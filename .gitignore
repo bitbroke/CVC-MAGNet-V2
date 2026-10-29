@@ -1,0 +1,13 @@
+﻿# Byte-compiled / virtualenv
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.pytest_cache/
+
+# Large cache and raw DICOM/image sets
+cache/
+data/
+outputs/
+archives/
+tools/mask_review/__pycache__/

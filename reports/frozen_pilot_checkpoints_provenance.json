@@ -1,0 +1,33 @@
+{
+  "frozen_timestamp_utc": "2026-10-15T15:09:39.587318+00:00",
+  "files": {
+    "control_final_checkpoint": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\pilot_control_reviewed_only\\checkpoints\\final_coarse_dual_head.pt",
+      "sha256": "3d3d2f305eb026b5b3efe9422d21228d25a8049024d4d5d39c6288bda4e24ef4"
+    },
+    "control_best_checkpoint": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\pilot_control_reviewed_only\\checkpoints\\best_coarse_dual_head.pt",
+      "sha256": "18baf1dbe2067686ea8c15e46419f8870ad5decfe59c3492d8a5a7c7be8d4804"
+    },
+    "experiment_final_checkpoint": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\pilot_experiment_expanded\\checkpoints\\final_coarse_dual_head.pt",
+      "sha256": "ed3e2acb2e0229f0452b00a41ed527a1ebfa65e0f9ef920d3dbe05ea626b5b55"
+    },
+    "experiment_best_checkpoint": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\pilot_experiment_expanded\\checkpoints\\best_coarse_dual_head.pt",
+      "sha256": "57b7406cc38c580bb0c63b52f3d4e4a2c02312be035bff2197c7123b936c491a"
+    },
+    "training_expansion_manifest": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\data\\training_expansion_manifest.parquet",
+      "sha256": "0211147ab56fa396e4ee21ddb93d598b99c2eb78fe4cfe16a9cc4afbe7c817b7"
+    },
+    "validation_targets_registry": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\data\\splits\\dev_pilot_val_targets.csv",
+      "sha256": "02be1b9ca032df7dc5929f816fcf9700665d6e900ae639bab3f06891432e1652"
+    },
+    "reviewed_distal_tips_v2": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\data\\reviewed_distal_tips_v2.parquet",
+      "sha256": "12c0d4cdb6b51f07a680f758e268cb7136685b874c58f9e2f730050be0acf53f"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+Follow-up audit of submitted corrections, 2026-10-16
+No model training or checkpoint modification performed.
+Frozen expanded checkpoint hash remains ed3e2acb2e0229f0452b00a41ed527a1ebfa65e0f9ef920d3dbe05ea626b5b55.
+
+VERIFIED PROGRESS
+Native evaluator unpads probabilities, resizes them to original image dimensions,
+and evaluates against native fixed-width path masks. Unknown no-polyline studies
+are rejected. Binary and soft Dice are separated. Negative area is normalized.
+Bounded KD-tree supports correct coverage decisions at the specified tolerances;
+it does not establish globally exact nearest distances beyond its bounded ROI.
+Trainer uses effective-batch BCE/Dice denominators, joint validity augmentation,
+finite-gradient checks and separate update/attempt counters.
+Executed tests/test_effective_batch_equivalence.py: 3 passed in 9.78 seconds.
+These tests are limited: geometry test does not invoke the actual dataset and only
+asserts some invalid pixels exist; gradient test uses copied equations/toy network;
+step-count test disables GradScaler and simulates a manual skip. They do not yet
+prove real trainer AMP skip behavior, dataset alignment or resume determinism.
+
+CLASSIFIER DIAGNOSIS MUST BE RETRACTED/CORRECTED
+scripts/diagnose_cvc_placement_classifier.py reads the segmentation study inventory
+then slices rows 0:4000 and 4000:5000. Those are NOT the classifier pilot cohorts.
+Actual classifier loader first filters classification_manifest.parquet by split,
+then applies iloc. Reconstructed real 4000/1000 pilot subsets have:
+PatientID intersection 0; StudyInstanceUID intersection 0; patient_group_id intersection 0.
+Train label prevalences: normal .74375, borderline .257, abnormal .09425.
+Selection: normal .603, borderline .335, abnormal .149.
+Distribution shift exists, but severe cross-split patient leakage is not shown.
+Exact-image dedup is NOT established: sha256 is empty for 30,067 manifest rows.
+The only common hash value in these subsets is the empty string, not a real hash.
+Populate/verify actual hashes before claiming exact duplicate absence.
+
+Classifier placement_net.py uses nn.BCEWithLogitsLoss() with no pos_weight.
+Diagnostic script computes a hypothetical prevalence weight and writes as though
+it was used in training. This is unsupported; it cannot explain the run's failure.
+Root cause remains unestablished. Use the saved real manifest, checkpoint and
+train/selection predictions for empirical diagnosis. Inspect BN behavior and
+image-label alignment as hypotheses, not established causes.
+
+New triage is documented rather than consistently implemented: metrics.py still
+has pred_acceptable = ~pred_review. The diagnostic diagram sums multilabel
+probabilities as a presence score; this is not a calibrated presence probability.
+An explicit normal-evidence rule cannot guarantee zero false reassurance.
+Unify predictor/evaluator policy, implement uncertain/no-assessment, measure residual
+false reassurance; do not claim clinical safety or a zero-error guarantee.
+
+PAIRED TRAINER REMAINING ITEMS
+Use a dedicated per-study/per-exposure augmentation RNG, independent of model
+forward RNG and DataLoader iteration. Current ledger has study IDs but no
+augmentation parameters/seeds. Seed equality alone does not prove matched transforms.
+Missing requested load_initial_weights/resume paths silently fall back to fresh
+training. Fail immediately instead, refuse reuse of completed output directories,
+and verify full initial state hashes.
+Resume loads tensors to CUDA then passes torch_rng_state without .cpu(); restore
+CPU RNG bytes correctly. Python/NumPy RNG states are saved but not restored.
+Sampler uses its own default_rng and needs saved state plus iterator/cursor for
+exact continuation. Save atomic last checkpoints and complete resolved config,
+input/source hashes, sampler state, initial hash and ordered exposure/augment data.
+Bound attempts and fail on persistent nonfinite loss/gradients to avoid endless loops.
+
+EVALUATOR FOLLOW-UP
+Cache includes checkpoint/architecture/resolution, but lacks image content,
+preprocessing/normalization and code version fingerprints. Add those before broad reuse.
+run_native_evaluations.py drops complete per-study results when saving summaries;
+persist them and bootstrap outputs for reproducible comparisons without inference.
+Bootstrap intervals describe these fixed models on this development cohort, not
+training-seed variability or independent generalization. Negative performance uses
+only 8 studies. Approximate recall regimes are not exact matched-recall points.
+Old checkpoints were trained before the repairs: their improved re-evaluation does
+not retroactively fix exposure/update/augmentation equivalence.
+
+NEXT ACTION
+Correct unsupported classifier diagnosis and strengthen actual-code tests plus
+paired-run provenance. Then run ONLY the corrected 512/768 paired pilot in new
+directories; no full-data scaling yet. Compare native-mask precision at comparable
+recall, instance/path coverage and negative foreground. Full expansion must use
+only approved training groups, never all 8,853 inventory studies indiscriminately.

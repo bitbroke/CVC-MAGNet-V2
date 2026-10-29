@@ -1,0 +1,637 @@
+{
+  "checkpoint_sha256": "ed3e2acb2e0229f0452b00a41ed527a1ebfa65e0f9ef920d3dbe05ea626b5b55",
+  "study_count": 193,
+  "negative_studies": [
+    "1.2.826.0.1.3680043.8.498.11949936472769428466626780922892522748",
+    "1.2.826.0.1.3680043.8.498.12081555449560607487646381923653562395",
+    "1.2.826.0.1.3680043.8.498.16685145848089373870698736004452376249",
+    "1.2.826.0.1.3680043.8.498.22320705680148774104574675541453580288",
+    "1.2.826.0.1.3680043.8.498.44115252344656427769689937573516279206",
+    "1.2.826.0.1.3680043.8.498.53607701500171502074287088982752779385",
+    "1.2.826.0.1.3680043.8.498.60080956841618870940968575868106407717",
+    "1.2.826.0.1.3680043.8.498.86838128454349618942354724331908482816"
+  ],
+  "decoder_parity": "All 193 baseline capped candidate sets exactly equal to official decoder",
+  "statistics": {
+    "r10_t0.3": {
+      "matched248_capped": 33,
+      "matched25_capped": 1,
+      "matched248_uncapped": 58,
+      "matched25_uncapped": 4,
+      "negative_counts_capped": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "negative_counts_uncapped": [
+        193,
+        253,
+        235,
+        246,
+        222,
+        229,
+        235,
+        253
+      ],
+      "negative_fp_mean_uncapped": 233.25,
+      "negative_fp_mean_capped": 10.0
+    },
+    "r10_t0.4": {
+      "matched248_capped": 33,
+      "matched25_capped": 1,
+      "matched248_uncapped": 50,
+      "matched25_uncapped": 2,
+      "negative_counts_capped": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "negative_counts_uncapped": [
+        17,
+        23,
+        27,
+        37,
+        16,
+        14,
+        27,
+        29
+      ],
+      "negative_fp_mean_uncapped": 23.75,
+      "negative_fp_mean_capped": 10.0
+    },
+    "r10_t0.5": {
+      "matched248_capped": 32,
+      "matched25_capped": 1,
+      "matched248_uncapped": 34,
+      "matched25_uncapped": 1,
+      "negative_counts_capped": [
+        1,
+        2,
+        5,
+        7,
+        3,
+        1,
+        7,
+        3
+      ],
+      "negative_counts_uncapped": [
+        1,
+        2,
+        5,
+        7,
+        3,
+        1,
+        7,
+        3
+      ],
+      "negative_fp_mean_uncapped": 3.625,
+      "negative_fp_mean_capped": 3.625
+    },
+    "r10_t0.6": {
+      "matched248_capped": 0,
+      "matched25_capped": 0,
+      "matched248_uncapped": 0,
+      "matched25_uncapped": 0,
+      "negative_counts_capped": [
+        0,
+        0,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_counts_uncapped": [
+        0,
+        0,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_fp_mean_uncapped": 0.5,
+      "negative_fp_mean_capped": 0.5
+    },
+    "r10_t0.7": {
+      "matched248_capped": 0,
+      "matched25_capped": 0,
+      "matched248_uncapped": 0,
+      "matched25_uncapped": 0,
+      "negative_counts_capped": [
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_counts_uncapped": [
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_fp_mean_uncapped": 0.375,
+      "negative_fp_mean_capped": 0.375
+    },
+    "r10_t0.8": {
+      "matched248_capped": 0,
+      "matched25_capped": 0,
+      "matched248_uncapped": 0,
+      "matched25_uncapped": 0,
+      "negative_counts_capped": [
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_counts_uncapped": [
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_fp_mean_uncapped": 0.375,
+      "negative_fp_mean_capped": 0.375
+    },
+    "r7_t0.3": {
+      "matched248_capped": 39,
+      "matched25_capped": 4,
+      "matched248_uncapped": 83,
+      "matched25_uncapped": 9,
+      "negative_counts_capped": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "negative_counts_uncapped": [
+        245,
+        338,
+        327,
+        340,
+        295,
+        309,
+        307,
+        335
+      ],
+      "negative_fp_mean_uncapped": 312.0,
+      "negative_fp_mean_capped": 10.0
+    },
+    "r7_t0.4": {
+      "matched248_capped": 39,
+      "matched25_capped": 4,
+      "matched248_uncapped": 73,
+      "matched25_uncapped": 7,
+      "negative_counts_capped": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "negative_counts_uncapped": [
+        19,
+        34,
+        34,
+        48,
+        17,
+        16,
+        30,
+        36
+      ],
+      "negative_fp_mean_uncapped": 29.25,
+      "negative_fp_mean_capped": 10.0
+    },
+    "r7_t0.5": {
+      "matched248_capped": 37,
+      "matched25_capped": 3,
+      "matched248_uncapped": 46,
+      "matched25_uncapped": 5,
+      "negative_counts_capped": [
+        1,
+        2,
+        6,
+        8,
+        3,
+        1,
+        9,
+        3
+      ],
+      "negative_counts_uncapped": [
+        1,
+        2,
+        6,
+        8,
+        3,
+        1,
+        9,
+        3
+      ],
+      "negative_fp_mean_uncapped": 4.125,
+      "negative_fp_mean_capped": 4.125
+    },
+    "r7_t0.6": {
+      "matched248_capped": 0,
+      "matched25_capped": 0,
+      "matched248_uncapped": 0,
+      "matched25_uncapped": 0,
+      "negative_counts_capped": [
+        0,
+        0,
+        4,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_counts_uncapped": [
+        0,
+        0,
+        4,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_fp_mean_uncapped": 0.625,
+      "negative_fp_mean_capped": 0.625
+    },
+    "r7_t0.7": {
+      "matched248_capped": 0,
+      "matched25_capped": 0,
+      "matched248_uncapped": 0,
+      "matched25_uncapped": 0,
+      "negative_counts_capped": [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_counts_uncapped": [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_fp_mean_uncapped": 0.5,
+      "negative_fp_mean_capped": 0.5
+    },
+    "r7_t0.8": {
+      "matched248_capped": 0,
+      "matched25_capped": 0,
+      "matched248_uncapped": 0,
+      "matched25_uncapped": 0,
+      "negative_counts_capped": [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_counts_uncapped": [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_fp_mean_uncapped": 0.5,
+      "negative_fp_mean_capped": 0.5
+    },
+    "r5_t0.3": {
+      "matched248_capped": 44,
+      "matched25_capped": 0,
+      "matched248_uncapped": 114,
+      "matched25_uncapped": 10,
+      "negative_counts_capped": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "negative_counts_uncapped": [
+        334,
+        433,
+        429,
+        439,
+        383,
+        399,
+        405,
+        444
+      ],
+      "negative_fp_mean_uncapped": 408.25,
+      "negative_fp_mean_capped": 10.0
+    },
+    "r5_t0.4": {
+      "matched248_capped": 44,
+      "matched25_capped": 0,
+      "matched248_uncapped": 101,
+      "matched25_uncapped": 7,
+      "negative_counts_capped": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10
+      ],
+      "negative_counts_uncapped": [
+        26,
+        39,
+        46,
+        57,
+        21,
+        19,
+        36,
+        43
+      ],
+      "negative_fp_mean_uncapped": 35.875,
+      "negative_fp_mean_capped": 10.0
+    },
+    "r5_t0.5": {
+      "matched248_capped": 43,
+      "matched25_capped": 0,
+      "matched248_uncapped": 68,
+      "matched25_uncapped": 4,
+      "negative_counts_capped": [
+        1,
+        4,
+        10,
+        10,
+        3,
+        1,
+        10,
+        4
+      ],
+      "negative_counts_uncapped": [
+        1,
+        4,
+        11,
+        11,
+        3,
+        1,
+        11,
+        4
+      ],
+      "negative_fp_mean_uncapped": 5.75,
+      "negative_fp_mean_capped": 5.375
+    },
+    "r5_t0.6": {
+      "matched248_capped": 0,
+      "matched25_capped": 0,
+      "matched248_uncapped": 0,
+      "matched25_uncapped": 0,
+      "negative_counts_capped": [
+        0,
+        0,
+        7,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_counts_uncapped": [
+        0,
+        0,
+        7,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_fp_mean_uncapped": 1.0,
+      "negative_fp_mean_capped": 1.0
+    },
+    "r5_t0.7": {
+      "matched248_capped": 0,
+      "matched25_capped": 0,
+      "matched248_uncapped": 0,
+      "matched25_uncapped": 0,
+      "negative_counts_capped": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_counts_uncapped": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_fp_mean_uncapped": 0.75,
+      "negative_fp_mean_capped": 0.75
+    },
+    "r5_t0.8": {
+      "matched248_capped": 0,
+      "matched25_capped": 0,
+      "matched248_uncapped": 0,
+      "matched25_uncapped": 0,
+      "negative_counts_capped": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_counts_uncapped": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "negative_fp_mean_uncapped": 0.75,
+      "negative_fp_mean_capped": 0.75
+    }
+  },
+  "negative_heatmap_statistics": [
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.11949936472769428466626780922892522748",
+      "prob_quantiles": [
+        0.1597900390625,
+        0.218505859375,
+        0.2293701171875,
+        0.3212890625,
+        0.51416015625
+      ],
+      "raw_maxima": 772,
+      "uncapped_peaks": 193,
+      "peaks_in_padding": 0
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.12081555449560607487646381923653562395",
+      "prob_quantiles": [
+        0.1580810546875,
+        0.2115478515625,
+        0.232177734375,
+        0.32470703125,
+        0.53564453125
+      ],
+      "raw_maxima": 879,
+      "uncapped_peaks": 253,
+      "peaks_in_padding": 0
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.16685145848089373870698736004452376249",
+      "prob_quantiles": [
+        0.023193359375,
+        0.2149658203125,
+        0.2333984375,
+        0.327880859375,
+        0.99560546875
+      ],
+      "raw_maxima": 876,
+      "uncapped_peaks": 235,
+      "peaks_in_padding": 0
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.22320705680148774104574675541453580288",
+      "prob_quantiles": [
+        0.059112548828125,
+        0.2181396484375,
+        0.2362060546875,
+        0.356201171875,
+        0.6904296875
+      ],
+      "raw_maxima": 966,
+      "uncapped_peaks": 246,
+      "peaks_in_padding": 0
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.44115252344656427769689937573516279206",
+      "prob_quantiles": [
+        0.1597900390625,
+        0.2171630859375,
+        0.229736328125,
+        0.3193359375,
+        0.51220703125
+      ],
+      "raw_maxima": 847,
+      "uncapped_peaks": 222,
+      "peaks_in_padding": 0
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.53607701500171502074287088982752779385",
+      "prob_quantiles": [
+        0.0849609375,
+        0.21533203125,
+        0.2318115234375,
+        0.3232421875,
+        0.59130859375
+      ],
+      "raw_maxima": 901,
+      "uncapped_peaks": 229,
+      "peaks_in_padding": 0
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.60080956841618870940968575868106407717",
+      "prob_quantiles": [
+        0.1517333984375,
+        0.2144775390625,
+        0.2330322265625,
+        0.350830078125,
+        0.5546875
+      ],
+      "raw_maxima": 938,
+      "uncapped_peaks": 235,
+      "peaks_in_padding": 0
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.86838128454349618942354724331908482816",
+      "prob_quantiles": [
+        0.11199951171875,
+        0.217041015625,
+        0.2340087890625,
+        0.3388671875,
+        0.52685546875
+      ],
+      "raw_maxima": 932,
+      "uncapped_peaks": 253,
+      "peaks_in_padding": 0
+    }
+  ],
+  "trace_counts": {
+    "('registry248', 'cap_removed')": 25,
+    "('registry248', 'nms_removed')": 86,
+    "('registry248', 'no_local_max_within15')": 104,
+    "('registry248', 'retained_candidate')": 33,
+    "('reviewed25', 'cap_removed')": 3,
+    "('reviewed25', 'nms_removed')": 9,
+    "('reviewed25', 'no_local_max_within15')": 12,
+    "('reviewed25', 'retained_candidate')": 1
+  }
+}

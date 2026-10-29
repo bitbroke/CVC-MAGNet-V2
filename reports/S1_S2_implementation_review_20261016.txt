@@ -1,0 +1,100 @@
+Independent review of the submitted S0/S1/S2 milestone report
+2026-10-16. Read-only code/result inspection; no training or model edits performed.
+
+Decision: Promising S1 mask improvement, but full-data advancement is premature.
+Original frozen checkpoint verified unchanged:
+ed3e2acb2e0229f0452b00a41ed527a1ebfa65e0f9ef920d3dbe05ea626b5b55
+Only annotation/review web servers were running during inspection.
+
+Verified same-grid comparison at threshold 0.50:
+S0: macro binary Dice .2053, positive-study pooled precision .1219,
+recall .6867, mean negative foreground 3336.1 model-grid pixels.
+S1: macro binary Dice .2979, positive-study pooled precision .2025,
+recall .6589, mean negative foreground 1416.8 model-grid pixels.
+Evidence supports a better precision/recall tradeoff, not attribution to a single
+change: initialization, architecture, loss, sampling and augmentation all changed.
+S0 was not an uninitialized model; it continued from a trained coarse checkpoint.
+
+Blocking findings:
+1. evaluate_cvc_masks.py computes overlap and areas on each model's native output
+grid. S2 uses 768 and S0/S1 512. Reproject predictions to the same native-image
+grid and evaluate against one unchanged native target. Report negative area as
+native pixels and percentage of valid radiograph area. Raw 768 pixel counts are
+not directly comparable with 512 counts. Centerline distances use rounded model
+coordinates and a nominal scale; recompute on native geometry, explicitly treating
+empty predictions as infinite distance and excluding out-of-image path points.
+
+2. Macro Soft Dice in the milestone table is binary thresholded Dice. These are
+different from the small soft Dice values used for checkpoint selection.
+Select and compare fixed-budget final checkpoints for the primary resolution
+experiment; report development-selected best checkpoints separately.
+
+3. Dataset augments image and target with flip/affine but leaves valid_mask fixed.
+Apply identical geometric transforms to all three; new affine borders must have
+validity zero. Add a non-square-image regression test.
+
+4. train_segmentation_v3.py unconditionally increments successful_updates and steps
+the scheduler after GradScaler.step. A skipped optimizer update still gets counted.
+Use a real optimizer-step counter and log attempts, skips and scale. Old saved
+counts cannot establish 1000 successful updates without additional evidence.
+
+5. Batch-2/accum-2 and batch-1/accum-4 do NOT optimize identical Dice objectives.
+Positive-only Dice is normalized by the number of positives in each microbatch.
+Example effective batch [P,P,P,N]: batch-2 yields .5*mean(D1,D2)+.5*D3, whereas
+batch-1 yields .25*(D1+D2+D3). Normalize summed positive losses by the effective
+batch positive count, not each microbatch's count. BCE pixel denominators also
+need consistent effective-batch weighting. Verify gradients on a deterministic
+toy model. Frozen BN and GroupNorm do not fix loss-normalization differences.
+
+6. Trainer does not seed Torch/augmentation/decoder initialization or persist full
+RNG, optimizer, scheduler, scaler, config and input hashes. Only sampler has its
+own fixed NumPy seed. Therefore S2 is not a clean resolution-only causal test.
+Store initial-state hash and ordered study/augmentation ledger for paired runs.
+
+7. Evaluator cache keys omit resolution/preprocessing/image hash and do not verify
+cache shape. Include those plus code/normalization version. No-polyline images
+are evaluated as negatives without asserting membership in confirmed negatives;
+fail fast on unknown images. Full-image AP is advertised/imported but not computed.
+Audit panel actually contains 8 negatives, not 10, and is overwritten by each
+evaluation. Freeze its IDs and save model-specific measurements separately.
+
+8. Low missed-instance rate means at least 30% of a path falls within tolerance
+of any foreground. It does not mean 244 complete catheters were segmented or
+identified individually. Multi-CVC Dice also cannot establish instance recall.
+At S2 threshold .70, pixel recall is .3596, centerline coverage .4989 and missed
+rate .2258. The high precision at that threshold comes with substantial misses.
+Do not mix threshold-.30 recovery and threshold-.70 precision as one result.
+S0 JSON missed_rate_10px at .30 is .0323, not .056 in the milestone table.
+
+9. Classifier actual run used 4000 train images and 1000 selection images, not
+5000 training images. Later full selection evaluation used 4562 images. Pilot
+selection uses df.iloc[:max_samples], not stratified random sampling. Saved
+training loss .616 -> .427 while selection AUC stayed about .51-.54 warrants
+generalization/optimization diagnosis, not an assumption that more data and
+weighting will achieve >90% sensitivity at acceptable specificity.
+Evaluate train and selection subsets in eval mode; verify image-label joins,
+pretraining, class order, probability variance and BN train/eval behavior. Then
+run a tiny fitting test only as a separately authorized diagnostic training run.
+Classifier triage currently calls every non-alert acceptable; normal probability
+and uncertainty_band are unused. Add explicit normal-evidence and uncertainty/
+no-CVC handling before describing outputs as placement decisions.
+
+10. Lower AUC on historically exposed cases cannot prove absence of leakage.
+Check patient, duplicate-group, image-hash and upstream fitting/selection exposure
+directly. Keep model_selection as development. 8853 annotated studies is the entire
+inventory, not an eligible training count; full fitting must intersect approved
+training groups and exclude all selection/calibration/test groups.
+All-zero CVC labels support CVC-negative supervision; absence of all listed device
+labels does not establish the absence of ECG wires or every possible distractor.
+
+Next work in order:
+A. Preserve S1/S2 outputs; correct report and regenerate common-grid evaluation
+   from cached probabilities, with matched-recall operating points and paired
+   patient-bootstrap intervals. No training required.
+B. Repair validity-mask geometry, update counting, effective-batch normalization,
+   seeding and resumable checkpoints. Test geometry and gradient equivalence.
+C. Audit classifier saved predictions and training/evaluation behavior separately.
+D. Repeat only the repaired S1/S2 paired pilot with identical initial weights and
+   exposure policy. Repeat the leading comparison across seeds if results warrant.
+E. Expand the winning segmentation model only to split-eligible training paths.
+   No full classifier expansion until its weak discrimination is understood.

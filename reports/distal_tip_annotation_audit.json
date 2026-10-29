@@ -1,0 +1,382 @@
+[
+  {
+    "case_idx": 1,
+    "study_id": "1.2.826.0.1.3680043.8.498.16742651845528516504406275323562162871",
+    "split": "train",
+    "heuristic_chosen_index": 0,
+    "pt0_coord": [
+      849.0,
+      1521.0
+    ],
+    "pt_last_coord": [
+      1721.0,
+      635.0
+    ],
+    "pt0_border_dist": 849.0,
+    "pt_last_border_dist": 327.0,
+    "inferior_endpoint_index": 0,
+    "heuristic_chose_inferior_endpoint": true,
+    "polyline_num_points": 9
+  },
+  {
+    "case_idx": 2,
+    "study_id": "1.2.826.0.1.3680043.8.498.13094333030562624783344292219369014086",
+    "split": "train",
+    "heuristic_chosen_index": 0,
+    "pt0_coord": [
+      1026.0,
+      988.0
+    ],
+    "pt_last_coord": [
+      780.0,
+      7.0
+    ],
+    "pt0_border_dist": 988.0,
+    "pt_last_border_dist": 7.0,
+    "inferior_endpoint_index": 0,
+    "heuristic_chose_inferior_endpoint": true,
+    "polyline_num_points": 9
+  },
+  {
+    "case_idx": 3,
+    "study_id": "1.2.826.0.1.3680043.8.498.12316203392543115626546886640885288308",
+    "split": "train",
+    "heuristic_chosen_index": 0,
+    "pt0_coord": [
+      1261.0,
+      788.0
+    ],
+    "pt_last_coord": [
+      10.0,
+      1647.0
+    ],
+    "pt0_border_dist": 788.0,
+    "pt_last_border_dist": 10.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": false,
+    "polyline_num_points": 20
+  },
+  {
+    "case_idx": 4,
+    "study_id": "1.2.826.0.1.3680043.8.498.11693509889426445054876979814173446281",
+    "split": "train",
+    "heuristic_chosen_index": 0,
+    "pt0_coord": [
+      990.0,
+      1265.0
+    ],
+    "pt_last_coord": [
+      1050.0,
+      218.0
+    ],
+    "pt0_border_dist": 783.0,
+    "pt_last_border_dist": 218.0,
+    "inferior_endpoint_index": 0,
+    "heuristic_chose_inferior_endpoint": true,
+    "polyline_num_points": 9
+  },
+  {
+    "case_idx": 5,
+    "study_id": "1.2.826.0.1.3680043.8.498.10719765237884376273796529448523394468",
+    "split": "train",
+    "heuristic_chosen_index": 0,
+    "pt0_coord": [
+      831.0,
+      819.0
+    ],
+    "pt_last_coord": [
+      -2.0,
+      1170.0
+    ],
+    "pt0_border_dist": 819.0,
+    "pt_last_border_dist": -2.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": false,
+    "polyline_num_points": 8
+  },
+  {
+    "case_idx": 6,
+    "study_id": "1.2.826.0.1.3680043.8.498.96178126926436668686672170440391537583",
+    "split": "val",
+    "heuristic_chosen_index": 0,
+    "pt0_coord": [
+      2074.0,
+      518.0
+    ],
+    "pt_last_coord": [
+      19.0,
+      2398.0
+    ],
+    "pt0_border_dist": 518.0,
+    "pt_last_border_dist": 19.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": false,
+    "polyline_num_points": 18
+  },
+  {
+    "case_idx": 7,
+    "study_id": "1.2.826.0.1.3680043.8.498.83523654254282840894239823618750578718",
+    "split": "train",
+    "heuristic_chosen_index": 0,
+    "pt0_coord": [
+      1272.0,
+      1141.0
+    ],
+    "pt_last_coord": [
+      192.0,
+      1535.0
+    ],
+    "pt0_border_dist": 907.0,
+    "pt_last_border_dist": 192.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": false,
+    "polyline_num_points": 41
+  },
+  {
+    "case_idx": 8,
+    "study_id": "1.2.826.0.1.3680043.8.498.73467343506690781589966062838239538045",
+    "split": "train",
+    "heuristic_chosen_index": 0,
+    "pt0_coord": [
+      1075.0,
+      1172.0
+    ],
+    "pt_last_coord": [
+      755.0,
+      509.0
+    ],
+    "pt0_border_dist": 876.0,
+    "pt_last_border_dist": 509.0,
+    "inferior_endpoint_index": 0,
+    "heuristic_chose_inferior_endpoint": true,
+    "polyline_num_points": 12
+  },
+  {
+    "case_idx": 9,
+    "study_id": "1.2.826.0.1.3680043.8.498.50472537084434906326361735574450304565",
+    "split": "train",
+    "heuristic_chosen_index": 0,
+    "pt0_coord": [
+      1173.0,
+      981.0
+    ],
+    "pt_last_coord": [
+      2496.0,
+      1555.0
+    ],
+    "pt0_border_dist": 981.0,
+    "pt_last_border_dist": 4.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": false,
+    "polyline_num_points": 34
+  },
+  {
+    "case_idx": 10,
+    "study_id": "1.2.826.0.1.3680043.8.498.12989538631862571621260783475633298763",
+    "split": "train",
+    "heuristic_chosen_index": 0,
+    "pt0_coord": [
+      1013.0,
+      1104.0
+    ],
+    "pt_last_coord": [
+      0.0,
+      1385.0
+    ],
+    "pt0_border_dist": 1013.0,
+    "pt_last_border_dist": 0.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": false,
+    "polyline_num_points": 16
+  },
+  {
+    "case_idx": 11,
+    "study_id": "1.2.826.0.1.3680043.8.498.54091385126230980862104728065826110442",
+    "split": "train",
+    "heuristic_chosen_index": -1,
+    "pt0_coord": [
+      981.0,
+      1.0
+    ],
+    "pt_last_coord": [
+      1296.0,
+      992.0
+    ],
+    "pt0_border_dist": 1.0,
+    "pt_last_border_dist": 992.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": true,
+    "polyline_num_points": 13
+  },
+  {
+    "case_idx": 12,
+    "study_id": "1.2.826.0.1.3680043.8.498.54458849707751691864942411905587251200",
+    "split": "train",
+    "heuristic_chosen_index": -1,
+    "pt0_coord": [
+      5.0,
+      1463.0
+    ],
+    "pt_last_coord": [
+      1497.0,
+      1347.0
+    ],
+    "pt0_border_dist": 5.0,
+    "pt_last_border_dist": 1197.0,
+    "inferior_endpoint_index": 0,
+    "heuristic_chose_inferior_endpoint": false,
+    "polyline_num_points": 31
+  },
+  {
+    "case_idx": 13,
+    "study_id": "1.2.826.0.1.3680043.8.498.80750200917344211096573123436766087903",
+    "split": "train",
+    "heuristic_chosen_index": -1,
+    "pt0_coord": [
+      1328.0,
+      1.0
+    ],
+    "pt_last_coord": [
+      2494.0,
+      1458.0
+    ],
+    "pt0_border_dist": 1.0,
+    "pt_last_border_dist": 6.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": true,
+    "polyline_num_points": 18
+  },
+  {
+    "case_idx": 14,
+    "study_id": "1.2.826.0.1.3680043.8.498.60575086009749783293670067167315255282",
+    "split": "train",
+    "heuristic_chosen_index": -1,
+    "pt0_coord": [
+      1368.0,
+      2.0
+    ],
+    "pt_last_coord": [
+      2394.0,
+      1284.0
+    ],
+    "pt0_border_dist": 2.0,
+    "pt_last_border_dist": 106.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": true,
+    "polyline_num_points": 24
+  },
+  {
+    "case_idx": 15,
+    "study_id": "1.2.826.0.1.3680043.8.498.11540463735946720922039741513964943833",
+    "split": "train",
+    "heuristic_chosen_index": -1,
+    "pt0_coord": [
+      866.0,
+      7.0
+    ],
+    "pt_last_coord": [
+      844.0,
+      748.0
+    ],
+    "pt0_border_dist": 7.0,
+    "pt_last_border_dist": 748.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": true,
+    "polyline_num_points": 5
+  },
+  {
+    "case_idx": 16,
+    "study_id": "1.2.826.0.1.3680043.8.498.11854948633417421322215509506292298253",
+    "split": "train",
+    "heuristic_chosen_index": -1,
+    "pt0_coord": [
+      2.0,
+      744.0
+    ],
+    "pt_last_coord": [
+      1088.0,
+      1217.0
+    ],
+    "pt0_border_dist": 2.0,
+    "pt_last_border_dist": 831.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": true,
+    "polyline_num_points": 26
+  },
+  {
+    "case_idx": 17,
+    "study_id": "1.2.826.0.1.3680043.8.498.64735643366845515679745932231330927454",
+    "split": "train",
+    "heuristic_chosen_index": -1,
+    "pt0_coord": [
+      3029.0,
+      1611.0
+    ],
+    "pt_last_coord": [
+      1454.0,
+      1203.0
+    ],
+    "pt0_border_dist": 27.0,
+    "pt_last_border_dist": 1203.0,
+    "inferior_endpoint_index": 0,
+    "heuristic_chose_inferior_endpoint": false,
+    "polyline_num_points": 23
+  },
+  {
+    "case_idx": 18,
+    "study_id": "1.2.826.0.1.3680043.8.498.98640823264094455953790779117707861114",
+    "split": "train",
+    "heuristic_chosen_index": -1,
+    "pt0_coord": [
+      0.0,
+      791.0
+    ],
+    "pt_last_coord": [
+      1405.0,
+      1297.0
+    ],
+    "pt0_border_dist": 0.0,
+    "pt_last_border_dist": 1297.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": true,
+    "polyline_num_points": 25
+  },
+  {
+    "case_idx": 19,
+    "study_id": "1.2.826.0.1.3680043.8.498.58611885491842813327565897273354343731",
+    "split": "train",
+    "heuristic_chosen_index": -1,
+    "pt0_coord": [
+      66.0,
+      641.0
+    ],
+    "pt_last_coord": [
+      1011.0,
+      1322.0
+    ],
+    "pt0_border_dist": 66.0,
+    "pt_last_border_dist": 726.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": true,
+    "polyline_num_points": 20
+  },
+  {
+    "case_idx": 20,
+    "study_id": "1.2.826.0.1.3680043.8.498.44446085225491203071818882236426940569",
+    "split": "train",
+    "heuristic_chosen_index": -1,
+    "pt0_coord": [
+      392.0,
+      271.0
+    ],
+    "pt_last_coord": [
+      972.0,
+      629.0
+    ],
+    "pt0_border_dist": 271.0,
+    "pt_last_border_dist": 629.0,
+    "inferior_endpoint_index": -1,
+    "heuristic_chose_inferior_endpoint": true,
+    "polyline_num_points": 15
+  }
+]

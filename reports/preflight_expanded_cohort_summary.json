@@ -1,0 +1,53 @@
+{
+  "status": "PASSED",
+  "total_positive_studies": 800,
+  "newly_added_positive_studies": 400,
+  "confirmed_negatives": 396,
+  "disk_image_verification": "100% of images verified on disk",
+  "geometry_alignment": "Verified: masks align with native coordinates and exclude padding",
+  "boundary_clipped_instances_audited": 35,
+  "saved_overlays": [
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.21250199466994255457924230887620883499",
+      "stratum": "Boundary-Clipped Polyline (Native Bounds Cut)",
+      "dimensions": "2500x2048",
+      "catheters_count": 2,
+      "overlay_path": "C:\\Ankshit\\CVC-MAGNet-V2\\reports\\preflight_overlays\\overlay_01_boundary-clipped_polyline_(native_bounds_cut)_20883499.png"
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.10758635634336838920685455707232728089",
+      "stratum": "Boundary-Clipped Polyline (Edge Crossing)",
+      "dimensions": "2500x2048",
+      "catheters_count": 1,
+      "overlay_path": "C:\\Ankshit\\CVC-MAGNet-V2\\reports\\preflight_overlays\\overlay_02_boundary-clipped_polyline_(edge_crossing)_32728089.png"
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.71109073104319693122842939327730316717",
+      "stratum": "Stratum: CVC - Abnormal Placement",
+      "dimensions": "2500x2048",
+      "catheters_count": 1,
+      "overlay_path": "C:\\Ankshit\\CVC-MAGNet-V2\\reports\\preflight_overlays\\overlay_03_stratum_30316717.png"
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.70195453795078248523351769088646449972",
+      "stratum": "Stratum: Multi-CVC (2 catheters)",
+      "dimensions": "3056x2544",
+      "catheters_count": 2,
+      "overlay_path": "C:\\Ankshit\\CVC-MAGNet-V2\\reports\\preflight_overlays\\overlay_04_stratum_46449972.png"
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.28053296864506787089491802306385138190",
+      "stratum": "Stratum: Cluttered Lines (ETT/NGT Present)",
+      "dimensions": "2500x2048",
+      "catheters_count": 3,
+      "overlay_path": "C:\\Ankshit\\CVC-MAGNet-V2\\reports\\preflight_overlays\\overlay_05_stratum_85138190.png"
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.94198024548632439908944340096910437905",
+      "stratum": "Stratum: Single Normal CVC",
+      "dimensions": "2500x2048",
+      "catheters_count": 1,
+      "overlay_path": "C:\\Ankshit\\CVC-MAGNet-V2\\reports\\preflight_overlays\\overlay_06_stratum_10437905.png"
+    }
+  ]
+}

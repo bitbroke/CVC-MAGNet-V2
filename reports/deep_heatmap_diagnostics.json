@@ -1,0 +1,821 @@
+{
+  "frozen_provenance": {
+    "frozen_timestamp_utc": "2026-10-15T15:09:39.587318+00:00",
+    "files": {
+      "control_final_checkpoint": {
+        "path": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\pilot_control_reviewed_only\\checkpoints\\final_coarse_dual_head.pt",
+        "sha256": "3d3d2f305eb026b5b3efe9422d21228d25a8049024d4d5d39c6288bda4e24ef4"
+      },
+      "control_best_checkpoint": {
+        "path": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\pilot_control_reviewed_only\\checkpoints\\best_coarse_dual_head.pt",
+        "sha256": "18baf1dbe2067686ea8c15e46419f8870ad5decfe59c3492d8a5a7c7be8d4804"
+      },
+      "experiment_final_checkpoint": {
+        "path": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\pilot_experiment_expanded\\checkpoints\\final_coarse_dual_head.pt",
+        "sha256": "ed3e2acb2e0229f0452b00a41ed527a1ebfa65e0f9ef920d3dbe05ea626b5b55"
+      },
+      "experiment_best_checkpoint": {
+        "path": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\pilot_experiment_expanded\\checkpoints\\best_coarse_dual_head.pt",
+        "sha256": "57b7406cc38c580bb0c63b52f3d4e4a2c02312be035bff2197c7123b936c491a"
+      },
+      "training_expansion_manifest": {
+        "path": "C:\\Ankshit\\CVC-MAGNet-V2\\data\\training_expansion_manifest.parquet",
+        "sha256": "0211147ab56fa396e4ee21ddb93d598b99c2eb78fe4cfe16a9cc4afbe7c817b7"
+      },
+      "validation_targets_registry": {
+        "path": "C:\\Ankshit\\CVC-MAGNet-V2\\data\\splits\\dev_pilot_val_targets.csv",
+        "sha256": "02be1b9ca032df7dc5929f816fcf9700665d6e900ae639bab3f06891432e1652"
+      },
+      "reviewed_distal_tips_v2": {
+        "path": "C:\\Ankshit\\CVC-MAGNet-V2\\data\\reviewed_distal_tips_v2.parquet",
+        "sha256": "12c0d4cdb6b51f07a680f758e268cb7136685b874c58f9e2f730050be0acf53f"
+      }
+    }
+  },
+  "fates_summary_248": {
+    "ctrl": {
+      "SUPPRESSED_BY_NMS": 134,
+      "DISPLACED_DISTANT_GT_50PX": 88,
+      "REMOVED_BY_TOP10_CAP": 22,
+      "DISPLACED_NEARBY_15_TO_50PX": 3,
+      "MATCHED": 1
+    },
+    "exp": {
+      "SUPPRESSED_BY_NMS": 121,
+      "DISPLACED_DISTANT_GT_50PX": 89,
+      "MATCHED": 18,
+      "DISPLACED_NEARBY_15_TO_50PX": 15,
+      "REMOVED_BY_TOP10_CAP": 5
+    },
+    "exp_single_cvc": {
+      "SUPPRESSED_BY_NMS": 61,
+      "DISPLACED_DISTANT_GT_50PX": 45,
+      "MATCHED": 12,
+      "DISPLACED_NEARBY_15_TO_50PX": 5,
+      "REMOVED_BY_TOP10_CAP": 3
+    },
+    "exp_multi_cvc": {
+      "SUPPRESSED_BY_NMS": 60,
+      "DISPLACED_DISTANT_GT_50PX": 44,
+      "DISPLACED_NEARBY_15_TO_50PX": 10,
+      "MATCHED": 6,
+      "REMOVED_BY_TOP10_CAP": 2
+    }
+  },
+  "heatmap_pixel_statistics_at_true_tip": {
+    "ctrl": {
+      "val_at_tip_mean": 0.29519407210811494,
+      "val_at_tip_median": 0.3131103515625,
+      "max_in_radius15_mean": 0.3235385033392137,
+      "max_in_radius15_median": 0.340087890625,
+      "targets_with_val_ge_030": 197
+    },
+    "exp": {
+      "val_at_tip_mean": 0.4021360335811492,
+      "val_at_tip_median": 0.432861328125,
+      "max_in_radius15_mean": 0.4413550592237903,
+      "max_in_radius15_median": 0.479736328125,
+      "targets_with_val_ge_030": 211
+    }
+  },
+  "fates_25_audited": {
+    "ctrl": [
+      {
+        "case_idx": 26,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.273681640625,
+        "max_in_radius_15": 0.32470703125,
+        "nearest_peak_dist": 363.9833021740986,
+        "dist_to_entry": 568.0537421809171
+      },
+      {
+        "case_idx": 27,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.30322265625,
+        "max_in_radius_15": 0.3564453125,
+        "nearest_peak_dist": 1352.8656359027239,
+        "dist_to_entry": 2016.9099311471575
+      },
+      {
+        "case_idx": 28,
+        "fate": "REMOVED_BY_TOP10_CAP",
+        "val_at_tip": 0.357666015625,
+        "max_in_radius_15": 0.357666015625,
+        "nearest_peak_dist": 450.1758158415829,
+        "dist_to_entry": 389.48962884587047
+      },
+      {
+        "case_idx": 29,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.267578125,
+        "max_in_radius_15": 0.319091796875,
+        "nearest_peak_dist": 874.7051061539318,
+        "dist_to_entry": 1531.938932497818
+      },
+      {
+        "case_idx": 30,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.324462890625,
+        "max_in_radius_15": 0.357421875,
+        "nearest_peak_dist": 481.0569123255548,
+        "dist_to_entry": 1912.433872514778
+      },
+      {
+        "case_idx": 31,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.29736328125,
+        "max_in_radius_15": 0.32080078125,
+        "nearest_peak_dist": 1093.8863942827868,
+        "dist_to_entry": 1458.0195294374837
+      },
+      {
+        "case_idx": 32,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.339111328125,
+        "max_in_radius_15": 0.349365234375,
+        "nearest_peak_dist": 891.1008682244222,
+        "dist_to_entry": 1717.5353473778418
+      },
+      {
+        "case_idx": 33,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.3466796875,
+        "max_in_radius_15": 0.373779296875,
+        "nearest_peak_dist": 823.4221559225913,
+        "dist_to_entry": 501.4576278646614
+      },
+      {
+        "case_idx": 34,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.271484375,
+        "max_in_radius_15": 0.3203125,
+        "nearest_peak_dist": 554.1100226993681,
+        "dist_to_entry": 1440.1666214190482
+      },
+      {
+        "case_idx": 35,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.342529296875,
+        "max_in_radius_15": 0.353759765625,
+        "nearest_peak_dist": 878.8490128141674,
+        "dist_to_entry": 1526.1052046191917
+      },
+      {
+        "case_idx": 36,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.2430419921875,
+        "max_in_radius_15": 0.29833984375,
+        "nearest_peak_dist": 557.0829277805199,
+        "dist_to_entry": 1952.2683788870477
+      },
+      {
+        "case_idx": 37,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.328857421875,
+        "max_in_radius_15": 0.33984375,
+        "nearest_peak_dist": 286.4095689233927,
+        "dist_to_entry": 1672.0855884027
+      },
+      {
+        "case_idx": 38,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.267333984375,
+        "max_in_radius_15": 0.2705078125,
+        "nearest_peak_dist": 312.83846634851426,
+        "dist_to_entry": 580.6601412845592
+      },
+      {
+        "case_idx": 39,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.285888671875,
+        "max_in_radius_15": 0.3076171875,
+        "nearest_peak_dist": 516.0350924882017,
+        "dist_to_entry": 326.3051496054277
+      },
+      {
+        "case_idx": 40,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.31494140625,
+        "max_in_radius_15": 0.33203125,
+        "nearest_peak_dist": 504.0262300483596,
+        "dist_to_entry": 1027.687729193832
+      },
+      {
+        "case_idx": 41,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.26953125,
+        "max_in_radius_15": 0.32470703125,
+        "nearest_peak_dist": 36.92884884743138,
+        "dist_to_entry": 1401.4752787211885
+      },
+      {
+        "case_idx": 42,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.314208984375,
+        "max_in_radius_15": 0.330810546875,
+        "nearest_peak_dist": 323.27711634613286,
+        "dist_to_entry": 562.4881334669197
+      },
+      {
+        "case_idx": 43,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.349365234375,
+        "max_in_radius_15": 0.377197265625,
+        "nearest_peak_dist": 480.6123237132974,
+        "dist_to_entry": 2105.0078472847467
+      },
+      {
+        "case_idx": 44,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.1844482421875,
+        "max_in_radius_15": 0.257568359375,
+        "nearest_peak_dist": 424.36798366819335,
+        "dist_to_entry": 337.6457484975624
+      },
+      {
+        "case_idx": 45,
+        "fate": "REMOVED_BY_TOP10_CAP",
+        "val_at_tip": 0.33056640625,
+        "max_in_radius_15": 0.379150390625,
+        "nearest_peak_dist": 183.4522780237672,
+        "dist_to_entry": 666.2228458382997
+      },
+      {
+        "case_idx": 46,
+        "fate": "REMOVED_BY_TOP10_CAP",
+        "val_at_tip": 0.327880859375,
+        "max_in_radius_15": 0.363525390625,
+        "nearest_peak_dist": 824.0156466788047,
+        "dist_to_entry": 1005.8835155657844
+      },
+      {
+        "case_idx": 47,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.22900390625,
+        "max_in_radius_15": 0.2305908203125,
+        "nearest_peak_dist": 912.0575506065052,
+        "dist_to_entry": 1356.404947760247
+      },
+      {
+        "case_idx": 48,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.34130859375,
+        "max_in_radius_15": 0.36669921875,
+        "nearest_peak_dist": 727.3814525972368,
+        "dist_to_entry": 1724.827729924636
+      },
+      {
+        "case_idx": 49,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.2310791015625,
+        "max_in_radius_15": 0.3017578125,
+        "nearest_peak_dist": 306.2457611893183,
+        "dist_to_entry": 585.9016654790569
+      },
+      {
+        "case_idx": 50,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.305419921875,
+        "max_in_radius_15": 0.32568359375,
+        "nearest_peak_dist": 276.90719871549817,
+        "dist_to_entry": 1234.3872083909475
+      }
+    ],
+    "exp": [
+      {
+        "case_idx": 26,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.2978515625,
+        "max_in_radius_15": 0.33642578125,
+        "nearest_peak_dist": 129.0717746319469,
+        "dist_to_entry": 876.0653064388583
+      },
+      {
+        "case_idx": 27,
+        "fate": "DISPLACED_NEARBY_15_TO_50PX",
+        "val_at_tip": 0.469970703125,
+        "max_in_radius_15": 0.5234375,
+        "nearest_peak_dist": 23.55427322392545,
+        "dist_to_entry": 711.7690083887958
+      },
+      {
+        "case_idx": 28,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.382568359375,
+        "max_in_radius_15": 0.442626953125,
+        "nearest_peak_dist": 602.2939759237946,
+        "dist_to_entry": 234.80372193706978
+      },
+      {
+        "case_idx": 29,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.40087890625,
+        "max_in_radius_15": 0.50048828125,
+        "nearest_peak_dist": 70.64079275550411,
+        "dist_to_entry": 975.4572988482555
+      },
+      {
+        "case_idx": 30,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.494873046875,
+        "max_in_radius_15": 0.50927734375,
+        "nearest_peak_dist": 56.38834077171493,
+        "dist_to_entry": 1521.3075179028956
+      },
+      {
+        "case_idx": 31,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.283203125,
+        "max_in_radius_15": 0.3056640625,
+        "nearest_peak_dist": 125.2565076515204,
+        "dist_to_entry": 570.2400761689752
+      },
+      {
+        "case_idx": 32,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.54248046875,
+        "max_in_radius_15": 0.544921875,
+        "nearest_peak_dist": 125.6149274162392,
+        "dist_to_entry": 1171.5663545893497
+      },
+      {
+        "case_idx": 33,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.388671875,
+        "max_in_radius_15": 0.4169921875,
+        "nearest_peak_dist": 187.79314789520103,
+        "dist_to_entry": 434.79713237618336
+      },
+      {
+        "case_idx": 34,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.339111328125,
+        "max_in_radius_15": 0.404296875,
+        "nearest_peak_dist": 142.59599406528147,
+        "dist_to_entry": 1338.430779857759
+      },
+      {
+        "case_idx": 35,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.407470703125,
+        "max_in_radius_15": 0.435791015625,
+        "nearest_peak_dist": 78.02537264089027,
+        "dist_to_entry": 1443.2625886833598
+      },
+      {
+        "case_idx": 36,
+        "fate": "DISPLACED_NEARBY_15_TO_50PX",
+        "val_at_tip": 0.296142578125,
+        "max_in_radius_15": 0.378662109375,
+        "nearest_peak_dist": 49.275659246351644,
+        "dist_to_entry": 1569.6114391933845
+      },
+      {
+        "case_idx": 37,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.5263671875,
+        "max_in_radius_15": 0.5478515625,
+        "nearest_peak_dist": 17.627616937176168,
+        "dist_to_entry": 1562.3134807096226
+      },
+      {
+        "case_idx": 38,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.22265625,
+        "max_in_radius_15": 0.224365234375,
+        "nearest_peak_dist": 123.62619783911595,
+        "dist_to_entry": 363.3522632728185
+      },
+      {
+        "case_idx": 39,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.343017578125,
+        "max_in_radius_15": 0.396240234375,
+        "nearest_peak_dist": 133.01003631808848,
+        "dist_to_entry": 769.7506927826582
+      },
+      {
+        "case_idx": 40,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.53662109375,
+        "max_in_radius_15": 0.55029296875,
+        "nearest_peak_dist": 16.783325230612647,
+        "dist_to_entry": 1318.7845787104852
+      },
+      {
+        "case_idx": 41,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.302490234375,
+        "max_in_radius_15": 0.415771484375,
+        "nearest_peak_dist": 36.58905737252984,
+        "dist_to_entry": 1407.3980902927042
+      },
+      {
+        "case_idx": 42,
+        "fate": "DISPLACED_NEARBY_15_TO_50PX",
+        "val_at_tip": 0.3720703125,
+        "max_in_radius_15": 0.482177734375,
+        "nearest_peak_dist": 16.662544147554584,
+        "dist_to_entry": 885.93784330982
+      },
+      {
+        "case_idx": 43,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.332763671875,
+        "max_in_radius_15": 0.3828125,
+        "nearest_peak_dist": 138.3498935812446,
+        "dist_to_entry": 1525.989511803421
+      },
+      {
+        "case_idx": 44,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.177978515625,
+        "max_in_radius_15": 0.2325439453125,
+        "nearest_peak_dist": 203.70025060026404,
+        "dist_to_entry": 291.3325366017269
+      },
+      {
+        "case_idx": 45,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.490966796875,
+        "max_in_radius_15": 0.5205078125,
+        "nearest_peak_dist": 22.274009256602127,
+        "dist_to_entry": 505.5150581045667
+      },
+      {
+        "case_idx": 46,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.5546875,
+        "max_in_radius_15": 0.56640625,
+        "nearest_peak_dist": 62.46364060962583,
+        "dist_to_entry": 1261.0955123452638
+      },
+      {
+        "case_idx": 47,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.2193603515625,
+        "max_in_radius_15": 0.220458984375,
+        "nearest_peak_dist": 468.58284319811065,
+        "dist_to_entry": 1220.07465813883
+      },
+      {
+        "case_idx": 48,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.5419921875,
+        "max_in_radius_15": 0.54833984375,
+        "nearest_peak_dist": 187.92896699343106,
+        "dist_to_entry": 1748.1234859847332
+      },
+      {
+        "case_idx": 49,
+        "fate": "DISPLACED_DISTANT_GT_50PX",
+        "val_at_tip": 0.207275390625,
+        "max_in_radius_15": 0.264404296875,
+        "nearest_peak_dist": 199.86840402678737,
+        "dist_to_entry": 623.2638906439483
+      },
+      {
+        "case_idx": 50,
+        "fate": "SUPPRESSED_BY_NMS",
+        "val_at_tip": 0.337646484375,
+        "max_in_radius_15": 0.37353515625,
+        "nearest_peak_dist": 47.79713118966077,
+        "dist_to_entry": 931.2181160965677
+      }
+    ]
+  },
+  "froc_sweeps": {
+    "ctrl_tip": [
+      {
+        "threshold": 0.05,
+        "neg_false_peaks_total": 5442,
+        "neg_fp_per_study": 7.4958677685950414,
+        "matched_248": 24,
+        "success_248": 0.0967741935483871,
+        "matched_25": 3,
+        "success_25": 0.12
+      },
+      {
+        "threshold": 0.1,
+        "neg_false_peaks_total": 5442,
+        "neg_fp_per_study": 7.4958677685950414,
+        "matched_248": 24,
+        "success_248": 0.0967741935483871,
+        "matched_25": 3,
+        "success_25": 0.12
+      },
+      {
+        "threshold": 0.15,
+        "neg_false_peaks_total": 5442,
+        "neg_fp_per_study": 7.4958677685950414,
+        "matched_248": 24,
+        "success_248": 0.0967741935483871,
+        "matched_25": 3,
+        "success_25": 0.12
+      },
+      {
+        "threshold": 0.2,
+        "neg_false_peaks_total": 5392,
+        "neg_fp_per_study": 7.426997245179064,
+        "matched_248": 24,
+        "success_248": 0.0967741935483871,
+        "matched_25": 3,
+        "success_25": 0.12
+      },
+      {
+        "threshold": 0.25,
+        "neg_false_peaks_total": 4127,
+        "neg_fp_per_study": 5.684573002754821,
+        "matched_248": 24,
+        "success_248": 0.0967741935483871,
+        "matched_25": 3,
+        "success_25": 0.12
+      },
+      {
+        "threshold": 0.3,
+        "neg_false_peaks_total": 2182,
+        "neg_fp_per_study": 3.005509641873278,
+        "matched_248": 23,
+        "success_248": 0.09274193548387097,
+        "matched_25": 3,
+        "success_25": 0.12
+      },
+      {
+        "threshold": 0.35,
+        "neg_false_peaks_total": 573,
+        "neg_fp_per_study": 0.7892561983471075,
+        "matched_248": 18,
+        "success_248": 0.07258064516129033,
+        "matched_25": 3,
+        "success_25": 0.12
+      },
+      {
+        "threshold": 0.4,
+        "neg_false_peaks_total": 14,
+        "neg_fp_per_study": 0.01928374655647383,
+        "matched_248": 1,
+        "success_248": 0.004032258064516129,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.5,
+        "neg_false_peaks_total": 3,
+        "neg_fp_per_study": 0.004132231404958678,
+        "matched_248": 0,
+        "success_248": 0.0,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.6,
+        "neg_false_peaks_total": 3,
+        "neg_fp_per_study": 0.004132231404958678,
+        "matched_248": 0,
+        "success_248": 0.0,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.7,
+        "neg_false_peaks_total": 3,
+        "neg_fp_per_study": 0.004132231404958678,
+        "matched_248": 0,
+        "success_248": 0.0,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.8,
+        "neg_false_peaks_total": 2,
+        "neg_fp_per_study": 0.0027548209366391185,
+        "matched_248": 0,
+        "success_248": 0.0,
+        "matched_25": 0,
+        "success_25": 0.0
+      }
+    ],
+    "exp_tip": [
+      {
+        "threshold": 0.05,
+        "neg_false_peaks_total": 6329,
+        "neg_fp_per_study": 8.717630853994491,
+        "matched_248": 24,
+        "success_248": 0.0967741935483871,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.1,
+        "neg_false_peaks_total": 6329,
+        "neg_fp_per_study": 8.717630853994491,
+        "matched_248": 24,
+        "success_248": 0.0967741935483871,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.15,
+        "neg_false_peaks_total": 6329,
+        "neg_fp_per_study": 8.717630853994491,
+        "matched_248": 24,
+        "success_248": 0.0967741935483871,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.2,
+        "neg_false_peaks_total": 6326,
+        "neg_fp_per_study": 8.713498622589531,
+        "matched_248": 24,
+        "success_248": 0.0967741935483871,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.25,
+        "neg_false_peaks_total": 2424,
+        "neg_fp_per_study": 3.3388429752066116,
+        "matched_248": 24,
+        "success_248": 0.0967741935483871,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.3,
+        "neg_false_peaks_total": 1056,
+        "neg_fp_per_study": 1.4545454545454546,
+        "matched_248": 23,
+        "success_248": 0.09274193548387097,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.35,
+        "neg_false_peaks_total": 303,
+        "neg_fp_per_study": 0.41735537190082644,
+        "matched_248": 21,
+        "success_248": 0.0846774193548387,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.4,
+        "neg_false_peaks_total": 123,
+        "neg_fp_per_study": 0.16942148760330578,
+        "matched_248": 20,
+        "success_248": 0.08064516129032258,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.5,
+        "neg_false_peaks_total": 23,
+        "neg_fp_per_study": 0.03168044077134986,
+        "matched_248": 18,
+        "success_248": 0.07258064516129033,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.6,
+        "neg_false_peaks_total": 2,
+        "neg_fp_per_study": 0.0027548209366391185,
+        "matched_248": 0,
+        "success_248": 0.0,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.7,
+        "neg_false_peaks_total": 1,
+        "neg_fp_per_study": 0.0013774104683195593,
+        "matched_248": 0,
+        "success_248": 0.0,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.8,
+        "neg_false_peaks_total": 1,
+        "neg_fp_per_study": 0.0013774104683195593,
+        "matched_248": 0,
+        "success_248": 0.0,
+        "matched_25": 0,
+        "success_25": 0.0
+      }
+    ],
+    "ctrl_skel": [
+      {
+        "threshold": 0.1,
+        "neg_false_cands_total": 8,
+        "neg_fp_per_study": 0.011019283746556474,
+        "matched_248": 0,
+        "success_248": 0.0,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.2,
+        "neg_false_cands_total": 1745,
+        "neg_fp_per_study": 2.4035812672176307,
+        "matched_248": 14,
+        "success_248": 0.056451612903225805,
+        "matched_25": 3,
+        "success_25": 0.12
+      },
+      {
+        "threshold": 0.3,
+        "neg_false_cands_total": 562,
+        "neg_fp_per_study": 0.7741046831955923,
+        "matched_248": 35,
+        "success_248": 0.14112903225806453,
+        "matched_25": 8,
+        "success_25": 0.32
+      },
+      {
+        "threshold": 0.4,
+        "neg_false_cands_total": 381,
+        "neg_fp_per_study": 0.5247933884297521,
+        "matched_248": 41,
+        "success_248": 0.16532258064516128,
+        "matched_25": 6,
+        "success_25": 0.24
+      },
+      {
+        "threshold": 0.5,
+        "neg_false_cands_total": 292,
+        "neg_fp_per_study": 0.4022038567493113,
+        "matched_248": 44,
+        "success_248": 0.1774193548387097,
+        "matched_25": 5,
+        "success_25": 0.2
+      },
+      {
+        "threshold": 0.6,
+        "neg_false_cands_total": 250,
+        "neg_fp_per_study": 0.3443526170798898,
+        "matched_248": 49,
+        "success_248": 0.1975806451612903,
+        "matched_25": 3,
+        "success_25": 0.12
+      }
+    ],
+    "exp_skel": [
+      {
+        "threshold": 0.1,
+        "neg_false_cands_total": 8,
+        "neg_fp_per_study": 0.011019283746556474,
+        "matched_248": 0,
+        "success_248": 0.0,
+        "matched_25": 0,
+        "success_25": 0.0
+      },
+      {
+        "threshold": 0.2,
+        "neg_false_cands_total": 1606,
+        "neg_fp_per_study": 2.212121212121212,
+        "matched_248": 14,
+        "success_248": 0.056451612903225805,
+        "matched_25": 2,
+        "success_25": 0.08
+      },
+      {
+        "threshold": 0.3,
+        "neg_false_cands_total": 542,
+        "neg_fp_per_study": 0.7465564738292011,
+        "matched_248": 24,
+        "success_248": 0.0967741935483871,
+        "matched_25": 6,
+        "success_25": 0.24
+      },
+      {
+        "threshold": 0.4,
+        "neg_false_cands_total": 395,
+        "neg_fp_per_study": 0.5440771349862259,
+        "matched_248": 27,
+        "success_248": 0.10887096774193548,
+        "matched_25": 6,
+        "success_25": 0.24
+      },
+      {
+        "threshold": 0.5,
+        "neg_false_cands_total": 292,
+        "neg_fp_per_study": 0.4022038567493113,
+        "matched_248": 34,
+        "success_248": 0.13709677419354838,
+        "matched_25": 5,
+        "success_25": 0.2
+      },
+      {
+        "threshold": 0.6,
+        "neg_false_cands_total": 251,
+        "neg_fp_per_study": 0.34573002754820936,
+        "matched_248": 36,
+        "success_248": 0.14516129032258066,
+        "matched_25": 6,
+        "success_25": 0.24
+      }
+    ]
+  }
+}

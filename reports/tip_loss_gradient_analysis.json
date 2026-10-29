@@ -1,0 +1,77 @@
+{
+  "positive_zones": {
+    "tip_core": {
+      "total_pixels_across_val": 99,
+      "mean_pixels_per_study": 0.5,
+      "prob_mean": 0.4316,
+      "prob_median": 0.475,
+      "prob_p95": 0.55,
+      "loss_mean": 78.8016,
+      "loss_total_sum": 7801.36,
+      "grad_mean": -50.7396,
+      "grad_total_sum": -5023.22
+    },
+    "tip_periphery": {
+      "total_pixels_across_val": 1193,
+      "mean_pixels_per_study": 6.4,
+      "prob_mean": 0.3742,
+      "prob_median": 0.374,
+      "prob_p95": 0.5335,
+      "loss_mean": 26.9612,
+      "loss_total_sum": 32164.68,
+      "grad_mean": -16.1798,
+      "grad_total_sum": -19302.45
+    },
+    "catheter_shaft": {
+      "total_pixels_across_val": 169443,
+      "mean_pixels_per_study": 915.9,
+      "prob_mean": 0.3639,
+      "prob_median": 0.3665,
+      "prob_p95": 0.5335,
+      "loss_mean": 0.4677,
+      "loss_total_sum": 79255.35,
+      "grad_mean": 0.3635,
+      "grad_total_sum": 61599.28
+    },
+    "false_peaks_off_catheter": {
+      "total_pixels_across_val": 1307701,
+      "mean_pixels_per_study": 7068.7,
+      "prob_mean": 0.3623,
+      "prob_median": 0.339,
+      "prob_p95": 0.4914,
+      "loss_mean": 0.459,
+      "loss_total_sum": 600261.02,
+      "grad_mean": 0.3618,
+      "grad_total_sum": 473121.96
+    },
+    "low_background": {
+      "total_pixels_across_val": 47018204,
+      "mean_pixels_per_study": 254152.5,
+      "prob_mean": 0.2158,
+      "prob_median": 0.2172,
+      "prob_p95": 0.244,
+      "loss_mean": 0.2434,
+      "loss_total_sum": 11444283.96,
+      "grad_mean": 0.2158,
+      "grad_total_sum": 10148561.16
+    }
+  },
+  "negative_zones": {
+    "false_peaks_ge_030": {
+      "total_pixels_across_8_studies": 44596,
+      "mean_pixels_per_negative_study": 5574.5,
+      "prob_mean": 0.3485,
+      "loss_mean": 0.436,
+      "grad_mean": 0.3485
+    },
+    "low_background": {
+      "total_pixels_across_8_studies": 2052556,
+      "mean_pixels_per_negative_study": 256569.5,
+      "prob_mean": 0.2157,
+      "loss_mean": 0.2433,
+      "grad_mean": 0.2157
+    }
+  },
+  "total_pos_studies": 185,
+  "total_neg_studies": 8
+}

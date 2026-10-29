@@ -1,0 +1,56 @@
+[
+  {
+    "run_name": "pilot_coarse_repaired",
+    "checkpoint": "best_coarse.pt",
+    "step": 1000,
+    "size_bytes": 25596008,
+    "sha256": "13aa7eb75e869c94a92a0ec43600eacb5f5f319645b083635ae281d8b0af6869",
+    "effective_pos_weight": 50.0,
+    "config_pos_weight": 50.0
+  },
+  {
+    "run_name": "pilot_coarse_repaired",
+    "checkpoint": "final_coarse.pt",
+    "step": 1000,
+    "size_bytes": 25596287,
+    "sha256": "caaaa1a3a616d6c37d323336b82328a1066cdcea325b3f93079c89026017d12b",
+    "effective_pos_weight": 50.0,
+    "config_pos_weight": 50.0
+  },
+  {
+    "run_name": "coarse_posweight_10",
+    "checkpoint": "best_coarse.pt",
+    "step": 1000,
+    "size_bytes": 25596008,
+    "sha256": "31082cf3a43f6a89e255f375e58182a87aeb2e919f16d1717fe83942598bf5dc",
+    "effective_pos_weight": 10.0,
+    "config_pos_weight": 10.0
+  },
+  {
+    "run_name": "coarse_posweight_10",
+    "checkpoint": "final_coarse.pt",
+    "step": 1000,
+    "size_bytes": 25596287,
+    "sha256": "f90f3da81e0d3e3e346187eb5b2c4c4e89c952547b140826a34554c0d1cb9b07",
+    "effective_pos_weight": 10.0,
+    "config_pos_weight": 10.0
+  },
+  {
+    "run_name": "coarse_posweight_1",
+    "checkpoint": "best_coarse.pt",
+    "step": 1000,
+    "size_bytes": 25596008,
+    "sha256": "06b3c61263fdef1e34d6cbbff2332ad8049119e0f9b354fdeed18b04d7da73f7",
+    "effective_pos_weight": 1.0,
+    "config_pos_weight": 1.0
+  },
+  {
+    "run_name": "coarse_posweight_1",
+    "checkpoint": "final_coarse.pt",
+    "step": 1000,
+    "size_bytes": 25596287,
+    "sha256": "5e148791707b58b8006fd1385359dcf3b872db051d8b2da4f317543cad893de5",
+    "effective_pos_weight": 1.0,
+    "config_pos_weight": 1.0
+  }
+]

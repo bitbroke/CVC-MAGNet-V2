@@ -1,0 +1,31 @@
+{
+  "audit_type": "Read-only verification of saved S4 artifacts; no new training",
+  "hard_pool_size": 99,
+  "training_negative_pool_size": 396,
+  "hard_pool_is_strict_subset": true,
+  "validation_overlap": {"study": 0, "patient": 0, "recorded_duplicate_group": 0},
+  "checkpoint_hashes_match_saved_evaluations": true,
+  "frozen_s3_sha256": "6520e32629e5ea0cf710682790495241f7fc79266b3ee500a324f1323338a53a",
+  "control": {"successful_updates": 1000, "attempts": 1002, "skipped_attempts": [138,458], "attempt_positive_draws": 3006, "hard_negative_draws": 239, "total_negative_draws": 1002, "dice": 0.433004043062246, "precision": 0.3102378267897352, "recall": 0.7463773306754163, "negative_false_area_pct": 0.12451789594433778, "negative_studies_with_foreground": 7, "missed_paths_10px": 9},
+  "experiment": {"successful_updates": 1000, "attempts": 1001, "skipped_attempts": [509], "attempt_positive_draws": 3003, "hard_negative_draws": 602, "total_negative_draws": 1001, "dice": 0.43625796462748606, "precision": 0.3135031193264886, "recall": 0.7423567579573261, "negative_false_area_pct": 0.10216144949027997, "negative_studies_with_foreground": 6, "missed_paths_10px": 9},
+  "positive_attempt_prefix_and_augmentation_equal": true,
+  "successful_positive_sequences_equal": false,
+  "successful_positive_draws_each": 3000,
+  "negative_area_patient_bootstrap": {
+    "negative_studies": 8,
+    "negative_patients": 7,
+    "replicates": 10000,
+    "seed": 42,
+    "statistic": "Mean study false-area percentage difference, experiment minus control; resample patient clusters",
+    "percentile_95ci_percentage_points": [-0.06533920188673364,0.013970689597808074],
+    "interpretation": "Descriptive only with seven negative patients; interval spans zero. Positive-study bootstrap does not establish significant negative-area reduction."
+  },
+  "qualifications": [
+    "Recall point estimate decreases about 0.40 percentage points versus control. A confidence interval spanning zero does not prove noninferiority.",
+    "Full validation cohort has 136 unique patients; 132 refers to positive-study patients only.",
+    "21% reduction describes mean native false-pixel count; reduction in mean image-area percentage is about 18%.",
+    "Hard pool is scored by the older S2 model; this is a fixed S2-mined pool, not refreshed S3 mining.",
+    "Repeated development evaluation and one training seed do not establish external generalization."
+  ],
+  "recommended_next_step": "Preserve S4 results. Retain/retry the same effective batch and augmentation after AMP skips before advancing to the next batch. Verify successful-update parity, predefine coverage-loss tolerance, and then run a second matched seed from the same frozen S3 checkpoint and fixed hard pool."
+}

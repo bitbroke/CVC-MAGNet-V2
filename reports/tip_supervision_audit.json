@@ -1,0 +1,27 @@
+{
+  "total_catheter_instances": 17999,
+  "tip_state_distribution": {
+    "assessable": 17876,
+    "uncertain": 123
+  },
+  "tip_label_source_distribution": {
+    "heuristic_border_distance": 17773,
+    "unassessable_crop": 123,
+    "diagnostic_packet_awaiting_audit": 51,
+    "clinical_reviewed_engineering_geometric_inspection_unattested": 50,
+    "clinical_reviewed_interactive_expert_endpoint_review": 2
+  },
+  "review_status_distribution": {
+    "unreviewed_heuristic": 17773,
+    "unassessable": 123,
+    "reviewed": 52,
+    "unreviewed_automated_pipeline": 51
+  },
+  "total_studies_audited": 9095,
+  "positive_studies": 9095,
+  "negative_studies": 0,
+  "studies_with_valid_segmentation": 9095,
+  "studies_with_full_tip_supervision": 8972,
+  "positive_studies_completely_labelled_for_tips": 8972,
+  "positive_studies_with_unlabelled_or_uncertain_tips": 123
+}

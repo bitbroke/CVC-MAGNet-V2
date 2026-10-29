@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CVC Distal-Tip Visual Annotation Tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css?v=20261025">
+</head>
+<body>
+  <div id="app-container">
+    <!-- Top Navigation Bar -->
+    <header id="top-navbar">
+      <div class="nav-brand">
+        <div class="brand-logo">CVC</div>
+        <div class="brand-text">
+          <h1>Distal-Tip Visual Annotation Tool</h1>
+          <span class="sub-badge">v2.0 • Blinded Protocol</span>
+        </div>
+      </div>
+
+      <div class="queue-selector-box">
+        <label for="queue-select">Review Queue:</label>
+        <select id="queue-select">
+          <!-- Dynamically populated -->
+        </select>
+      </div>
+
+      <div class="reviewer-meta-box">
+        <label for="reviewer-input">Reviewer ID:</label>
+        <input type="text" id="reviewer-input" placeholder="e.g. Rad-Expert-1" value="engineering_provisional">
+      </div>
+
+      <div class="top-actions">
+        <button id="btn-prev-study" class="btn btn-secondary" title="Shortcut: [">◀ Prev</button>
+        <span id="study-index-indicator">0 / 0</span>
+        <button id="btn-next-study" class="btn btn-secondary" title="Shortcut: ]">Next ▶</button>
+        <button id="btn-save-review" class="btn btn-primary" title="Shortcut: Ctrl+S">
+          <span class="save-icon">💾</span> Save Review
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <div id="workspace">
+      <!-- Left Sidebar: Studies List -->
+      <aside id="sidebar-studies">
+        <div class="sidebar-header">
+          <h2>Studies in Queue</h2>
+          <div class="filter-controls">
+            <input type="text" id="study-search" placeholder="Search Study/Patient...">
+            <div class="status-filters">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="completed">Done</button>
+              <button class="filter-btn" data-filter="pending">Pending</button>
+            </div>
+          </div>
+        </div>
+        <div id="study-list-scroll">
+          <ul id="study-list">
+            <!-- Dynamically populated -->
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Center: High-Resolution Viewport Canvas -->
+      <main id="viewport-container">
+        <!-- Canvas Toolbar Overlay -->
+        <div id="canvas-toolbar">
+          <div class="tool-group">
+            <button id="btn-mark-tip" class="tool-btn active" title="Click image to mark selected CVC tip">Mark CVC Tip</button>
+            <button id="btn-mark-carina" class="tool-btn" title="Click image to mark carina">Mark Carina</button>
+          </div>
+          <div class="tool-divider"></div>
+          <div class="tool-group">
+            <button id="btn-zoom-in" class="tool-btn" title="Zoom In">+</button>
+            <button id="btn-zoom-out" class="tool-btn" title="Zoom Out">−</button>
+            <button id="btn-zoom-reset" class="tool-btn" title="Reset (R)">Reset</button>
+            <button id="btn-zoom-100" class="tool-btn" title="100% Native Pixels">1:1</button>
+          </div>
+          <div class="tool-divider"></div>
+          <div class="tool-group">
+            <label class="toggle-control" title="Toggle Invert Image Contrast">
+              <input type="checkbox" id="toggle-invert">
+              <span>Invert</span>
+            </label>
+            <label class="toggle-control" title="Toggle Polylines Overlay">
+              <input type="checkbox" id="toggle-polylines" checked>
+              <span>Polylines</span>
+            </label>
+          </div>
+          <div class="tool-divider"></div>
+          <div class="viewport-info">
+            <span id="cursor-native-coords">X: --- , Y: ---</span>
+            <span id="zoom-level-badge">100%</span>
+          </div>
+        </div>
+
+        <!-- Interactive Canvas Stage -->
+        <div id="canvas-stage">
+          <canvas id="main-canvas"></canvas>
+          <div id="canvas-loading-spinner" class="spinner-overlay hidden">
+            <div class="spinner"></div>
+            <span>Loading Native Radiograph...</span>
+          </div>
+        </div>
+
+        <!-- Instructions Banner -->
+        <div id="canvas-guidance">
+          <span id="canvas-guidance-text">💡 Mark the selected CVC tip. Use “Mark Carina” to mark the carina. Drag to pan; scroll to zoom. No auto-snapping.</span>
+        </div>
+      </main>
+
+      <!-- Right Inspection & Review Pane -->
+      <aside id="inspector-pane">
+        <div class="inspector-header">
+          <div class="study-meta-card">
+            <div class="meta-row">
+              <span class="meta-label">Study UID:</span>
+              <span id="current-study-uid" class="meta-val mono" title="Click to copy">---</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Patient ID:</span>
+              <span id="current-patient-id" class="meta-val mono">---</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Image Size:</span>
+              <span id="current-image-dims" class="meta-val">--- × --- px</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catheter Selection Cards -->
+        <div class="section-title-bar">
+          <h3>Inventory-Listed CVCs (<span id="catheter-count-badge">0</span>)</h3>
+          <span class="subtitle-hint">Click a catheter to inspect & review</span>
+        </div>
+
+        <div id="catheter-cards-container">
+          <!-- Dynamically populated catheter cards -->
+        </div>
+
+        <div id="carina-review-box" class="card review-box">
+          <div class="card-title"><div class="badge-dot carina-dot"></div><h4>Carina Landmark</h4></div>
+          <label class="field-label" for="carina-state">Visibility / review state</label>
+          <select id="carina-state" class="review-select">
+            <option value="">Choose state…</option>
+            <option value="visible">Visible — mark point</option>
+            <option value="uncertain">Uncertain / obscured</option>
+            <option value="not_visible">Not visible</option>
+          </select>
+          <div class="tip-coord-box">
+            <div class="coord-label-row"><label class="field-label">Carina point (native pixels)</label><button id="btn-clear-carina" class="btn-xs btn-outline">Clear</button></div>
+            <div class="coord-display-field"><span id="carina-coords" class="mono">No coordinate marked</span></div>
+          </div>
+          <label for="carina-notes" class="field-label">Carina notes</label>
+          <textarea id="carina-notes" placeholder="Visibility, uncertainty, or landmark notes"></textarea>
+        </div>
+
+        <!-- Selected Catheter Review Control Box -->
+        <div id="catheter-review-box" class="card review-box">
+          <div class="card-title">
+            <div class="badge-dot" id="active-cath-color-dot"></div>
+            <h4 id="active-cath-title">Select a CVC Catheter</h4>
+          </div>
+
+          <div class="state-selector-group">
+            <label class="field-label">Distal-Tip Review State:</label>
+            <div class="radio-pill-group">
+              <button class="pill-btn" data-state="assessable" id="pill-assessable" title="Key: A">
+                <span class="dot green"></span> Assessable
+              </button>
+              <button class="pill-btn" data-state="uncertain" id="pill-uncertain" title="Key: U">
+                <span class="dot amber"></span> Uncertain
+              </button>
+              <button class="pill-btn" data-state="outside_image" id="pill-outside" title="Key: O">
+                <span class="dot blue"></span> Outside Image
+              </button>
+              <button class="pill-btn" data-state="annotation_incorrect" id="pill-incorrect" title="Key: I">
+                <span class="dot rose"></span> Incorrect
+              </button>
+            </div>
+          </div>
+
+          <div class="state-selector-group">
+            <label class="field-label" for="placement-label">Placement assessment for this CVC</label>
+            <select id="placement-label" class="review-select">
+              <option value="">Choose label…</option>
+              <option value="normal">Normal</option>
+              <option value="borderline">Borderline</option>
+              <option value="malpositioned">Malpositioned</option>
+              <option value="uncertain">Uncertain</option>
+            </select>
+            <p class="empty-hint">Reviewer assessment only; source dataset labels are not pre-filled here.</p>
+          </div>
+
+          <!-- Distal Tip Coordinate Display -->
+          <div class="tip-coord-box">
+            <div class="coord-label-row">
+              <label class="field-label">Marked Distal Tip (Native):</label>
+              <button id="btn-clear-tip" class="btn-xs btn-outline" title="Key: C">Clear Coordinate</button>
+            </div>
+            <div class="coord-display-field">
+              <span id="marked-tip-coords" class="mono">No coordinate marked</span>
+            </div>
+          </div>
+
+          <!-- Notes for this catheter -->
+          <div class="notes-box">
+            <label for="cath-notes-input" class="field-label">Catheter Notes:</label>
+            <textarea id="cath-notes-input" placeholder="e.g. Tip terminates in cavoatrial junction; high confidence."></textarea>
+          </div>
+        </div>
+
+        <!-- Uncataloged Catheters Section -->
+        <div class="section-title-bar mt-4">
+          <h3>Uncataloged Visible CVCs</h3>
+          <button id="btn-add-uncataloged" class="btn-xs btn-secondary">+ Add Uncataloged</button>
+        </div>
+        <div id="uncataloged-container">
+          <p class="empty-hint" id="uncataloged-empty-hint">No extra uncataloged catheters added.</p>
+          <ul id="uncataloged-list"></ul>
+        </div>
+
+        <!-- Study Level Review Notes & Attestation -->
+        <div class="card study-review-footer mt-4">
+          <label for="study-notes-input" class="field-label">Study-Level Review Notes:</label>
+          <textarea id="study-notes-input" placeholder="General radiographic findings, patient rotation, dual lines, etc."></textarea>
+
+          <div class="study-completion-status">
+            <div class="status-indicator-row">
+              <span id="study-complete-icon">⚠️</span>
+              <span id="study-complete-text">Pending: Review all CVCs</span>
+            </div>
+            <button id="btn-attest-complete" class="btn btn-success w-100 mt-2">
+              Attest Complete & Save
+            </button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="app.js?v=20261025"></script>
+</body>
+</html>

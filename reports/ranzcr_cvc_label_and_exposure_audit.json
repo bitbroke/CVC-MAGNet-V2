@@ -1,0 +1,113 @@
+{
+  "dataset_summary": {
+    "total_studies": 30083,
+    "total_unique_patients": 3255,
+    "patients_with_1_study": 397,
+    "patients_with_multi_studies": 2858,
+    "max_studies_single_patient": 172,
+    "duplicate_groups_gt1": 2857,
+    "images_in_duplicate_groups": 29687,
+    "missing_placement_labels": 0,
+    "missing_patient_ids": 0
+  },
+  "placement_label_counts": {
+    "cvc_normal": 21324,
+    "cvc_borderline": 8460,
+    "cvc_abnormal": 3195,
+    "any_cvc_positive": 29333,
+    "no_cvc_reported": 750,
+    "multi_label_positive_count": 3575,
+    "multi_label_percentage": 12.19
+  },
+  "placement_label_combinations": {
+    "Normal": 18059,
+    "Borderline": 5543,
+    "Normal+Borderline": 2536,
+    "Abnormal": 2156,
+    "None": 750,
+    "Normal+Abnormal": 658,
+    "Borderline+Abnormal": 310,
+    "Normal+Borderline+Abnormal": 71
+  },
+  "annotated_cvc_polylines": {
+    "total_cvc_traces_in_annotations_csv": 11629,
+    "cvc_trace_label_counts": {
+      "CVC - Normal": 7437,
+      "CVC - Borderline": 2986,
+      "CVC - Abnormal": 1206
+    },
+    "studies_with_0_traces": 21230,
+    "studies_with_1_trace": 6364,
+    "studies_with_2plus_traces": 2489,
+    "studies_with_any_traces": 8853,
+    "trace_count_distribution": {
+      "0": 21230,
+      "1": 6364,
+      "2": 2218,
+      "3": 255,
+      "4": 16
+    },
+    "multi_line_studies_count": 2489,
+    "multi_line_discordant_placement_studies": 1338,
+    "discordant_percentage_in_multi_line": 53.76
+  },
+  "crosstab_label_vs_trace": {
+    "any_cvc_label_0_neg": {
+      "0 traces": 750,
+      "1 trace": 0,
+      "2+ traces": 0
+    },
+    "any_cvc_label_1_pos": {
+      "0 traces": 20480,
+      "1 trace": 6364,
+      "2+ traces": 2489
+    }
+  },
+  "combo_vs_trace": {
+    "0 traces": {
+      "Abnormal": 1405,
+      "Borderline": 3924,
+      "Borderline+Abnormal": 185,
+      "None": 750,
+      "Normal": 12925,
+      "Normal+Abnormal": 409,
+      "Normal+Borderline": 1592,
+      "Normal+Borderline+Abnormal": 40
+    },
+    "1 trace": {
+      "Abnormal": 707,
+      "Borderline": 1423,
+      "Borderline+Abnormal": 0,
+      "None": 0,
+      "Normal": 4224,
+      "Normal+Abnormal": 1,
+      "Normal+Borderline": 9,
+      "Normal+Borderline+Abnormal": 0
+    },
+    "2+ traces": {
+      "Abnormal": 44,
+      "Borderline": 196,
+      "Borderline+Abnormal": 125,
+      "None": 0,
+      "Normal": 910,
+      "Normal+Abnormal": 248,
+      "Normal+Borderline": 935,
+      "Normal+Borderline+Abnormal": 31
+    }
+  },
+  "prior_exposure_audit": {
+    "partitions": {
+      "dev_pilot_val": 193,
+      "dev_pilot_train": 796,
+      "dev_full_train": 15450,
+      "previously_exposed_held_out": 0,
+      "gold_clean_manifest_2974": 2974
+    },
+    "total_unique_exposed_studies": 15643,
+    "total_unique_unexposed_studies": 14440,
+    "total_unique_exposed_patients": 1954,
+    "total_unique_unexposed_patients": 1301,
+    "unexposed_cvc_positive_studies": 14106,
+    "unexposed_cvc_negative_studies": 334
+  }
+}

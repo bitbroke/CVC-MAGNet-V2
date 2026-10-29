@@ -1,0 +1,587 @@
+{
+  "step1_repaired_logit_gradients": {
+    "active_positives": {
+      "group_name": "Active Positives (tip_mask=1)",
+      "sample_count": 30,
+      "mean_seg_loss": 2.2174,
+      "mean_tip_loss": 0.2673,
+      "zones": {
+        "tip_core": {
+          "mean_px_per_study": 10.4,
+          "mean_prob": 0.4308,
+          "median_prob": 0.4462,
+          "mean_effective_grad_per_px": -0.00010335566898507674,
+          "total_effective_grad_per_study": -0.001071453768478629
+        },
+        "tip_periphery": {
+          "mean_px_per_study": 129.4,
+          "mean_prob": 0.3782,
+          "median_prob": 0.3769,
+          "mean_effective_grad_per_px": -3.2701355880028033e-05,
+          "total_effective_grad_per_study": -0.004231555450875627
+        },
+        "catheter_shaft": {
+          "mean_px_per_study": 845.2,
+          "mean_prob": 0.3865,
+          "median_prob": 0.3965,
+          "mean_effective_grad_per_px": 7.660229202629589e-07,
+          "total_effective_grad_per_study": 0.0006474170381089107
+        },
+        "off_catheter_false_peaks": {
+          "mean_px_per_study": 6870.0,
+          "mean_prob": 0.3592,
+          "median_prob": 0.3364,
+          "mean_effective_grad_per_px": 7.134514413280612e-07,
+          "total_effective_grad_per_study": 0.0049014351836384916
+        },
+        "low_background": {
+          "mean_px_per_study": 254289.0,
+          "mean_prob": 0.2166,
+          "median_prob": 0.2182,
+          "mean_effective_grad_per_px": 4.3880222610634214e-07,
+          "total_effective_grad_per_study": 0.1115825939010965
+        }
+      }
+    },
+    "masked_positives": {
+      "group_name": "Masked Positives (tip_mask=0)",
+      "sample_count": 20,
+      "mean_seg_loss": 2.2418,
+      "mean_tip_loss": 0.0,
+      "zones": {
+        "tip_core": {
+          "mean_px_per_study": 0.0,
+          "mean_prob": 0.0,
+          "median_prob": 0.0,
+          "mean_effective_grad_per_px": 0.0,
+          "total_effective_grad_per_study": 0.0
+        },
+        "tip_periphery": {
+          "mean_px_per_study": 0.0,
+          "mean_prob": 0.0,
+          "median_prob": 0.0,
+          "mean_effective_grad_per_px": 0.0,
+          "total_effective_grad_per_study": 0.0
+        },
+        "catheter_shaft": {
+          "mean_px_per_study": 985.1,
+          "mean_prob": 0.3782,
+          "median_prob": 0.3779,
+          "mean_effective_grad_per_px": 0.0,
+          "total_effective_grad_per_study": 0.0
+        },
+        "off_catheter_false_peaks": {
+          "mean_px_per_study": 7556.0,
+          "mean_prob": 0.3665,
+          "median_prob": 0.3395,
+          "mean_effective_grad_per_px": 0.0,
+          "total_effective_grad_per_study": 0.0
+        },
+        "low_background": {
+          "mean_px_per_study": 253602.9,
+          "mean_prob": 0.2163,
+          "median_prob": 0.218,
+          "mean_effective_grad_per_px": 0.0,
+          "total_effective_grad_per_study": 0.0
+        }
+      }
+    },
+    "confirmed_negatives": {
+      "group_name": "Confirmed Negatives (tip_mask=1, empty heatmap)",
+      "sample_count": 30,
+      "mean_seg_loss": 2.1941,
+      "mean_tip_loss": 0.245,
+      "zones": {
+        "tip_core": {
+          "mean_px_per_study": 0.0,
+          "mean_prob": 0.0,
+          "median_prob": 0.0,
+          "mean_effective_grad_per_px": 0.0,
+          "total_effective_grad_per_study": 0.0
+        },
+        "tip_periphery": {
+          "mean_px_per_study": 0.0,
+          "mean_prob": 0.0,
+          "median_prob": 0.0,
+          "mean_effective_grad_per_px": 0.0,
+          "total_effective_grad_per_study": 0.0
+        },
+        "catheter_shaft": {
+          "mean_px_per_study": 0.0,
+          "mean_prob": 0.0,
+          "median_prob": 0.0,
+          "mean_effective_grad_per_px": 0.0,
+          "total_effective_grad_per_study": 0.0
+        },
+        "off_catheter_false_peaks": {
+          "mean_px_per_study": 4600.0,
+          "mean_prob": 0.3434,
+          "median_prob": 0.3249,
+          "mean_effective_grad_per_px": 6.967083107497274e-07,
+          "total_effective_grad_per_study": 0.0032048350058383876
+        },
+        "low_background": {
+          "mean_px_per_study": 257544.0,
+          "mean_prob": 0.2147,
+          "median_prob": 0.2162,
+          "mean_effective_grad_per_px": 4.361983119868758e-07,
+          "total_effective_grad_per_study": 0.11234027260229168
+        }
+      }
+    }
+  },
+  "step2_backbone_gradient_conflict": {
+    "global": {
+      "norm_seg": 21.55654899875814,
+      "norm_tip": 26.667038134328955,
+      "norm_ratio_tip_over_seg": 1.2370736213790634,
+      "dot_product": 193.8365820517065,
+      "cosine_similarity": 0.3371954654296604
+    },
+    "blocks": {
+      "conv1": {
+        "norm_seg": 10.916020248248048,
+        "norm_tip": 12.45526886156903,
+        "norm_ratio_tip_over_seg": 1.1410082226228944,
+        "dot_product": 29.296910339966416,
+        "cosine_similarity": 0.2154787178131742
+      },
+      "conv2": {
+        "norm_seg": 9.100982885657162,
+        "norm_tip": 6.656267190531265,
+        "norm_ratio_tip_over_seg": 0.7313789372158159,
+        "dot_product": -38.874674330465496,
+        "cosine_similarity": -0.6417231688133086
+      },
+      "conv3": {
+        "norm_seg": 4.701391920068703,
+        "norm_tip": 3.2331666363189844,
+        "norm_ratio_tip_over_seg": 0.6877041291787767,
+        "dot_product": -11.299120885785669,
+        "cosine_similarity": -0.7433444613826906
+      },
+      "conv4": {
+        "norm_seg": 3.830848256295426,
+        "norm_tip": 2.7729025631076367,
+        "norm_ratio_tip_over_seg": 0.7238351345686392,
+        "dot_product": -8.620186036569066,
+        "cosine_similarity": -0.8114973014674516
+      },
+      "ppm": {
+        "norm_seg": 2.4949444967614616,
+        "norm_tip": 1.9145312512023858,
+        "norm_ratio_tip_over_seg": 0.7673642654926891,
+        "dot_product": -4.312122877687216,
+        "cosine_similarity": -0.9027505870650028
+      },
+      "conv7": {
+        "norm_seg": 2.275452771529709,
+        "norm_tip": 1.6076755849056554,
+        "norm_ratio_tip_over_seg": 0.7065299728567296,
+        "dot_product": -2.682646924396977,
+        "cosine_similarity": -0.7333263234296029
+      },
+      "conv8": {
+        "norm_seg": 3.4822867965896944,
+        "norm_tip": 4.92902906513531,
+        "norm_ratio_tip_over_seg": 1.4154575292197222,
+        "dot_product": 8.852628687978722,
+        "cosine_similarity": 0.5157584279083501
+      },
+      "conv9": {
+        "norm_seg": 14.07341165511085,
+        "norm_tip": 21.352530571782573,
+        "norm_ratio_tip_over_seg": 1.5172248986284904,
+        "dot_product": 217.87092372775078,
+        "cosine_similarity": 0.7250209085527956
+      }
+    },
+    "per_layer": {
+      "conv1.conv.0.weight": {
+        "norm_seg": 7.788793087005615,
+        "norm_tip": 8.75755500793457,
+        "norm_ratio_tip_over_seg": 1.124378951925836,
+        "dot_product": 28.54178810119629,
+        "cosine_similarity": 0.41843512810234096
+      },
+      "conv1.conv.1.weight": {
+        "norm_seg": 0.2250020056962967,
+        "norm_tip": 0.1488458514213562,
+        "norm_ratio_tip_over_seg": 0.6615312204028324,
+        "dot_product": 0.0032596196979284286,
+        "cosine_similarity": 0.09732934696131224
+      },
+      "conv1.conv.1.bias": {
+        "norm_seg": 0.26781395077705383,
+        "norm_tip": 0.29373693466186523,
+        "norm_ratio_tip_over_seg": 1.096794748031597,
+        "dot_product": 0.028356919065117836,
+        "cosine_similarity": 0.36046847483619654
+      },
+      "conv1.conv.3.weight": {
+        "norm_seg": 7.608702182769775,
+        "norm_tip": 8.823168754577637,
+        "norm_ratio_tip_over_seg": 1.1596154695814054,
+        "dot_product": 0.7581520080566406,
+        "cosine_similarity": 0.011293306587707757
+      },
+      "conv1.conv.4.weight": {
+        "norm_seg": 0.39939892292022705,
+        "norm_tip": 0.4611068367958069,
+        "norm_ratio_tip_over_seg": 1.1545019536467427,
+        "dot_product": -0.025123903527855873,
+        "cosine_similarity": -0.1364201950811036
+      },
+      "conv1.conv.4.bias": {
+        "norm_seg": 0.5656692385673523,
+        "norm_tip": 0.5192204117774963,
+        "norm_ratio_tip_over_seg": 0.9178869494344521,
+        "dot_product": -0.00952240452170372,
+        "cosine_similarity": -0.03242144053791477
+      },
+      "conv2.conv.0.weight": {
+        "norm_seg": 7.430041790008545,
+        "norm_tip": 5.153918743133545,
+        "norm_ratio_tip_over_seg": 0.6936594555987844,
+        "dot_product": -24.740930557250977,
+        "cosine_similarity": -0.6460813529288805
+      },
+      "conv2.conv.1.weight": {
+        "norm_seg": 0.15483757853507996,
+        "norm_tip": 0.10499785095453262,
+        "norm_ratio_tip_over_seg": 0.6781160745855008,
+        "dot_product": -0.009992275387048721,
+        "cosine_similarity": -0.6146213094896585
+      },
+      "conv2.conv.1.bias": {
+        "norm_seg": 0.16736477613449097,
+        "norm_tip": 0.1149897649884224,
+        "norm_ratio_tip_over_seg": 0.687060728334013,
+        "dot_product": -0.010325279086828232,
+        "cosine_similarity": -0.5365109027119007
+      },
+      "conv2.conv.3.weight": {
+        "norm_seg": 5.247429847717285,
+        "norm_tip": 4.207095623016357,
+        "norm_ratio_tip_over_seg": 0.8017440432951211,
+        "dot_product": -14.100117683410645,
+        "cosine_similarity": -0.6386952891801222
+      },
+      "conv2.conv.4.weight": {
+        "norm_seg": 0.13828445971012115,
+        "norm_tip": 0.08948764204978943,
+        "norm_ratio_tip_over_seg": 0.6471272494203465,
+        "dot_product": -0.008099023252725601,
+        "cosine_similarity": -0.6544797350375601
+      },
+      "conv2.conv.4.bias": {
+        "norm_seg": 0.12546011805534363,
+        "norm_tip": 0.10538352280855179,
+        "norm_ratio_tip_over_seg": 0.8399762764615322,
+        "dot_product": -0.005209512077271938,
+        "cosine_similarity": -0.39402034329904456
+      },
+      "conv3.conv.0.weight": {
+        "norm_seg": 3.527360439300537,
+        "norm_tip": 2.35257887840271,
+        "norm_ratio_tip_over_seg": 0.6669516537610253,
+        "dot_product": -6.17666482925415,
+        "cosine_similarity": -0.7443205369434694
+      },
+      "conv3.conv.1.weight": {
+        "norm_seg": 0.07322493940591812,
+        "norm_tip": 0.04599832370877266,
+        "norm_ratio_tip_over_seg": 0.6281783785956268,
+        "dot_product": -0.0026444471441209316,
+        "cosine_similarity": -0.7851160665036193
+      },
+      "conv3.conv.1.bias": {
+        "norm_seg": 0.08836603909730911,
+        "norm_tip": 0.06195051223039627,
+        "norm_ratio_tip_over_seg": 0.7010669807455788,
+        "dot_product": -0.004204995930194855,
+        "cosine_similarity": -0.7681309944761874
+      },
+      "conv3.conv.3.weight": {
+        "norm_seg": 3.1036276817321777,
+        "norm_tip": 2.214773654937744,
+        "norm_ratio_tip_over_seg": 0.713608036161621,
+        "dot_product": -5.107234001159668,
+        "cosine_similarity": -0.7429965394492071
+      },
+      "conv3.conv.4.weight": {
+        "norm_seg": 0.0839286670088768,
+        "norm_tip": 0.05519835650920868,
+        "norm_ratio_tip_over_seg": 0.6576817966544205,
+        "dot_product": -0.0035995719954371452,
+        "cosine_similarity": -0.7769881435264923
+      },
+      "conv3.conv.4.bias": {
+        "norm_seg": 0.08997255563735962,
+        "norm_tip": 0.06720272451639175,
+        "norm_ratio_tip_over_seg": 0.7469247043204688,
+        "dot_product": -0.004773040302097797,
+        "cosine_similarity": -0.7894018944987485
+      },
+      "conv4.conv.0.weight": {
+        "norm_seg": 2.9436564445495605,
+        "norm_tip": 2.0690009593963623,
+        "norm_ratio_tip_over_seg": 0.7028676743943064,
+        "dot_product": -4.917342662811279,
+        "cosine_similarity": -0.8073886853974469
+      },
+      "conv4.conv.1.weight": {
+        "norm_seg": 0.05369624122977257,
+        "norm_tip": 0.03714673966169357,
+        "norm_ratio_tip_over_seg": 0.691794040158943,
+        "dot_product": -0.0016501221107318997,
+        "cosine_similarity": -0.8272780389941234
+      },
+      "conv4.conv.1.bias": {
+        "norm_seg": 0.07117168605327606,
+        "norm_tip": 0.056925904005765915,
+        "norm_ratio_tip_over_seg": 0.7998391939619589,
+        "dot_product": -0.003240901743993163,
+        "cosine_similarity": -0.7999239023551109
+      },
+      "conv4.conv.3.weight": {
+        "norm_seg": 2.447620153427124,
+        "norm_tip": 1.842787265777588,
+        "norm_ratio_tip_over_seg": 0.7528893987890002,
+        "dot_product": -3.6897478103637695,
+        "cosine_similarity": -0.8180455014489671
+      },
+      "conv4.conv.4.weight": {
+        "norm_seg": 0.05878346413373947,
+        "norm_tip": 0.04682275652885437,
+        "norm_ratio_tip_over_seg": 0.7965293849019676,
+        "dot_product": -0.002357922261580825,
+        "cosine_similarity": -0.856677438349919
+      },
+      "conv4.conv.4.bias": {
+        "norm_seg": 0.08964648842811584,
+        "norm_tip": 0.07447105646133423,
+        "norm_ratio_tip_over_seg": 0.8307191700102093,
+        "dot_product": -0.00584661727771163,
+        "cosine_similarity": -0.8757575062972931
+      },
+      "ppm.stages.0.1.weight": {
+        "norm_seg": 0.6218031644821167,
+        "norm_tip": 0.5652396082878113,
+        "norm_ratio_tip_over_seg": 0.9090330197315485,
+        "dot_product": -0.3177477717399597,
+        "cosine_similarity": -0.9040594683815426
+      },
+      "ppm.stages.1.1.weight": {
+        "norm_seg": 0.6374111771583557,
+        "norm_tip": 0.5419515371322632,
+        "norm_ratio_tip_over_seg": 0.8502385219354619,
+        "dot_product": -0.3328351080417633,
+        "cosine_similarity": -0.9634939747451067
+      },
+      "ppm.stages.2.1.weight": {
+        "norm_seg": 0.4997842311859131,
+        "norm_tip": 0.4255943298339844,
+        "norm_ratio_tip_over_seg": 0.8515561381840976,
+        "dot_product": -0.20240992307662964,
+        "cosine_similarity": -0.9515977732304304
+      },
+      "ppm.stages.3.1.weight": {
+        "norm_seg": 0.5993804335594177,
+        "norm_tip": 0.4402136504650116,
+        "norm_ratio_tip_over_seg": 0.7344478161404185,
+        "dot_product": -0.24613244831562042,
+        "cosine_similarity": -0.9328306447795349
+      },
+      "ppm.bottleneck.0.weight": {
+        "norm_seg": 2.1935667991638184,
+        "norm_tip": 1.6342562437057495,
+        "norm_ratio_tip_over_seg": 0.7450223281683164,
+        "dot_product": -3.2049880027770996,
+        "cosine_similarity": -0.8940367910585604
+      },
+      "ppm.bottleneck.1.weight": {
+        "norm_seg": 0.06215825304389,
+        "norm_tip": 0.04253806173801422,
+        "norm_ratio_tip_over_seg": 0.6843509856684367,
+        "dot_product": -0.002457594033330679,
+        "cosine_similarity": -0.9294662969358106
+      },
+      "ppm.bottleneck.1.bias": {
+        "norm_seg": 0.08470965176820755,
+        "norm_tip": 0.06856442242860794,
+        "norm_ratio_tip_over_seg": 0.80940507955601,
+        "dot_product": -0.005552029702812433,
+        "cosine_similarity": -0.9559167300590851
+      },
+      "up7.weight": {
+        "norm_seg": 0.6805203557014465,
+        "norm_tip": 0.5089993476867676,
+        "norm_ratio_tip_over_seg": 0.7479560948064755,
+        "dot_product": -0.3094668686389923,
+        "cosine_similarity": -0.8934202964282537
+      },
+      "up7.bias": {
+        "norm_seg": 0.26600217819213867,
+        "norm_tip": 0.216364786028862,
+        "norm_ratio_tip_over_seg": 0.8133947905967048,
+        "dot_product": -0.05561378598213196,
+        "cosine_similarity": -0.9662971280909846
+      },
+      "conv7.conv.0.weight": {
+        "norm_seg": 1.7042694091796875,
+        "norm_tip": 1.2549769878387451,
+        "norm_ratio_tip_over_seg": 0.7363724192190956,
+        "dot_product": -1.552101731300354,
+        "cosine_similarity": -0.7256817016386308
+      },
+      "conv7.conv.1.weight": {
+        "norm_seg": 0.0641273707151413,
+        "norm_tip": 0.03693529590964317,
+        "norm_ratio_tip_over_seg": 0.5759677263818065,
+        "dot_product": -0.0021460510324686766,
+        "cosine_similarity": -0.9060559748767081
+      },
+      "conv7.conv.1.bias": {
+        "norm_seg": 0.06988207995891571,
+        "norm_tip": 0.06495436280965805,
+        "norm_ratio_tip_over_seg": 0.9294852535563523,
+        "dot_product": -0.003447619266808033,
+        "cosine_similarity": -0.7595303798076534
+      },
+      "conv7.conv.3.weight": {
+        "norm_seg": 1.5024789571762085,
+        "norm_tip": 1.0003474950790405,
+        "norm_ratio_tip_over_seg": 0.6657980068879735,
+        "dot_product": -1.1219606399536133,
+        "cosine_similarity": -0.7464802713065061
+      },
+      "conv7.conv.4.weight": {
+        "norm_seg": 0.06503290683031082,
+        "norm_tip": 0.02821032702922821,
+        "norm_ratio_tip_over_seg": 0.4337854234754861,
+        "dot_product": -0.0017337717581540346,
+        "cosine_similarity": -0.9450409708608
+      },
+      "conv7.conv.4.bias": {
+        "norm_seg": 0.04982946813106537,
+        "norm_tip": 0.05078708007931709,
+        "norm_ratio_tip_over_seg": 1.0192177838569927,
+        "dot_product": -0.0012571110855787992,
+        "cosine_similarity": -0.4967457498995013
+      },
+      "up8.weight": {
+        "norm_seg": 0.5007748007774353,
+        "norm_tip": 0.3432663083076477,
+        "norm_ratio_tip_over_seg": 0.68547041060121,
+        "dot_product": -0.10887176543474197,
+        "cosine_similarity": -0.6333468562011684
+      },
+      "up8.bias": {
+        "norm_seg": 0.17073465883731842,
+        "norm_tip": 0.2519565522670746,
+        "norm_ratio_tip_over_seg": 1.4757200089476095,
+        "dot_product": 0.00013414944987744093,
+        "cosine_similarity": 0.0031184698392358865
+      },
+      "conv8.conv.0.weight": {
+        "norm_seg": 2.1227498054504395,
+        "norm_tip": 3.0490314960479736,
+        "norm_ratio_tip_over_seg": 1.4363593336431755,
+        "dot_product": 2.755267858505249,
+        "cosine_similarity": 0.42569946625091976
+      },
+      "conv8.conv.1.weight": {
+        "norm_seg": 0.08825209736824036,
+        "norm_tip": 0.09105684608221054,
+        "norm_ratio_tip_over_seg": 1.0317810997994428,
+        "dot_product": 0.0007685673190280795,
+        "cosine_similarity": 0.09564103655568379
+      },
+      "conv8.conv.1.bias": {
+        "norm_seg": 0.09055769443511963,
+        "norm_tip": 0.15499894320964813,
+        "norm_ratio_tip_over_seg": 1.7116043443519606,
+        "dot_product": 0.0094315055757761,
+        "cosine_similarity": 0.6719344868108781
+      },
+      "conv8.conv.3.weight": {
+        "norm_seg": 2.751188039779663,
+        "norm_tip": 3.860992431640625,
+        "norm_ratio_tip_over_seg": 1.4033909626729273,
+        "dot_product": 6.059528827667236,
+        "cosine_similarity": 0.570452687888354
+      },
+      "conv8.conv.4.weight": {
+        "norm_seg": 0.11490316689014435,
+        "norm_tip": 0.12009590119123459,
+        "norm_ratio_tip_over_seg": 1.0451922644225713,
+        "dot_product": -0.0004973097238689661,
+        "cosine_similarity": -0.036038505029681416
+      },
+      "conv8.conv.4.bias": {
+        "norm_seg": 0.14841529726982117,
+        "norm_tip": 0.21150143444538116,
+        "norm_ratio_tip_over_seg": 1.4250649248161291,
+        "dot_product": 0.02812923863530159,
+        "cosine_similarity": 0.8961196362856854
+      },
+      "up9.weight": {
+        "norm_seg": 1.4273353815078735,
+        "norm_tip": 1.9407259225845337,
+        "norm_ratio_tip_over_seg": 1.3596845897103043,
+        "dot_product": 2.160844326019287,
+        "cosine_similarity": 0.7800693995652994
+      },
+      "up9.bias": {
+        "norm_seg": 1.215806484222412,
+        "norm_tip": 1.679103136062622,
+        "norm_ratio_tip_over_seg": 1.3810611786106064,
+        "dot_product": 1.917844295501709,
+        "cosine_similarity": 0.9394453412331977
+      },
+      "conv9.conv.0.weight": {
+        "norm_seg": 11.044734001159668,
+        "norm_tip": 17.017921447753906,
+        "norm_ratio_tip_over_seg": 1.54081768252337,
+        "dot_product": 155.70616149902344,
+        "cosine_similarity": 0.8284075015545211
+      },
+      "conv9.conv.1.weight": {
+        "norm_seg": 0.5559740662574768,
+        "norm_tip": 0.9175834655761719,
+        "norm_ratio_tip_over_seg": 1.6504069546855993,
+        "dot_product": 0.4239809513092041,
+        "cosine_similarity": 0.831086507436383
+      },
+      "conv9.conv.1.bias": {
+        "norm_seg": 0.7335984110832214,
+        "norm_tip": 1.1741187572479248,
+        "norm_ratio_tip_over_seg": 1.6004925031315662,
+        "dot_product": 0.7484035491943359,
+        "cosine_similarity": 0.8688912628204457
+      },
+      "conv9.conv.3.weight": {
+        "norm_seg": 8.611848831176758,
+        "norm_tip": 12.732197761535645,
+        "norm_ratio_tip_over_seg": 1.4784511445953779,
+        "dot_product": 60.4296760559082,
+        "cosine_similarity": 0.5511254833400066
+      },
+      "conv9.conv.4.weight": {
+        "norm_seg": 0.7902392148971558,
+        "norm_tip": 0.9849043488502502,
+        "norm_ratio_tip_over_seg": 1.2463369702279692,
+        "dot_product": 0.29755041003227234,
+        "cosine_similarity": 0.3823031889292967
+      },
+      "conv9.conv.4.bias": {
+        "norm_seg": 0.6626268625259399,
+        "norm_tip": 1.0106931924819946,
+        "norm_ratio_tip_over_seg": 1.5252825528823606,
+        "dot_product": 0.2651512622833252,
+        "cosine_similarity": 0.3959180670394381
+      }
+    }
+  }
+}

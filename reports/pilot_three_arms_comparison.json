@@ -1,0 +1,104 @@
+{
+  "Arm A (Reviewed-Only Control)": {
+    "sha256": "3d3d2f305eb026b5b3efe9422d21228d25a8049024d4d5d39c6288bda4e24ef4",
+    "successful_updates": 1000,
+    "actual_exposures": {
+      "positive": 50,
+      "negative": 1988,
+      "unknown": 1966
+    },
+    "segmentation_dice": 0.1285,
+    "tip_head_reference_capped": {
+      "success15_248": "1/248 (0.40%)",
+      "success15_25_audited": "0/25 (0.00%)",
+      "false_peaks_per_neg": 10.0,
+      "total_neg_peaks": 80
+    },
+    "tip_head_uncapped_tau30": {
+      "success15_248": "54/248 (21.77%)",
+      "success15_25_audited": "7/25 (28.00%)",
+      "false_peaks_per_neg": 331.25,
+      "total_neg_peaks": 2650
+    },
+    "tip_head_uncapped_tau50": {
+      "success15_248": "0/248 (0.00%)",
+      "success15_25_audited": "0/25 (0.00%)",
+      "false_peaks_per_neg": 0.62,
+      "total_neg_peaks": 5
+    },
+    "seg_skeleton_endpoints": {
+      "success15_248": "35/248 (14.11%)",
+      "success15_25_audited": "8/25 (32.00%)",
+      "candidates_per_neg": 70.25,
+      "total_neg_candidates": 562
+    }
+  },
+  "Arm B (Expanded Baseline, 1x)": {
+    "sha256": "ed3e2acb2e0229f0452b00a41ed527a1ebfa65e0f9ef920d3dbe05ea626b5b55",
+    "successful_updates": 1000,
+    "actual_exposures": {
+      "positive": 1461,
+      "negative": 1988,
+      "unknown": 555
+    },
+    "segmentation_dice": 0.1387,
+    "tip_head_reference_capped": {
+      "success15_248": "33/248 (13.31%)",
+      "success15_25_audited": "1/25 (4.00%)",
+      "false_peaks_per_neg": 10.0,
+      "total_neg_peaks": 80
+    },
+    "tip_head_uncapped_tau30": {
+      "success15_248": "58/248 (23.39%)",
+      "success15_25_audited": "4/25 (16.00%)",
+      "false_peaks_per_neg": 233.25,
+      "total_neg_peaks": 1866
+    },
+    "tip_head_uncapped_tau50": {
+      "success15_248": "34/248 (13.71%)",
+      "success15_25_audited": "1/25 (4.00%)",
+      "false_peaks_per_neg": 3.62,
+      "total_neg_peaks": 29
+    },
+    "seg_skeleton_endpoints": {
+      "success15_248": "24/248 (9.68%)",
+      "success15_25_audited": "6/25 (24.00%)",
+      "candidates_per_neg": 67.75,
+      "total_neg_candidates": 542
+    }
+  },
+  "Arm C (Shaft-Weighted, 2x)": {
+    "sha256": "3cbc44789f04c282fba1086d3b4aacff594ef4d2c00f68eb75613ca3aeee9eda",
+    "successful_updates": 1000,
+    "actual_exposures": {
+      "positive": 1461,
+      "negative": 1988,
+      "unknown": 555
+    },
+    "segmentation_dice": 0.1433,
+    "tip_head_reference_capped": {
+      "success15_248": "40/248 (16.13%)",
+      "success15_25_audited": "3/25 (12.00%)",
+      "false_peaks_per_neg": 10.0,
+      "total_neg_peaks": 80
+    },
+    "tip_head_uncapped_tau30": {
+      "success15_248": "63/248 (25.40%)",
+      "success15_25_audited": "8/25 (32.00%)",
+      "false_peaks_per_neg": 225.38,
+      "total_neg_peaks": 1803
+    },
+    "tip_head_uncapped_tau50": {
+      "success15_248": "33/248 (13.31%)",
+      "success15_25_audited": "1/25 (4.00%)",
+      "false_peaks_per_neg": 1.62,
+      "total_neg_peaks": 13
+    },
+    "seg_skeleton_endpoints": {
+      "success15_248": "23/248 (9.27%)",
+      "success15_25_audited": "4/25 (16.00%)",
+      "candidates_per_neg": 66.38,
+      "total_neg_candidates": 531
+    }
+  }
+}

@@ -1,0 +1,117 @@
+# CVC-MAGNet-V2 Pilot Experiment Contract
+# Formally defines the scope, data versions, resolutions, optimization, and evaluation rules.
+
+project:
+  name: "CVC-MAGNet-V2"
+  scope: "CVC-only"
+  description: "Central Venous Catheter distal tip localization and catheter segmentation via adapted MAG-Net architecture."
+  reference_v1_dir: "C:/Ankshit/Catheter"  # Strictly read-only reference
+  frozen_v1_comparison:
+    metric: "all_target_success_at_15"
+    result: "37.5% (93/248) at threshold 0.50 on development validation cohort"
+    note: "V1 result is one operating point from an upstream-exposed development set, not an independently validated accuracy."
+
+data:
+  raw_dir: "C:/Users/M S I/Downloads/ranzcr-clip-catheter-line-classification/ranzcr-clip-catheter-line-classification"
+  train_csv: "C:/Users/M S I/Downloads/ranzcr-clip-catheter-line-classification/ranzcr-clip-catheter-line-classification/train.csv"
+  annotations_csv: "C:/Users/M S I/Downloads/ranzcr-clip-catheter-line-classification/ranzcr-clip-catheter-line-classification/train_annotations.csv"
+  processed_dir: "data"
+  inventory_parquet: "data/annotation_inventory.parquet"
+  splits_json: "data/splits.json"
+  target_device: "CVC"
+  
+  # Split integrity rules
+  split_policy:
+    group_keys: ["PatientID", "duplicate_group_id"]
+    n_folds: 5
+    dev_folds: [0, 1, 2, 3]
+    test_fold: 4  # Previously exposed in V1 fitting (Folds 1-4); held out from V2 fitting
+    note: "Fold 4 was previously exposed during V1 fitting. It is held out from V2 fitting, but cannot support a genuinely untouched project-level test claim. Final generalization remains unmeasured at the project level."
+
+preprocessing:
+  coarse:
+    input_size: [512, 512]
+    channels: 1
+    aspect_ratio_preservation: true  # Letterbox resize with symmetric padding
+    contrast_enhancement: "clahe"    # Documented replication parameter
+    clahe_clip_limit: 2.0
+    clahe_tile_grid_size: [8, 8]
+    mask_stroke_width_native: 10     # Empirical rasterization hyperparameter (stroke width in native pixels; uncalibrated to physical millimeters)
+    mask_size: [512, 512]
+  fine:
+    crop_size: [512, 512]
+    channels: 2                      # [Cropped radiograph, Coarse mask prediction]
+    roi_padding_px: 32
+    gaussian_blur_kernel: 11         # Published Gaussian attention supervision kernel
+    gaussian_blur_sigma: 2.0
+
+training:
+  seed: 42
+  deterministic: true
+  hardware:
+    gpu: "NVIDIA GeForce RTX 3050 Laptop GPU"
+    vram_budget_gb: 4.0
+    max_concurrent_gpu_experiments: 1
+    mixed_precision: true            # torch.amp.autocast('cuda')
+  
+  # Pilot budgets (controlled by optimizer steps and examples seen, not epochs alone)
+  pilot:
+    coarse:
+      batch_size: 4
+      accumulate_grad_batches: 1
+      max_steps: 1000
+      lr: 1.0e-4
+      weight_decay: 1.0e-4
+      optimizer: "AdamW"
+      scheduler: "CosineAnnealingLR"
+      min_lr: 1.0e-6
+    fine:
+      batch_size: 2
+      accumulate_grad_batches: 2
+      max_steps: 1000
+      lr: 1.0e-4
+      weight_decay: 1.0e-4
+      optimizer: "AdamW"
+      scheduler: "CosineAnnealingLR"
+      min_lr: 1.0e-6
+
+losses:
+  coarse:
+    bce_weight: 1.0
+    dice_weight: 2.0
+    pos_weight: 50.0                 # Positive-pixel loss weighting to counteract 300:1 catheter background pixel imbalance
+  fine:
+    bce_weight: 1.0
+    dice_weight: 1.0
+    attention_l1_weight: 0.5         # Published MAG-Net mask attention loss weight
+
+checkpoint_selection:
+  primary_metric: "all_target_success_at_15"
+  mode: "max"
+  save_fields:
+    - "config"
+    - "input_hashes"
+    - "model_state_dict"
+    - "optimizer_state_dict"
+    - "scaler_state_dict"
+    - "rng_state"
+    - "step"
+    - "metrics"
+
+evaluation:
+  primary_metric: "all_target_success_at_15"
+  primary_tolerance_px: 15.0
+  additional_tolerances_px: [5.0, 10.0, 20.0, 30.0, 50.0]
+  fixed_threshold: 0.50
+  threshold_sweep_range: [0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90]
+  matching_rule: "greedy_bipartite_min_distance"
+  strict_denominator: true          # Include every ground-truth CVC target; missed proposals count as errors
+  report_metrics:
+    - "all_target_success_at_15"
+    - "proposal_coverage"
+    - "median_localization_error_px"
+    - "p95_localization_error_px"
+    - "negative_acceptance_rate"
+    - "dice_score"
+    - "runtime_per_image_ms"
+    - "peak_vram_mb"

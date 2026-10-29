@@ -1,0 +1,263 @@
+CVC SEGMENTATION AND PLACEMENT REBUILD — IMPLEMENTATION CONTRACT
+Date: 2026-10-16
+Status: Planning and baseline archival only. No new training started.
+Priority: Improve CVC segmentation first; develop a separate placement classifier.
+
+1. FROZEN REFERENCE
+Name: CVC-SegTip-V2-Frozen-20261016
+Archive: archives/CVC-SegTip-V2-Frozen-20261016
+FREEZE_MANIFEST.json records full SHA256 and sizes for 93 verified copied files.
+Includes expanded best/final checkpoints, history, resolved configuration, current
+source/tests/scripts, top-level data registries and independent heatmap diagnostics.
+Raw radiographs are not duplicated. Current code snapshot is not claimed identical
+to the historical training code. Original runs remain unchanged. Archive is
+reference-only by policy; it is not a filesystem security boundary.
+Current final checkpoint SHA256:
+ed3e2acb2e0229f0452b00a41ed527a1ebfa65e0f9ef920d3dbe05ea626b5b55
+All new training must use distinct run directories and must never resume this run.
+Only two local Python web servers were running during inspection; no trainer seen.
+
+2. WHAT THE INSPECTION ESTABLISHED
+Files: src/models/coarse.py, coarse_dual.py, losses.py; src/data/datasets.py,
+rasterize.py, transforms.py; scripts/05_train_coarse_dual.py; resolved run config.
+
+A. Architecture is a custom, single-channel, base-32 U-Net with three pooling
+operations (deepest stride 8), PPM bottleneck, transposed-convolution upsampling,
+BatchNorm and shared segmentation/tip decoder. This is NOT the previous refiner's
+EfficientNet architecture. It has spatial skip connections and global context;
+claiming it lacks all context or all fine-resolution outputs would be incorrect.
+The backbone initialization came from our coarse checkpoint, not ImageNet.
+
+B. All native radiographs are reduced to 512x512 letterboxed inputs. A 10-native-
+pixel target stroke becomes about 2.05 pixels when a 2500-pixel side maps to 512.
+Real catheter contrast and thin paths may be lost. The model cannot reconstruct
+image information discarded by preprocessing simply by upsampling its output.
+
+C. Targets are fixed-width rasterized polylines, not manually traced silhouettes.
+They support catheter path/corridor learning, not proof of exact physical borders.
+Native fixed stroke width also varies in effective model-grid thickness by image
+size. Nearest-neighbor reduction can introduce aliasing/discontinuities.
+
+D. Dataset safeguards reject wholly unannotated positives as empty masks. However,
+the presence of one polyline does not prove every CVC in that image is annotated.
+The current full-image binary loss treats everything outside supplied paths as
+background, potentially penalizing unlisted catheters. This is a residual risk,
+not a measured prevalence estimate.
+
+E. DiceLoss flattens the entire batch into one Dice calculation. Large foreground
+samples influence the batch statistic more than short/sparse paths. Compare with
+per-positive-image Dice; retain explicit negative-image BCE supervision.
+
+F. Segmentation uses BCE positive weight 50 and Dice weight 2. The tip head uses
+weight 2 and positive weight 100. These objectives share all backbone features.
+High positive weighting encourages recall, but is not a complete explanation for
+false masks. Earlier weight-only pilots did not solve discrimination. Shared-task
+interference is a hypothesis, not a proven root cause.
+
+G. The inspected dataset applies CLAHE, resize and /255 scaling, with no stochastic
+augmentation in its loading path. The run has only 1000 successful updates on
+796 studies (400 positive,396 negative); it is a pilot, not full-data training.
+BatchNorm with small batches is a potential stability issue, not a proven defect.
+CLAHE can enhance both catheters and distracting structures; test rather than assume.
+
+H. Semantic union masks do not assign pixels to individual catheters at crossings.
+Skeleton endpoints are not automatically distal tips. Largest-component filtering,
+nearest-carina rules and narrow anatomical gates can discard real abnormal CVCs.
+Global boxes around diffuse foreground cannot produce useful fine-stage ROIs.
+
+I. Reported final validation mask Dice in expanded history is 0.13866 (aggregate
+definition must be retained). Tip success is 1/25 provisional reviewed targets;
+this is NOT segmentation accuracy. The viewer uses mask threshold 0.30. Earlier
+weight-50 precision/recall numbers belong to a different checkpoint and threshold.
+Re-evaluate masks directly before ranking future segmentation models.
+
+J. Code/config drift remains: pilot.yaml names greedy matching while the resolved
+run uses Hungarian matching; loss defaults differ from effective run weights.
+Use one resolved configuration and canonical evaluator, hash both, and store ordered
+sample IDs. Seed equality alone does not establish ordered exposure equality.
+Existing fixes to geometry and FP32 reductions should be retained. Current shaft
+penalty code already uses a negative-only softplus term, but is irrelevant to the
+first segmentation-only experiment.
+
+3. DATA CONTRACT — EXISTING DATA CAN SERVE TWO DIFFERENT TASKS
+Verified inventory: 11,629 CVC polylines in 8,853 studies (before split/exclusion).
+Study inventory: 29,333 CVC-present studies; 726 flagged confirmed negatives.
+The 750 all-zero-CVC-label raw studies versus 726 inventory negatives must be
+reconciled, not silently conflated. Do not assume another-device-present means CVC absent.
+
+Segmentation eligibility:
+- Valid CVC paths: annotated foreground. Record completeness separately.
+- Supported CVC-absent study: empty target, background supervision allowed.
+- CVC present but no paths: no segmentation loss; usable for classification.
+- Known incomplete annotations: exclude from full-background segmentation loss
+  initially, or use an explicitly tested partial-label scheme in a later arm.
+- Truncated CVC: keep its visible path. Unknown distal identity is irrelevant here.
+- Invalid record: quarantine that record/affected task, not automatically every
+  other usable label for the image.
+- Non-CVC polylines can support distractor analysis. Do not erase overlap pixels
+  or assume their annotation inventory is exhaustive.
+
+Classification eligibility:
+- Use the three original CVC Normal/Borderline/Abnormal columns on all valid images,
+  including images with no segmentation annotations.
+- Multi-CVC images may have multiple positive labels. Preserve multilabel targets.
+- Contradictory/missing labels need explicit audit flags; never fill unknowns with 0.
+
+Create versioned manifests with study, patient, duplicate connected-group, split,
+image path/hash/dimensions, three labels, annotation instance IDs, annotation
+completeness status, segmentation validity, and historical fitting/selection exposure.
+Preserve existing development comparisons. Fit/tune/calibrate on separated patient-
+and-duplicate groups. Reserve an additional internal calibration partition where
+feasible, with its historical exposure clearly disclosed. No re-split converts old
+exposed images into an untouched project test. External validation remains necessary.
+
+4. FIRST DELIVERABLE: MASK EVALUATOR AND LABEL AUDIT, NO TRAINING
+Implement scripts/evaluate_cvc_masks.py using the checkpoint already in the viewer.
+Cache float32 probabilities once. Sweep mask thresholds on development data only.
+Report positive-study macro Dice/IoU, pooled precision/recall, full-image AP with
+sampling/binning disclosed, catheter-centerline coverage at fixed native tolerances,
+and missed annotated instances. Report false foreground area, predicted component
+count/length and affected-study rate on negatives; distinguish prediction components
+from actual catheter instances. Use identical native target rasterization for comparisons.
+Exclude letterbox padding from loss/metrics via an image-validity mask.
+Do not use tip Success@15 as the primary segmentation metric.
+
+Audit a fixed varied 50-study development panel before training: multi-CVC, single
+CVC, abnormal/borderline, small images, large images, CVC-absent but other-device-
+present, cropped paths and low contrast. Inspect paths against images, not endpoint
+orientation. Record missing/incorrect paths and disagreements. Select training and
+evaluation reviews separately; never use validation failure annotations as training labels.
+This is targeted label QC, not a requirement to redraw thousands of images.
+
+5. SEGMENTATION MODEL S1 — PRIORITY EXPERIMENT
+New name: CVC-Segmentation-V3. Output: union probability mask for all visible CVCs.
+Architecture proposal: ImageNet-pretrained EfficientNet-B0 encoder plus lightweight
+U-Net/FPN-style top-down decoder with lateral fusion at strides 4,8,16,32 and a
+stride-2 detail stage; final native-compatible output at input resolution. Keep
+decoder widths small (e.g.128,64,32,16). This is a new baseline, not a paper replica.
+Do not include tip, anatomy or classification heads in this first training objective.
+Use grayscale replicated to three channels and encoder-specific normalization.
+Start 512 inputs for memory/optimization checks; compare 768 in the next controlled
+arm only if thin-line diagnostics support it. Preserve aspect ratio.
+Freeze pretrained encoder BatchNorm running statistics for tiny batches; use GroupNorm
+in new decoder blocks. Document the policy; accumulation does not emulate large-batch BN.
+
+Supervision:
+Start with the existing fixed-width path target as a transparent compatibility
+baseline. Exclude padding. Per-image foreground Dice on positive images plus BCE
+over valid pixels on both positives and negatives. Select BCE positive weighting
+from a small predeclared development sweep; do not assume 1 or 50 is optimal.
+Change weighting only in an isolated follow-up, not alongside resolution/sampling.
+Next target experiment, if aliasing is measured: construct antialiased/soft path
+targets with documented native-to-model width conversion. Keep evaluation masks
+unchanged so target thickening cannot manufacture an improvement.
+Exact silhouette claims require a small boundary-annotated benchmark; existing
+polylines alone cannot certify catheter wall accuracy.
+
+Sampling and augmentation:
+Start with documented 3 positive:1 confirmed negative study sampling, ensuring
+multi-CVC and abnormal cases remain represented. Sample patients to limit repeated
+study dominance; disclose the altered prevalence. Keep batch composition identical
+in paired model arms. Modest rotation/translation/scale and mild brightness/contrast
+with joint mask transforms; no vertical flips or aggressive cropping of catheters.
+Compare CLAHE on/off later, not as an unlogged preprocessing change.
+
+Hardware:
+One GPU training process. Profile batch 2 at 512 then batch 1-2 at 768. Accumulate
+gradients to effective batch 4 when needed. Use AMP, GradScaler, FP32 loss reductions,
+unscale before gradient clipping, and log real optimizer updates plus AMP skips.
+AdamW initial proposal lr1e-4, weight_decay1e-4. Record updates, examples and wall time.
+Cache resized images/targets on disk with fingerprints; avoid repeated full-native
+rasterization/hashing every epoch. Tune workers 0/2 experimentally on Windows.
+Do not treat empty_cache or allocator flags as guarantees against OOM.
+
+6. EXPERIMENT ORDER AND STOP RULES
+S0: Frozen mask evaluation; no fitting.
+S1: Segmentation-only pretrained baseline, fixed eligible pilot cohort, 1000 updates.
+S2: Same model/data/loss, higher resolution, matched successful-update/exposure budget;
+    additionally report wall time so higher compute is visible.
+S3: Only if false positives persist, training-only hard-negative patch sampling from
+    confirmed-negative images. Preserve whole-image positives and negative variety.
+    Never mine new training examples from validation/test errors.
+S4: Only if correct tracks remain disconnected, small soft-clDice addition, with
+    FP-area and false-bridge checks. Connectivity loss can reinforce wrong connections.
+Do not run every option by default. Stop to inspect labels/targets if S1 cannot fit
+a fixed small positive+negative training set or improves training but not development.
+
+Preflight: geometry roundtrip, visible paths surviving resizing, joint augmentation,
+padding ignore, multi-CVC targets, negative/unknown masks, AMP finite backward,
+save/reload inference parity and tiny-set fitting. Never use overfit success as
+proof of clinical truth or generalization.
+
+Advancement: choose a predeclared operating point by precision/recall tradeoff;
+compare precision at matched centerline recall and negative false area. Require
+improvement on the fixed varied panel without a multi-CVC recall collapse. Use
+patient-bootstrap intervals and repeat the leading comparison across 3 seeds.
+Only then expand to all eligible training paths and supported negatives. Full
+training length is chosen from learning curves/early stopping, not an accuracy promise.
+
+7. DIRECT PLACEMENT CLASSIFIER — INDEPENDENT TRACK
+Name: CVC-Placement-V1. Input: entire radiograph, output three independent sigmoid
+scores for CVC Normal, Borderline, Abnormal. Initial encoder: pretrained
+EfficientNet-B0, 512 letterbox, global pooling, dropout and linear three-output head.
+Use existing image labels; no tip labels or predicted masks are required.
+Retain full image to avoid removing misplaced devices. Separate model parameters
+from segmentation so failures are measurable and objectives cannot interfere.
+
+Start unweighted multilabel BCE with a documented natural-prevalence sampler.
+Evaluate per-label imbalance first; compare weighting/balancing only if needed.
+Use 4-6k grouped training studies for the optimization pilot (3 epochs), but a fixed
+representative development set, including all available eligible abnormal subgroups.
+Then use all eligible classifier training studies with early stopping. Preprocessing,
+memory profiling, AMP safeguards and provenance are the same discipline as S1.
+
+Output policy, tuned on separate calibration data:
+- Any high-confidence abnormal: needs review.
+- Borderline: needs review, retain borderline explanation.
+- Normal only with low abnormal/borderline probability: predicted normal placement.
+- Low/conflicting confidence or out-of-scope image: uncertain.
+- No convincing CVC evidence: no reliable CVC assessment; do not call placement normal.
+Study-level labels do not identify which catheter is abnormal. Do not report a
+per-catheter placement decision until instance-specific evidence is available.
+
+Metrics: per-label ROC-AUC and AP, abnormal and borderline sensitivity, abnormal
+cases incorrectly called normal (false reassurance), specificity on normal-only
+studies, positive predictive value, calibration/Brier score and coverage versus
+error under abstention. Count referrals separately from correct classifications;
+referring everyone cannot be called high placement accuracy. Patient-level intervals,
+multi-CVC strata, actual class prevalence and learning curves required.
+Image-level overall accuracy alone is unacceptable. No 95% guarantee.
+
+8. COMBINE ONLY AFTER BOTH TRACKS ARE MEASURABLY USEFUL
+Serve the original image plus predicted mask and independent placement scores.
+Keep an overlay-off option; distinguish probability masks from binary thresholds.
+Never erase the full image or force the classifier to view only a predicted mask.
+If testing mask-assisted classification, compare against the image-only baseline;
+train using out-of-fold predicted masks (not ideal GT masks), and use a frozen
+segmentation producer for validation. Preserve producer fitting/selection provenance.
+Mask-assistance is optional, not a prerequisite for placement decisions.
+Add instance association, verified tip labels and anatomy only in later separate
+milestones. No carina/CAJ or physical-millimetre outputs without relevant labels
+and image calibration. Current semantic masks are not individual instance masks.
+
+9. ACCEPTANCE AND DELIVERY
+Next implementation files: build_task_manifests.py, evaluate_cvc_masks.py,
+segmentation_dataset.py, segmentation_pretrained.py, train_segmentation.py,
+placement_dataset.py, placement_classifier.py, train_placement.py,
+evaluate_placement.py. Existing frozen code stays untouched.
+Each run writes input and source hashes, environment versions, resolved config,
+ordered exposure ledger, status, progress, best/final checkpoints and prediction cache.
+Do not build another frontend: reuse current mask viewer for fixed-panel comparisons.
+Required manual effort is targeted completeness/incorrect-path checking and later
+independent adjudication, not per-image tip annotation for either initial track.
+Current data enables research models but cannot by itself establish clinical safety,
+independent project-level generalization, exact silhouettes or calibrated distances.
+
+10. RESEARCH BASIS (NOT CLAIMS OF A GUARANTEED FIX)
+Wang et al. 2023, Multi-task learning framework to predict the status of central
+venous catheter based on radiographs: segmentation/tip/classification combination
+has prior art; our staged independent baselines isolate which component works.
+https://pubmed.ncbi.nlm.nih.gov/38042594/
+Shit et al. CVPR2021, clDice: topology-aware loss for tubular structures; supports
+a later continuity experiment, not a guarantee of CVC identity or crossing recovery.
+https://openaccess.thecvf.com/content/CVPR2021/html/Shit_clDice_-_A_Novel_Topology-Preserving_Loss_Function_for_Tubular_Structure_CVPR_2021_paper.html

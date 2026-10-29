@@ -1,0 +1,368 @@
+{
+  "checkpoint": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\pilot_experiment_expanded\\checkpoints\\final_coarse_dual_head.pt",
+  "checkpoint_sha256": "ed3e2acb2e0229f0452b00a41ed527a1ebfa65e0f9ef920d3dbe05ea626b5b55",
+  "tag": "S0_frozen_final",
+  "type": "S0 Frozen Dual-Head (Final)",
+  "img_size": 512,
+  "evaluation_grid": "native_radiograph_geometry",
+  "total_studies_evaluated": 193,
+  "summary_by_threshold": {
+    "tau_10": {
+      "threshold": 0.1,
+      "macro_binary_dice": 0.008342645884641224,
+      "macro_soft_dice": 0.030081514146424106,
+      "macro_binary_iou": 0.004192839819794378,
+      "pooled_precision": 0.004045870000671176,
+      "pooled_recall": 0.9999919465624749,
+      "centerline_coverage": {
+        "cov_5px": 1.0,
+        "cov_10px": 1.0,
+        "cov_15px": 1.0,
+        "cov_20px": 1.0
+      },
+      "missed_catheter_rates": {
+        "missed_rate_5px": 0.0,
+        "missed_rate_10px": 0.0,
+        "missed_rate_15px": 0.0,
+        "missed_rate_20px": 0.0
+      },
+      "missed_catheter_counts": {
+        "missed_count_5px": 0,
+        "missed_count_10px": 0,
+        "missed_count_15px": 0,
+        "missed_count_20px": 0
+      },
+      "total_catheter_instances": 248,
+      "negatives": {
+        "mean_false_area_native_px": 6446977.875,
+        "max_false_area_native_px": 7774464,
+        "mean_false_area_pct_radiograph": 99.9962769857028,
+        "affected_study_rate": 1.0
+      },
+      "strata": {
+        "single_cvc": {
+          "count": 126,
+          "macro_binary_dice": 0.006267464259408376
+        },
+        "multi_cvc": {
+          "count": 59,
+          "macro_binary_dice": 0.012774389694460524
+        },
+        "abnormal": {
+          "count": 23,
+          "macro_binary_dice": 0.009543879522706897
+        },
+        "cluttered_other_lines": {
+          "count": 94,
+          "macro_binary_dice": 0.008313870852356086
+        }
+      }
+    },
+    "tau_20": {
+      "threshold": 0.2,
+      "macro_binary_dice": 0.07842217636783066,
+      "macro_soft_dice": 0.030081514146424106,
+      "macro_binary_iou": 0.041148259752147344,
+      "pooled_precision": 0.03936645908280895,
+      "pooled_recall": 0.8652539100498847,
+      "centerline_coverage": {
+        "cov_5px": 0.9012350439300489,
+        "cov_10px": 0.9242100747901406,
+        "cov_15px": 0.9402627522627509,
+        "cov_20px": 0.9520654516406594
+      },
+      "missed_catheter_rates": {
+        "missed_rate_5px": 0.008064516129032258,
+        "missed_rate_10px": 0.0,
+        "missed_rate_15px": 0.0,
+        "missed_rate_20px": 0.0
+      },
+      "missed_catheter_counts": {
+        "missed_count_5px": 2,
+        "missed_count_10px": 0,
+        "missed_count_15px": 0,
+        "missed_count_20px": 0
+      },
+      "total_catheter_instances": 248,
+      "negatives": {
+        "mean_false_area_native_px": 509724.75,
+        "max_false_area_native_px": 823269,
+        "mean_false_area_pct_radiograph": 7.833481898157223,
+        "affected_study_rate": 1.0
+      },
+      "strata": {
+        "single_cvc": {
+          "count": 126,
+          "macro_binary_dice": 0.062801025973613
+        },
+        "multi_cvc": {
+          "count": 59,
+          "macro_binary_dice": 0.11178259924361751
+        },
+        "abnormal": {
+          "count": 23,
+          "macro_binary_dice": 0.0907509746777396
+        },
+        "cluttered_other_lines": {
+          "count": 94,
+          "macro_binary_dice": 0.07449790467218571
+        }
+      }
+    },
+    "tau_30": {
+      "threshold": 0.3,
+      "macro_binary_dice": 0.1424749417174934,
+      "macro_soft_dice": 0.030081514146424106,
+      "macro_binary_iou": 0.07775919344809538,
+      "pooled_precision": 0.07604368473777176,
+      "pooled_recall": 0.7736100296663206,
+      "centerline_coverage": {
+        "cov_5px": 0.8154124472875535,
+        "cov_10px": 0.8442018254162053,
+        "cov_15px": 0.8639789352412491,
+        "cov_20px": 0.8804810551999056
+      },
+      "missed_catheter_rates": {
+        "missed_rate_5px": 0.03225806451612903,
+        "missed_rate_10px": 0.020161290322580645,
+        "missed_rate_15px": 0.012096774193548387,
+        "missed_rate_20px": 0.008064516129032258
+      },
+      "missed_catheter_counts": {
+        "missed_count_5px": 8,
+        "missed_count_10px": 5,
+        "missed_count_15px": 3,
+        "missed_count_20px": 2
+      },
+      "total_catheter_instances": 248,
+      "negatives": {
+        "mean_false_area_native_px": 199476.375,
+        "max_false_area_native_px": 378474,
+        "mean_false_area_pct_radiograph": 3.074278894982342,
+        "affected_study_rate": 1.0
+      },
+      "strata": {
+        "single_cvc": {
+          "count": 126,
+          "macro_binary_dice": 0.12115879068802414
+        },
+        "multi_cvc": {
+          "count": 59,
+          "macro_binary_dice": 0.18799756933974973
+        },
+        "abnormal": {
+          "count": 23,
+          "macro_binary_dice": 0.16000380738305386
+        },
+        "cluttered_other_lines": {
+          "count": 94,
+          "macro_binary_dice": 0.131557241556085
+        }
+      }
+    },
+    "tau_40": {
+      "threshold": 0.4,
+      "macro_binary_dice": 0.17564802711474437,
+      "macro_soft_dice": 0.030081514146424106,
+      "macro_binary_iou": 0.09785117891250861,
+      "pooled_precision": 0.09845762448900233,
+      "pooled_recall": 0.7203424745500777,
+      "centerline_coverage": {
+        "cov_5px": 0.7660483556008886,
+        "cov_10px": 0.7967667250234626,
+        "cov_15px": 0.8193176950225985,
+        "cov_20px": 0.8365127141222007
+      },
+      "missed_catheter_rates": {
+        "missed_rate_5px": 0.04435483870967742,
+        "missed_rate_10px": 0.04032258064516129,
+        "missed_rate_15px": 0.04032258064516129,
+        "missed_rate_20px": 0.028225806451612902
+      },
+      "missed_catheter_counts": {
+        "missed_count_5px": 11,
+        "missed_count_10px": 10,
+        "missed_count_15px": 10,
+        "missed_count_20px": 7
+      },
+      "total_catheter_instances": 248,
+      "negatives": {
+        "mean_false_area_native_px": 135103.375,
+        "max_false_area_native_px": 261791,
+        "mean_false_area_pct_radiograph": 2.084883319046175,
+        "affected_study_rate": 1.0
+      },
+      "strata": {
+        "single_cvc": {
+          "count": 126,
+          "macro_binary_dice": 0.15310945612801422
+        },
+        "multi_cvc": {
+          "count": 59,
+          "macro_binary_dice": 0.223781246510134
+        },
+        "abnormal": {
+          "count": 23,
+          "macro_binary_dice": 0.19435372629480324
+        },
+        "cluttered_other_lines": {
+          "count": 94,
+          "macro_binary_dice": 0.1602387062411878
+        }
+      }
+    },
+    "tau_50": {
+      "threshold": 0.5,
+      "macro_binary_dice": 0.203700796052879,
+      "macro_soft_dice": 0.030081514146424106,
+      "macro_binary_iou": 0.11549287992044055,
+      "pooled_precision": 0.11997837578449573,
+      "pooled_recall": 0.6748568713412492,
+      "centerline_coverage": {
+        "cov_5px": 0.7259090923530612,
+        "cov_10px": 0.7579480477597553,
+        "cov_15px": 0.7828808868112941,
+        "cov_20px": 0.8024974611125307
+      },
+      "missed_catheter_rates": {
+        "missed_rate_5px": 0.05241935483870968,
+        "missed_rate_10px": 0.04435483870967742,
+        "missed_rate_15px": 0.04435483870967742,
+        "missed_rate_20px": 0.04435483870967742
+      },
+      "missed_catheter_counts": {
+        "missed_count_5px": 13,
+        "missed_count_10px": 11,
+        "missed_count_15px": 11,
+        "missed_count_20px": 11
+      },
+      "total_catheter_instances": 248,
+      "negatives": {
+        "mean_false_area_native_px": 98222.375,
+        "max_false_area_native_px": 192467,
+        "mean_false_area_pct_radiograph": 1.515483988269159,
+        "affected_study_rate": 1.0
+      },
+      "strata": {
+        "single_cvc": {
+          "count": 126,
+          "macro_binary_dice": 0.18117331497439626
+        },
+        "multi_cvc": {
+          "count": 59,
+          "macro_binary_dice": 0.2518103319154014
+        },
+        "abnormal": {
+          "count": 23,
+          "macro_binary_dice": 0.22094497072633776
+        },
+        "cluttered_other_lines": {
+          "count": 94,
+          "macro_binary_dice": 0.1842046187336026
+        }
+      }
+    },
+    "tau_60": {
+      "threshold": 0.6,
+      "macro_binary_dice": 0.23018758360073074,
+      "macro_soft_dice": 0.030081514146424106,
+      "macro_binary_iou": 0.1327732523777297,
+      "pooled_precision": 0.14363302022550578,
+      "pooled_recall": 0.6288484304909927,
+      "centerline_coverage": {
+        "cov_5px": 0.6851623502075136,
+        "cov_10px": 0.7190349454070966,
+        "cov_15px": 0.7450925295793243,
+        "cov_20px": 0.7658522130461436
+      },
+      "missed_catheter_rates": {
+        "missed_rate_5px": 0.06048387096774194,
+        "missed_rate_10px": 0.056451612903225805,
+        "missed_rate_15px": 0.04838709677419355,
+        "missed_rate_20px": 0.04435483870967742
+      },
+      "missed_catheter_counts": {
+        "missed_count_5px": 15,
+        "missed_count_10px": 14,
+        "missed_count_15px": 12,
+        "missed_count_20px": 11
+      },
+      "total_catheter_instances": 248,
+      "negatives": {
+        "mean_false_area_native_px": 71712.875,
+        "max_false_area_native_px": 141325,
+        "mean_false_area_pct_radiograph": 1.10518690653465,
+        "affected_study_rate": 1.0
+      },
+      "strata": {
+        "single_cvc": {
+          "count": 126,
+          "macro_binary_dice": 0.2093361426185366
+        },
+        "multi_cvc": {
+          "count": 59,
+          "macro_binary_dice": 0.274717779596603
+        },
+        "abnormal": {
+          "count": 23,
+          "macro_binary_dice": 0.24436962584273034
+        },
+        "cluttered_other_lines": {
+          "count": 94,
+          "macro_binary_dice": 0.20665084407924442
+        }
+      }
+    },
+    "tau_70": {
+      "threshold": 0.7,
+      "macro_binary_dice": 0.25851421212258086,
+      "macro_soft_dice": 0.030081514146424106,
+      "macro_binary_iou": 0.15204408179976459,
+      "pooled_precision": 0.17398077949847499,
+      "pooled_recall": 0.572846945267567,
+      "centerline_coverage": {
+        "cov_5px": 0.6364966690590675,
+        "cov_10px": 0.6738626127166784,
+        "cov_15px": 0.7006873447425809,
+        "cov_20px": 0.7232146545738414
+      },
+      "missed_catheter_rates": {
+        "missed_rate_5px": 0.11693548387096774,
+        "missed_rate_10px": 0.08870967741935484,
+        "missed_rate_15px": 0.06854838709677419,
+        "missed_rate_20px": 0.06048387096774194
+      },
+      "missed_catheter_counts": {
+        "missed_count_5px": 29,
+        "missed_count_10px": 22,
+        "missed_count_15px": 17,
+        "missed_count_20px": 15
+      },
+      "total_catheter_instances": 248,
+      "negatives": {
+        "mean_false_area_native_px": 49062.375,
+        "max_false_area_native_px": 97808,
+        "mean_false_area_pct_radiograph": 0.7552615094268879,
+        "affected_study_rate": 1.0
+      },
+      "strata": {
+        "single_cvc": {
+          "count": 126,
+          "macro_binary_dice": 0.2409708676345467
+        },
+        "multi_cvc": {
+          "count": 59,
+          "macro_binary_dice": 0.295979659673298
+        },
+        "abnormal": {
+          "count": 23,
+          "macro_binary_dice": 0.2684406375226304
+        },
+        "cluttered_other_lines": {
+          "count": 94,
+          "macro_binary_dice": 0.22993392238331736
+        }
+      }
+    }
+  }
+}

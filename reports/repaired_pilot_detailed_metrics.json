@@ -1,0 +1,37 @@
+{
+  "positive_studies": {
+    "n": 185,
+    "pooled_dice": 0.13084733486175537,
+    "pooled_precision": 0.07212474197149277,
+    "pooled_recall": 0.7041651010513306,
+    "mean_dice": 0.13074254989624023,
+    "mean_precision": 0.07386268675327301,
+    "mean_recall": 0.7116715908050537
+  },
+  "negative_studies": {
+    "n": 8,
+    "studies_with_fp": 8,
+    "mean_fp_pixels": 7766.75,
+    "neg_fp_rate": 0.029627799987778845
+  },
+  "crops": {
+    "total_crops": 193,
+    "mean_crops_per_study": 1.0,
+    "median_width": 2497.0,
+    "min_width": 2018.0,
+    "max_width": 3051.0,
+    "median_height": 2048.0,
+    "min_height": 2018.0,
+    "max_height": 3051.0,
+    "median_area_pct": 99.87999999998048,
+    "min_area_pct": 99.66599888791825,
+    "max_area_pct": 99.87999999998048
+  },
+  "tip_corridor": {
+    "gt_tips_in_mask_corridor": 196,
+    "total_targets": 248,
+    "corridor_coverage_pct": 79.03225806451613,
+    "accepted_success_at_15": 27,
+    "ungated_success_at_15": 37
+  }
+}
