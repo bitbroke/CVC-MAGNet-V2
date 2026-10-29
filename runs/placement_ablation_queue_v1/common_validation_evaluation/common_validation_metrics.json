@@ -1,0 +1,499 @@
+{
+  "validation_count": 2558,
+  "strata_counts": {
+    "all_locked_validation": 2558,
+    "annotated_trace_any": 778,
+    "no_annotated_trace": 1780,
+    "one_annotated_trace": 537,
+    "multiple_annotated_traces": 241,
+    "multiple_image_labels": 332
+  },
+  "models": {
+    "full_effnet": {
+      "checkpoint": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\placement_image_baseline_512\\checkpoints\\best_placement_baseline.pt",
+      "checkpoint_update": 2500,
+      "metrics": {
+        "all_locked_validation": {
+          "n": 2558,
+          "macro_auroc": 0.626611747839365,
+          "macro_auprc": 0.45317800187214713,
+          "macro_brier": 0.15979701528946558,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 1848,
+              "auroc": 0.5812686726419121,
+              "auprc": 0.76789688726983,
+              "brier": 0.19738860428333282
+            },
+            "CVC - Borderline": {
+              "support_positive": 729,
+              "auroc": 0.660593201589091,
+              "auprc": 0.44196167898391053,
+              "brier": 0.19059625267982483
+            },
+            "CVC - Abnormal": {
+              "support_positive": 266,
+              "auroc": 0.6379733692870921,
+              "auprc": 0.1496754393627009,
+              "brier": 0.0914061889052391
+            }
+          }
+        },
+        "annotated_trace_any": {
+          "n": 778,
+          "macro_auroc": 0.6456123426257682,
+          "macro_auprc": 0.49908852844761836,
+          "macro_brier": 0.1632460579276085,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 588,
+              "auroc": 0.5884622269960615,
+              "auprc": 0.8077716362889642,
+              "brier": 0.18374939262866974
+            },
+            "CVC - Borderline": {
+              "support_positive": 261,
+              "auroc": 0.6794874645204799,
+              "auprc": 0.5109046607290042,
+              "brier": 0.20924308896064758
+            },
+            "CVC - Abnormal": {
+              "support_positive": 87,
+              "auroc": 0.6688873363607631,
+              "auprc": 0.17858928832488682,
+              "brier": 0.09674569219350815
+            }
+          }
+        },
+        "no_annotated_trace": {
+          "n": 1780,
+          "macro_auroc": 0.6172945485764342,
+          "macro_auprc": 0.43429768682414727,
+          "macro_brier": 0.15828950454791388,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 1260,
+              "auroc": 0.5794123931623931,
+              "auprc": 0.7522389472074036,
+              "brier": 0.2033500075340271
+            },
+            "CVC - Borderline": {
+              "support_positive": 468,
+              "auroc": 0.6502379416823014,
+              "auprc": 0.40940430531727023,
+              "brier": 0.18244610726833344
+            },
+            "CVC - Abnormal": {
+              "support_positive": 179,
+              "auroc": 0.6222333108846078,
+              "auprc": 0.14124980794776804,
+              "brier": 0.08907239884138107
+            }
+          }
+        },
+        "one_annotated_trace": {
+          "n": 537,
+          "macro_auroc": 0.6496005525721471,
+          "macro_auprc": 0.4214292747203137,
+          "macro_brier": 0.13859922935565314,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 392,
+              "auroc": 0.6364795918367347,
+              "auprc": 0.8157888084231786,
+              "brier": 0.19054996967315674
+            },
+            "CVC - Borderline": {
+              "support_positive": 102,
+              "auroc": 0.6067387874690107,
+              "auprc": 0.279009831467671,
+              "brier": 0.1536535918712616
+            },
+            "CVC - Abnormal": {
+              "support_positive": 43,
+              "auroc": 0.7055832784106959,
+              "auprc": 0.16948918427009152,
+              "brier": 0.07159412652254105
+            }
+          }
+        },
+        "multiple_annotated_traces": {
+          "n": 241,
+          "macro_auroc": 0.5364851300626389,
+          "macro_auprc": 0.5753748145916372,
+          "macro_brier": 0.21816452840963999,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 196,
+              "auroc": 0.4473356009070295,
+              "auprc": 0.7904027601897992,
+              "brier": 0.1685962826013565
+            },
+            "CVC - Borderline": {
+              "support_positive": 159,
+              "auroc": 0.6005138824973155,
+              "auprc": 0.7283874005644072,
+              "brier": 0.33310848474502563
+            },
+            "CVC - Abnormal": {
+              "support_positive": 44,
+              "auroc": 0.5616059067835718,
+              "auprc": 0.20733428302070508,
+              "brier": 0.15278881788253784
+            }
+          }
+        },
+        "multiple_image_labels": {
+          "n": 332,
+          "macro_auroc": 0.5228221613666899,
+          "macro_auprc": 0.6876780106604414,
+          "macro_brier": 0.2529290070136388,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 299,
+              "auroc": 0.4347319347319347,
+              "auprc": 0.8815963520681609,
+              "brier": 0.13122978806495667
+            },
+            "CVC - Borderline": {
+              "support_positive": 283,
+              "auroc": 0.53097281315353,
+              "auprc": 0.8669965422683915,
+              "brier": 0.4133874475955963
+            },
+            "CVC - Abnormal": {
+              "support_positive": 88,
+              "auroc": 0.602761736214605,
+              "auprc": 0.31444113764477194,
+              "brier": 0.21416978538036346
+            }
+          }
+        }
+      }
+    },
+    "traced_effnet": {
+      "checkpoint": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\placement_ablation_queue_v1\\all_cvc_traced_effnet_multilabel_1000\\checkpoints\\best_placement_baseline.pt",
+      "checkpoint_update": 1000,
+      "metrics": {
+        "all_locked_validation": {
+          "n": 2558,
+          "macro_auroc": 0.7098136838383695,
+          "macro_auprc": 0.5025431633682387,
+          "macro_brier": 0.15102201203505197,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 1848,
+              "auroc": 0.7057740381684043,
+              "auprc": 0.8487775999210185,
+              "brier": 0.18052297830581665
+            },
+            "CVC - Borderline": {
+              "support_positive": 729,
+              "auroc": 0.7117965321699401,
+              "auprc": 0.44104093549632006,
+              "brier": 0.18190032243728638
+            },
+            "CVC - Abnormal": {
+              "support_positive": 266,
+              "auroc": 0.7118704811767639,
+              "auprc": 0.21781095468737738,
+              "brier": 0.09064273536205292
+            }
+          }
+        },
+        "annotated_trace_any": {
+          "n": 778,
+          "macro_auroc": 0.7267299978958972,
+          "macro_auprc": 0.5444019981269436,
+          "macro_brier": 0.15056451658407846,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 588,
+              "auroc": 0.7366630862871465,
+              "auprc": 0.8863567764836272,
+              "brier": 0.1611519753932953
+            },
+            "CVC - Borderline": {
+              "support_positive": 261,
+              "auroc": 0.7364473791473056,
+              "auprc": 0.5244984462947022,
+              "brier": 0.19493290781974792
+            },
+            "CVC - Abnormal": {
+              "support_positive": 87,
+              "auroc": 0.7070795282532395,
+              "auprc": 0.22235077160250138,
+              "brier": 0.0956086665391922
+            }
+          }
+        },
+        "no_annotated_trace": {
+          "n": 1780,
+          "macro_auroc": 0.7033988560516824,
+          "macro_auprc": 0.4862710053391091,
+          "macro_brier": 0.15122197568416595,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 1260,
+              "auroc": 0.6933836996336996,
+              "auprc": 0.8318695090268543,
+              "brier": 0.18898962438106537
+            },
+            "CVC - Borderline": {
+              "support_positive": 468,
+              "auroc": 0.701964606785491,
+              "auprc": 0.40328008417432026,
+              "brier": 0.17620407044887543
+            },
+            "CVC - Abnormal": {
+              "support_positive": 179,
+              "auroc": 0.7148482617358564,
+              "auprc": 0.22366342281615262,
+              "brier": 0.08847223222255707
+            }
+          }
+        },
+        "one_annotated_trace": {
+          "n": 537,
+          "macro_auroc": 0.731915072909807,
+          "macro_auprc": 0.45746105786868685,
+          "macro_brier": 0.12968877206246057,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 392,
+              "auroc": 0.7339901477832512,
+              "auprc": 0.8683231072229392,
+              "brier": 0.16986913979053497
+            },
+            "CVC - Borderline": {
+              "support_positive": 102,
+              "auroc": 0.7093306288032454,
+              "auprc": 0.29351457239738776,
+              "brier": 0.14729249477386475
+            },
+            "CVC - Abnormal": {
+              "support_positive": 43,
+              "auroc": 0.7524244421429243,
+              "auprc": 0.2105454939857336,
+              "brier": 0.07190468162298203
+            }
+          }
+        },
+        "multiple_annotated_traces": {
+          "n": 241,
+          "macro_auroc": 0.6810516614414626,
+          "macro_auprc": 0.6557343267465031,
+          "macro_brier": 0.1970801850159963,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 196,
+              "auroc": 0.7431405895691611,
+              "auprc": 0.9272423389808332,
+              "brier": 0.14172828197479248
+            },
+            "CVC - Borderline": {
+              "support_positive": 159,
+              "auroc": 0.6586899831262463,
+              "auprc": 0.7459897000104581,
+              "brier": 0.3010860085487366
+            },
+            "CVC - Abnormal": {
+              "support_positive": 44,
+              "auroc": 0.6413244116289802,
+              "auprc": 0.2939709412482184,
+              "brier": 0.14842626452445984
+            }
+          }
+        },
+        "multiple_image_labels": {
+          "n": 332,
+          "macro_auroc": 0.5507736204599637,
+          "macro_auprc": 0.6922257820133328,
+          "macro_brier": 0.23901510735352835,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 299,
+              "auroc": 0.6213134691395561,
+              "auprc": 0.937557526579835,
+              "brier": 0.1433645784854889
+            },
+            "CVC - Borderline": {
+              "support_positive": 283,
+              "auroc": 0.46953198240426913,
+              "auprc": 0.8264960122316879,
+              "brier": 0.36182504892349243
+            },
+            "CVC - Abnormal": {
+              "support_positive": 88,
+              "auroc": 0.5614754098360656,
+              "auprc": 0.3126238072284754,
+              "brier": 0.2118556946516037
+            }
+          }
+        }
+      }
+    },
+    "full_resnet18": {
+      "checkpoint": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\placement_ablation_queue_v1\\full_cohort_resnet18_multilabel_1000\\checkpoints\\best_placement_baseline.pt",
+      "checkpoint_update": 1000,
+      "metrics": {
+        "all_locked_validation": {
+          "n": 2558,
+          "macro_auroc": 0.6016065183527763,
+          "macro_auprc": 0.43242079804801675,
+          "macro_brier": 0.1624201461672783,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 1848,
+              "auroc": 0.554248597646485,
+              "auprc": 0.7622356675803821,
+              "brier": 0.19902417063713074
+            },
+            "CVC - Borderline": {
+              "support_positive": 729,
+              "auroc": 0.6248787819470039,
+              "auprc": 0.38582719800588616,
+              "brier": 0.19660623371601105
+            },
+            "CVC - Abnormal": {
+              "support_positive": 266,
+              "auroc": 0.6256921754648401,
+              "auprc": 0.14919952855778185,
+              "brier": 0.09163003414869308
+            }
+          }
+        },
+        "annotated_trace_any": {
+          "n": 778,
+          "macro_auroc": 0.6254265247038876,
+          "macro_auprc": 0.47567702122315075,
+          "macro_brier": 0.16558649639288583,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 588,
+              "auroc": 0.5868376297887575,
+              "auprc": 0.7989006328563375,
+              "brier": 0.184226855635643
+            },
+            "CVC - Borderline": {
+              "support_positive": 261,
+              "auroc": 0.64362628485886,
+              "auprc": 0.45556722818880885,
+              "brier": 0.2153080254793167
+            },
+            "CVC - Abnormal": {
+              "support_positive": 87,
+              "auroc": 0.6458156594640452,
+              "auprc": 0.17256320262430594,
+              "brier": 0.09722460806369781
+            }
+          }
+        },
+        "no_annotated_trace": {
+          "n": 1780,
+          "macro_auroc": 0.5910165168021383,
+          "macro_auprc": 0.41483430896164103,
+          "macro_brier": 0.16103618343671164,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 1260,
+              "auroc": 0.5444276556776557,
+              "auprc": 0.7485076385593935,
+              "brier": 0.20549173653125763
+            },
+            "CVC - Borderline": {
+              "support_positive": 468,
+              "auroc": 0.6134546982489055,
+              "auprc": 0.3546964589275815,
+              "brier": 0.18843205273151398
+            },
+            "CVC - Abnormal": {
+              "support_positive": 179,
+              "auroc": 0.6151671964798537,
+              "auprc": 0.14129882939794802,
+              "brier": 0.08918476104736328
+            }
+          }
+        },
+        "one_annotated_trace": {
+          "n": 537,
+          "macro_auroc": 0.5903544415882208,
+          "macro_auprc": 0.3761888404713533,
+          "macro_brier": 0.14307896296183267,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 392,
+              "auroc": 0.5843771991555242,
+              "auprc": 0.7824902291398986,
+              "brier": 0.1944885551929474
+            },
+            "CVC - Borderline": {
+              "support_positive": 102,
+              "auroc": 0.5423258958755917,
+              "auprc": 0.22366961021146187,
+              "brier": 0.16191883385181427
+            },
+            "CVC - Abnormal": {
+              "support_positive": 43,
+              "auroc": 0.6443602297335467,
+              "auprc": 0.12240668206269942,
+              "brier": 0.07282949984073639
+            }
+          }
+        },
+        "multiple_annotated_traces": {
+          "n": 241,
+          "macro_auroc": 0.6234894333932083,
+          "macro_auprc": 0.615646176357228,
+          "macro_brier": 0.21573813259601593,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 196,
+              "auroc": 0.7271541950113379,
+              "auprc": 0.8956370769256101,
+              "brier": 0.16136154532432556
+            },
+            "CVC - Borderline": {
+              "support_positive": 159,
+              "auroc": 0.5730556833870225,
+              "auprc": 0.702100774012003,
+              "brier": 0.3342706561088562
+            },
+            "CVC - Abnormal": {
+              "support_positive": 44,
+              "auroc": 0.5702584217812645,
+              "auprc": 0.24920067813407082,
+              "brier": 0.15158219635486603
+            }
+          }
+        },
+        "multiple_image_labels": {
+          "n": 332,
+          "macro_auroc": 0.607556800697764,
+          "macro_auprc": 0.7191419606117613,
+          "macro_brier": 0.24920273820559183,
+          "per_class": {
+            "CVC - Normal": {
+              "support_positive": 299,
+              "auroc": 0.6955508259856086,
+              "auprc": 0.9380990326664402,
+              "brier": 0.13179843127727509
+            },
+            "CVC - Borderline": {
+              "support_positive": 283,
+              "auroc": 0.5223552318453883,
+              "auprc": 0.8618972464131932,
+              "brier": 0.40370675921440125
+            },
+            "CVC - Abnormal": {
+              "support_positive": 88,
+              "auroc": 0.6047643442622951,
+              "auprc": 0.35742960275565067,
+              "brier": 0.21210302412509918
+            }
+          }
+        }
+      }
+    }
+  }
+}

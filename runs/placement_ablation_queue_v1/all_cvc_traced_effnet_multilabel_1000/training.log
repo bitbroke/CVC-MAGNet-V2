@@ -1,0 +1,145 @@
+Using device: cuda
+Dataset split: Train = 6,600 studies, Val = 778 studies (100% UNEXPOSED).
+Training Config: Effective Batch = 32 (Micro = 8, Accum = 4)
+Starting training for 1000 updates. Validation every 250 updates...
+Update    1/1000 | Loss: 0.6979 (avg: 0.6979) | LR: 3.00e-04
+Update   10/1000 | Loss: 0.5729 (avg: 0.5630) | LR: 3.00e-04
+Update   20/1000 | Loss: 0.5337 (avg: 0.5577) | LR: 3.00e-04
+Update   30/1000 | Loss: 0.4917 (avg: 0.5380) | LR: 2.99e-04
+Update   40/1000 | Loss: 0.4850 (avg: 0.5176) | LR: 2.99e-04
+Update   50/1000 | Loss: 0.5089 (avg: 0.5050) | LR: 2.98e-04
+Update   60/1000 | Loss: 0.4280 (avg: 0.4953) | LR: 2.97e-04
+Update   70/1000 | Loss: 0.6000 (avg: 0.5262) | LR: 2.96e-04
+Update   80/1000 | Loss: 0.5692 (avg: 0.5363) | LR: 2.95e-04
+Update   90/1000 | Loss: 0.5736 (avg: 0.5477) | LR: 2.94e-04
+Update  100/1000 | Loss: 0.5395 (avg: 0.5469) | LR: 2.93e-04
+Update  110/1000 | Loss: 0.4705 (avg: 0.5348) | LR: 2.91e-04
+Update  120/1000 | Loss: 0.4717 (avg: 0.5431) | LR: 2.90e-04
+Update  130/1000 | Loss: 0.4330 (avg: 0.5328) | LR: 2.88e-04
+Update  140/1000 | Loss: 0.6299 (avg: 0.5514) | LR: 2.86e-04
+Update  150/1000 | Loss: 0.6289 (avg: 0.5285) | LR: 2.84e-04
+Update  160/1000 | Loss: 0.4753 (avg: 0.5125) | LR: 2.82e-04
+Update  170/1000 | Loss: 0.5164 (avg: 0.5246) | LR: 2.79e-04
+Update  180/1000 | Loss: 0.5211 (avg: 0.5322) | LR: 2.77e-04
+Update  190/1000 | Loss: 0.5007 (avg: 0.5284) | LR: 2.74e-04
+Update  200/1000 | Loss: 0.5825 (avg: 0.5294) | LR: 2.71e-04
+Update  210/1000 | Loss: 0.4818 (avg: 0.5241) | LR: 2.69e-04
+Update  220/1000 | Loss: 0.4782 (avg: 0.5233) | LR: 2.66e-04
+Update  230/1000 | Loss: 0.4868 (avg: 0.5079) | LR: 2.63e-04
+Update  240/1000 | Loss: 0.5052 (avg: 0.5250) | LR: 2.59e-04
+Update  250/1000 | Loss: 0.5477 (avg: 0.5427) | LR: 2.56e-04
+
+--- Starting Validation @ Update 250 ---
+  [Val Eval] Processed batch 49/49...
+
+--- Validation @ Update 250 (Took 201.0s) ---
+Macro AUROC: 0.6453 | Macro AUPRC: 0.5010
+Normal AUROC: 0.6378 | Borderline AUROC: 0.6801 | Abnormal AUROC: 0.6179
+Selected Thresholds: [0.51, 0.28, 0.15]
+
+--> Saved NEW BEST checkpoint to C:\Ankshit\CVC-MAGNet-V2\runs\placement_ablation_queue_v1\all_cvc_traced_effnet_multilabel_1000\checkpoints\best_placement_baseline.pt (Macro AUROC: 0.6453)
+Update  260/1000 | Loss: 0.4599 (avg: 0.5597) | LR: 2.53e-04
+Update  270/1000 | Loss: 0.5014 (avg: 0.5154) | LR: 2.49e-04
+Update  280/1000 | Loss: 0.5682 (avg: 0.5601) | LR: 2.46e-04
+Update  290/1000 | Loss: 0.4949 (avg: 0.5503) | LR: 2.42e-04
+Update  300/1000 | Loss: 0.4233 (avg: 0.5276) | LR: 2.38e-04
+Update  310/1000 | Loss: 0.5120 (avg: 0.5688) | LR: 2.35e-04
+Update  320/1000 | Loss: 0.5384 (avg: 0.5215) | LR: 2.31e-04
+Update  330/1000 | Loss: 0.5237 (avg: 0.5381) | LR: 2.27e-04
+Update  340/1000 | Loss: 0.4727 (avg: 0.5010) | LR: 2.23e-04
+Update  350/1000 | Loss: 0.5083 (avg: 0.5309) | LR: 2.18e-04
+Update  360/1000 | Loss: 0.5239 (avg: 0.5512) | LR: 2.14e-04
+Update  370/1000 | Loss: 0.6199 (avg: 0.5296) | LR: 2.10e-04
+Update  380/1000 | Loss: 0.5957 (avg: 0.5302) | LR: 2.06e-04
+Update  390/1000 | Loss: 0.5903 (avg: 0.5335) | LR: 2.01e-04
+Update  400/1000 | Loss: 0.4087 (avg: 0.5338) | LR: 1.97e-04
+Update  410/1000 | Loss: 0.4951 (avg: 0.5696) | LR: 1.92e-04
+Update  420/1000 | Loss: 0.5988 (avg: 0.5334) | LR: 1.88e-04
+Update  430/1000 | Loss: 0.5692 (avg: 0.5537) | LR: 1.83e-04
+Update  440/1000 | Loss: 0.5512 (avg: 0.5242) | LR: 1.79e-04
+Update  450/1000 | Loss: 0.5305 (avg: 0.5452) | LR: 1.74e-04
+Update  460/1000 | Loss: 0.5504 (avg: 0.5467) | LR: 1.69e-04
+Update  470/1000 | Loss: 0.5906 (avg: 0.5325) | LR: 1.65e-04
+Update  480/1000 | Loss: 0.4817 (avg: 0.5005) | LR: 1.60e-04
+Update  490/1000 | Loss: 0.4940 (avg: 0.4881) | LR: 1.55e-04
+Update  500/1000 | Loss: 0.6985 (avg: 0.5243) | LR: 1.51e-04
+
+--- Starting Validation @ Update 500 ---
+  [Val Eval] Processed batch 49/49...
+
+--- Validation @ Update 500 (Took 120.3s) ---
+Macro AUROC: 0.5988 | Macro AUPRC: 0.4607
+Normal AUROC: 0.5428 | Borderline AUROC: 0.6480 | Abnormal AUROC: 0.6057
+Selected Thresholds: [0.1, 0.15, 0.11]
+
+Update  510/1000 | Loss: 0.6002 (avg: 0.5446) | LR: 1.46e-04
+Update  520/1000 | Loss: 0.5247 (avg: 0.5326) | LR: 1.41e-04
+Update  530/1000 | Loss: 0.3939 (avg: 0.5146) | LR: 1.36e-04
+Update  540/1000 | Loss: 0.4913 (avg: 0.5301) | LR: 1.32e-04
+Update  550/1000 | Loss: 0.5594 (avg: 0.5278) | LR: 1.27e-04
+Update  560/1000 | Loss: 0.5242 (avg: 0.5336) | LR: 1.22e-04
+Update  570/1000 | Loss: 0.4877 (avg: 0.5371) | LR: 1.18e-04
+Update  580/1000 | Loss: 0.5237 (avg: 0.5241) | LR: 1.13e-04
+Update  590/1000 | Loss: 0.5091 (avg: 0.4953) | LR: 1.09e-04
+Update  600/1000 | Loss: 0.4588 (avg: 0.5144) | LR: 1.04e-04
+Update  610/1000 | Loss: 0.5911 (avg: 0.5521) | LR: 9.99e-05
+Update  620/1000 | Loss: 0.5681 (avg: 0.5169) | LR: 9.55e-05
+Update  630/1000 | Loss: 0.4118 (avg: 0.5138) | LR: 9.11e-05
+Update  640/1000 | Loss: 0.6024 (avg: 0.4984) | LR: 8.68e-05
+Update  650/1000 | Loss: 0.4410 (avg: 0.5260) | LR: 8.26e-05
+Update  660/1000 | Loss: 0.5058 (avg: 0.5119) | LR: 7.85e-05
+Update  670/1000 | Loss: 0.5669 (avg: 0.4873) | LR: 7.44e-05
+Update  680/1000 | Loss: 0.5745 (avg: 0.5462) | LR: 7.04e-05
+Update  690/1000 | Loss: 0.4888 (avg: 0.5396) | LR: 6.65e-05
+Update  700/1000 | Loss: 0.5343 (avg: 0.5153) | LR: 6.26e-05
+Update  710/1000 | Loss: 0.5379 (avg: 0.5251) | LR: 5.89e-05
+Update  720/1000 | Loss: 0.3518 (avg: 0.4993) | LR: 5.52e-05
+Update  730/1000 | Loss: 0.4675 (avg: 0.5059) | LR: 5.16e-05
+Update  740/1000 | Loss: 0.5210 (avg: 0.4934) | LR: 4.82e-05
+Update  750/1000 | Loss: 0.4823 (avg: 0.4585) | LR: 4.48e-05
+
+--- Starting Validation @ Update 750 ---
+  [Val Eval] Processed batch 49/49...
+
+--- Validation @ Update 750 (Took 115.7s) ---
+Macro AUROC: 0.6951 | Macro AUPRC: 0.5163
+Normal AUROC: 0.7094 | Borderline AUROC: 0.7117 | Abnormal AUROC: 0.6643
+Selected Thresholds: [0.1, 0.26, 0.18]
+
+--> Saved NEW BEST checkpoint to C:\Ankshit\CVC-MAGNet-V2\runs\placement_ablation_queue_v1\all_cvc_traced_effnet_multilabel_1000\checkpoints\best_placement_baseline.pt (Macro AUROC: 0.6951)
+Update  760/1000 | Loss: 0.4200 (avg: 0.5044) | LR: 4.15e-05
+Update  770/1000 | Loss: 0.4883 (avg: 0.5015) | LR: 3.84e-05
+Update  780/1000 | Loss: 0.5265 (avg: 0.4414) | LR: 3.53e-05
+Update  790/1000 | Loss: 0.4287 (avg: 0.4682) | LR: 3.24e-05
+Update  800/1000 | Loss: 0.4317 (avg: 0.4588) | LR: 2.96e-05
+Update  810/1000 | Loss: 0.4840 (avg: 0.4835) | LR: 2.69e-05
+Update  820/1000 | Loss: 0.4717 (avg: 0.4456) | LR: 2.43e-05
+Update  830/1000 | Loss: 0.4747 (avg: 0.4663) | LR: 2.18e-05
+Update  840/1000 | Loss: 0.3943 (avg: 0.4278) | LR: 1.95e-05
+Update  850/1000 | Loss: 0.4994 (avg: 0.4685) | LR: 1.73e-05
+Update  860/1000 | Loss: 0.5854 (avg: 0.4716) | LR: 1.52e-05
+Update  870/1000 | Loss: 0.4368 (avg: 0.4552) | LR: 1.33e-05
+Update  880/1000 | Loss: 0.4686 (avg: 0.4611) | LR: 1.15e-05
+Update  890/1000 | Loss: 0.3524 (avg: 0.4459) | LR: 9.84e-06
+Update  900/1000 | Loss: 0.6030 (avg: 0.4700) | LR: 8.32e-06
+Update  910/1000 | Loss: 0.2967 (avg: 0.4477) | LR: 6.94e-06
+Update  920/1000 | Loss: 0.5015 (avg: 0.4780) | LR: 5.70e-06
+Update  930/1000 | Loss: 0.4349 (avg: 0.4273) | LR: 4.60e-06
+Update  940/1000 | Loss: 0.3379 (avg: 0.4512) | LR: 3.65e-06
+Update  950/1000 | Loss: 0.4645 (avg: 0.4417) | LR: 2.84e-06
+Update  960/1000 | Loss: 0.3722 (avg: 0.4771) | LR: 2.18e-06
+Update  970/1000 | Loss: 0.3778 (avg: 0.4538) | LR: 1.66e-06
+Update  980/1000 | Loss: 0.4234 (avg: 0.4607) | LR: 1.30e-06
+Update  990/1000 | Loss: 0.3792 (avg: 0.4423) | LR: 1.07e-06
+Update 1000/1000 | Loss: 0.5486 (avg: 0.5024) | LR: 1.00e-06
+
+--- Starting Validation @ Update 1000 ---
+  [Val Eval] Processed batch 49/49...
+
+--- Validation @ Update 1000 (Took 93.1s) ---
+Macro AUROC: 0.7266 | Macro AUPRC: 0.5432
+Normal AUROC: 0.7364 | Borderline AUROC: 0.7363 | Abnormal AUROC: 0.7070
+Selected Thresholds: [0.43, 0.22, 0.2]
+
+--> Saved NEW BEST checkpoint to C:\Ankshit\CVC-MAGNet-V2\runs\placement_ablation_queue_v1\all_cvc_traced_effnet_multilabel_1000\checkpoints\best_placement_baseline.pt (Macro AUROC: 0.7266)
+Wrote placement baseline summary to C:\Ankshit\CVC-MAGNet-V2\runs\placement_ablation_queue_v1\all_cvc_traced_effnet_multilabel_1000\placement_baseline_summary.json

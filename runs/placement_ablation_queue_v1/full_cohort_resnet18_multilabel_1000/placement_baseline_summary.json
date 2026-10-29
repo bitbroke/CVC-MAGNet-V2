@@ -1,0 +1,470 @@
+{
+  "run_name": "placement_image_baseline_512",
+  "model": "resnet18.a1_in1k",
+  "manifest_path": "C:\\Ankshit\\CVC-MAGNet-V2\\data\\splits\\placement_locked_manifest.parquet",
+  "resolution": 512,
+  "target_updates": 1000,
+  "effective_batch_size": 32,
+  "micro_batch_size": 8,
+  "total_train_time_sec": 39621.2,
+  "manifest_sha256": "876fe1925d055f3ba5b8400bedd37ddf8be6e297d6753e38634c135c1cc77323",
+  "best_checkpoint": {
+    "path": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\placement_ablation_queue_v1\\full_cohort_resnet18_multilabel_1000\\checkpoints\\best_placement_baseline.pt",
+    "sha256": "3b0ba85fd4327b81e9dcd0842a1d0e6ec9e717bd6182675c48f9cd0169650c82",
+    "macro_auroc": 0.6018,
+    "metrics": {
+      "per_class": {
+        "Normal": {
+          "auroc": 0.5547,
+          "auprc": 0.7614,
+          "brier_score": 0.199,
+          "optimal_threshold": 0.59,
+          "sensitivity": 1.0,
+          "specificity": 0.0014,
+          "precision": 0.7227,
+          "f1_score": 0.839,
+          "support_positive": 1848,
+          "support_total": 2558
+        },
+        "Borderline": {
+          "auroc": 0.6249,
+          "auprc": 0.3853,
+          "brier_score": 0.1966,
+          "optimal_threshold": 0.24,
+          "sensitivity": 0.856,
+          "specificity": 0.2947,
+          "precision": 0.326,
+          "f1_score": 0.4722,
+          "support_positive": 729,
+          "support_total": 2558
+        },
+        "Abnormal": {
+          "auroc": 0.6256,
+          "auprc": 0.1492,
+          "brier_score": 0.0916,
+          "optimal_threshold": 0.12,
+          "sensitivity": 0.4925,
+          "specificity": 0.6832,
+          "precision": 0.1529,
+          "f1_score": 0.2333,
+          "support_positive": 266,
+          "support_total": 2558
+        }
+      },
+      "macro": {
+        "macro_auroc": 0.6018,
+        "macro_auprc": 0.432,
+        "macro_brier": 0.1624,
+        "selected_thresholds": [
+          0.59,
+          0.24,
+          0.12
+        ]
+      },
+      "subgroups": {
+        "single_cvc": {
+          "study_count": 2139,
+          "macro_auroc": 0.5765,
+          "per_class": {
+            "Normal": {
+              "auroc": 0.5712,
+              "positive_count": 1485
+            },
+            "Borderline": {
+              "auroc": 0.5591,
+              "positive_count": 424
+            },
+            "Abnormal": {
+              "auroc": 0.5992,
+              "positive_count": 177
+            }
+          }
+        },
+        "multi_cvc": {
+          "study_count": 419,
+          "macro_auroc": 0.6174,
+          "per_class": {
+            "Normal": {
+              "auroc": 0.7055,
+              "positive_count": 363
+            },
+            "Borderline": {
+              "auroc": 0.5513,
+              "positive_count": 305
+            },
+            "Abnormal": {
+              "auroc": 0.5956,
+              "positive_count": 89
+            }
+          }
+        }
+      }
+    }
+  },
+  "eval_history": [
+    {
+      "update": 250,
+      "metrics": {
+        "per_class": {
+          "Normal": {
+            "auroc": 0.5609,
+            "auprc": 0.7626,
+            "brier_score": 0.2009,
+            "optimal_threshold": 0.1,
+            "sensitivity": 1.0,
+            "specificity": 0.0,
+            "precision": 0.7224,
+            "f1_score": 0.8389,
+            "support_positive": 1848,
+            "support_total": 2558
+          },
+          "Borderline": {
+            "auroc": 0.6196,
+            "auprc": 0.3847,
+            "brier_score": 0.1976,
+            "optimal_threshold": 0.25,
+            "sensitivity": 0.7805,
+            "specificity": 0.3674,
+            "precision": 0.3297,
+            "f1_score": 0.4635,
+            "support_positive": 729,
+            "support_total": 2558
+          },
+          "Abnormal": {
+            "auroc": 0.6228,
+            "auprc": 0.1479,
+            "brier_score": 0.0931,
+            "optimal_threshold": 0.13,
+            "sensitivity": 0.7707,
+            "specificity": 0.4241,
+            "precision": 0.1344,
+            "f1_score": 0.2289,
+            "support_positive": 266,
+            "support_total": 2558
+          }
+        },
+        "macro": {
+          "macro_auroc": 0.6011,
+          "macro_auprc": 0.4317,
+          "macro_brier": 0.1639,
+          "selected_thresholds": [
+            0.1,
+            0.25,
+            0.13
+          ]
+        },
+        "subgroups": {
+          "single_cvc": {
+            "study_count": 2139,
+            "macro_auroc": 0.5761,
+            "per_class": {
+              "Normal": {
+                "auroc": 0.5786,
+                "positive_count": 1485
+              },
+              "Borderline": {
+                "auroc": 0.551,
+                "positive_count": 424
+              },
+              "Abnormal": {
+                "auroc": 0.5988,
+                "positive_count": 177
+              }
+            }
+          },
+          "multi_cvc": {
+            "study_count": 419,
+            "macro_auroc": 0.5932,
+            "per_class": {
+              "Normal": {
+                "auroc": 0.6193,
+                "positive_count": 363
+              },
+              "Borderline": {
+                "auroc": 0.5626,
+                "positive_count": 305
+              },
+              "Abnormal": {
+                "auroc": 0.5975,
+                "positive_count": 89
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "update": 500,
+      "metrics": {
+        "per_class": {
+          "Normal": {
+            "auroc": 0.5371,
+            "auprc": 0.7551,
+            "brier_score": 0.2007,
+            "optimal_threshold": 0.61,
+            "sensitivity": 0.9995,
+            "specificity": 0.0028,
+            "precision": 0.7229,
+            "f1_score": 0.839,
+            "support_positive": 1848,
+            "support_total": 2558
+          },
+          "Borderline": {
+            "auroc": 0.6153,
+            "auprc": 0.3683,
+            "brier_score": 0.1986,
+            "optimal_threshold": 0.25,
+            "sensitivity": 0.8532,
+            "specificity": 0.2761,
+            "precision": 0.3196,
+            "f1_score": 0.465,
+            "support_positive": 729,
+            "support_total": 2558
+          },
+          "Abnormal": {
+            "auroc": 0.6154,
+            "auprc": 0.1472,
+            "brier_score": 0.0919,
+            "optimal_threshold": 0.11,
+            "sensitivity": 0.5677,
+            "specificity": 0.6091,
+            "precision": 0.1442,
+            "f1_score": 0.23,
+            "support_positive": 266,
+            "support_total": 2558
+          }
+        },
+        "macro": {
+          "macro_auroc": 0.5893,
+          "macro_auprc": 0.4235,
+          "macro_brier": 0.1638,
+          "selected_thresholds": [
+            0.61,
+            0.25,
+            0.11
+          ]
+        },
+        "subgroups": {
+          "single_cvc": {
+            "study_count": 2139,
+            "macro_auroc": 0.5594,
+            "per_class": {
+              "Normal": {
+                "auroc": 0.554,
+                "positive_count": 1485
+              },
+              "Borderline": {
+                "auroc": 0.5442,
+                "positive_count": 424
+              },
+              "Abnormal": {
+                "auroc": 0.5801,
+                "positive_count": 177
+              }
+            }
+          },
+          "multi_cvc": {
+            "study_count": 419,
+            "macro_auroc": 0.6186,
+            "per_class": {
+              "Normal": {
+                "auroc": 0.6739,
+                "positive_count": 363
+              },
+              "Borderline": {
+                "auroc": 0.5653,
+                "positive_count": 305
+              },
+              "Abnormal": {
+                "auroc": 0.6166,
+                "positive_count": 89
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "update": 750,
+      "metrics": {
+        "per_class": {
+          "Normal": {
+            "auroc": 0.5541,
+            "auprc": 0.7622,
+            "brier_score": 0.1993,
+            "optimal_threshold": 0.59,
+            "sensitivity": 1.0,
+            "specificity": 0.0014,
+            "precision": 0.7227,
+            "f1_score": 0.839,
+            "support_positive": 1848,
+            "support_total": 2558
+          },
+          "Borderline": {
+            "auroc": 0.6226,
+            "auprc": 0.3853,
+            "brier_score": 0.1974,
+            "optimal_threshold": 0.26,
+            "sensitivity": 0.8409,
+            "specificity": 0.3056,
+            "precision": 0.3255,
+            "f1_score": 0.4694,
+            "support_positive": 729,
+            "support_total": 2558
+          },
+          "Abnormal": {
+            "auroc": 0.6238,
+            "auprc": 0.1509,
+            "brier_score": 0.0917,
+            "optimal_threshold": 0.1,
+            "sensitivity": 0.6729,
+            "specificity": 0.5362,
+            "precision": 0.1441,
+            "f1_score": 0.2374,
+            "support_positive": 266,
+            "support_total": 2558
+          }
+        },
+        "macro": {
+          "macro_auroc": 0.6002,
+          "macro_auprc": 0.4328,
+          "macro_brier": 0.1628,
+          "selected_thresholds": [
+            0.59,
+            0.26,
+            0.1
+          ]
+        },
+        "subgroups": {
+          "single_cvc": {
+            "study_count": 2139,
+            "macro_auroc": 0.5737,
+            "per_class": {
+              "Normal": {
+                "auroc": 0.57,
+                "positive_count": 1485
+              },
+              "Borderline": {
+                "auroc": 0.5562,
+                "positive_count": 424
+              },
+              "Abnormal": {
+                "auroc": 0.5948,
+                "positive_count": 177
+              }
+            }
+          },
+          "multi_cvc": {
+            "study_count": 419,
+            "macro_auroc": 0.6213,
+            "per_class": {
+              "Normal": {
+                "auroc": 0.6983,
+                "positive_count": 363
+              },
+              "Borderline": {
+                "auroc": 0.562,
+                "positive_count": 305
+              },
+              "Abnormal": {
+                "auroc": 0.6037,
+                "positive_count": 89
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "update": 1000,
+      "metrics": {
+        "per_class": {
+          "Normal": {
+            "auroc": 0.5547,
+            "auprc": 0.7614,
+            "brier_score": 0.199,
+            "optimal_threshold": 0.59,
+            "sensitivity": 1.0,
+            "specificity": 0.0014,
+            "precision": 0.7227,
+            "f1_score": 0.839,
+            "support_positive": 1848,
+            "support_total": 2558
+          },
+          "Borderline": {
+            "auroc": 0.6249,
+            "auprc": 0.3853,
+            "brier_score": 0.1966,
+            "optimal_threshold": 0.24,
+            "sensitivity": 0.856,
+            "specificity": 0.2947,
+            "precision": 0.326,
+            "f1_score": 0.4722,
+            "support_positive": 729,
+            "support_total": 2558
+          },
+          "Abnormal": {
+            "auroc": 0.6256,
+            "auprc": 0.1492,
+            "brier_score": 0.0916,
+            "optimal_threshold": 0.12,
+            "sensitivity": 0.4925,
+            "specificity": 0.6832,
+            "precision": 0.1529,
+            "f1_score": 0.2333,
+            "support_positive": 266,
+            "support_total": 2558
+          }
+        },
+        "macro": {
+          "macro_auroc": 0.6018,
+          "macro_auprc": 0.432,
+          "macro_brier": 0.1624,
+          "selected_thresholds": [
+            0.59,
+            0.24,
+            0.12
+          ]
+        },
+        "subgroups": {
+          "single_cvc": {
+            "study_count": 2139,
+            "macro_auroc": 0.5765,
+            "per_class": {
+              "Normal": {
+                "auroc": 0.5712,
+                "positive_count": 1485
+              },
+              "Borderline": {
+                "auroc": 0.5591,
+                "positive_count": 424
+              },
+              "Abnormal": {
+                "auroc": 0.5992,
+                "positive_count": 177
+              }
+            }
+          },
+          "multi_cvc": {
+            "study_count": 419,
+            "macro_auroc": 0.6174,
+            "per_class": {
+              "Normal": {
+                "auroc": 0.7055,
+                "positive_count": 363
+              },
+              "Borderline": {
+                "auroc": 0.5513,
+                "positive_count": 305
+              },
+              "Abnormal": {
+                "auroc": 0.5956,
+                "positive_count": 89
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
