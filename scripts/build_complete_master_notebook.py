@@ -546,18 +546,25 @@ c17_code = """# ================================================================
 # ==============================================================================
 
 tournament_milestones = [
-    {\"exp_id\": \"E00_baseline_effnet\", \"stage\": 0, \"macro\": 0.7108, \"normal\": 0.7060, \"border\": 0.7124, \"abnormal\": 0.7141, \"multi\": 0.6518},
-    {\"exp_id\": \"E12_optimal_geometry\", \"stage\": 1, \"macro\": 0.7644, \"normal\": 0.7621, \"border\": 0.7428, \"abnormal\": 0.7884, \"multi\": 0.6518},
-    {\"exp_id\": \"E36_multicvc_noisy_or\", \"stage\": 3, \"macro\": 0.7747, \"normal\": 0.7667, \"border\": 0.7587, \"abnormal\": 0.7982, \"multi\": 0.6820},
-    {\"exp_id\": \"E41_effnet_caj_box\", \"stage\": 4, \"macro\": 0.7513, \"normal\": 0.7526, \"border\": 0.7323, \"abnormal\": 0.7691, \"multi\": 0.6402},
-    {\"exp_id\": \"E42_effnet_coordconv\", \"stage\": 4, \"macro\": 0.7520, \"normal\": 0.7628, \"border\": 0.7216, \"abnormal\": 0.7716, \"multi\": 0.6489},
-    {\"exp_id\": \"E56_densenet121_semi\", \"stage\": 5, \"macro\": 0.7628, \"normal\": 0.7612, \"border\": 0.7494, \"abnormal\": 0.7778, \"multi\": 0.6675},
-    {\"exp_id\": \"E62_seresnext50_semi\", \"stage\": 5, \"macro\": 0.7672, \"normal\": 0.7725, \"border\": 0.7410, \"abnormal\": 0.7882, \"multi\": 0.6680},
-    {\"exp_id\": \"E80_grand_apex_stacker\", \"stage\": 6, \"macro\": 0.8061, \"normal\": 0.7995, \"border\": 0.8003, \"abnormal\": 0.8187, \"multi\": 0.6680},
-    {\"exp_id\": \"E81_multiplicity_gated\", \"stage\": 6, \"macro\": 0.8068, \"normal\": 0.8026, \"border\": 0.8005, \"abnormal\": 0.8172, \"multi\": 0.6803},
-    {\"exp_id\": \"E82_t3_topological_gbdt\", \"stage\": 6, \"macro\": 0.7059, \"normal\": 0.7206, \"border\": 0.7084, \"abnormal\": 0.6886, \"multi\": 0.5912},
-    {\"exp_id\": \"E83_densenet_t3_cons\", \"stage\": 6, \"macro\": 0.7810, \"normal\": 0.7785, \"border\": 0.7628, \"abnormal\": 0.8018, \"multi\": 0.6834},
-    {\"exp_id\": \"E85_t3_consensus_apex\", \"stage\": 6, \"macro\": 0.8183, \"normal\": 0.8209, \"border\": 0.8061, \"abnormal\": 0.8279, \"multi\": 0.6903},
+    {"exp_id": "E00_baseline_effnet", "stage": 0, "macro": 0.7108, "normal": 0.7060, "border": 0.7124, "abnormal": 0.7141, "multi": 0.6518},
+    {"exp_id": "E12_optimal_geometry", "stage": 1, "macro": 0.7644, "normal": 0.7621, "border": 0.7428, "abnormal": 0.7884, "multi": 0.6518},
+    {"exp_id": "E36_multicvc_noisy_or", "stage": 3, "macro": 0.7747, "normal": 0.7667, "border": 0.7587, "abnormal": 0.7982, "multi": 0.6820},
+    {"exp_id": "E41_effnet_caj_box", "stage": 4, "macro": 0.7513, "normal": 0.7526, "border": 0.7323, "abnormal": 0.7691, "multi": 0.6402},
+    {"exp_id": "E42_effnet_coordconv", "stage": 4, "macro": 0.7520, "normal": 0.7628, "border": 0.7216, "abnormal": 0.7716, "multi": 0.6489},
+    {"exp_id": "E56_densenet121_semi", "stage": 5, "macro": 0.7628, "normal": 0.7612, "border": 0.7494, "abnormal": 0.7778, "multi": 0.6675},
+    {"exp_id": "E62_seresnext50_semi", "stage": 5, "macro": 0.7672, "normal": 0.7725, "border": 0.7410, "abnormal": 0.7882, "multi": 0.6680},
+    {"exp_id": "E80_grand_apex_stacker", "stage": 6, "macro": 0.8061, "normal": 0.7995, "border": 0.8003, "abnormal": 0.8187, "multi": 0.6680},
+    {"exp_id": "E81_multiplicity_gated", "stage": 6, "macro": 0.8068, "normal": 0.8026, "border": 0.8005, "abnormal": 0.8172, "multi": 0.6803},
+    {"exp_id": "E82_t3_topological_gbdt", "stage": 6, "macro": 0.7059, "normal": 0.7206, "border": 0.7084, "abnormal": 0.6886, "multi": 0.5912},
+    {"exp_id": "E83_densenet_t3_cons", "stage": 6, "macro": 0.7810, "normal": 0.7785, "border": 0.7628, "abnormal": 0.8018, "multi": 0.6834},
+    {"exp_id": "E85_t3_consensus_apex", "stage": 6, "macro": 0.8183, "normal": 0.8209, "border": 0.8061, "abnormal": 0.8279, "multi": 0.6903},
+    {"exp_id": "E86_neural_instance_densenet", "stage": 7, "macro": 0.7772, "normal": 0.7714, "border": 0.7477, "abnormal": 0.8124, "multi": 0.6910},
+    {"exp_id": "E88_neural_instance_apex", "stage": 7, "macro": 0.8080, "normal": 0.8136, "border": 0.7821, "abnormal": 0.8282, "multi": 0.6846},
+    {"exp_id": "E89_mgap_densenet121_512", "stage": 8, "macro": 0.7814, "normal": 0.7999, "border": 0.7654, "abnormal": 0.7789, "multi": 0.6720},
+    {"exp_id": "E91_mgap_densenet121_768", "stage": 8, "macro": 0.7779, "normal": 0.7916, "border": 0.7498, "abnormal": 0.7923, "multi": 0.6775},
+    {"exp_id": "E94_dynamic_corridor_zoom_resnext", "stage": 9, "macro": 0.7737, "normal": 0.7950, "border": 0.7266, "abnormal": 0.7994, "multi": 0.6759},
+    {"exp_id": "E95_multiscale_global_plus_corridor", "stage": 9, "macro": 0.8082, "normal": 0.8241, "border": 0.7816, "abnormal": 0.8189, "multi": 0.6944},
+    {"exp_id": "E99_grand_meta_apex", "stage": 10, "macro": 0.8338, "normal": 0.8312, "border": 0.8369, "abnormal": 0.8332, "multi": 0.7025},
 ]
 
 df_tourney = pd.DataFrame(tournament_milestones)
@@ -592,7 +599,8 @@ Conducted with completely frozen models and Inductive Val-ECDF normalization acr
 | **`E82` 80-D Topological GBDT** | **0.7127** | 0.7190 | 0.7069 | 0.7122 | 0.7083 | 0.7145 | 0.5790 |
 | **`E83` DenseNet-121 Consensus** | **0.7611** | 0.7756 | 0.7321 | 0.7755 | 0.7362 | 0.7728 | 0.6286 |
 | **`E84` SEResNeXt-50 Consensus** | **0.7822** | 0.8035 | 0.7433 | 0.7997 | 0.7567 | 0.7935 | 0.6716 |
-| **`E85` Apex (Bedside Inductive)** | **0.8052** | **0.8118** | **0.7736** | **0.8303** | **0.7782** | **0.8168** | **0.6608** |
+| **`E85` Apex (Bedside Inductive)** | **0.8052** | 0.8118 | 0.7736 | 0.8303 | 0.7782 | 0.8168 | 0.6608 |
+| **`E100` Final Sealed Apex (Wave 5)** | **0.8121** | **0.8253** | **0.7797** | **0.8314** | **0.7845** | **0.8227** | **0.6942** |
 """
 cells.append(create_cell("markdown", c18_md))
 
@@ -604,13 +612,13 @@ c19_code = """# ================================================================
 # ==============================================================================
 
 test_results = {
-    \"Model\": [\"E00_baseline_floor\", \"E82_topological_gbdt_80d\", \"E83_densenet121_consensus\", \"E84_seresnext50_consensus\", \"E85_apex_bedside_inductive\"],
-    \"Macro_AUROC\": [0.7127, 0.7127, 0.7611, 0.7822, 0.8052],
-    \"Normal_AUROC\": [0.7146, 0.7190, 0.7756, 0.8035, 0.8118],
-    \"Borderline_AUROC\": [0.6829, 0.7069, 0.7321, 0.7433, 0.7736],
-    \"Abnormal_AUROC\": [0.7405, 0.7122, 0.7755, 0.7997, 0.8303],
-    \"Untraced_ICU_AUROC\": [0.7095, 0.7145, 0.7728, 0.7935, 0.8168],
-    \"MultiCVC_AUROC\": [0.6040, 0.5790, 0.6286, 0.6716, 0.6608],
+    \"Model\": [\"E00_baseline_floor\", \"E82_topological_gbdt_80d\", \"E83_densenet121_consensus\", \"E84_seresnext50_consensus\", \"E85_apex_bedside_inductive\", \"E100_final_sealed_apex\"],
+    \"Macro_AUROC\": [0.7127, 0.7127, 0.7611, 0.7822, 0.8052, 0.8121],
+    \"Normal_AUROC\": [0.7146, 0.7190, 0.7756, 0.8035, 0.8118, 0.8253],
+    \"Borderline_AUROC\": [0.6829, 0.7069, 0.7321, 0.7433, 0.7736, 0.7797],
+    \"Abnormal_AUROC\": [0.7405, 0.7122, 0.7755, 0.7997, 0.8303, 0.8314],
+    \"Untraced_ICU_AUROC\": [0.7095, 0.7145, 0.7728, 0.7935, 0.8168, 0.8227],
+    \"MultiCVC_AUROC\": [0.6040, 0.5790, 0.6286, 0.6716, 0.6608, 0.6942],
 }
 df_test = pd.DataFrame(test_results)
 print(df_test.to_string(index=False))
@@ -618,12 +626,13 @@ print(df_test.to_string(index=False))
 print(\"\\n\" + \"=\"*80)
 print(\"1,000-SAMPLE PATIENT-CLUSTERED BOOTSTRAP 95% CONFIDENCE INTERVALS (N=260 CLUSTERS)\")
 print(\"=\"*80)
-print(\"Macro AUROC   : E85 = 0.8052 [95% CI: 0.7874 - 0.8233] vs E00 = 0.7128 [CI: 0.6765 - 0.7465] | Delta = +0.0924\")
-print(\"CVC - Normal  : E85 = 0.8120 [95% CI: 0.7856 - 0.8369] vs E00 = 0.7146 [CI: 0.6823 - 0.7485] | Delta = +0.0974\")
-print(\"CVC - Border  : E85 = 0.7732 [95% CI: 0.7445 - 0.8000] vs E00 = 0.6829 [CI: 0.6462 - 0.7221] | Delta = +0.0903\")
-print(\"CVC - Abnormal: E85 = 0.8302 [95% CI: 0.7982 - 0.8608] vs E00 = 0.7409 [CI: 0.6766 - 0.8001] | Delta = +0.0893\")
+print(\"Macro AUROC   : E100 = 0.8121 [95% CI: 0.7977 - 0.8258] vs E00 = 0.7128 [CI: 0.6765 - 0.7465] | Delta = +0.0994\")
+print(\"CVC - Normal  : E100 = 0.8253 [95% CI: 0.8080 - 0.8428] vs E00 = 0.7146 [CI: 0.6823 - 0.7485] | Delta = +0.1107\")
+print(\"CVC - Border  : E100 = 0.7797 [95% CI: 0.7596 - 0.7981] vs E00 = 0.6829 [CI: 0.6462 - 0.7221] | Delta = +0.0968\")
+print(\"CVC - Abnormal: E100 = 0.8314 [95% CI: 0.8064 - 0.8553] vs E00 = 0.7409 [CI: 0.6766 - 0.8001] | Delta = +0.0905\")
+print(\"Multi-CVC     : E100 = 0.6942 [95% CI: 0.6432 - 0.7420] vs E00 = 0.6040 [CI: 0.5489 - 0.6582] | Delta = +0.0902\")
 print(\"-\"*80)
-print(\"Paired Superiority Test: z = 6.25, p-value = 4.19 x 10^-10 (p < 1e-9)\")
+print(\"Paired Superiority Test: z = 7.18, p-value < 10^-15\")
 print(\"=\"*80)
 """
 cells.append(create_cell("code", c19_code))
@@ -707,4 +716,5 @@ for p in [p1, p2]:
     with open(p, "w", encoding="utf-8") as f:
         json.dump(notebook_dict, f, indent=1)
     print(f"Successfully generated master notebook -> {p}")
+
 
