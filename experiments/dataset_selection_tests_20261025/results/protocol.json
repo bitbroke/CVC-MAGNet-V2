@@ -1,0 +1,20 @@
+{
+  "tests": [
+    "geometry and label availability",
+    "patient/study/duplicate separation",
+    "three frozen model subgroup comparison",
+    "patient-bootstrap uncertainty",
+    "training-only cohort manifests"
+  ],
+  "threshold": 0.5,
+  "bootstrap_replicates": 1000,
+  "seed": 42,
+  "selection": "metadata only; no individual model-score filtering",
+  "limitations": [
+    "Repeated development cohort; not independent test",
+    "Overlapping subgroups; descriptive intervals not multiple-comparison adjusted",
+    "Inventory counts do not establish all visible catheters",
+    "No review attestation or dense boundary truth",
+    "No training started; no models loaded or modified"
+  ]
+}

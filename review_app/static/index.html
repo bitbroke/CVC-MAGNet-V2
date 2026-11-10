@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CVC Distal Tip Endpoint Review Workstation</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header>
+    <div class="brand">
+      <div class="brand-icon">CVC</div>
+      <div>
+        <span class="brand-title">Distal Tip Endpoint Review</span>
+        <span class="brand-subtitle">Workstation v3</span>
+      </div>
+    </div>
+
+    <div class="header-stats">
+      <!-- Filter Dropdown -->
+      <select id="filterPriority" style="background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border-color); padding: 6px 12px; border-radius: 6px; font-size: 12px; cursor: pointer;">
+        <option value="all">All Cases (754)</option>
+        <option value="unreviewed">Unreviewed Only</option>
+        <option value="1">Priority 1 (Unlock Multi-CVC)</option>
+        <option value="2">Priority 2 (Ambiguous Border &lt;60px)</option>
+        <option value="reviewed">Already Reviewed</option>
+      </select>
+
+      <!-- Overall Progress Pill -->
+      <div class="progress-pill">
+        <span id="progressText">0 / 754 Reviewed (0%)</span>
+        <div class="progress-bar-mini">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workstation Layout -->
+  <div class="app-container">
+
+    <!-- Left: Pan/Zoom Radiograph Viewport -->
+    <div class="viewer-panel" id="viewerPanel">
+      
+      <!-- Toolbar Overlay -->
+      <div class="viewer-toolbar">
+        <button class="tool-btn" id="btnFit" title="Fit to Screen">⤢ Fit</button>
+        <button class="tool-btn" id="btnZoomIn" title="Zoom In (+)">＋</button>
+        <button class="tool-btn" id="btnZoomOut" title="Zoom Out (-)">－</button>
+        <button class="tool-btn" id="btnReset" title="Reset View">↺ Reset</button>
+        <button class="tool-btn" id="btnInvert" title="Invert Grayscale">◑ Invert</button>
+        
+        <div class="slider-group">
+          <span>Contrast:</span>
+          <input type="range" id="contrastSlider" min="50" max="250" value="100">
+        </div>
+        <div class="slider-group">
+          <span>Brightness:</span>
+          <input type="range" id="brightnessSlider" min="50" max="200" value="100">
+        </div>
+      </div>
+
+      <!-- Viewport Drag/Zoom Surface -->
+      <div class="viewport-wrapper" id="viewport">
+        <div class="viewport-content" id="viewportContent">
+          <img id="radiographImg" class="radiograph-img" src="" alt="Radiograph">
+          <svg id="svgOverlay" class="svg-overlay"></svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right: Decision & Metadata Sidebar -->
+    <div class="sidebar-panel">
+      <div class="sidebar-content">
+
+        <!-- Case Identification Card -->
+        <div class="case-card">
+          <div class="case-card-header">
+            <span class="case-id-badge" id="caseBadge">Case #1</span>
+            <span class="priority-tag" id="priorityTag">Priority 1</span>
+          </div>
+
+          <div class="meta-row">
+            <span>Study UID:</span>
+            <span class="val" id="studyUidShort" title="">Loading...</span>
+          </div>
+          <div class="meta-row">
+            <span>Catheter Instance:</span>
+            <span class="val" id="catheterId">#1 of 1</span>
+          </div>
+          <div class="meta-row">
+            <span>Split:</span>
+            <span class="val" id="splitVal">dev_pilot_train</span>
+          </div>
+          <div class="meta-row">
+            <span>Clinical Label:</span>
+            <span class="val" id="labelVal">CVC - Normal</span>
+          </div>
+          <div class="meta-row">
+            <span>Polyline Points:</span>
+            <span class="val" id="pointsVal">14 points</span>
+          </div>
+        </div>
+
+        <!-- Decision Buttons -->
+        <div class="decision-section">
+          <div class="decision-title">Select Distal Tip Endpoint</div>
+
+          <!-- Endpoint A -->
+          <button class="action-btn btn-a" id="btnChoiceA">
+            <div>
+              <span style="color: var(--color-a); font-weight: 700; margin-right: 8px;">● A</span>
+              <span>Endpoint A (Green)</span>
+            </div>
+            <span class="key-hint">Press A or 1</span>
+          </button>
+
+          <!-- Endpoint B -->
+          <button class="action-btn btn-b" id="btnChoiceB">
+            <div>
+              <span style="color: var(--color-b); font-weight: 700; margin-right: 8px;">● B</span>
+              <span>Endpoint B (Magenta)</span>
+            </div>
+            <span class="key-hint">Press B or 2</span>
+          </button>
+
+          <!-- Unassessable -->
+          <button class="action-btn btn-u" id="btnChoiceU">
+            <div>
+              <span style="color: var(--color-u); font-weight: 700; margin-right: 8px;">✕</span>
+              <span>Unassessable / Neither</span>
+            </div>
+            <span class="key-hint">Press U or 3</span>
+          </button>
+        </div>
+
+        <!-- Automated Heuristic Comparison & Clues -->
+        <div class="heuristic-box">
+          <div style="margin-bottom: 4px;"><strong>Anatomical Clue:</strong></div>
+          <div id="heuristicExplanation">
+            The CVC distal tip terminates centrally in the SVC / cavoatrial junction. The insertion site begins peripherally in the neck, subclavian, or groin.
+          </div>
+          <div style="margin-top: 8px; font-size: 11px; color: var(--text-dim);" id="borderDistDetails">
+            Border Dist: A = 0px | B = 0px
+          </div>
+        </div>
+
+        <!-- Reviewer Notes -->
+        <div>
+          <label style="font-size: 11px; color: var(--text-dim); text-transform: uppercase; font-weight: 600;">Audit Notes (Optional):</label>
+          <input type="text" id="reviewNotes" placeholder="e.g. Left IJ looping into SVC" style="width: 100%; margin-top: 4px; padding: 8px 12px; background: var(--bg-card); border: 1px solid var(--border-color); color: #fff; border-radius: 6px; font-size: 12px;">
+        </div>
+
+        <!-- Navigation Section -->
+        <div class="nav-section">
+          <button class="nav-btn" id="btnPrev">← Prev (←)</button>
+          <button class="nav-btn" id="btnNext">Next (→) →</button>
+        </div>
+
+        <div style="text-align: center; font-size: 11px; color: var(--text-dim); margin-top: 4px;">
+          Decisions auto-save immediately to <br><code>reviewed_distal_tips_v3.parquet</code>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

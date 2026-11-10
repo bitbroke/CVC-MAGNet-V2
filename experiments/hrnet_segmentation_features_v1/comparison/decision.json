@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "fewer_misses_than_baseline": true,
+    "fewer_misses_than_control": true,
+    "dice_preserved": false,
+    "precision_preserved": false,
+    "coverage_preserved": true,
+    "negative_false_area_preserved": true,
+    "longest_gap_not_worse": true
+  },
+  "passed": false,
+  "promoted": false,
+  "tip_branch": "Original frozen model",
+  "qualification": "Single-seed repeatedly used development cohort; provisional tip truth; not independent clinical validation"
+}

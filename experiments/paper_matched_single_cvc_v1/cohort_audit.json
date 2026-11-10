@@ -1,0 +1,60 @@
+{
+  "cohort_name": "paper_matched_single_annotated_cvc_v1",
+  "definition": "Exactly one annotated CVC trace per study and exactly one image-level CVC placement label, matching the trace label. This is an annotation-defined single-trace cohort; it is not radiologist-confirmed single-catheter truth.",
+  "input_hashes_sha256": {
+    "data\\splits\\placement_locked_manifest.parquet": "876fe1925d055f3ba5b8400bedd37ddf8be6e297d6753e38634c135c1cc77323",
+    "train_annotations.csv": "9e0ac22bb0aa44f8a70eda8b77b4279a47124c223957d7be80158261f39bedc2"
+  },
+  "counts": {
+    "test": {
+      "studies": 451,
+      "patients": 233,
+      "duplicate_groups": 233,
+      "prior_exposed_studies": 0,
+      "per_class": {
+        "CVC - Normal": 304,
+        "CVC - Borderline": 101,
+        "CVC - Abnormal": 46
+      }
+    },
+    "train": {
+      "studies": 4788,
+      "patients": 2264,
+      "duplicate_groups": 2262,
+      "prior_exposed_studies": 3226,
+      "per_class": {
+        "CVC - Normal": 3159,
+        "CVC - Borderline": 1071,
+        "CVC - Abnormal": 558
+      }
+    },
+    "val": {
+      "studies": 537,
+      "patients": 232,
+      "duplicate_groups": 232,
+      "prior_exposed_studies": 0,
+      "per_class": {
+        "CVC - Normal": 392,
+        "CVC - Borderline": 102,
+        "CVC - Abnormal": 43
+      }
+    }
+  },
+  "candidate_studies_with_exactly_one_trace_in_locked_splits": 5786,
+  "excluded_due_to_image_label_mismatch_or_multiple_active_labels": 10,
+  "excluded_historical_development_split": 2797,
+  "leakage_audit": {
+    "patient_overlap_train_val": 0,
+    "patient_overlap_train_test": 0,
+    "patient_overlap_val_test": 0,
+    "duplicate_group_overlap_train_val": 0,
+    "duplicate_group_overlap_train_test": 0,
+    "duplicate_group_overlap_val_test": 0,
+    "prior_exposed_val_or_test_studies": 0
+  },
+  "outputs_sha256": {
+    "single_annotated_cvc_manifest.csv": "ebc479125b93bd31104cac74917a01b3ef281d6a7ffa960d9ad19fdd348859ea",
+    "single_annotated_cvc_manifest.parquet": "41320bffa01c5ea1a000a2d3310d150924c228b587e3f12e47e4a1c855c6b319"
+  },
+  "test_policy": "Manifest records test membership; do not use test for tuning or model selection."
+}

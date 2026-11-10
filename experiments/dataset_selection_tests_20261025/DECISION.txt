@@ -1,0 +1,20 @@
+DATASET TEST SERIES: DECISION
+25 October 2026
+
+Completed: geometry/label eligibility audit, separation checks, ten overlapping subgroup comparisons for three frozen models, patient-cluster bootstrap intervals, and metadata-selected training manifests. No model was loaded or trained. No source image, label, split or checkpoint was edited. Input hashes verified unchanged.
+
+The strongest candidate starting pool is low-other-device-clutter source-supported positives, including both single and multiple CVCs. This is a proposed cohort for review, not a proven optimal training set or clinically verified core.
+Original HRNet: single/no-other-device Dice0.4932 (95% patient bootstrap0.4608–0.5217), coverage95.10%; multiple/no-other-device Dice0.4915 (0.4347–0.5352), coverage88.97%. Their intervals overlap. Do not claim a significant winner. The corresponding training counts are2443 and474 (disjoint), totaling2917. This group retains some multi-CVC anatomy.
+Keep the1435 other-device-cluttered annotated positive training studies as a separate difficult-case pool, not discarded data. Retain all396 label-supported negatives. The full source-supported positive pool is4352. The complete development cohort remains193studies; no cases removed from evaluation.
+Do not exclude abnormal placements: they are part of the intended task, with583 source-supported training studies. Placement strata prioritize any abnormal label, then borderline without abnormal, then normal-only; these are image-level groupings, not verified per-catheter placement.
+Three-plus-CVC validation contains only4studies/3patients; its ranking is inconclusive. All subgroup intervals are descriptive and unadjusted for multiple comparisons. Repeated development inspection cannot establish independent generalization.
+Across all ten groups, both recent continuations have worse Dice than original HRNet. Subset selection does not repair the precision problem. Recall is proximity to annotated paths, not accurate tip localization or proof of separate instance detection.
+
+Next implementation:
+1. Review the saved30-study training-only queue (10 single low-clutter,10 single cluttered,10 multiple; distinct patients). Mark complete, incomplete or uncertain; these are pending, not attested labels.
+2. Use source-supported positives as provisional data. Promote only reviewed-complete examples to a high-confidence core. Exclude missing-path positives from dense supervision, not from storage or future classification uses.
+3. Add a separate negative-review batch before treating suspicious model tracks as confirmed background. Eight validation negatives are insufficient for specificity claims.
+4. Freeze final cohort definitions and supervision masks before proposing a matched training comparison. Preserve difficult cases, negatives, and all validation denominators. Do not select individual training cases by validation/model correctness.
+5. A future curated-vs-broader training test must keep initialization/update budget/architecture fixed, report image exposure differences, and evaluate precision, Dice, instance coverage, gaps and negative false area jointly. No such training ran in this diagnostic series.
+
+Automatic checks cover coordinate structure and source metadata; they do not establish radiographic completeness, dense boundary truth or clinical tip identity. No full-image readability scan was added in this series. Existing curated experiment image checks are not a substitute for checking every newly selected image before training.

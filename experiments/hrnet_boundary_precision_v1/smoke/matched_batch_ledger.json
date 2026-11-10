@@ -1,0 +1,136 @@
+[
+  {
+    "update_id": 1,
+    "study_ids": [
+      "1.2.826.0.1.3680043.8.498.57895167239963477615391127330978220967",
+      "1.2.826.0.1.3680043.8.498.11282726926385674799032474140254366087",
+      "1.2.826.0.1.3680043.8.498.58316870273475304341182775332135854880",
+      "1.2.826.0.1.3680043.8.498.74097243699070773856712835722074575225"
+    ],
+    "sampling_category": [
+      "uniform_negative",
+      "positive",
+      "positive",
+      "positive"
+    ],
+    "augmentation_parameters": [
+      {
+        "hflip": true,
+        "angle": 2.197473582119372,
+        "translate_x_pct": -0.007367584604102161,
+        "translate_y_pct": 0.034173260234706536,
+        "scale": 1.026321298620173,
+        "brightness": 1.0,
+        "contrast": 0.9159417521887697,
+        "exposure_idx": 0,
+        "aug_seed": "014bf885cdfe366c"
+      },
+      {
+        "hflip": true,
+        "angle": -2.4756131582071923,
+        "translate_x_pct": 0.010369856175705204,
+        "translate_y_pct": -0.03264792251061047,
+        "scale": 0.9811150723619271,
+        "brightness": 1.0,
+        "contrast": 1.021978481671181,
+        "exposure_idx": 0,
+        "aug_seed": "0246ed2408f649bc"
+      },
+      {
+        "hflip": true,
+        "angle": 0.1566950127032669,
+        "translate_x_pct": -0.013451011851947685,
+        "translate_y_pct": -0.008830107309034895,
+        "scale": 1.0332651545146658,
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "exposure_idx": 0,
+        "aug_seed": "1a567e8d4127ab8a"
+      },
+      {
+        "hflip": true,
+        "angle": -4.58102424642324,
+        "translate_x_pct": 0.010531489790231115,
+        "translate_y_pct": -0.0037445280540763515,
+        "scale": 1.019725125211568,
+        "brightness": 1.0,
+        "contrast": 1.0273100601052865,
+        "exposure_idx": 0,
+        "aug_seed": "ffc707a78cdedb5b"
+      }
+    ],
+    "source_image_hashes": [
+      "2d441d64ba2c867bd91c2b31de9e1ebd642f63de4ec27a330eb04b36efce2a65",
+      "3d4199fb13004f83f8c234e8f93b9c1882558da4d0969f3d71eff3cee9218f6e",
+      "9a39d546c413a24b5786bd6b05e22105647676bbf21c9df2d5c21461de7cde9d",
+      "7ff4a0192200d8ae2a63b09beccf048903c5d8dca8993c5f5a3cd15551c0284b"
+    ]
+  },
+  {
+    "update_id": 2,
+    "study_ids": [
+      "1.2.826.0.1.3680043.8.498.33662628010250991950988976039827921129",
+      "1.2.826.0.1.3680043.8.498.83923652541609006708791396137076299931",
+      "1.2.826.0.1.3680043.8.498.82451315049982636820767033277902399231",
+      "1.2.826.0.1.3680043.8.498.34766909908450403096870107469026209140"
+    ],
+    "sampling_category": [
+      "positive",
+      "selective_hard_negative",
+      "positive",
+      "positive"
+    ],
+    "augmentation_parameters": [
+      {
+        "hflip": true,
+        "angle": 2.5911633921090704,
+        "translate_x_pct": -0.030889744765774108,
+        "translate_y_pct": 0.014790045213036215,
+        "scale": 1.0368880477456945,
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "exposure_idx": 0,
+        "aug_seed": "23725aece8ab87bd"
+      },
+      {
+        "hflip": true,
+        "angle": -4.436356204999491,
+        "translate_x_pct": 0.02176912070749274,
+        "translate_y_pct": -0.008318355583391515,
+        "scale": 0.9733085195309836,
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "exposure_idx": 0,
+        "aug_seed": "412676ef68832a83"
+      },
+      {
+        "hflip": false,
+        "angle": -5.580183060247515,
+        "translate_x_pct": -0.01899853409399342,
+        "translate_y_pct": -0.02656764124301174,
+        "scale": 0.9880551617585026,
+        "brightness": 1.0,
+        "contrast": 1.073084705399374,
+        "exposure_idx": 0,
+        "aug_seed": "e8c96b1db6e05d0c"
+      },
+      {
+        "hflip": false,
+        "angle": 5.621461479200196,
+        "translate_x_pct": 0.027971696506437917,
+        "translate_y_pct": -0.006225748039804649,
+        "scale": 1.0260625449600072,
+        "brightness": 1.0099636760799993,
+        "contrast": 1.0187237632443813,
+        "exposure_idx": 0,
+        "aug_seed": "bf151b56310eabce"
+      }
+    ],
+    "source_image_hashes": [
+      "abacb639ffcb6482a2f1abcf6ecc6020c0357884ee83c5286b6007250104b979",
+      "56e6e4d748e0c6ef53ab18d0bf907b217cd734c88bc35b4084f98645ebf6ced0",
+      "4cbb0c8240bddcbc7da6c42c1ef882c2208303d1b25d6bf57915fdd74f508e6a",
+      "5037f5fdbaf6ba536611886512ca0613acce677c6ef7c9030f26cb5f1339add3"
+    ]
+  }
+]

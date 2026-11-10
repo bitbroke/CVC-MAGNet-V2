@@ -1,0 +1,38 @@
+{
+  "mixed": {
+    "positive_macro_precision": 0.25142416347729374,
+    "positive_pooled_precision": 0.23865967090995277,
+    "positive_macro_recall": 0.8933766410282009,
+    "positive_fp_pixels": 13353448,
+    "positive_fp_within5_fraction": 0.2701019242370959,
+    "positive_fp_5to15_fraction": 0.32770435021726224,
+    "positive_fp_beyond15_fraction": 0.40219372554564187,
+    "positive_fp_other_annotation_fraction": 0.006968462377657066,
+    "negative_fp_pixels": 18616,
+    "negative_other_annotation_overlap": 0
+  },
+  "original": {
+    "positive_macro_precision": 0.3334308115823139,
+    "positive_pooled_precision": 0.3071849416888586,
+    "positive_macro_recall": 0.8348546038009308,
+    "positive_fp_pixels": 8791070,
+    "positive_fp_within5_fraction": 0.3441205678034642,
+    "positive_fp_5to15_fraction": 0.2749245541213982,
+    "positive_fp_beyond15_fraction": 0.3809548780751376,
+    "positive_fp_other_annotation_fraction": 0.007480204343726077,
+    "negative_fp_pixels": 25692,
+    "negative_other_annotation_overlap": 0
+  },
+  "simple_first": {
+    "positive_macro_precision": 0.22999464224112426,
+    "positive_pooled_precision": 0.21737173000824497,
+    "positive_macro_recall": 0.9049743896667837,
+    "positive_fp_pixels": 15287168,
+    "positive_fp_within5_fraction": 0.24168237046914118,
+    "positive_fp_5to15_fraction": 0.3175065519002604,
+    "positive_fp_beyond15_fraction": 0.4408110776305984,
+    "positive_fp_other_annotation_fraction": 0.007900613115522771,
+    "negative_fp_pixels": 46819,
+    "negative_other_annotation_overlap": 0
+  }
+}

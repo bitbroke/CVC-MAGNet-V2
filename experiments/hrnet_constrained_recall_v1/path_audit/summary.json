@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "training_started": false,
+  "checkpoints_unchanged": true,
+  "studies": 11,
+  "instances": 19,
+  "union_missed_instances": 10,
+  "missed_counts": {
+    "baseline": 8,
+    "control": 7,
+    "constrained": 10
+  },
+  "constrained_transitions": {
+    "retained": 9,
+    "persistently_missed": 8,
+    "lost_by_constrained": 2
+  },
+  "panels": 10
+}

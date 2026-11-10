@@ -1,0 +1,61 @@
+
+================================================================================
+=== RUNNING CONTINUATION ARM: CONTROL (250 UPDATES) ===
+================================================================================
+[HRNetJointOffsetTipNet] Loaded 1949 parameter tensors from final_model.pt.
+
+--- Running Step 0 Baseline Evaluation for control ---
+[control Step 0] Success@15px: 34.15% (14/41) | Success@10px: 24.39% | Success@5px: 7.32% | Mean FP: 1.273 | Neg FP: 0.375
+Pre-caching deterministic letterbox representations for 500 unique studies...
+Cached 500 studies in 53.74s.
+Starting sequential training for control (Updates 1 to 250)...
+[control] Update 025/250 | Seg Loss: 1.0427 | Tip Loss: 0.1193 | Off Loss: 0.0000 | LR: 4.88e-05
+[control] Update 050/250 | Seg Loss: 1.0248 | Tip Loss: 0.1057 | Off Loss: 0.0000 | LR: 4.53e-05
+[control] Update 075/250 | Seg Loss: 1.0201 | Tip Loss: 0.0981 | Off Loss: 0.0000 | LR: 3.99e-05
+[control] Update 100/250 | Seg Loss: 1.0574 | Tip Loss: 0.0767 | Off Loss: 0.0000 | LR: 3.31e-05
+[control] Update 125/250 | Seg Loss: 1.0135 | Tip Loss: 0.0919 | Off Loss: 0.0000 | LR: 2.55e-05
+[control] Update 150/250 | Seg Loss: 1.0368 | Tip Loss: 0.0931 | Off Loss: 0.0000 | LR: 1.79e-05
+[control] Update 175/250 | Seg Loss: 1.0147 | Tip Loss: 0.1208 | Off Loss: 0.0000 | LR: 1.11e-05
+[control] Update 200/250 | Seg Loss: 1.0257 | Tip Loss: 0.1748 | Off Loss: 0.0000 | LR: 5.68e-06
+[control] Update 225/250 | Seg Loss: 1.0136 | Tip Loss: 0.1748 | Off Loss: 0.0000 | LR: 2.20e-06
+[control] Update 250/250 | Seg Loss: 1.0171 | Tip Loss: 0.1329 | Off Loss: 0.0000 | LR: 1.00e-06
+
+Completed 250 updates for control in 448.2s (1.79s/update).
+Saved control checkpoint to C:\Ankshit\CVC-MAGNet-V2\experiments\hrnet_tip_improvement_v2\runs\control\checkpoints\final_model.pt.
+
+--- Running Step 250 Evaluation for control ---
+[control Step 250] Success@15px: 34.15% (14/41) | Success@10px: 17.07% | Success@5px: 9.76% | Mean FP: 1.061 | Neg FP: 0.375
+
+================================================================================
+=== RUNNING CONTINUATION ARM: EXPERIMENT (250 UPDATES) ===
+================================================================================
+[HRNetJointOffsetTipNet] Loaded 1949 parameter tensors from final_model.pt.
+
+--- Running Step 0 Baseline Evaluation for experiment ---
+[experiment Step 0] Success@15px: 34.15% (14/41) | Success@10px: 21.95% | Success@5px: 12.20% | Mean FP: 1.303 | Neg FP: 0.375
+Pre-caching deterministic letterbox representations for 500 unique studies...
+Cached 500 studies in 27.30s.
+Starting sequential training for experiment (Updates 1 to 250)...
+[experiment] Update 025/250 | Seg Loss: 1.0426 | Tip Loss: 0.1191 | Off Loss: 0.1813 | LR: 4.88e-05
+[experiment] Update 050/250 | Seg Loss: 1.0253 | Tip Loss: 0.1059 | Off Loss: 0.2602 | LR: 4.53e-05
+[experiment] Update 075/250 | Seg Loss: 1.0172 | Tip Loss: 0.1007 | Off Loss: 0.4488 | LR: 3.99e-05
+[experiment] Update 100/250 | Seg Loss: 1.0574 | Tip Loss: 0.0771 | Off Loss: 0.0884 | LR: 3.31e-05
+[experiment] Update 125/250 | Seg Loss: 1.0134 | Tip Loss: 0.0897 | Off Loss: 0.3187 | LR: 2.55e-05
+[experiment] Update 150/250 | Seg Loss: 1.0364 | Tip Loss: 0.0946 | Off Loss: 0.3704 | LR: 1.79e-05
+[experiment] Update 175/250 | Seg Loss: 1.0148 | Tip Loss: 0.1177 | Off Loss: 0.3030 | LR: 1.11e-05
+[experiment] Update 200/250 | Seg Loss: 1.0246 | Tip Loss: 0.1732 | Off Loss: 0.2484 | LR: 5.68e-06
+[experiment] Update 225/250 | Seg Loss: 1.0137 | Tip Loss: 0.1787 | Off Loss: 0.2876 | LR: 2.20e-06
+[experiment] Update 250/250 | Seg Loss: 1.0169 | Tip Loss: 0.1367 | Off Loss: 0.3789 | LR: 1.00e-06
+
+Completed 250 updates for experiment in 313.5s (1.25s/update).
+Saved experiment checkpoint to C:\Ankshit\CVC-MAGNet-V2\experiments\hrnet_tip_improvement_v2\runs\experiment\checkpoints\final_model.pt.
+
+--- Running Step 250 Evaluation for experiment ---
+[experiment Step 250] Success@15px: 29.27% (12/41) | Success@10px: 19.51% | Success@5px: 7.32% | Mean FP: 1.242 | Neg FP: 0.250
+
+Saved training comparison to C:\Ankshit\CVC-MAGNet-V2\experiments\hrnet_tip_improvement_v2\training_comparison.csv
+       arm evaluation_point  success_at_5px  matches_5px  success_at_10px  matches_10px  success_at_15px  matches_15px  success_at_25px  matches_25px  mean_false_tips_per_image  mean_false_tips_negative_image  total_false_tips  single_cvc_matches  multi_cvc_matches  seg_dice
+   control     start_step_0        0.073171            3         0.243902            10         0.341463            14         0.463415            19                   1.272727                           0.375                42                   6                  8  0.057801
+   control     end_step_250        0.097561            4         0.170732             7         0.341463            14         0.439024            18                   1.060606                           0.375                35                   6                  8  0.076487
+experiment     start_step_0        0.121951            5         0.219512             9         0.341463            14         0.463415            19                   1.303030                           0.375                43                   6                  8  0.057801
+experiment     end_step_250        0.073171            3         0.195122             8         0.292683            12         0.463415            19                   1.242424                           0.250                41                   5                  7  0.068308

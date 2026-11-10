@@ -1,0 +1,31 @@
+{
+  "checkpoints": {
+    "baseline": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_42\\t1_joint_hrnet\\checkpoints\\final_model.pt",
+      "sha256": "d9ef494fc6f95e2abcf2597d7269e8732803a3e634bd638e64a5ab9a2d139b1d"
+    },
+    "control": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_constrained_recall_v1\\comparison\\control\\last.pt",
+      "sha256": "1b01dcf800b9eb382424105a8e48bf1900f2083ed90bd55963e7e386a43e2dd6"
+    },
+    "constrained": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_constrained_recall_v1\\comparison\\constrained\\last.pt",
+      "sha256": "e25af114af34ee0837d4ae9fc5ae485016bdbd702dc4691ab081157e7e480496"
+    }
+  },
+  "selected_studies": [
+    "1.2.826.0.1.3680043.8.498.12464093581846907075342437333637626577",
+    "1.2.826.0.1.3680043.8.498.12575290440446300900925347935794273313",
+    "1.2.826.0.1.3680043.8.498.12871071965059370780810112778709279366",
+    "1.2.826.0.1.3680043.8.498.13291019872037576039278430006129810501",
+    "1.2.826.0.1.3680043.8.498.27963861264021315511737268412392466836",
+    "1.2.826.0.1.3680043.8.498.41144963011239762202217200171174002878",
+    "1.2.826.0.1.3680043.8.498.44035371991270344904121335051903588208",
+    "1.2.826.0.1.3680043.8.498.45817682189727563785173896545909698546",
+    "1.2.826.0.1.3680043.8.498.71397273151606664571623862200956275617",
+    "1.2.826.0.1.3680043.8.498.79740836963768268150320442749142998292",
+    "1.2.826.0.1.3680043.8.498.99528331661749530513986086498457643928"
+  ],
+  "selection": "Conservative mathematical bound from per-study mean and instance count; includes every potentially missed path. No training or threshold selection.",
+  "source_sha256": "04e7420dd238b9adb3e089859242e2fd34032d43630f00f629048a9e1e2d84c9"
+}

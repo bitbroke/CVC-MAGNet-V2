@@ -1,0 +1,10 @@
+{
+  "predicted_pixels": 3312566,
+  "gt_pixels": 820577,
+  "false_pixels": 2526854,
+  "within_1px": 444036,
+  "boundary_1_to_8px": 1448824,
+  "distant_over_8px": 633994,
+  "studies": 400,
+  "coordinate_space": "768 model grid; reference is annotation ribbon, not clinical catheter boundary"
+}

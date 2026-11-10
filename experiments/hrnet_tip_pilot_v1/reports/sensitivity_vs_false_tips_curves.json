@@ -1,0 +1,335 @@
+{
+  "benchmark_version": "v2_audited",
+  "total_targets": 41,
+  "total_studies": 33,
+  "T0_baseline": [
+    {
+      "threshold": 0.45,
+      "sensitivity": 0.17073170731707318,
+      "matches_count": 7,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 13.121212121212121,
+      "mean_false_tips_negative_image": 3.0,
+      "total_false_tips": 433
+    },
+    {
+      "threshold": 0.5,
+      "sensitivity": 0.17073170731707318,
+      "matches_count": 7,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 11.06060606060606,
+      "mean_false_tips_negative_image": 1.625,
+      "total_false_tips": 365
+    },
+    {
+      "threshold": 0.55,
+      "sensitivity": 0.17073170731707318,
+      "matches_count": 7,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 7.0606060606060606,
+      "mean_false_tips_negative_image": 1.125,
+      "total_false_tips": 233
+    },
+    {
+      "threshold": 0.6,
+      "sensitivity": 0.14634146341463414,
+      "matches_count": 6,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 4.545454545454546,
+      "mean_false_tips_negative_image": 0.875,
+      "total_false_tips": 150
+    },
+    {
+      "threshold": 0.65,
+      "sensitivity": 0.14634146341463414,
+      "matches_count": 6,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 2.727272727272727,
+      "mean_false_tips_negative_image": 0.375,
+      "total_false_tips": 90
+    },
+    {
+      "threshold": 0.7,
+      "sensitivity": 0.12195121951219512,
+      "matches_count": 5,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.7272727272727273,
+      "mean_false_tips_negative_image": 0.0,
+      "total_false_tips": 57
+    },
+    {
+      "threshold": 0.75,
+      "sensitivity": 0.04878048780487805,
+      "matches_count": 2,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.1515151515151516,
+      "mean_false_tips_negative_image": 0.0,
+      "total_false_tips": 38
+    },
+    {
+      "threshold": 0.8,
+      "sensitivity": 0.0,
+      "matches_count": 0,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 0.6363636363636364,
+      "mean_false_tips_negative_image": 0.0,
+      "total_false_tips": 21
+    },
+    {
+      "threshold": 0.85,
+      "sensitivity": 0.0,
+      "matches_count": 0,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 0.30303030303030304,
+      "mean_false_tips_negative_image": 0.0,
+      "total_false_tips": 10
+    },
+    {
+      "threshold": 0.9,
+      "sensitivity": 0.0,
+      "matches_count": 0,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 0.18181818181818182,
+      "mean_false_tips_negative_image": 0.0,
+      "total_false_tips": 6
+    }
+  ],
+  "T1_seed_42": [
+    {
+      "threshold": 0.05,
+      "sensitivity": 0.36585365853658536,
+      "matches_count": 15,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 3.212121212121212,
+      "mean_false_tips_negative_image": 0.625,
+      "total_false_tips": 106
+    },
+    {
+      "threshold": 0.1,
+      "sensitivity": 0.36585365853658536,
+      "matches_count": 15,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 2.5757575757575757,
+      "mean_false_tips_negative_image": 0.625,
+      "total_false_tips": 85
+    },
+    {
+      "threshold": 0.15,
+      "sensitivity": 0.34146341463414637,
+      "matches_count": 14,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 2.242424242424242,
+      "mean_false_tips_negative_image": 0.5,
+      "total_false_tips": 74
+    },
+    {
+      "threshold": 0.2,
+      "sensitivity": 0.34146341463414637,
+      "matches_count": 14,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.9696969696969697,
+      "mean_false_tips_negative_image": 0.5,
+      "total_false_tips": 65
+    },
+    {
+      "threshold": 0.25,
+      "sensitivity": 0.34146341463414637,
+      "matches_count": 14,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.878787878787879,
+      "mean_false_tips_negative_image": 0.375,
+      "total_false_tips": 62
+    },
+    {
+      "threshold": 0.3,
+      "sensitivity": 0.34146341463414637,
+      "matches_count": 14,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.6666666666666667,
+      "mean_false_tips_negative_image": 0.375,
+      "total_false_tips": 55
+    },
+    {
+      "threshold": 0.35,
+      "sensitivity": 0.34146341463414637,
+      "matches_count": 14,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.4848484848484849,
+      "mean_false_tips_negative_image": 0.375,
+      "total_false_tips": 49
+    },
+    {
+      "threshold": 0.4,
+      "sensitivity": 0.34146341463414637,
+      "matches_count": 14,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.2727272727272727,
+      "mean_false_tips_negative_image": 0.375,
+      "total_false_tips": 42
+    },
+    {
+      "threshold": 0.45,
+      "sensitivity": 0.34146341463414637,
+      "matches_count": 14,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.0606060606060606,
+      "mean_false_tips_negative_image": 0.375,
+      "total_false_tips": 35
+    },
+    {
+      "threshold": 0.5,
+      "sensitivity": 0.34146341463414637,
+      "matches_count": 14,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 0.8787878787878788,
+      "mean_false_tips_negative_image": 0.25,
+      "total_false_tips": 29
+    },
+    {
+      "threshold": 0.6,
+      "sensitivity": 0.2926829268292683,
+      "matches_count": 12,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 0.6363636363636364,
+      "mean_false_tips_negative_image": 0.125,
+      "total_false_tips": 21
+    },
+    {
+      "threshold": 0.7,
+      "sensitivity": 0.24390243902439024,
+      "matches_count": 10,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 0.30303030303030304,
+      "mean_false_tips_negative_image": 0.0,
+      "total_false_tips": 10
+    },
+    {
+      "threshold": 0.8,
+      "sensitivity": 0.07317073170731707,
+      "matches_count": 3,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 0.06060606060606061,
+      "mean_false_tips_negative_image": 0.0,
+      "total_false_tips": 2
+    }
+  ],
+  "T1_seed_43": [
+    {
+      "threshold": 0.05,
+      "sensitivity": 0.2926829268292683,
+      "matches_count": 12,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 3.5757575757575757,
+      "mean_false_tips_negative_image": 1.0,
+      "total_false_tips": 118
+    },
+    {
+      "threshold": 0.1,
+      "sensitivity": 0.2926829268292683,
+      "matches_count": 12,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 2.696969696969697,
+      "mean_false_tips_negative_image": 0.75,
+      "total_false_tips": 89
+    },
+    {
+      "threshold": 0.15,
+      "sensitivity": 0.2926829268292683,
+      "matches_count": 12,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 2.3333333333333335,
+      "mean_false_tips_negative_image": 0.75,
+      "total_false_tips": 77
+    },
+    {
+      "threshold": 0.2,
+      "sensitivity": 0.2926829268292683,
+      "matches_count": 12,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 2.121212121212121,
+      "mean_false_tips_negative_image": 0.625,
+      "total_false_tips": 70
+    },
+    {
+      "threshold": 0.25,
+      "sensitivity": 0.2926829268292683,
+      "matches_count": 12,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.9090909090909092,
+      "mean_false_tips_negative_image": 0.5,
+      "total_false_tips": 63
+    },
+    {
+      "threshold": 0.3,
+      "sensitivity": 0.2926829268292683,
+      "matches_count": 12,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.696969696969697,
+      "mean_false_tips_negative_image": 0.5,
+      "total_false_tips": 56
+    },
+    {
+      "threshold": 0.35,
+      "sensitivity": 0.2926829268292683,
+      "matches_count": 12,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.4848484848484849,
+      "mean_false_tips_negative_image": 0.375,
+      "total_false_tips": 49
+    },
+    {
+      "threshold": 0.4,
+      "sensitivity": 0.2926829268292683,
+      "matches_count": 12,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.3636363636363635,
+      "mean_false_tips_negative_image": 0.25,
+      "total_false_tips": 45
+    },
+    {
+      "threshold": 0.45,
+      "sensitivity": 0.2926829268292683,
+      "matches_count": 12,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 1.121212121212121,
+      "mean_false_tips_negative_image": 0.125,
+      "total_false_tips": 37
+    },
+    {
+      "threshold": 0.5,
+      "sensitivity": 0.2926829268292683,
+      "matches_count": 12,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 0.9696969696969697,
+      "mean_false_tips_negative_image": 0.125,
+      "total_false_tips": 32
+    },
+    {
+      "threshold": 0.6,
+      "sensitivity": 0.2682926829268293,
+      "matches_count": 11,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 0.6666666666666666,
+      "mean_false_tips_negative_image": 0.125,
+      "total_false_tips": 22
+    },
+    {
+      "threshold": 0.7,
+      "sensitivity": 0.24390243902439024,
+      "matches_count": 10,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 0.3939393939393939,
+      "mean_false_tips_negative_image": 0.0,
+      "total_false_tips": 13
+    },
+    {
+      "threshold": 0.8,
+      "sensitivity": 0.0975609756097561,
+      "matches_count": 4,
+      "total_targets": 41,
+      "mean_false_tips_per_image": 0.12121212121212122,
+      "mean_false_tips_negative_image": 0.0,
+      "total_false_tips": 4
+    }
+  ]
+}

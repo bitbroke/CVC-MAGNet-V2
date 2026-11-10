@@ -1,0 +1,99 @@
+{
+  "title": "Placement cohort ablation matrix v1",
+  "inputs": {
+    "locked_split_sha256": "876fe1925d055f3ba5b8400bedd37ddf8be6e297d6753e38634c135c1cc77323",
+    "train_annotations_sha256": "9e0ac22bb0aa44f8a70eda8b77b4279a47124c223957d7be80158261f39bedc2"
+  },
+  "variants": {
+    "all_cvc_traced_multilabel": {
+      "definition": "At least one annotated CVC trace; original three image-level labels retained.",
+      "counts": {
+        "train": {
+          "studies": 6600,
+          "patients": 2538,
+          "duplicate_groups": 2536,
+          "prior_exposed": 4352,
+          "label_counts": {
+            "CVC - Normal": 4708,
+            "CVC - Borderline": 1970,
+            "CVC - Abnormal": 874
+          },
+          "multi_label_studies": 935
+        },
+        "val": {
+          "studies": 778,
+          "patients": 256,
+          "duplicate_groups": 256,
+          "prior_exposed": 0,
+          "label_counts": {
+            "CVC - Normal": 588,
+            "CVC - Borderline": 261,
+            "CVC - Abnormal": 87
+          },
+          "multi_label_studies": 154
+        },
+        "test": {
+          "studies": 630,
+          "patients": 256,
+          "duplicate_groups": 256,
+          "prior_exposed": 0,
+          "label_counts": {
+            "CVC - Normal": 450,
+            "CVC - Borderline": 201,
+            "CVC - Abnormal": 85
+          },
+          "multi_label_studies": 105
+        }
+      },
+      "manifest_sha256": "b720f11807ba39f8f8e914dbc789069c75c50dad74371f7dd351b345f1ceda50"
+    },
+    "single_cvc_binary_normal_vs_non_normal": {
+      "definition": "Exactly one CVC trace, exactly one concordant image-level label; Normal=0, Borderline or Abnormal=1.",
+      "counts": {
+        "train": {
+          "studies": 4788,
+          "patients": 2264,
+          "duplicate_groups": 2262,
+          "prior_exposed": 3226,
+          "label_counts": {
+            "CVC - Normal": 3159,
+            "CVC - Borderline": 1071,
+            "CVC - Abnormal": 558
+          },
+          "multi_label_studies": 0
+        },
+        "val": {
+          "studies": 537,
+          "patients": 232,
+          "duplicate_groups": 232,
+          "prior_exposed": 0,
+          "label_counts": {
+            "CVC - Normal": 392,
+            "CVC - Borderline": 102,
+            "CVC - Abnormal": 43
+          },
+          "multi_label_studies": 0
+        },
+        "test": {
+          "studies": 451,
+          "patients": 233,
+          "duplicate_groups": 233,
+          "prior_exposed": 0,
+          "label_counts": {
+            "CVC - Normal": 304,
+            "CVC - Borderline": 101,
+            "CVC - Abnormal": 46
+          },
+          "multi_label_studies": 0
+        }
+      },
+      "manifest_sha256": "9693b323f6059871627ebdf52724908c0e9dfd67734714e2fc4ee87421d9e0e2"
+    }
+  },
+  "cautions": [
+    "An annotation trace count is not proof that the image contains exactly that many visible catheters.",
+    "Image-level placement labels are not catheter-specific outcomes in multi-CVC studies.",
+    "The locked test subset must remain unused until final model selection is complete.",
+    "The binary target means not-normal by dataset label; it is not a millimetre-based placement judgment."
+  ]
+}

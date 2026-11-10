@@ -1,0 +1,46 @@
+{
+  "arm": "Arm_B_Mamba_Hybrid",
+  "hypothesis": "Inserting a 4-way scanning selective state-space (Mamba S6) context module at the stride-32 bottleneck improves global catheter continuity and precision without sacrificing local feature localization.",
+  "model_class": "ArmBMambaHybridNet",
+  "context_module": {
+    "type": "FourWayMamba2DBlock",
+    "d_model": 128,
+    "d_state": 16,
+    "dt_rank": 8,
+    "scan_directions": ["row_forward", "row_backward", "col_forward", "col_backward"],
+    "residual_init": "zero"
+  },
+  "starting_checkpoint": "C:/Ankshit/CVC-MAGNet-V2/experiments/cvc_mamba_hybrid_20261017/frozen_reference/runs/s4_experiment_seed43/checkpoints/final_segmentation_v3.pt",
+  "starting_checkpoint_sha256": "f01089be1b7507bfb1d1a2762911f6ee1f0d425ce49628c6d0083daecf5e94e2",
+  "seed": 42,
+  "resolution": 768,
+  "micro_batch_size": 1,
+  "gradient_accumulation_steps": 4,
+  "effective_batch_size": 4,
+  "target_updates": 1000,
+  "optimizer": {
+    "type": "AdamW",
+    "lr": 0.0001,
+    "weight_decay": 0.0001
+  },
+  "scheduler": {
+    "type": "CosineAnnealingLR",
+    "T_max": 1000,
+    "eta_min": 1e-06
+  },
+  "loss": {
+    "bce_pos_weight": 10.0,
+    "dice_weight": 1.0,
+    "valid_padding_exclusion": true,
+    "fp32_reductions": true
+  },
+  "mixed_precision": {
+    "enabled": true,
+    "init_scale": 1024.0,
+    "same_batch_retry_on_overflow": true
+  },
+  "batch_ledger": "C:/Ankshit/CVC-MAGNet-V2/experiments/cvc_mamba_hybrid_20261017/configs/batch_ledger.jsonl",
+  "batch_ledger_sha256": "54dfcc249a43a8274f0fb1a3777e507a0d6c8c09df69a03534b09a2bee41f95e",
+  "evaluation_checkpoints": [0, 250, 500, 750, 1000],
+  "validation_manifest": "C:/Ankshit/CVC-MAGNet-V2/data/dev_eval_manifest.json"
+}

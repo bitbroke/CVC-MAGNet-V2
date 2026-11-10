@@ -1,0 +1,12 @@
+{
+  "C:\\Ankshit\\CVC-MAGNet-V2\\data\\study_inventory.parquet": "2acff229cdac56db0db5b853a8a93953e10a14a4b628f3e4d385a16a91bec1ca",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\data\\annotation_inventory.parquet": "02b8f5acec0e8075444e1bf7484bfc9afed66fd38a323cbbbeb1c710dc26c859",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\data\\splits.json": "5ba91e3521cd4fe3deac6c7fea7ff11ae211b65a8c65457989a2e5b49f1a2887",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\precision_annotation_audit_20261025\\results\\pixel_diagnostics.csv": "6256343f0caa0f8c4ad53c1a3228aa966949f2924c45f696e62507e4cc8721a9",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_segmentation_features_v1\\comparison\\baseline_native.json": "a339dc3493a23f2942c1d4154f2cecd28cb0318519c8709e14920a6433ab692a",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_segmentation_features_v1\\comparison\\baseline_paths.csv": "882026fa5cc8899555ec3d3bfa543c34fc5742d202d8c4784cec98c8348978ef",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\simple_first_v1\\comparison\\run\\mixed_data_native.json": "2117ad4f0278cdd68e926ce7b254772dbf2309ca3b1d9d87a0cf3b60543ce5c4",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\simple_first_v1\\comparison\\run\\mixed_data_paths.csv": "b92f8585b72a9ea51721c7829808c8f796c1cbcf6a39d14d930dae8470d2777e",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\simple_first_v1\\comparison\\run\\simple_first_native.json": "91b5c32b648b5c25befc0d234ca46536e00ac254a71fbefde714ae6e70c76125",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\simple_first_v1\\comparison\\run\\simple_first_paths.csv": "3f2aff853341caeffaf159de5b6f7b8bf3d8344d3387de5639e021dcde0b671c"
+}

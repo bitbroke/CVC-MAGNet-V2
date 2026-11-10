@@ -1,0 +1,27 @@
+{
+  "cases": [
+    [
+      "low_coverage_1",
+      "1.2.826.0.1.3680043.8.498.99528331661749530513986086498457643928"
+    ],
+    [
+      "low_coverage_2",
+      "1.2.826.0.1.3680043.8.498.71397273151606664571623862200956275617"
+    ],
+    [
+      "multi_cvc",
+      "1.2.826.0.1.3680043.8.498.71397273151606664571623862200956275617"
+    ],
+    [
+      "negative",
+      "1.2.826.0.1.3680043.8.498.11949936472769428466626780922892522748"
+    ]
+  ],
+  "checkpoint_hashes": {
+    "baseline": "d9ef494fc6f95e2abcf2597d7269e8732803a3e634bd638e64a5ab9a2d139b1d",
+    "control": "a60281b4b152ade87a1ba5ed6d192a99347e7dc1e5ee236c6226ed4505ff7b72",
+    "instance_recall": "5b58044932ef6d95d88272cf83c0492fe064082d890afac20717f9efdb518bdd"
+  },
+  "inference": "CPU FP32",
+  "selection": "two lowest baseline coverage studies, lowest baseline coverage multi-CVC, first listed negative; illustrative not representative"
+}

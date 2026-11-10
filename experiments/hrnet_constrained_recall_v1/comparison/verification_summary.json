@@ -1,0 +1,11 @@
+{
+  "new_loss_unit_tests_passed": 3,
+  "real_model_smoke_arms_passed": 2,
+  "successful_updates_each": 250,
+  "tip_metrics_identical_full_benchmark": true,
+  "old_checkpoints_hashes_unchanged": true,
+  "new_model_promoted": false,
+  "overlay_panels": 4,
+  "distinct_overlay_studies": 3,
+  "binary_masks": 12
+}

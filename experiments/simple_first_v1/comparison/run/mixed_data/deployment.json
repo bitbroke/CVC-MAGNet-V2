@@ -1,0 +1,6 @@
+{
+  "status": "not_promoted",
+  "tip_model": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_42\\t1_joint_hrnet\\checkpoints\\final_model.pt",
+  "tip_sha256": "d9ef494fc6f95e2abcf2597d7269e8732803a3e634bd638e64a5ab9a2d139b1d",
+  "tip_output_bitwise_equal": true
+}

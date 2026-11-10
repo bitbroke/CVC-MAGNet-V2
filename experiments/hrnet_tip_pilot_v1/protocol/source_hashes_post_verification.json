@@ -1,0 +1,70 @@
+{
+  "all_frozen_references_intact": true,
+  "verified_count": 16,
+  "results": {
+    "hrnet_seed42_final": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "c5510099c504695bfc205dfbdbd89a5dc0d9b2fae87274f0c47f4a2991b883bc"
+    },
+    "hrnet_seed42_best": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "855d0b89b2c4ca12eaf4f8eaf824f7087a1fccc7f05918ae1fa92a0238d0a4ef"
+    },
+    "hrnet_seed43_final": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "b727afea9dbefef55affa86df9c6448d34cba1cd234950813c30c1663b05f6d9"
+    },
+    "hrnet_seed43_best": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "2ba3bcc2f62e4934dad7bd36010d889185973686afd608037f62d2c5bd984e17"
+    },
+    "s4_efficientnet_final": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "f01089be1b7507bfb1d1a2762911f6ee1f0d425ce49628c6d0083daecf5e94e2"
+    },
+    "model_registry_code": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "e91f80c7a3219261a0927f3bfc6d13601e62d06e7da700235c9b623cb746b1c9"
+    },
+    "train_runner_code": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "e7c521d1c89b07f436f79a9bafcaa32d691ce616294118992089c16145f74464"
+    },
+    "segmentation_v3_code": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "c2b952e79f7a3086a2cbc8e34cd1a53ab4ac0594ce1ba97d00e4754e61310444"
+    },
+    "transforms_code": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "92cf0c0faa71038c8bf27dbd052356ccbae019b437ff586176ec12cdf2ed8ed0"
+    },
+    "rasterize_code": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "837e98b788d43edf7154e967f4536f3cc70810550c581b55a5fe1f71a702276a"
+    },
+    "endpoints_code": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "0e2630c86b7c9468837e86c7a34e7dd9e8c23425655b5794287b4e7882ab9bc5"
+    },
+    "decoders_code": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "45ad12d2412322c54a02f4380d3a65d316123c07f3f38ce06d0bb453ea37b0ce"
+    },
+    "batch_ledger": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "54dfcc249a43a8274f0fb1a3777e507a0d6c8c09df69a03534b09a2bee41f95e"
+    },
+    "splits_json": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "5ba91e3521cd4fe3deac6c7fea7ff11ae211b65a8c65457989a2e5b49f1a2887"
+    },
+    "val_queue_v4": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "ad595335b11c0c0421fd84ae690a509a411d5855bee10bf87c09650d151a66ec"
+    },
+    "reviewed_tips_v3": {
+      "status": "BITWISE_IDENTICAL",
+      "sha256": "86ad20347b19ea95752dc9277b45a5af9d48f7dadc138f6aab2611a53d85782f"
+    }
+  }
+}

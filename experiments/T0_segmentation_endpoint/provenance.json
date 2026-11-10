@@ -1,0 +1,5 @@
+{
+  "eval_cohort": "dev_pilot_val (185 studies, 250 catheters)",
+  "primary_metric": "Success@15",
+  "matching": "Hungarian bipartite matching (tolerance 15 native pixels, distance tie-breaker)"
+}

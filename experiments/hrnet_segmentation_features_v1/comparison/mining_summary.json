@@ -1,0 +1,9 @@
+{
+  "instances": 506,
+  "hard_instances": 129,
+  "hard_studies": 110,
+  "coverage_quartile": 0.9484888732959103,
+  "replacements": 370,
+  "validation_used": false,
+  "policy": "50% of positive slots replaced from training-only low coverage or >=100px longest-gap studies; negative slots unchanged"
+}

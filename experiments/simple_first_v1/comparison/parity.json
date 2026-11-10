@@ -1,0 +1,6 @@
+{
+  "identical_image_exposure_multiset": true,
+  "identical_image_augmentation_multiset": true,
+  "identical_negative_slots": true,
+  "study_patient_duplicate_validation_overlap": 0
+}

@@ -1,0 +1,7 @@
+{
+  "checkpoint_path": "runs/s4_experiment_seed43/checkpoints/final_segmentation_v3.pt",
+  "checkpoint_sha256": "f01089be1b7507bfb1d1a2762911f6ee1f0d425ce49628c6d0083daecf5e94e2",
+  "img_size": 768,
+  "threshold": 0.5,
+  "device": "cuda"
+}

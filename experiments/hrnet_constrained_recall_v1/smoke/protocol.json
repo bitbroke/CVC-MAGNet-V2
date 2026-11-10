@@ -1,0 +1,28 @@
+{
+  "seed": 42,
+  "updates": 1,
+  "model": "HRNetJointTipNet",
+  "trainable": "seg_head only",
+  "source": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_42\\t1_joint_hrnet\\checkpoints\\final_model.pt",
+  "learning_rate": 5e-05,
+  "effective_batch": 4,
+  "microbatch": 1,
+  "arms": {
+    "control": {
+      "recall": 0.25,
+      "background": 0,
+      "retention": 0
+    },
+    "constrained": {
+      "recall": 0.25,
+      "background": 0.25,
+      "retention": 0.25
+    }
+  },
+  "background": "top 1% predicted probabilities outside 7x7 dilated GT; valid image only",
+  "retention": "relu(reference probability - prediction - .02) on GT foreground",
+  "tip_policy": "no tip training; exact shared-feature and tip-head freeze; inherited weak-label limitations remain",
+  "progression": "strict: fewer misses than baseline and control; Dice and mean-study precision >= baseline; negative false area <= baseline; coverage >= baseline; identical tip metrics. No automatic promotion.",
+  "benchmark": "193 studies /248 paths; mixed provisional 41 tips plus complete-provisional subset",
+  "code_sha256": "f9a972508be064938e7d8e0c76b3afd8511ea449b4590a8484862fcbd12df9fa"
+}

@@ -1,0 +1,11 @@
+{
+  "image_exposures_per_arm": 1000,
+  "unique_studies": 500,
+  "label_categories": {
+    "label_supported_negative": 250,
+    "unknown_or_unreviewed": 733,
+    "provisional_or_attested": 17
+  },
+  "tip_training_enabled": false,
+  "tip_weights_and_shared_features": "frozen"
+}

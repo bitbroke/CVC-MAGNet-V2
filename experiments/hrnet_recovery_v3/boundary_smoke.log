@@ -1,0 +1,6 @@
+FREEZE HASH 25 129
+FREEZE HASH 50 129
+FREEZE HASH 75 129
+FREEZE HASH 100 129
+FREEZE HASH 125 129
+SUPERVISION {('label_supported_negative', True): 2, ('unknown_or_unreviewed', False): 6}

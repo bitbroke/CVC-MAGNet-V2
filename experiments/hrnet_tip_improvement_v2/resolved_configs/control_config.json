@@ -1,0 +1,18 @@
+{
+  "arm_name": "control",
+  "model_architecture": "HRNetJointTipNet",
+  "base_checkpoint": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_42\\t1_joint_hrnet\\checkpoints\\final_model.pt",
+  "updates": 250,
+  "effective_batch": 4,
+  "microbatch": 1,
+  "learning_rate": 5e-05,
+  "optimizer": "AdamW",
+  "scheduler": "CosineAnnealingLR",
+  "enable_offset_head": false,
+  "lambda_seg": 1.0,
+  "lambda_tip": 1.0,
+  "lambda_offset": 0.0,
+  "seg_loss": "BCE(pos_weight=10) + SoftDice",
+  "tip_loss": "TipWeightedBCELoss(pos_weight=20)",
+  "offset_loss": "None"
+}

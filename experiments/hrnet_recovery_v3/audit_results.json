@@ -1,0 +1,200 @@
+{
+  "baseline": {
+    "native_segmentation": {
+      "threshold": 0.5,
+      "macro_dice": 0.46251080101061587,
+      "precision": 0.3403352339001455,
+      "recall": 0.8417000088247266,
+      "centerline_coverage_10px": 0.8792561434254356,
+      "missed_catheter_rate": 3.225806451612903,
+      "total_catheters_evaluated": 248,
+      "negative_false_area_pct": 0.061049950437097655,
+      "negative_total_false_pixels": 25692,
+      "negative_any_fp_rate": 50.0,
+      "num_positive_studies": 185,
+      "num_negative_studies": 8
+    },
+    "tip": {
+      "quadratic_decoder": {
+        "mixed_provisional_v2": {
+          "success_at_5px": 0.07317073170731707,
+          "matches_5px": 3,
+          "success_at_10px": 0.24390243902439024,
+          "matches_10px": 10,
+          "success_at_15px": 0.34146341463414637,
+          "matches_15px": 14,
+          "success_at_25px": 0.4634146341463415,
+          "matches_25px": 19,
+          "mean_false_tips_per_image": 1.2727272727272727,
+          "mean_false_tips_negative_image": 0.375,
+          "total_false_tips": 42,
+          "single_cvc_matches": 6,
+          "single_cvc_success": 0.5454545454545454,
+          "multi_cvc_matches": 8,
+          "multi_cvc_success": 0.26666666666666666
+        },
+        "complete_provisional_studies": {
+          "success_at_5px": 0.0,
+          "matches_5px": 0,
+          "success_at_10px": 0.2727272727272727,
+          "matches_10px": 3,
+          "success_at_15px": 0.5454545454545454,
+          "matches_15px": 6,
+          "success_at_25px": 0.6363636363636364,
+          "matches_25px": 7,
+          "mean_false_tips_per_image": 0.7368421052631579,
+          "mean_false_tips_negative_image": 0.375,
+          "total_false_tips": 14,
+          "single_cvc_matches": 6,
+          "multi_cvc_matches": 0,
+          "target_count": 11,
+          "study_count": 19
+        }
+      }
+    }
+  },
+  "control": {
+    "native_segmentation": {
+      "threshold": 0.5,
+      "macro_dice": 0.4856925822072765,
+      "precision": 0.3683352509830179,
+      "recall": 0.8108262505922957,
+      "centerline_coverage_10px": 0.8483141266184064,
+      "missed_catheter_rate": 6.048387096774194,
+      "total_catheters_evaluated": 248,
+      "negative_false_area_pct": 0.01645579714562959,
+      "negative_total_false_pixels": 8723,
+      "negative_any_fp_rate": 62.5,
+      "num_positive_studies": 185,
+      "num_negative_studies": 8
+    },
+    "tip": {
+      "quadratic_decoder": {
+        "mixed_provisional_v2": {
+          "success_at_5px": 0.0975609756097561,
+          "matches_5px": 4,
+          "success_at_10px": 0.17073170731707318,
+          "matches_10px": 7,
+          "success_at_15px": 0.34146341463414637,
+          "matches_15px": 14,
+          "success_at_25px": 0.43902439024390244,
+          "matches_25px": 18,
+          "mean_false_tips_per_image": 1.0606060606060606,
+          "mean_false_tips_negative_image": 0.375,
+          "total_false_tips": 35,
+          "single_cvc_matches": 6,
+          "single_cvc_success": 0.5454545454545454,
+          "multi_cvc_matches": 8,
+          "multi_cvc_success": 0.26666666666666666
+        },
+        "complete_provisional_studies": {
+          "success_at_5px": 0.09090909090909091,
+          "matches_5px": 1,
+          "success_at_10px": 0.2727272727272727,
+          "matches_10px": 3,
+          "success_at_15px": 0.5454545454545454,
+          "matches_15px": 6,
+          "success_at_25px": 0.6363636363636364,
+          "matches_25px": 7,
+          "mean_false_tips_per_image": 0.7894736842105263,
+          "mean_false_tips_negative_image": 0.375,
+          "total_false_tips": 15,
+          "single_cvc_matches": 6,
+          "multi_cvc_matches": 0,
+          "target_count": 11,
+          "study_count": 19
+        }
+      }
+    }
+  },
+  "offset": {
+    "native_segmentation": {
+      "threshold": 0.5,
+      "macro_dice": 0.49304026351278923,
+      "precision": 0.37772760493083574,
+      "recall": 0.8101511921380689,
+      "centerline_coverage_10px": 0.8511942876289672,
+      "missed_catheter_rate": 5.241935483870968,
+      "total_catheters_evaluated": 248,
+      "negative_false_area_pct": 0.013066840363528598,
+      "negative_total_false_pixels": 7115,
+      "negative_any_fp_rate": 62.5,
+      "num_positive_studies": 185,
+      "num_negative_studies": 8
+    },
+    "tip": {
+      "quadratic_decoder": {
+        "mixed_provisional_v2": {
+          "success_at_5px": 0.12195121951219512,
+          "matches_5px": 5,
+          "success_at_10px": 0.17073170731707318,
+          "matches_10px": 7,
+          "success_at_15px": 0.36585365853658536,
+          "matches_15px": 15,
+          "success_at_25px": 0.43902439024390244,
+          "matches_25px": 18,
+          "mean_false_tips_per_image": 1.121212121212121,
+          "mean_false_tips_negative_image": 0.25,
+          "total_false_tips": 37,
+          "single_cvc_matches": 6,
+          "single_cvc_success": 0.5454545454545454,
+          "multi_cvc_matches": 9,
+          "multi_cvc_success": 0.3
+        },
+        "complete_provisional_studies": {
+          "success_at_5px": 0.09090909090909091,
+          "matches_5px": 1,
+          "success_at_10px": 0.2727272727272727,
+          "matches_10px": 3,
+          "success_at_15px": 0.5454545454545454,
+          "matches_15px": 6,
+          "success_at_25px": 0.6363636363636364,
+          "matches_25px": 7,
+          "mean_false_tips_per_image": 0.6842105263157895,
+          "mean_false_tips_negative_image": 0.25,
+          "total_false_tips": 13,
+          "single_cvc_matches": 6,
+          "multi_cvc_matches": 0,
+          "target_count": 11,
+          "study_count": 19
+        }
+      },
+      "learned_offsets": {
+        "mixed_provisional_v2": {
+          "success_at_5px": 0.07317073170731707,
+          "matches_5px": 3,
+          "success_at_10px": 0.1951219512195122,
+          "matches_10px": 8,
+          "success_at_15px": 0.2926829268292683,
+          "matches_15px": 12,
+          "success_at_25px": 0.4634146341463415,
+          "matches_25px": 19,
+          "mean_false_tips_per_image": 1.2424242424242424,
+          "mean_false_tips_negative_image": 0.25,
+          "total_false_tips": 41,
+          "single_cvc_matches": 5,
+          "single_cvc_success": 0.45454545454545453,
+          "multi_cvc_matches": 7,
+          "multi_cvc_success": 0.23333333333333334
+        },
+        "complete_provisional_studies": {
+          "success_at_5px": 0.09090909090909091,
+          "matches_5px": 1,
+          "success_at_10px": 0.18181818181818182,
+          "matches_10px": 2,
+          "success_at_15px": 0.45454545454545453,
+          "matches_15px": 5,
+          "success_at_25px": 0.6363636363636364,
+          "matches_25px": 7,
+          "mean_false_tips_per_image": 0.7368421052631579,
+          "mean_false_tips_negative_image": 0.25,
+          "total_false_tips": 14,
+          "single_cvc_matches": 5,
+          "multi_cvc_matches": 0,
+          "target_count": 11,
+          "study_count": 19
+        }
+      }
+    }
+  }
+}

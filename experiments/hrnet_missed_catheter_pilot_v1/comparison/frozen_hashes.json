@@ -1,0 +1,5 @@
+{
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_42\\t1_joint_hrnet\\checkpoints\\final_model.pt": "d9ef494fc6f95e2abcf2597d7269e8732803a3e634bd638e64a5ab9a2d139b1d",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_improvement_v2\\checkpoints\\control_final_model.pt": "dcc05cb25676466dea1fdd960143e014fe4d0253e7c3574560975558fa257d60",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_improvement_v2\\checkpoints\\experiment_final_model.pt": "02046ea6988a61bba15351cfcf134a421d49c474dc18b10f5f5d54511d056a67"
+}

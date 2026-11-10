@@ -1,0 +1,6 @@
+{
+  "non_segmentation_state_sha256": "0401fbb5f216a35f602dc6ca03f54f5ae4fac09be1752ff661dda20ec05632de",
+  "state_unchanged": true,
+  "fp32_tip_logits_bitwise_equal": true,
+  "trainable_parameters": 23153
+}

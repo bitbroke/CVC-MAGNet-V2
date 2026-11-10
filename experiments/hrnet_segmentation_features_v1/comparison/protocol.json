@@ -1,0 +1,19 @@
+{
+  "updates": 250,
+  "seed": 42,
+  "input": 768,
+  "effective_batch": 4,
+  "microbatch": 1,
+  "arms": [
+    "head_control",
+    "feature_adaptation"
+  ],
+  "head_lr": 5e-05,
+  "feature_lr": 1e-05,
+  "loss": "BCE pos_weight10 + Dice + 0.25 equal-instance recall; identical arms",
+  "threshold": 0.5,
+  "mining": "training only; same hard-positive ledger in both arms",
+  "tip_policy": "Separate entire frozen original model",
+  "promotion": "None automatic; fewer misses than baseline and control; baseline Dice, precision, coverage, false area and longest-gap preservation",
+  "limitations": "Development experiment, provisional labels, not clinically attested"
+}

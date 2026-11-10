@@ -1,0 +1,8 @@
+{
+  "batch_ledger_path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\architecture_comparison_v1\\manifests\\batch_ledger.jsonl",
+  "batch_ledger_sha256": "54dfcc249a43a8274f0fb1a3777e507a0d6c8c09df69a03534b09a2bee41f95e",
+  "total_updates": 1001,
+  "total_exposures": 4004,
+  "hard_negatives_manifest_sha256": "0c869fdfd865c550e882f7f77a7b842d41ceb3a77d459afa73b38d48a7903f1c",
+  "splits_sha256": "5ba91e3521cd4fe3deac6c7fea7ff11ae211b65a8c65457989a2e5b49f1a2887"
+}

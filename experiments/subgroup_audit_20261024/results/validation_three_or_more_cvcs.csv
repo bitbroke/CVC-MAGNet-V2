@@ -1,0 +1,5 @@
+study_id,ETT - Abnormal,ETT - Borderline,ETT - Normal,NGT - Abnormal,NGT - Borderline,NGT - Incompletely Imaged,NGT - Normal,CVC - Abnormal,CVC - Borderline,CVC - Normal,Swan Ganz Catheter Present,patient_id,duplicate_group_id,has_cvc,has_other_lines,is_study_level_negative,cvc_count,annotated_cvc_count,other_device_present,low_clutter_proxy
+1.2.826.0.1.3680043.8.498.19597658072691561369006045865478606218,0,0,0,0,0,0,0,1,1,1,0,5733c2458,5733c2458,True,False,False,3,3,False,False
+1.2.826.0.1.3680043.8.498.45244834314896076632852957176525307034,0,1,0,0,0,0,1,0,0,1,0,83f1d2141,83f1d2141,True,True,False,3,3,True,False
+1.2.826.0.1.3680043.8.498.11814110223606344917146986146259503354,0,0,0,0,0,0,1,0,1,1,0,1a88af381,1a88af381,True,True,False,3,3,True,False
+1.2.826.0.1.3680043.8.498.12780732480359760065997067333764961045,0,0,1,0,0,0,0,1,1,1,0,5733c2458,5733c2458,True,True,False,3,3,True,False

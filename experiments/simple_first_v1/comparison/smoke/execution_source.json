@@ -1,0 +1,5 @@
+{
+  "sha256": "9f5852a24fa28d18c0334267e1b9728bb373cc3330162d16e02400fea2d6eecc",
+  "preparation_hash": "4dcbe23a1ced97c259d078cb077e32b7f82cc9f931bce86b20ee9e5b0599f0c5",
+  "change": "Bounded 16-image RAM cache; training mathematics and ledger unchanged"
+}

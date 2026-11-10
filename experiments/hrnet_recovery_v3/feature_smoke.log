@@ -1,0 +1,3 @@
+SUPERVISION {('label_supported_negative', True): 2, ('unknown_or_unreviewed', False): 6}
+head_control {'update': 2, 'attempts': 2, 'loss': [1.0462739244103432, 1.033127672970295, 0.05258504766970873], 'seconds': 4.573946714401245, 'peak_allocated_mb': 374.2080078125, 'peak_reserved_mb': 448.0, 'amp_scale': 1024.0}
+feature_adaptation {'update': 2, 'attempts': 2, 'loss': [1.0442081466317177, 1.033317692577839, 0.04356169793754816], 'seconds': 3.0107123851776123, 'peak_allocated_mb': 1285.6767578125, 'peak_reserved_mb': 1356.0, 'amp_scale': 1024.0}

@@ -1,0 +1,48 @@
+PRECISION AND ANNOTATION AUDIT — 25 October 2026
+
+Scope
+Saved predictions only: original HRNet, mixed-data continuation, simple-first continuation. All 193 development studies, 248 source-listed CVC paths; source reconciliation also covers all 896 unique experiment training studies. No training, no checkpoint promotion, no label modification. Eight selected native-resolution crop panels personally inspected: six positive studies (largest paired Dice changes and all four previously recovered studies) and two highest-FP negative studies. Selection is diagnostic, not representative clinical sampling.
+
+1. What actually went wrong
+Positive-study macro precision: original 33.34%, mixed 25.14%, simple-first 23.00%. Pooled positive pixel precision: 30.72%, 23.87%, 21.74%. Positive pixel recall rises from 83.49% to 89.34% and 90.50%. More path detection comes with much more foreground outside the reference ribbon.
+Positive false pixels: original 8,791,070; mixed 13,353,448; simple-first 15,287,168. These are measured against rasterized 10-native-pixel polylines, not clinically traced dense boundaries.
+For simple-first, 24.17% of those false pixels are <=5 pixels outside the reference ribbon, 31.75% are >5 to15 pixels away, and 44.08% are >15 pixels away. Original proportions:34.41%,27.49%,38.10%. Mixed:27.01%,32.77%,40.22%. Thus neither pure boundary thickness error nor purely remote hallucination explains everything.
+Only 0.79% of simple-first positive FP pixels overlap another device's annotated 10px ribbon. This does NOT prove other-device confusion is rare: those annotations are incomplete and narrow, and external wires/bone boundaries are not exhaustively labeled.
+Negative false pixels: original25,692, mixed18,616, simple-first46,819. One study contributes42,469 (90.7%) of simple-first's total. With only eight negative studies, this is unstable as a population estimate.
+
+2. Visual observations (provisional engineering inspection)
+native_01: central vertical blobs enlarge while a faint upper annotated line remains mostly absent. A suppressed true line and increased off-reference foreground can coexist.
+native_02: predicted descending annotated line is broad; prominent lateral side branches connect at a crossing. Removing whole components would also remove the desired path.
+native_03: simple-first recovers more of the faint arch but creates an uneven wider corridor and an isolated spot.
+native_04: a recovered arch has wide, irregular foreground following a similar direction to adjacent background edges. Exact visible catheter boundaries remain uncertain.
+native_05: the second crossing catheter is discontinuous in simple-first even though its aggregate 'not missed' classification remains true.
+native_06: substantial recovery of a faint annotated path accompanies a broad band and side spurs.
+native_07: long false upper-chest track under a CVC-absent source label. Identity/clinical absence is not independently adjudicated by this audit.
+native_08: small lateral blobs near surface lines; much less false area than case7.
+Raw images and native crops support width/branch confusion and recall/precision tradeoff. They do not establish which individual loss term caused it. Both continuations use positive-weighted BCE, Dice and an additional recall term; objective imbalance or feature drift are hypotheses requiring an ablation, not proven causes.
+
+3. Annotation completeness: what is and is not verified
+Exact coordinate-multiset reconciliation against original train_annotations.csv found zero lost/altered CVC polylines in 896 training studies (572 CVC instances) or193 validation studies (248 instances). No label-positive/no-polyline study or label-negative/with-polyline contradiction occurs in these cohorts.
+This verifies conversion integrity, NOT that every visible catheter or full path was annotated. Inventory assessability/border flags are inherited metadata, not independent visual certification. 'Simple' means metadata-defined low clutter, not verified complete labels.
+Across the entire study inventory,20,480 image-level CVC-positive studies have no CVC polyline. Never convert these into empty segmentation negatives. This count is outside the selected annotated experiment cohort; it does not explain a conversion failure here.
+The prior training inspection's examples5 and9 remain annotation-completeness review candidates (short peripheral/neck traces). Example5 was re-inspected here at contact-sheet resolution: multiple visible line-like structures exist outside its single peripheral trace; their identity cannot safely be inferred from that alone. Additional visible lines are not automatically missing CVC labels.
+RANZCR polylines provide a path reference; rasterizing each at fixed10px does not supply actual catheter wall boundaries. Near-ribbon FP may combine overwidth, annotation deviation, interpolation and genuine boundary uncertainty. Do not relabel all such pixels as correct or all distant pixels as wrong without review.
+
+4. Threshold-only repair is unsafe as a blanket decision
+Saved simple-first predictions evaluated at0.5/0.6/0.7 on four recovered paths. At0.5 ->0.7, path coverage changes56.15->47.10%,43.22->36.27%,92.16->81.01%,80.02->70.26%. All remain above the loose30% detection cutoff, concealing losses of7.0–11.2 percentage points. This is a targeted diagnostic, not a full-cohort threshold selection or deployment recommendation.
+Do not remove small components blindly either: faint catheters are already fragmented. Do not keep only the largest component: multi-CVC paths are required.
+
+5. Fix next, in order (nothing below has been trained)
+A. Correct metric labels. Keep historical reports immutable. Report positive-only macro and pooled precision, native Dice, negative area per study, per-instance coverage and longest uncovered gaps separately. A 'missed count' alone is insufficient. Existing canonical precision/recall averages include negatives with special zero/one conventions; they must not be labeled positive-only accuracy.
+B. Make a small adjudication queue from training-only data: high-confidence off-reference tracks, crossing branches, short/incomplete traces, and label-supported hard negatives. Include a blinded random sample as well. Ask a qualified reviewer only to mark confirmed CVC path, confirmed non-CVC foreground, or uncertain regions. Corrected labels must be versioned; uncertain regions must not become hard negatives. Development examples here are diagnostic and must not be copied into training.
+C. Separate boundary uncertainty from confirmed background. Retain known positive centerline supervision and valid negative-study supervision. Apply any strong extra FP penalty only to confirmed non-CVC regions or reviewed-complete studies, with a training-defined boundary uncertainty band. The15px analysis bins are descriptive and are NOT a validated supervision margin.
+D. Next single controlled experiment, once explicitly authorized: same mixed-data ledger, original architecture and budgets; compare unchanged recovery objective against a capped, image-normalized penalty for confirmed background false predictions. Keep the centerline/instance-recall protection identical. Do not simultaneously change resolution, backbone, sampling, threshold or several losses. Freeze separate original tip inference. Existing hard-negative image mining is not equivalent to this reviewed region-level supervision.
+E. Gate progression against BOTH references: original model's precision/Dice/negative area and recovery model's per-instance coverage/gaps. Specifically track all four recovered paths and multi-CVC companions, not just total misses. Use a predeclared tolerance before training; do not choose it after seeing results. If both objectives cannot be met, retain separate candidates rather than declaring a new best model.
+F. Expand negative evaluation before specificity claims. Eight negatives and one dominant failure are insufficient. Any newly assembled development set from previously exposed data remains development; independent clinical test claims require genuinely independent data and attested labels.
+
+Recommendation
+Keep the original model as the mask-quality reference and the recovery candidates as frozen diagnostic references. Prioritize reviewed region-level background supervision and boundary uncertainty, not more simple-only training, blanket threshold increases, automatic removal of difficult cases, or a new backbone. Model-wide 'perfect' segmentation and complete annotation accuracy remain unproven.
+
+Artifacts
+results/summary.json; pixel_diagnostics.csv; source_annotation_reconciliation.csv; cohort_completeness.csv; completeness_summary.json; recovered_path_threshold_risk.csv; native_01..08.jpg; preservation.json.
+All conclusions are development diagnostics against provisional source polylines, not independently established clinical accuracy.

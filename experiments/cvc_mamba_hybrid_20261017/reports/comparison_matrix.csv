@@ -1,0 +1,4 @@
+Arm,Status,Parameters,Macro Dice (Native),Centerline Cov @ 10px,Missed Catheter Rate,Neg False Area %,Neg Total FP Pixels,Neg Any-FP Rate,Update Speed (768px),Peak VRAM (Alloc / Res),Total Run Time
+Arm A: Continuation Control,Invalid (Zero Supervision),"4,176,941",0.4420,81.99%,4.44%,0.0887%,"45,753",87.5%,0.33s,931 / 1090 MB,20.3 min
+Arm B: Mamba S6 Hybrid,Invalid (Zero Supervision),"4,219,053",0.4420,81.99%,4.44%,0.0887%,"45,753",87.5%,7.09s,1007 / 1154 MB,141.4 min
+Arm C: Conv Context Control,Invalid (Zero Supervision),"4,220,749",0.4420,81.99%,4.44%,0.0887%,"45,753",87.5%,0.36s,952 / 1094 MB,21.8 min

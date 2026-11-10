@@ -1,0 +1,10 @@
+{
+  "primary_rule_passed": true,
+  "patient_cluster_bootstrap_study_mean_coverage_delta": 0.03475751595223571,
+  "ci95": [
+    0.021629805706550365,
+    0.049949657729185866
+  ],
+  "patient_count": 132,
+  "note": "Study-weighted paired diagnostic; canonical headline coverage may use a different aggregation. Repeated development selection and single seed limit generalization claims."
+}

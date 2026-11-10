@@ -10,12 +10,19 @@ Implements Section 6 of the Experiment Specification:
 - Saves result report to reports/decoder_comparison_d0_d1.md and experiments/D0_D1_decoder_comparison/
 """
 
+import os
+import sys
+os.environ["PYTHONIOENCODING"] = "utf-8"
+os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
 import argparse
 import json
 import math
-import os
 from pathlib import Path
-import sys
 import time
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -195,7 +202,7 @@ def compare_decoders(
         json.dump(sum_d1, f, indent=2)
 
     # Markdown Comparison Table
-    tol_keys = ["Success@5", "Success@10", "Success@15", "Success@20", "Success@30"]
+    tol_keys = ["Success@5", "Success@10", "Success@15", "Success@20", "Success@25", "Success@35", "Success@50", "Success@65"]
     rows = []
     for tk in tol_keys:
         v0 = sum_d0["tolerance_metrics"][tk]["success_rate"] * 100

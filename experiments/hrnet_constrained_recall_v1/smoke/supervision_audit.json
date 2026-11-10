@@ -1,0 +1,30 @@
+[
+  {
+    "study_id": "1.2.826.0.1.3680043.8.498.11282726926385674799032474140254366087",
+    "negative": false,
+    "instances": 1,
+    "tip_enabled": false,
+    "source": "unknown_or_unreviewed"
+  },
+  {
+    "study_id": "1.2.826.0.1.3680043.8.498.57895167239963477615391127330978220967",
+    "negative": true,
+    "instances": 0,
+    "tip_enabled": true,
+    "source": "label_supported_negative"
+  },
+  {
+    "study_id": "1.2.826.0.1.3680043.8.498.58316870273475304341182775332135854880",
+    "negative": false,
+    "instances": 1,
+    "tip_enabled": false,
+    "source": "unknown_or_unreviewed"
+  },
+  {
+    "study_id": "1.2.826.0.1.3680043.8.498.74097243699070773856712835722074575225",
+    "negative": false,
+    "instances": 1,
+    "tip_enabled": false,
+    "source": "unknown_or_unreviewed"
+  }
+]

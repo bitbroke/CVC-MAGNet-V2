@@ -1,0 +1,22 @@
+{
+  "seed": 42,
+  "updates_per_arm": 250,
+  "positive_exposures": 500,
+  "negative_exposures": 500,
+  "positive_simple": 375,
+  "positive_complex": 125,
+  "initial": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_42\\t1_joint_hrnet\\checkpoints\\final_model.pt",
+  "initial_sha256": "d9ef494fc6f95e2abcf2597d7269e8732803a3e634bd638e64a5ab9a2d139b1d",
+  "resolution": 768,
+  "effective_batch": 4,
+  "microbatch": 1,
+  "optimizer": "AdamW; head 5e-5, features 1e-5; cosine eta_min1e-6; weight_decay1e-4",
+  "loss": "BCE posweight10 + foreground Dice + .25 equal-instance recall; identical arms",
+  "order": "simple_first first125 updates: 2 simple +2negative; last125: mixed positive pool. mixed_data: shuffled identical positive exposures throughout. Negative slots identical.",
+  "scope": "Tests exposure order under a fixed simple-enriched mixture, NOT full-population natural sampling or training from scratch.",
+  "primary": "Full 193-study native macro Dice; path coverage/misses/precision/negative area safeguards vs matched control",
+  "pass_rule": "Dice > mixed; precision >= mixed; path coverage >= mixed-.005; misses <= mixed; negative total FP and mean area <= mixed; original quality separately reported",
+  "limitations": "Repeated development set, provisional polyline labels, eight negative validation studies; no clinical or independent accuracy claim",
+  "tip_policy": "Complete separate original frozen model; copied tip outputs never deployed",
+  "promotion": false
+}

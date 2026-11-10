@@ -1,0 +1,27 @@
+{
+  "source_geometry_invalid_instances": 0,
+  "all_inventory_status_counts": {
+    "positive_missing_path": 20480,
+    "source_supported_positive": 8853,
+    "label_supported_negative": 726,
+    "review_required": 24
+  },
+  "allowed_training_status_counts": {
+    "positive_missing_path": 10690,
+    "source_supported_positive": 4352,
+    "label_supported_negative": 396,
+    "review_required": 12
+  },
+  "validation_status_counts": {
+    "source_supported_positive": 185,
+    "label_supported_negative": 8
+  },
+  "train_validation_overlap": {
+    "study_id": 0,
+    "patient_id": 0,
+    "duplicate_group_id": 0
+  },
+  "review_studies": 30,
+  "training_started": false,
+  "original_data_modified": false
+}

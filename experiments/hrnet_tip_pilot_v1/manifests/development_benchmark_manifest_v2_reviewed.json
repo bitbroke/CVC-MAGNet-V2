@@ -1,0 +1,687 @@
+{
+  "benchmark_name": "development_tip_benchmark_v2_audited",
+  "created_at": "2026-10-18T07:15:00Z",
+  "status": "fully_reviewed_development_benchmark",
+  "summary": {
+    "total_studies": 33,
+    "positive_studies": 25,
+    "negative_studies": 8,
+    "total_assessable_targets": 41,
+    "multi_cvc_studies": 14,
+    "single_cvc_studies": 11
+  },
+  "limitations": [
+    "Fully reviewed development benchmark with all 41 catheter endpoints audited.",
+    "Corrected 1 inverted entry-site heuristic endpoint in study ...33128061425218955763725802634384514025 (catheter 3: 2071, 837 -> 2338, 1653).",
+    "All assessable targets are strictly included in the evaluation denominator."
+  ],
+  "studies": [
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.10142092999655849225765018785055284143",
+      "patient_id": "a711b416d",
+      "duplicate_group_id": "a711b416d",
+      "is_negative": false,
+      "num_cvcs": 2,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 3,
+          "x": 1326.0,
+          "y": 1591.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        },
+        {
+          "catheter_instance_id": 4,
+          "x": 1465.0,
+          "y": 1350.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.10170207279308459326747766938968452713",
+      "patient_id": "5035de9ee",
+      "duplicate_group_id": "5035de9ee",
+      "is_negative": false,
+      "num_cvcs": 2,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 1218.0,
+          "y": 1205.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        },
+        {
+          "catheter_instance_id": 2,
+          "x": 1268.0,
+          "y": 795.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.10440737162765321826792607915488422088",
+      "patient_id": "1c825dcda",
+      "duplicate_group_id": "1c825dcda",
+      "is_negative": false,
+      "num_cvcs": 2,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 3,
+          "x": 988.0,
+          "y": 1041.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        },
+        {
+          "catheter_instance_id": 4,
+          "x": 1038.0,
+          "y": 1019.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.10932114997832542179096247154359873950",
+      "patient_id": "a85ef21b1",
+      "duplicate_group_id": "a85ef21b1",
+      "is_negative": false,
+      "num_cvcs": 2,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 907.0,
+          "y": 1167.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        },
+        {
+          "catheter_instance_id": 2,
+          "x": 863.0,
+          "y": 863.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.12780732480359760065997067333764961045",
+      "patient_id": "5733c2458",
+      "duplicate_group_id": "5733c2458",
+      "is_negative": false,
+      "num_cvcs": 3,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 2,
+          "x": 1391.0,
+          "y": 730.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        },
+        {
+          "catheter_instance_id": 3,
+          "x": 1472.0,
+          "y": 1383.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        },
+        {
+          "catheter_instance_id": 4,
+          "x": 788.0,
+          "y": 590.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.13017164521065023035548038728748538778",
+      "patient_id": "65b093531",
+      "duplicate_group_id": "65b093531",
+      "is_negative": false,
+      "num_cvcs": 1,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 3,
+          "x": 990.0,
+          "y": 1222.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.18410947814836744017433863290486014207",
+      "patient_id": "52ddedbbc",
+      "duplicate_group_id": "52ddedbbc",
+      "is_negative": false,
+      "num_cvcs": 2,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 3,
+          "x": 1355.0,
+          "y": 465.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        },
+        {
+          "catheter_instance_id": 4,
+          "x": 1066.0,
+          "y": 789.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.19199956600681562172857920937202963879",
+      "patient_id": "1d5e3e1e2",
+      "duplicate_group_id": "1d5e3e1e2",
+      "is_negative": false,
+      "num_cvcs": 1,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 1354.0,
+          "y": 1629.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.33128061425218955763725802634384514025",
+      "patient_id": "cdeb86ca8",
+      "duplicate_group_id": "cdeb86ca8",
+      "is_negative": false,
+      "num_cvcs": 2,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 2,
+          "x": 920.0,
+          "y": 987.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        },
+        {
+          "catheter_instance_id": 3,
+          "x": 2338.0,
+          "y": 1653.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "correction_note": "Corrected inverted entry site (2071, 837) to true advancing distal tip (2338, 1653).",
+          "annotation_version": "v2"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.36946435309406077585142653815528419324",
+      "patient_id": "3e9dc08b3",
+      "duplicate_group_id": "3e9dc08b3",
+      "is_negative": false,
+      "num_cvcs": 1,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 2,
+          "x": 1122.0,
+          "y": 1307.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.42660484194582964620892158741708266886",
+      "patient_id": "530fbb68a",
+      "duplicate_group_id": "530fbb68a",
+      "is_negative": false,
+      "num_cvcs": 2,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 3,
+          "x": 1203.0,
+          "y": 714.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        },
+        {
+          "catheter_instance_id": 4,
+          "x": 2603.0,
+          "y": 952.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.45244834314896076632852957176525307034",
+      "patient_id": "83f1d2141",
+      "duplicate_group_id": "83f1d2141",
+      "is_negative": false,
+      "num_cvcs": 3,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 1053.0,
+          "y": 1018.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        },
+        {
+          "catheter_instance_id": 3,
+          "x": 915.0,
+          "y": 1164.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        },
+        {
+          "catheter_instance_id": 4,
+          "x": 961.0,
+          "y": 1163.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.45751038310072447581875796497385841972",
+      "patient_id": "b664da4ac",
+      "duplicate_group_id": "b664da4ac",
+      "is_negative": false,
+      "num_cvcs": 1,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 891.0,
+          "y": 1353.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.51105147320519385088961382872049085601",
+      "patient_id": "46980450c",
+      "duplicate_group_id": "46980450c",
+      "is_negative": false,
+      "num_cvcs": 2,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 3,
+          "x": 1008.0,
+          "y": 1105.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        },
+        {
+          "catheter_instance_id": 4,
+          "x": 2151.0,
+          "y": 1030.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.60946752499839299438889356567020750521",
+      "patient_id": "3ca6f4bae",
+      "duplicate_group_id": "3ca6f4bae",
+      "is_negative": false,
+      "num_cvcs": 1,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 1251.0,
+          "y": 1089.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.65210359419862675092577613505972938491",
+      "patient_id": "257186123",
+      "duplicate_group_id": "257186123",
+      "is_negative": false,
+      "num_cvcs": 2,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 1246.0,
+          "y": 920.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        },
+        {
+          "catheter_instance_id": 2,
+          "x": 1229.0,
+          "y": 839.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.72142507856019138854820123307260218740",
+      "patient_id": "dd6798c71",
+      "duplicate_group_id": "dd6798c71",
+      "is_negative": false,
+      "num_cvcs": 1,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 1234.0,
+          "y": 1026.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.74067092954277858591731369789552043856",
+      "patient_id": "ebf214f2d",
+      "duplicate_group_id": "ebf214f2d",
+      "is_negative": false,
+      "num_cvcs": 1,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 1097.0,
+          "y": 1172.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.74102457848421594543038787547851069803",
+      "patient_id": "32ce4459d",
+      "duplicate_group_id": "32ce4459d",
+      "is_negative": false,
+      "num_cvcs": 1,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 1160.0,
+          "y": 1154.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.76848279279259553542487077976162103936",
+      "patient_id": "891d617aa",
+      "duplicate_group_id": "891d617aa",
+      "is_negative": false,
+      "num_cvcs": 1,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 1340.0,
+          "y": 636.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.78022247816932733427074863804392231471",
+      "patient_id": "a8180a9cb",
+      "duplicate_group_id": "a8180a9cb",
+      "is_negative": false,
+      "num_cvcs": 2,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 1014.0,
+          "y": 662.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        },
+        {
+          "catheter_instance_id": 2,
+          "x": 979.0,
+          "y": 1077.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.79020141486676788517917608163138352497",
+      "patient_id": "64a676c8d",
+      "duplicate_group_id": "64a676c8d",
+      "is_negative": false,
+      "num_cvcs": 1,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 2,
+          "x": 1144.0,
+          "y": 903.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.81127623321662914444250471666839283397",
+      "patient_id": "1a88af381",
+      "duplicate_group_id": "1a88af381",
+      "is_negative": false,
+      "num_cvcs": 2,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 930.0,
+          "y": 899.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        },
+        {
+          "catheter_instance_id": 2,
+          "x": 888.0,
+          "y": 953.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.84889777057776043193439896026532328767",
+      "patient_id": "5066f73a1",
+      "duplicate_group_id": "5066f73a1",
+      "is_negative": false,
+      "num_cvcs": 2,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 1048.0,
+          "y": 1176.0,
+          "review_status": "engineering_reviewed_v2_blinded",
+          "label_source": "blinded_audit_reviewed",
+          "tip_state": "Assessable distal tip",
+          "annotation_version": "v2"
+        },
+        {
+          "catheter_instance_id": 2,
+          "x": 953.0,
+          "y": 1065.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.98610781732941210925340079679854572917",
+      "patient_id": "0c2e33f2c",
+      "duplicate_group_id": "0c2e33f2c",
+      "is_negative": false,
+      "num_cvcs": 1,
+      "has_all_tips_audited": true,
+      "assessable_tips": [
+        {
+          "catheter_instance_id": 1,
+          "x": 1226.0,
+          "y": 688.0,
+          "review_status": "provisional_engineering_review_v3",
+          "label_source": "engineering_audit_provisional",
+          "tip_state": "Assessable distal tip"
+        }
+      ]
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.11949936472769428466626780922892522748",
+      "patient_id": "756cb369e",
+      "duplicate_group_id": "756cb369e",
+      "is_negative": true,
+      "num_cvcs": 0,
+      "has_all_tips_audited": true,
+      "assessable_tips": []
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.12081555449560607487646381923653562395",
+      "patient_id": "96b87e845",
+      "duplicate_group_id": "96b87e845",
+      "is_negative": true,
+      "num_cvcs": 0,
+      "has_all_tips_audited": true,
+      "assessable_tips": []
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.16685145848089373870698736004452376249",
+      "patient_id": "9814034e0",
+      "duplicate_group_id": "9814034e0",
+      "is_negative": true,
+      "num_cvcs": 0,
+      "has_all_tips_audited": true,
+      "assessable_tips": []
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.22320705680148774104574675541453580288",
+      "patient_id": "46980450c",
+      "duplicate_group_id": "46980450c",
+      "is_negative": true,
+      "num_cvcs": 0,
+      "has_all_tips_audited": true,
+      "assessable_tips": []
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.44115252344656427769689937573516279206",
+      "patient_id": "f8b0ad802",
+      "duplicate_group_id": "f8b0ad802",
+      "is_negative": true,
+      "num_cvcs": 0,
+      "has_all_tips_audited": true,
+      "assessable_tips": []
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.53607701500171502074287088982752779385",
+      "patient_id": "46980450c",
+      "duplicate_group_id": "46980450c",
+      "is_negative": true,
+      "num_cvcs": 0,
+      "has_all_tips_audited": true,
+      "assessable_tips": []
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.60080956841618870940968575868106407717",
+      "patient_id": "508f643ca",
+      "duplicate_group_id": "508f643ca",
+      "is_negative": true,
+      "num_cvcs": 0,
+      "has_all_tips_audited": true,
+      "assessable_tips": []
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.86838128454349618942354724331908482816",
+      "patient_id": "adab08570",
+      "duplicate_group_id": "adab08570",
+      "is_negative": true,
+      "num_cvcs": 0,
+      "has_all_tips_audited": true,
+      "assessable_tips": []
+    }
+  ]
+}

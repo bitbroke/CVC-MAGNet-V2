@@ -1,0 +1,17 @@
+{
+  "updates": 1,
+  "seed": 42,
+  "arms": {
+    "control": 0.0,
+    "instance_recall": 0.25
+  },
+  "effective_batch": 4,
+  "microbatch": 1,
+  "learning_rate": 5e-05,
+  "bn_running_stats": "frozen",
+  "tip_policy": "complete provisional studies only; weak targets masked",
+  "primary": "missed catheter rate and native centerline coverage at 10px",
+  "decision": "challenger must reduce missed paths vs control and preserve baseline coverage within 1pp; report precision and false-area tradeoffs; no winner from Dice alone",
+  "tip_decoder": "quadratic, confidence 0.4, native NMS 20px, cap 10; existing helper",
+  "source_code_sha256": "455b5a447dc54e07e74473a0a6e32332b7f919efd5e8a8969e9d170ff5c1124f"
+}

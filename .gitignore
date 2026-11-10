@@ -5,9 +5,17 @@ __pycache__/
 .venv/
 .pytest_cache/
 
-# Large cache and raw DICOM/image sets
+# Large cache, raw DICOM/image sets, and checkpoints
 cache/
 data/
 outputs/
 archives/
+runs/
+scratch/
+catboost_info/
 tools/mask_review/__pycache__/
+*.pt
+*.pth
+*.npy
+*.npz
+*.bin

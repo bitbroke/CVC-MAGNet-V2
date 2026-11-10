@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-10-17T03:15:11.722833+05:30",
+  "status": "gpu_feasibility_tested_and_passed",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\M S I\\anaconda3\\python.exe",
+  "torch": "2.6.0+cu124",
+  "torch_cuda_build": "12.4",
+  "packages_present": {
+    "mamba_ssm": false,
+    "causal_conv1d": false,
+    "triton": false
+  },
+  "nvidia_smi": {
+    "returncode": 0,
+    "stdout": "Sat Oct 17 03:15:11 2026       \r\n+-----------------------------------------------------------------------------------------+\r\n| NVIDIA-SMI 610.78                 KMD Version: 610.78        CUDA UMD Version: 13.3     |\r\n+-----------------------------------------+------------------------+----------------------+\r\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\r\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\r\n|                                         |                        |               MIG M. |\r\n|=========================================+========================+======================|\r\n|   0  NVIDIA GeForce RTX 3050 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |\r\n| N/A   75C    P0             21W /   44W |    2003MiB /   4096MiB |     63%      Default |\r\n|                                         |                        |                  N/A |\r\n+-----------------------------------------+------------------------+----------------------+\r\n\r\n+-----------------------------------------------------------------------------------------+\r\n| Processes:                                                                              |\r\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\r\n|        ID   ID                                                               Usage      |\r\n|=========================================================================================|\r\n|    0   N/A  N/A           22424      C   ...rs\\M S I\\anaconda3\\python.exe      N/A      |\r\n|    0   N/A  N/A           26780    C+G   ...Browser\\Application\\brave.exe      N/A      |\r\n|    0   N/A  N/A           27452    C+G   ...Browser\\Application\\brave.exe      N/A      |\r\n+-----------------------------------------------------------------------------------------+\r\n",
+    "stderr": ""
+  },
+  "processes": {
+    "returncode": 0,
+    "stdout": "[\r\n    {\r\n        \"ProcessId\":  12828,\r\n        \"CommandLine\":  \"\\\"C:\\\\Users\\\\M S I\\\\anaconda3\\\\python.exe\\\" -m uvicorn review_app.server:app --host 127.0.0.1 --port 8000\"\r\n    },\r\n    {\r\n        \"ProcessId\":  16440,\r\n        \"CommandLine\":  \"\\\"C:\\\\Users\\\\M S I\\\\anaconda3\\\\python.exe\\\" -m uvicorn tools.mask_review.server:app --host 127.0.0.1 --port 8766\"\r\n    },\r\n    {\r\n        \"ProcessId\":  15924,\r\n        \"CommandLine\":  \"\\\"C:\\\\Users\\\\M S I\\\\anaconda3\\\\python.exe\\\" scripts/run_s5_expansion_comparison.py\"\r\n    },\r\n    {\r\n        \"ProcessId\":  22424,\r\n        \"CommandLine\":  \"\\\"C:\\\\Users\\\\M S I\\\\anaconda3\\\\python.exe\\\" C:\\\\Ankshit\\\\CVC-MAGNet-V2\\\\scripts\\\\train_segmentation_v3.py --output_dir C:\\\\Ankshit\\\\CVC-MAGNet-V2\\\\runs\\\\s5_duration_control_2500 --target_updates 2500 --effective_batch_size 4 --micro_batch_size 2 --img_size 768 --lr 1e-4 --seed 43 --aug_seed 43 --load_initial_weights C:\\\\Ankshit\\\\CVC-MAGNet-V2\\\\runs\\\\s3_experiment_hard_neg\\\\checkpoints\\\\final_segmentation_v3.pt --hard_negative_manifest C:\\\\Ankshit\\\\CVC-MAGNet-V2\\\\data\\\\selective_hard_negatives_manifest.json\"\r\n    },\r\n    {\r\n        \"ProcessId\":  27096,\r\n        \"CommandLine\":  \"\\\"C:\\\\Users\\\\M S I\\\\anaconda3\\\\python.exe\\\" experiments/cvc_mamba_hybrid_20261017/capture_preflight.py\"\r\n    }\r\n]\r\n",
+    "stderr": ""
+  },
+  "blockers": [],
+  "gpu_fit": "ALL_THREE_ARMS_FEASIBLE_AT_768PX",
+  "training_launched": false,
+  "original_reference_hashes_unchanged": true
+}

@@ -1,0 +1,26 @@
+{
+  "input_sha256": {
+    "data\\study_inventory.parquet": "2acff229cdac56db0db5b853a8a93953e10a14a4b628f3e4d385a16a91bec1ca",
+    "data\\annotation_inventory.parquet": "02b8f5acec0e8075444e1bf7484bfc9afed66fd38a323cbbbeb1c710dc26c859",
+    "data\\splits.json": "5ba91e3521cd4fe3deac6c7fea7ff11ae211b65a8c65457989a2e5b49f1a2887",
+    "experiments\\hrnet_segmentation_features_v1\\comparison\\baseline_native.json": "a339dc3493a23f2942c1d4154f2cecd28cb0318519c8709e14920a6433ab692a",
+    "experiments\\hrnet_segmentation_features_v1\\comparison\\baseline_paths.csv": "882026fa5cc8899555ec3d3bfa543c34fc5742d202d8c4784cec98c8348978ef",
+    "experiments\\hrnet_segmentation_features_v1\\comparison\\feature_adaptation_native.json": "9c5a2f7baf05ccd8d65616f5188bed124961c69d2d5adfeb7e9785549f6877f0",
+    "experiments\\hrnet_segmentation_features_v1\\comparison\\feature_adaptation_paths.csv": "ab3b479c9ad9fc6eed1a50599aae5850cac240e30a0bf519943d3bc16d7c475a",
+    "experiments\\hrnet_boundary_precision_v1\\comparison\\boundary_native.json": "c694cdd8f086377833a15d6a074955764a11d05625cf27c913ec3ad78d47fac4",
+    "experiments\\hrnet_boundary_precision_v1\\comparison\\boundary_paths.csv": "d799bc7dbced5044a7991c11a39e6672b475567baa191e67457f95dddcf4e7b1"
+  },
+  "evaluation": "post-hoc development analysis; not independent generalization",
+  "simple_definition": "Exactly one inventory-annotated CVC; no image-level ETT/NGT/Swan positive label. Not a clinical image-quality judgment.",
+  "limitations": [
+    "Counts are annotation inventory counts, not proof of all visible CVCs.",
+    "No tip-accuracy claim; metrics measure segmentation against rasterized polylines.",
+    "Groups overlap; do not sum subgroup counts.",
+    "Negative cohort retained separately: only eight validation studies.",
+    "Selecting the highest scoring subgroup does not improve population accuracy."
+  ],
+  "training_simple_candidates": 2443,
+  "training_negative_candidates": 396,
+  "originals_modified": false,
+  "training_started": false
+}

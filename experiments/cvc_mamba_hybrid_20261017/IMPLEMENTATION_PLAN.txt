@@ -1,0 +1,172 @@
+CVC-Mamba-Hybrid-01: controlled architecture comparison
+Prepared 2026-10-17. Status: planning and read-only environment preflight.
+No Mamba training or GPU feasibility test has been run.
+
+1. PURPOSE AND LIMITS
+Test whether a small selective state-space context module improves CVC union
+segmentation beyond equivalent continuation of the current EfficientNet-B0 model.
+This experiment does not establish tip accuracy, placement accuracy, clinical
+safety, or millimetre measurement accuracy. Do not add tip or anatomy heads during
+this segmentation comparison. Preserve the existing tip-development track.
+
+2. FROZEN REFERENCE AND ISOLATION
+Reference: runs/s4_experiment_seed43/checkpoints/final_segmentation_v3.pt.
+Copy this completed reference into frozen_reference/ and record full SHA-256.
+Snapshot current architecture, trainer, dataset, split and hard-negative manifests,
+and available canonical native evaluation reports. Hash originals and copies.
+No edits or checkpoint writes to existing src/, scripts/, runs/, data/, or caches.
+Experimental code goes in this directory's src/ and scripts/; all new output stays
+inside this directory. Do not hard-link writable checkpoints to the reference.
+The separately running S5 comparison is outside this experiment; do not kill it.
+
+3. ENVIRONMENT GATE (BEFORE GPU WORK)
+Observed host: Windows, Python 3.13.9, Torch 2.6.0+cu124, RTX 3050 Laptop 4 GB.
+mamba_ssm, causal_conv1d and triton are not installed; WSL is not installed.
+Official Mamba documentation lists Linux, Python >=3.10 and CUDA >=11.6 for
+the NVIDIA path. Package installation alone is not evidence of working kernels.
+Preferred route: separate Linux/WSL2 environment with a compatible pinned Python,
+PyTorch, CUDA and Mamba release/commit, after existing GPU work completes.
+Do not upgrade/downgrade the working Anaconda environment. OS/WSL setup may need
+administrator access or a restart; keep this as a separate setup task.
+Record package lock, source commit, driver, CUDA toolkit/build and installation log.
+First import and test the genuine Mamba selective scan forward/backward on CUDA.
+Do not substitute an unverified homemade recurrent layer and label it Mamba.
+Do not treat the official source's pure-Python installation as CUDA-kernel proof.
+Reference: https://github.com/state-spaces/mamba
+
+4. THREE ARMS
+A: exact current EfficientNet-B0 + multiscale decoder; continuation control.
+B: same model + one residual Mamba context module after the 128-channel stride-32
+   bottleneck, before block16. Keep all skip connections and output resolution.
+C: same model + residual convolution context module in the same location.
+   Match additional trainable parameters approximately (target within 10%);
+   record exact parameter/FLOP/runtime differences. Do not claim compute parity.
+All arms start from copies of the SAME frozen S4 reference, with new optimizer
+and scheduler states. This tests continuation with an architectural extension,
+not from-scratch superiority or reproduction of a published network.
+
+Proposed B specification (freeze after functional preflight):
+128 channels -> LayerNorm over channels -> four directional raster scans:
+row-major forward/reverse and column-major forward/reverse; restore each ordering
+to H,W, average, output projection, residual addition. Shared scan weights across
+directions to limit parameter count. Use Mamba-1 d_model=128, d_state=16,
+d_conv=4, expand=1 initially. At 768 input, stride-32 tokens are 24x24=576.
+Use a zero-initialized residual output projection so initial outputs match A.
+First update may train only that projection; assert internal Mamba gradients
+become finite/nonzero on subsequent updates. Use the same initialization scheme
+for C. Four scans are not four separately pretrained backbones.
+Use FP32 inside the state-space block initially if mixed precision is unstable;
+record this policy rather than silently changing it between runs.
+
+5. CONTRACT TESTS BEFORE TIMING
+- Strictly load every shared weight; allow missing keys only for the new module.
+- Verify shared parameter hashes and identical initial segmentation outputs.
+- Verify scan/inverse-scan geometry on a non-square tensor with unique cell IDs.
+- Check output shape for 512 and 768 inputs, positive/negative/letterbox cases.
+- Verify finite FP32 loss and backward gradients, then AMP agreement within a
+  stated numerical tolerance; check all trainable branches receive gradients.
+- Retain frozen encoder BatchNorm and decoder GroupNorm policy.
+- Validate checkpoint reload reproduces predictions; verify original hashes.
+
+6. 4 GB GPU FEASIBILITY TEST (NOT YET PERFORMED)
+Run only with no other training process using the GPU. Record external VRAM use.
+For each arm separately, start with 512, then test the actual 768 input.
+Microbatch=1, accumulation=4, AdamW, AMP and the real masked BCE/Dice loss.
+Use a fixed training-only batch containing positives and negatives, not noise alone.
+Warm up 5 successful optimizer updates and time 20 successful updates. Include
+optimizer-state allocation, real loading, backward, validation, save and reload.
+Then run 100 updates for the chosen configuration to expose allocator/stability
+problems that short forward-only tests miss. These are disposable smoke weights.
+Save allocated/reserved peak VRAM, driver free VRAM, per-update times, AMP scale,
+skips/retries, gradient norms, process list and any complete crash traceback.
+Practical gate: no OOM/nonfinite values, correct gradients/reload, no sustained
+AMP skip loop, and approximately >=500 MiB driver-free margin after warmup under
+representative desktop load. Report minimum sampled headroom, not a guarantee.
+Do not set a speed guarantee before measuring the full path.
+If B fails: try activation checkpointing, then narrower context width (64) with
+documented projections. If 768 still fails, rerun ALL arms at 512 for a distinct
+feasibility comparison, explicitly separate from the 768 primary experiment.
+Do not compare a 512 hybrid to a 768 control as architecture-only evidence.
+
+7. LOCK THE TRAINING COMPARISON
+Use existing dev_pilot_train: 400 annotated positives + 396 label-supported
+negatives. Do not introduce the 800-positive expansion during this comparison.
+Reuse exactly the fixed 50% uniform / 50% top-99 hard-negative policy and source
+manifest. Check patient, study and recorded duplicate-group separation against
+ALL validation studies, including studies with no predicted foreground.
+Segmentation annotations must not treat unannotated CVC-positive images as empty.
+Preserve visible clipped paths and exclude padding from loss/metrics. Record
+target raster width, interpolation, native dimensions and transform inversion.
+Precompute an effective-batch image/augmentation ledger, separate from model RNG.
+Match the ledger across A/B/C even when new modules consume RNG draws.
+Use the same-batch AMP retry rule; scheduler/counter advance only on successful
+updates. Define a bounded retry limit and fail rather than silently skip samples.
+
+Initial pilot: 1000 successful updates, seed42, microbatch1/effective batch4,
+768 input if preflight passes; AdamW lr=1e-4, weight_decay=1e-4.
+Copy the current resolved BCE positive weight (trainer currently defaults to 10),
+Dice weight (currently 1), scheduler, augmentation and loss normalization exactly;
+save explicit resolved values. Do not reuse older coarse-model weights 50/100.
+Evaluate at step0,250,500,750,1000; primary comparison is final step1000.
+Development-selected checkpoints are secondary. No automatic early stopping.
+Run A then B then C sequentially, never concurrent GPU training.
+
+8. EVALUATION AND DECISION RULE
+Use the same frozen 193-study development registry, native-grid inversion and
+threshold0.50. Record actual study/patient/target counts from registry, not prose.
+Report positive macro Dice, pooled precision/recall, centerline coverage@10,
+missed-line rate with its exact definition, negative false pixels/area, any-FP
+negative-study rate, connected false components, and per-study results.
+Always preserve original X-ray, annotation-only, prediction-only and overlay
+views for the same fixed 50 cases, plus every substantial regression case.
+Polyine-raster Dice is sensitive to target line width: retain centerline metrics.
+Segmentation coverage is NOT distal-tip Success@15.
+
+Paired patient-cluster bootstrap of model differences, resampling patient groups
+including all their studies. Report seeds separately. Eight negative studies are
+too few for strong specificity claims. Repeated development use is not an
+independent test; upstream history also precludes project-level unseen claims.
+
+Proposed screening gate, fixed before runs (research heuristic, not clinical):
+- Hybrid improves macro Dice >=0.01 absolute vs matched A, OR reduces negative
+  area >=15% relative while positive Dice is no more than 0.005 lower.
+- Recall and centerline coverage each decline no more than 1 percentage point.
+- No systematic loss of multi-CVC or distal segments in fixed overlays.
+- All above must reproduce at seed43 before longer training.
+- Compare B against C: if both improve similarly, report added capacity/context,
+  not a demonstrated Mamba-specific advantage.
+Small uncertain effects -> one longer matched 2500-update comparison; a slower
+learning curve is not disproven by one early epoch. Clear regression -> archive.
+If B exceeds 2x control runtime, report the accuracy/time tradeoff and add a
+separate equal-wall-time comparison before selecting it for full training.
+
+9. OUTPUT CONTRACT
+frozen_reference/ : checkpoint, source/data snapshots, full hashes
+preflight/        : environment.json, compatibility report, GPU measurements,
+                    tests, crash traces; status must distinguish pending/pass/fail
+configs/          : resolved arm configs, seeds and immutable batch ledgers
+src/, scripts/    : isolated experimental modules and runners
+runs/seed42/arm_a_control, arm_b_mamba, arm_c_conv (then seed43)
+Each run: status.json, command.txt, stdout.log, history.jsonl, package lock,
+manifest hashes, initialization hash, best/last/final checkpoints, RNG/optimizer/
+scaler/scheduler state, exposure ledger, native prediction probability files.
+reports/          : comparison.csv/json, per-study metrics, bootstrap results,
+                    overlays, failures and final interpretation
+Probability cache keys MUST include checkpoint SHA, input geometry and
+preprocessing hash. Never reuse another arm's cache by study ID alone.
+Use unique attempt directories; never overwrite failed or successful attempts.
+Do not claim completion from process launch; write complete only after artifacts
+and evaluation counts validate. Keep benchmark weights out of frozen_reference.
+
+10. AFTER A WINNER
+Only then test the same direct multi-tip head on control versus winning backbone
+using reliable complete tip targets, weak-label provenance and unknown masking.
+Evaluate all-target one-to-one Success@5/10/15/25 native pixels and false tips per
+image, missing tips, large errors and multi-CVC association. No assumption that
+better union segmentation solves instance identity or precise distal location.
+Anatomy and calibrated millimetres remain later tasks with their own labels.
+
+Sources: https://github.com/state-spaces/mamba
+https://u-mamba.github.io/
+https://arxiv.org/abs/2403.05246
+This protocol is a custom hybrid ablation, not a reproduction of those papers.

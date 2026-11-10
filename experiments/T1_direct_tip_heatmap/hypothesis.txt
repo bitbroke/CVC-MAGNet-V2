@@ -1,0 +1,1 @@
+Hypothesis T1: Direct landmark learning via multi-tip heatmap outperforms skeleton endpoints from segmentation.

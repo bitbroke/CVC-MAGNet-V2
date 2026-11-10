@@ -1,0 +1,15 @@
+{
+  "experiments\\hrnet_recovery_v3\\run_constrained_recall.py": "f9a972508be064938e7d8e0c76b3afd8511ea449b4590a8484862fcbd12df9fa",
+  "experiments\\hrnet_recovery_v3\\run_recall_pilot.py": "455b5a447dc54e07e74473a0a6e32332b7f919efd5e8a8969e9d170ff5c1124f",
+  "experiments\\hrnet_recovery_v3\\contracts.py": "0a230eaf238b208d13a2d2e72790b8c204db3d493cfd8888b1f4058b9b310b1b",
+  "data\\splits.json": "5ba91e3521cd4fe3deac6c7fea7ff11ae211b65a8c65457989a2e5b49f1a2887",
+  "data\\annotation_inventory.parquet": "02b8f5acec0e8075444e1bf7484bfc9afed66fd38a323cbbbeb1c710dc26c859",
+  "data\\study_inventory.parquet": "2acff229cdac56db0db5b853a8a93953e10a14a4b628f3e4d385a16a91bec1ca",
+  "experiments\\hrnet_tip_pilot_v1\\manifests\\instance_target_registry.parquet": "06bcc038f3545fcdcc3241774b1d658a2bcda1967d0779c8f0e7754ab43abbb5",
+  "experiments\\hrnet_recovery_v3\\benchmark_provenance_restored.csv": "6f11b9cd1fc636606ead32b728c2763e716f79e2f88360b6a6b2a590f63db1c8",
+  "experiments\\hrnet_tip_pilot_v1\\src\\models\\hrnet_joint_tip.py": "4e34e45749941f5005ffe2740d8898d9a9b05a67a0694ee41cfe470ef54b7748",
+  "src\\data\\transforms.py": "92cf0c0faa71038c8bf27dbd052356ccbae019b437ff586176ec12cdf2ed8ed0",
+  "experiments\\hrnet_tip_pilot_v1\\src\\geometry.py": "8a9d65661d37275a45ff76a2e4329a7a1669151be7572baa9ba2f68b12a728e0",
+  "experiments\\architecture_comparison_v2\\scripts\\train_runner.py": "e7c521d1c89b07f436f79a9bafcaa32d691ce616294118992089c16145f74464",
+  "experiments\\hrnet_tip_improvement_v2\\src\\run_continuation_pilot.py": "d2d48aae249d44d4a7c4c9787825767fe43c0c11b07b9141d13a5441a19add8f"
+}

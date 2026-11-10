@@ -1,0 +1,12 @@
+{
+  "mixed_data": {
+    "dice_preserved": false,
+    "precision_preserved": false,
+    "coverage_preserved": true
+  },
+  "simple_first": {
+    "dice_preserved": false,
+    "precision_preserved": false,
+    "coverage_preserved": true
+  }
+}

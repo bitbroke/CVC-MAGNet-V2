@@ -1,0 +1,8 @@
+{
+  "control": {
+    "smoke_passed": true
+  },
+  "constrained": {
+    "smoke_passed": true
+  }
+}

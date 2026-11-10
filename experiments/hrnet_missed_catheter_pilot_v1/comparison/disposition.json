@@ -1,0 +1,6 @@
+{
+  "experiment_complete": true,
+  "promoted": false,
+  "reason": "Recall recovers matched-control misses, but does not beat baseline missed count and degrades baseline Dice and provisional tip success.",
+  "existing_models_preserved": true
+}

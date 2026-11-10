@@ -1,0 +1,65 @@
+DATASET SELECTION TEST SERIES — 25 October 2026
+Five diagnostic tests completed. No models loaded/trained and no labels modified.
+
+{
+  "source_geometry_invalid_instances": 0,
+  "all_inventory_status_counts": {
+    "positive_missing_path": 20480,
+    "source_supported_positive": 8853,
+    "label_supported_negative": 726,
+    "review_required": 24
+  },
+  "allowed_training_status_counts": {
+    "positive_missing_path": 10690,
+    "source_supported_positive": 4352,
+    "label_supported_negative": 396,
+    "review_required": 12
+  },
+  "validation_status_counts": {
+    "source_supported_positive": 185,
+    "label_supported_negative": 8
+  },
+  "train_validation_overlap": {
+    "study_id": 0,
+    "patient_id": 0,
+    "duplicate_group_id": 0
+  },
+  "review_studies": 30,
+  "training_started": false,
+  "original_data_modified": false
+}
+
+Frozen-model comparisons:
+       model                      subset  studies  patients  paths     dice  dice_ci_low  dice_ci_high  positive_macro_precision  pooled_precision  coverage10  misses  mean_longest_gap  false_pixels  remote_fp_fraction  training_studies
+    original      all_annotated_positive      185       132    248 0.462511     0.443643      0.481207                  0.333431          0.307185    0.879256       8        156.033054       8791070            0.380955              4352
+    original     single_no_other_devices       66        63     66 0.493242     0.460807      0.521712                  0.345146          0.319338    0.950973       1         82.574983       2704451            0.345518              2443
+    original   single_with_other_devices       60        43     60 0.428726     0.386332      0.468170                  0.307989          0.271262    0.886065       1        140.632897       2477095            0.467074               786
+    original               two_catheters       55        43    110 0.464496     0.432073      0.493048                  0.349408          0.325873    0.832964       6        210.570859       3206618            0.336492              1009
+    original        three_plus_catheters        4         3     12 0.434910     0.360751      0.572370                  0.302068          0.280253    0.875111       0        137.123352        402906            0.443225               114
+    original   multiple_no_other_devices       25        21     51 0.491451     0.434734      0.535220                  0.355195          0.320344    0.889723       2        158.390954       1696745            0.356339               474
+    original multiple_with_other_devices       34        25     71 0.441196     0.398385      0.475745                  0.339584          0.321712    0.799318       4        235.638536       1912779            0.341368               649
+    original                 normal_only      106        80    132 0.473128     0.445941      0.499652                  0.336046          0.310792    0.906143       5        125.203031       4786912            0.394585              2544
+    original borderline_without_abnormal       56        49     81 0.452484     0.417861      0.482853                  0.332115          0.308731    0.846989       2        189.351192       2725595            0.354688              1225
+    original            abnormal_present       23        21     35 0.437993     0.396214      0.484776                  0.324584          0.289887    0.852531       1        195.198594       1278563            0.385918               583
+       mixed      all_annotated_positive      185       132    248 0.381813     0.367550      0.395310                  0.251424          0.238660    0.915317       7        115.971098      13353448            0.402194              4352
+       mixed     single_no_other_devices       66        63     66 0.396518     0.374934      0.417599                  0.256590          0.241204    0.969408       1         54.310538       4159378            0.384146              2443
+       mixed   single_with_other_devices       60        43     60 0.353470     0.325560      0.382785                  0.231814          0.212341    0.916043       1        104.410304       3664737            0.470681               786
+       mixed               two_catheters       55        43    110 0.395744     0.376456      0.412732                  0.266987          0.256536    0.888199       4        153.097190       4971626            0.359749              1009
+       mixed        three_plus_catheters        4         3     12 0.372789     0.302783      0.483805                  0.246353          0.223291    0.862769       1        172.585646        557707            0.465126               114
+       mixed   multiple_no_other_devices       25        21     51 0.407639     0.370944      0.437855                  0.265473          0.253063    0.935031       1        108.137212       2563126            0.371379               474
+       mixed multiple_with_other_devices       34        25     71 0.384297     0.358532      0.404424                  0.265672          0.253529    0.850261       4        188.686209       2966207            0.369513               649
+       mixed                 normal_only      106        80    132 0.389826     0.371401      0.409416                  0.255655          0.242708    0.937235       3         93.137158       7152540            0.400062              2544
+       mixed borderline_without_abnormal       56        49     81 0.372982     0.343351      0.397100                  0.249739          0.238202    0.885176       3        142.646756       4190605            0.385858              1225
+       mixed            abnormal_present       23        21     35 0.366386     0.339531      0.399086                  0.236031          0.224888    0.902410       1        140.352579       2010303            0.443831               583
+simple_first      all_annotated_positive      185       132    248 0.360299     0.345227      0.374719                  0.229995          0.217372    0.924311       6        100.006333      15287168            0.440811              4352
+simple_first     single_no_other_devices       66        63     66 0.378883     0.357094      0.398429                  0.238638          0.223176    0.979225       0         38.695864       4662491            0.410568              2443
+simple_first   single_with_other_devices       60        43     60 0.323693     0.289647      0.357244                  0.204434          0.184689    0.918098       2         87.382770       4423062            0.530078               786
+simple_first               two_catheters       55        43    110 0.379244     0.362087      0.393802                  0.248354          0.240046    0.896026       4        143.803448       5494681            0.382472              1009
+simple_first        three_plus_catheters        4         3     12 0.342274     0.260865      0.475878                  0.218341          0.192855    0.912628       0         98.858174        706934            0.535203               114
+simple_first   multiple_no_other_devices       25        21     51 0.386962     0.355435      0.413561                  0.248750          0.236064    0.930443       1        112.092524       2805075            0.393757               474
+simple_first multiple_with_other_devices       34        25     71 0.369220     0.345929      0.387507                  0.244532          0.234022    0.874109       3        158.985333       3396540            0.404941               649
+simple_first                 normal_only      106        80    132 0.370481     0.351908      0.389158                  0.235303          0.222996    0.950070       2         75.249262       8125433            0.430441              2544
+simple_first borderline_without_abnormal       56        49     81 0.352979     0.320899      0.377780                  0.228201          0.215635    0.895773       2        124.725328       4830290            0.431473              1225
+simple_first            abnormal_present       23        21     35 0.331198     0.294239      0.371312                  0.209896          0.200878    0.893203       2        136.169040       2331445            0.496299               583
+
+Interpretation: Rank groups descriptively only. Best observed performance does not identify the best training distribution. Compare uncertainty and sample size; do not discard abnormal/multiple/faint cases. Candidate manifests are source-supported, not clinically verified. The 30-study training-only queue must be reviewed before declaring a high-confidence curated core. All negatives and the complete validation registry are retained.

@@ -1,0 +1,8 @@
+{
+  "status": "experimental_not_promoted",
+  "segmentation_checkpoint": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_segmentation_features_v1\\comparison\\feature_adaptation\\last.pt",
+  "segmentation_sha256": "bc4ec1da1143034a27496c77fe30fe939ee5133cd24ca81e28d0a3126a205c83",
+  "tip_checkpoint": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_42\\t1_joint_hrnet\\checkpoints\\final_model.pt",
+  "tip_sha256": "d9ef494fc6f95e2abcf2597d7269e8732803a3e634bd638e64a5ab9a2d139b1d",
+  "requirement": "Use separate complete frozen tip model. Do not decode adapted model internal tip logits."
+}

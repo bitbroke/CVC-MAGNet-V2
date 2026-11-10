@@ -1,0 +1,1 @@
+Hypothesis T2: Auxiliary catheter-path segmentation supervision improves direct tip localization accuracy.

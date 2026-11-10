@@ -1,0 +1,83 @@
+{
+  "experiment_name": "hrnet_tip_improvement_v2",
+  "created_at": "2026-10-18T07:28:00Z",
+  "baseline_source": "hrnet_tip_pilot_v1",
+  "summary": "Preserved baseline references for HRNet distal-tip localization improvement sprint.",
+  "artifacts": {
+    "t0_skeleton_predictions": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\predictions\\t0_baseline_predictions.json",
+      "size_bytes": 64484,
+      "sha256": "7cb59e62232f05fa3bd6d20ced6235294f035bec36f88c9619c2c20435a0e5c1"
+    },
+    "t1_seed42_checkpoint": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_42\\t1_joint_hrnet\\checkpoints\\final_model.pt",
+      "size_bytes": 139515745,
+      "sha256": "d9ef494fc6f95e2abcf2597d7269e8732803a3e634bd638e64a5ab9a2d139b1d"
+    },
+    "t1_seed43_checkpoint": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_43\\t1_joint_hrnet\\checkpoints\\final_model.pt",
+      "size_bytes": 139515745,
+      "sha256": "3babf3448a41df2a8dc9dcdd1b00e0addc9988bba165361fa544f493a612b023"
+    },
+    "t1_seed42_decoded_candidates": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_42\\t1_joint_hrnet\\decoded_candidates.csv",
+      "size_bytes": 10092,
+      "sha256": "4f2403b70bb5c43998979f218805b9ecf994a2325d53ecceb0a0c81c6c1d2d94"
+    },
+    "t1_seed43_decoded_candidates": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_43\\t1_joint_hrnet\\decoded_candidates.csv",
+      "size_bytes": 10497,
+      "sha256": "8e9b7ee85e2965883ec29d87a0247a42092c150fcd8977d2a404076a7cce4f46"
+    },
+    "original_41_target_benchmark_manifest": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\manifests\\development_benchmark_manifest.json",
+      "size_bytes": 21935,
+      "sha256": "335837a72180e5dc39a1e02a7e41211b7104060945582ae818bf185b6a1c168c"
+    },
+    "original_instance_target_registry_csv": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\manifests\\instance_target_registry.csv",
+      "size_bytes": 2461160,
+      "sha256": "ae58b3aab593a5460486ae75b4f4bb3e39a09a6c3659c3976e498cd2e3547e1d"
+    },
+    "original_instance_target_registry_parquet": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\manifests\\instance_target_registry.parquet",
+      "size_bytes": 475971,
+      "sha256": "06bcc038f3545fcdcc3241774b1d658a2bcda1967d0779c8f0e7754ab43abbb5"
+    },
+    "training_config_seed42": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_42\\t1_joint_hrnet\\resolved_config.json",
+      "size_bytes": 676,
+      "sha256": "320e3f733ba076e1f68e874ae70c293eca8bbc40dae106d4f90c68a4dcff58ba"
+    },
+    "training_config_seed43": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_43\\t1_joint_hrnet\\resolved_config.json",
+      "size_bytes": 676,
+      "sha256": "993a65a27e07811aed4bc7d6cf7734ee4001fd92fe0f09968beee51fc097d943"
+    },
+    "model_code_hrnet_joint": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\src\\models\\hrnet_joint_tip.py",
+      "size_bytes": 4846,
+      "sha256": "4e34e45749941f5005ffe2740d8898d9a9b05a67a0694ee41cfe470ef54b7748"
+    },
+    "geometry_code": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\src\\geometry.py",
+      "size_bytes": 6740,
+      "sha256": "8a9d65661d37275a45ff76a2e4329a7a1669151be7572baa9ba2f68b12a728e0"
+    },
+    "decoder_code": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\src\\decoder.py",
+      "size_bytes": 5509,
+      "sha256": "e39f04ae5ef95567f9e7826924b9e530493da5d1f46bbd7f71744baeb3bd5353"
+    },
+    "evaluation_code": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\src\\evaluation.py",
+      "size_bytes": 7706,
+      "sha256": "2441b414aff778595552e0f5fde2c40206d9a7c0a70e02a2c8da6166a3233856"
+    },
+    "train_runner_code": {
+      "path": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\src\\train_runner_tip.py",
+      "size_bytes": 35112,
+      "sha256": "8a878b47fff6eca92b89b469bf7d3a28c8cd6b61cd90c8e37a276f4b17592d7d"
+    }
+  }
+}

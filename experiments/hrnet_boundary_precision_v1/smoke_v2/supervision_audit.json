@@ -1,0 +1,58 @@
+[
+  {
+    "study_id": "1.2.826.0.1.3680043.8.498.11282726926385674799032474140254366087",
+    "negative": false,
+    "instances": 1,
+    "tip_enabled": false,
+    "source": "unknown_or_unreviewed"
+  },
+  {
+    "study_id": "1.2.826.0.1.3680043.8.498.33662628010250991950988976039827921129",
+    "negative": false,
+    "instances": 1,
+    "tip_enabled": false,
+    "source": "unknown_or_unreviewed"
+  },
+  {
+    "study_id": "1.2.826.0.1.3680043.8.498.34766909908450403096870107469026209140",
+    "negative": false,
+    "instances": 1,
+    "tip_enabled": false,
+    "source": "unknown_or_unreviewed"
+  },
+  {
+    "study_id": "1.2.826.0.1.3680043.8.498.57895167239963477615391127330978220967",
+    "negative": true,
+    "instances": 0,
+    "tip_enabled": true,
+    "source": "label_supported_negative"
+  },
+  {
+    "study_id": "1.2.826.0.1.3680043.8.498.58316870273475304341182775332135854880",
+    "negative": false,
+    "instances": 1,
+    "tip_enabled": false,
+    "source": "unknown_or_unreviewed"
+  },
+  {
+    "study_id": "1.2.826.0.1.3680043.8.498.74097243699070773856712835722074575225",
+    "negative": false,
+    "instances": 1,
+    "tip_enabled": false,
+    "source": "unknown_or_unreviewed"
+  },
+  {
+    "study_id": "1.2.826.0.1.3680043.8.498.82451315049982636820767033277902399231",
+    "negative": false,
+    "instances": 1,
+    "tip_enabled": false,
+    "source": "unknown_or_unreviewed"
+  },
+  {
+    "study_id": "1.2.826.0.1.3680043.8.498.83923652541609006708791396137076299931",
+    "negative": true,
+    "instances": 0,
+    "tip_enabled": true,
+    "source": "label_supported_negative"
+  }
+]

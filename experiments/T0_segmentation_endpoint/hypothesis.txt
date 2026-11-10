@@ -1,0 +1,1 @@
+T0: Baseline catheter skeleton distal endpoint extraction on corrected tip benchmark.

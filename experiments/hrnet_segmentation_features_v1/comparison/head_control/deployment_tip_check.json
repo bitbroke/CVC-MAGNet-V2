@@ -1,0 +1,5 @@
+{
+  "fp32_bitwise_equal": true,
+  "source_sha256": "d9ef494fc6f95e2abcf2597d7269e8732803a3e634bd638e64a5ab9a2d139b1d",
+  "separate_frozen_model": true
+}

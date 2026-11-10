@@ -1,0 +1,76 @@
+{
+  "seed": 43,
+  "frozen_baseline_seed_43": {
+    "num_positive_studies": 185,
+    "num_negative_studies": 8,
+    "macro_dice": 0.48086557557624793,
+    "centerline_coverage_10px": 0.8729649071759183,
+    "precision": 0.3374515846560596,
+    "recall": 0.8214680329211552,
+    "missed_catheter_count": 10,
+    "total_catheters_evaluated": 248,
+    "missed_catheter_rate_pct": 4.032258064516129,
+    "negative_fp_area_pct": 0.03498594435565459
+  },
+  "t1_joint_hrnet_seed_43": {
+    "num_positive_studies": 185,
+    "num_negative_studies": 8,
+    "macro_dice": 0.4848177833758624,
+    "centerline_coverage_10px": 0.8751154372832557,
+    "precision": 0.3353084370027523,
+    "recall": 0.8165874318640424,
+    "missed_catheter_count": 7,
+    "total_catheters_evaluated": 248,
+    "missed_catheter_rate_pct": 2.82258064516129,
+    "negative_fp_area_pct": 0.08132365951775736
+  },
+  "dice_difference": 0.003952207799614471,
+  "coverage_difference": 0.002150530107337345,
+  "damage_detected_predefined_tolerance": false,
+  "lost_catheters_count": 4,
+  "lost_catheters_details": [
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.41144963011239762202217200171174002878",
+      "catheter_index": 1,
+      "baseline_coverage": 0.7683965917893106,
+      "t1_coverage": 0.4763749031758327,
+      "coverage_drop": 0.29202168861347794,
+      "baseline_dice": 0.4621633127327079,
+      "t1_dice": 0.3896061737263785
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.71397273151606664571623862200956275617",
+      "catheter_index": 0,
+      "baseline_coverage": 0.6932270916334662,
+      "t1_coverage": 0.14209827357237717,
+      "coverage_drop": 0.551128818061089,
+      "baseline_dice": 0.3757931396358023,
+      "t1_dice": 0.2569762815034345
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.71397273151606664571623862200956275617",
+      "catheter_index": 1,
+      "baseline_coverage": 0.5665938864628821,
+      "t1_coverage": 0.43122270742358076,
+      "coverage_drop": 0.13537117903930135,
+      "baseline_dice": 0.3757931396358023,
+      "t1_dice": 0.2569762815034345
+    },
+    {
+      "study_id": "1.2.826.0.1.3680043.8.498.78022247816932733427074863804392231471",
+      "catheter_index": 1,
+      "baseline_coverage": 0.5251716247139588,
+      "t1_coverage": 0.408466819221968,
+      "coverage_drop": 0.11670480549199086,
+      "baseline_dice": 0.42569141501391633,
+      "t1_dice": 0.41854651230220974
+    }
+  ],
+  "paired_dice_distribution": {
+    "mean_diff": 0.003952207799614413,
+    "median_diff": -1.392268102284877e-05,
+    "improved_studies": 72,
+    "degraded_studies": 71,
+    "unchanged_studies": 42
+  }
+}

@@ -207,6 +207,7 @@ def train_t2():
     parser.add_argument("--aug_seed", type=int, default=43)
     parser.add_argument("--load_initial_weights", type=str, default=str(PROJECT_ROOT / "runs" / "s5_duration_control_2500" / "checkpoints" / "final_segmentation_v3.pt"))
     parser.add_argument("--max_retry_attempts", type=int, default=5)
+    parser.add_argument("--eval_interval", type=int, default=250)
     args = parser.parse_args()
 
     seed_everything(args.seed)
@@ -382,7 +383,7 @@ def train_t2():
                 "elapsed_sec": elapsed,
             })
 
-        if updates % 250 == 0 or updates == args.target_updates:
+        if updates % args.eval_interval == 0 or updates == args.target_updates:
             print(f"--> Running Validation Evaluation at update {updates}...", flush=True)
             val_res = evaluate_tip_validation(model, val_dataset, device)
             s15 = val_res["summary"]["primary_metric"]["value"]

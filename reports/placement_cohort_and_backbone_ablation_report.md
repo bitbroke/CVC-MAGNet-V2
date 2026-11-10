@@ -61,3 +61,4 @@ This ablation benchmark systematically addresses the core hypothesis raised in t
    While `traced_effnet` reached **0.710–0.732 AUROC**, image-level classifiers still cannot specify *which* catheter is misplaced in multi-catheter patients.
 3. **Deployment of the 10/10 Anatomical Placement Engine**:
    With the implementation of [`src/models/placement_geometry.py`](file:///c:/Ankshit/CVC-MAGNet-V2/src/models/placement_geometry.py), the path to 10/10 clinical performance is to connect this high-performing traced feature extractor to the landmark geometry engine, measuring exact physical distance from catheter tips to the carina.
+

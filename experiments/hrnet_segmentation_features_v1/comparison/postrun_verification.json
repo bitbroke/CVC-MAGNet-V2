@@ -1,0 +1,27 @@
+{
+  "head_control": {
+    "checkpoint_sha256": "69fa59847ac7094ea9bf7e88f2abc2d9da72ec480f7418673fed6970a5d10641",
+    "changed_tensor_count": 8,
+    "changed_modules": [
+      "seg_head"
+    ],
+    "tip_head_weights_unchanged": true,
+    "bn_buffers_unchanged": true
+  },
+  "feature_adaptation": {
+    "checkpoint_sha256": "bc4ec1da1143034a27496c77fe30fe939ee5133cd24ca81e28d0a3126a205c83",
+    "changed_tensor_count": 981,
+    "changed_modules": [
+      "encoder",
+      "fusion",
+      "proj1",
+      "proj2",
+      "proj3",
+      "proj4",
+      "seg_head"
+    ],
+    "tip_head_weights_unchanged": true,
+    "bn_buffers_unchanged": true
+  },
+  "source_inputs_unchanged": true
+}

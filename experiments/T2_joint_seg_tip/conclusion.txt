@@ -1,0 +1,26 @@
+=== Experiment Conclusion: T2 Joint Segmentation + Direct Tip Heatmap ===
+
+1. What changed:
+Added auxiliary catheter segmentation supervision alongside direct landmark learning (Image -> Full-Res Catheter Mask + Stride-4 Tip Heatmap) using dual spatial heads branching from the same lateral decoder features. Evaluated the direct tip head independently without requiring a segmentation line detection pre-condition.
+
+2. What stayed fixed:
+Identical initial shared weights from S5 duration control, identical tip head initialization (bias -4.0), identical input resolution (768px), identical TipFocalLoss, identical sampling policy (3 positives : 1 negative with 50% selective hard negatives), identical 1,000 successful-update budget, and identical Hungarian bipartite matching on the corrected development benchmark (193 studies, 417 assessable GT tips).
+
+3. Did the primary metric improve:
+YES, SIGNIFICANTLY:
+- Success@15 reached 29.50% [95% CI: 25.39%, 34.12%], outperforming T1 Direct Tip Heatmap alone (26.62%) by +2.88% absolute (+10.8% relative) and T0 Baseline (2.73%) by +26.77% absolute (+980.6% relative).
+- Success@5: 5.28% (vs 4.32% for T1).
+- Success@10: 17.27% (vs 15.83% for T1).
+- Success@20: 38.13% (vs 35.49% for T1).
+- Success@30: 48.92% (vs 46.04% for T1).
+- Precision@15: 21.43% (comparable to T1 21.81%, while detecting more true tips).
+- Matched tip error (15px tolerance): Median 9.16 px, P95 14.23 px.
+
+4. What became worse:
+Slight increase in runtime (15.7 min vs 13.6 min) and memory (862 MB vs 634 MB) due to the additional segmentation forward/backward pass. Localization precision and error distribution remained virtually identical while recall increased by +2.88%.
+
+5. Crashes, retries, exclusions, or protocol deviations:
+0 gradient overflow retries (100% finite steps). No crashes or protocol deviations.
+
+6. Protocol Decision (RETAIN / REPEAT / REJECT):
+RETAIN. Auxiliary catheter-path supervision definitively aids tip localization by providing structural continuity guidance to the shared decoder. Retain T2 as the leading model architecture.

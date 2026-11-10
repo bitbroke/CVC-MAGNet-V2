@@ -1,0 +1,25 @@
+=== Experiment Conclusion: T1 Direct Tip Heatmap ===
+
+1. What changed:
+Replaced the indirect morphological skeleton-endpoint pipeline with direct spatial landmark regression (Image -> Stride-4 Multi-Tip Heatmap) using EfficientNet-B0 backbone and lateral decoder stages retaining deep spatial context, trained with CenterNet Gaussian focal loss for 1,000 updates.
+
+2. What stayed fixed:
+Evaluated on the exact same corrected development benchmark (193 studies, 293 assessable ground-truth CVC tips) using identical Hungarian bipartite matching with 15-pixel primary tolerance.
+
+3. Did the primary metric improve:
+YES, DRAMATICALLY:
+- Success@15 jumped from 2.73% (T0 baseline) to 26.62% [95% CI: 22.30%, 31.16%], an absolute improvement of +23.89% (relative +875.0%).
+- Precision@15 increased from 0.92% (T0) to 21.81%.
+- Recall@15 increased from 2.73% (T0) to 26.62%.
+- Success@5: 4.32%, Success@10: 15.83%, Success@20: 35.49%, Success@30: 46.04%.
+- False tips per image dropped from 6.124 (T0) down to 2.062.
+- Matched error (15px): Median 9.09 px, P95 14.39 px.
+
+4. What became worse:
+No metric degraded compared to T0. Localization accuracy, precision, recall, and false-alarm rate all improved substantially.
+
+5. Crashes, retries, exclusions, or protocol deviations:
+0 gradient overflow retries (100% finite steps with CenterNet prior bias -4.0 and GradScaler init_scale 1024.0). Initial run had an unlinked supervision column mask that was caught and corrected before executing the full 1,000-update run.
+
+6. Protocol Decision (RETAIN / REPEAT / REJECT):
+RETAIN. Direct landmark learning definitively outperforms skeleton endpoint extraction on every primary metric and diagnostic. Proceed immediately to T2 (Joint Segmentation + Multi-Tip Heatmap) to determine if auxiliary catheter path supervision further improves localization.

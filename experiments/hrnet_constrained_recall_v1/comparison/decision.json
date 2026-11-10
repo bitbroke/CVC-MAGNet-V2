@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "fewer_misses_than_baseline": false,
+    "fewer_misses_than_control": false,
+    "dice_preserved": true,
+    "precision_preserved": true,
+    "coverage_preserved": false,
+    "negative_false_area_preserved": true,
+    "tip_metrics_identical": true
+  },
+  "all_criteria_passed": false,
+  "promoted": false,
+  "paired_study_mean_coverage_difference": -0.034361520944654764,
+  "patient_cluster_ci95": [
+    -0.041863129718593205,
+    -0.027640963054905203
+  ],
+  "patient_count": 132,
+  "note": "Single-seed repeatedly used development benchmark; no external validation. Study-weighted interval differs from catheter-weighted headline coverage."
+}

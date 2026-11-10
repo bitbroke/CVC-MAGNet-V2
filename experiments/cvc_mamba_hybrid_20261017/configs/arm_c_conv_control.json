@@ -1,0 +1,43 @@
+{
+  "arm": "Arm_C_Conv_Control",
+  "hypothesis": "Inserting a conventional convolutional context module with matched parameter capacity (~43.8k parameters, within 4% of Arm B) at the stride-32 bottleneck controls for general capacity expansion versus selective state-space sequence modeling.",
+  "model_class": "ArmCConvControlNet",
+  "context_module": {
+    "type": "ConvContextBlock",
+    "dim": 128,
+    "residual_init": "zero"
+  },
+  "starting_checkpoint": "C:/Ankshit/CVC-MAGNet-V2/experiments/cvc_mamba_hybrid_20261017/frozen_reference/runs/s4_experiment_seed43/checkpoints/final_segmentation_v3.pt",
+  "starting_checkpoint_sha256": "f01089be1b7507bfb1d1a2762911f6ee1f0d425ce49628c6d0083daecf5e94e2",
+  "seed": 42,
+  "resolution": 768,
+  "micro_batch_size": 1,
+  "gradient_accumulation_steps": 4,
+  "effective_batch_size": 4,
+  "target_updates": 1000,
+  "optimizer": {
+    "type": "AdamW",
+    "lr": 0.0001,
+    "weight_decay": 0.0001
+  },
+  "scheduler": {
+    "type": "CosineAnnealingLR",
+    "T_max": 1000,
+    "eta_min": 1e-06
+  },
+  "loss": {
+    "bce_pos_weight": 10.0,
+    "dice_weight": 1.0,
+    "valid_padding_exclusion": true,
+    "fp32_reductions": true
+  },
+  "mixed_precision": {
+    "enabled": true,
+    "init_scale": 1024.0,
+    "same_batch_retry_on_overflow": true
+  },
+  "batch_ledger": "C:/Ankshit/CVC-MAGNet-V2/experiments/cvc_mamba_hybrid_20261017/configs/batch_ledger.jsonl",
+  "batch_ledger_sha256": "54dfcc249a43a8274f0fb1a3777e507a0d6c8c09df69a03534b09a2bee41f95e",
+  "evaluation_checkpoints": [0, 250, 500, 750, 1000],
+  "validation_manifest": "C:/Ankshit/CVC-MAGNet-V2/data/dev_eval_manifest.json"
+}

@@ -1,0 +1,10 @@
+study_id,catheter_instance_id,transition,panel
+1.2.826.0.1.3680043.8.498.12464093581846907075342437333637626577,2,crossed_above_30pct,C:\Ankshit\CVC-MAGNet-V2\experiments\hrnet_segmentation_features_v1\comparison\overlays\path_01.png
+1.2.826.0.1.3680043.8.498.12871071965059370780810112778709279366,4,persistent_miss,C:\Ankshit\CVC-MAGNet-V2\experiments\hrnet_segmentation_features_v1\comparison\overlays\path_02.png
+1.2.826.0.1.3680043.8.498.13291019872037576039278430006129810501,1,persistent_miss,C:\Ankshit\CVC-MAGNet-V2\experiments\hrnet_segmentation_features_v1\comparison\overlays\path_03.png
+1.2.826.0.1.3680043.8.498.18115890201898364875537124423266837419,3,new_miss,C:\Ankshit\CVC-MAGNet-V2\experiments\hrnet_segmentation_features_v1\comparison\overlays\path_04.png
+1.2.826.0.1.3680043.8.498.27963861264021315511737268412392466836,2,persistent_miss,C:\Ankshit\CVC-MAGNet-V2\experiments\hrnet_segmentation_features_v1\comparison\overlays\path_05.png
+1.2.826.0.1.3680043.8.498.44035371991270344904121335051903588208,2,persistent_miss,C:\Ankshit\CVC-MAGNet-V2\experiments\hrnet_segmentation_features_v1\comparison\overlays\path_06.png
+1.2.826.0.1.3680043.8.498.45817682189727563785173896545909698546,4,crossed_above_30pct,C:\Ankshit\CVC-MAGNet-V2\experiments\hrnet_segmentation_features_v1\comparison\overlays\path_07.png
+1.2.826.0.1.3680043.8.498.71397273151606664571623862200956275617,2,crossed_above_30pct,C:\Ankshit\CVC-MAGNet-V2\experiments\hrnet_segmentation_features_v1\comparison\overlays\path_08.png
+1.2.826.0.1.3680043.8.498.99528331661749530513986086498457643928,1,crossed_above_30pct,C:\Ankshit\CVC-MAGNet-V2\experiments\hrnet_segmentation_features_v1\comparison\overlays\path_09.png

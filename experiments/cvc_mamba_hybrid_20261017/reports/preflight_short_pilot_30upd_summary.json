@@ -1,0 +1,209 @@
+{
+  "arm_a_continuation": {
+    "total_params_keys": 396,
+    "changed_params_keys": 252,
+    "max_param_delta": 0.001528024673461914,
+    "l2_param_delta": 0.7056043147341008,
+    "checkpoints": [
+      "best_segmentation_v3.pt",
+      "final_segmentation_v3.pt",
+      "update_0000.pt",
+      "update_0025.pt",
+      "update_0030.pt"
+    ],
+    "history": [
+      {
+        "update": 0,
+        "loss": null,
+        "lr": 0.0001,
+        "val_metrics": {
+          "threshold": 0.5,
+          "macro_dice": 0.44187175868760264,
+          "centerline_coverage_10px": 0.8052527818421147,
+          "missed_catheter_rate": 4.435483870967742,
+          "total_catheters_evaluated": 248,
+          "negative_false_area_pct": 0.07765229771788769,
+          "negative_total_false_pixels": 45714,
+          "negative_any_fp_rate": 87.5,
+          "num_positive_studies": 185,
+          "num_negative_studies": 8
+        },
+        "timestamp": "2026-10-17T20:28:09Z"
+      },
+      {
+        "update": 25,
+        "loss": 0.9790080005303026,
+        "lr": 7.631742512670284e-06,
+        "val_metrics": {
+          "threshold": 0.5,
+          "macro_dice": 0.43752407813448746,
+          "centerline_coverage_10px": 0.79815929267576,
+          "missed_catheter_rate": 4.435483870967742,
+          "total_catheters_evaluated": 248,
+          "negative_false_area_pct": 0.11486506827030132,
+          "negative_total_false_pixels": 64707,
+          "negative_any_fp_rate": 75.0,
+          "num_positive_studies": 185,
+          "num_negative_studies": 8
+        },
+        "timestamp": "2026-10-17T20:30:44Z"
+      },
+      {
+        "update": 30,
+        "loss": 0.9789200826734304,
+        "lr": 1e-06,
+        "val_metrics": {
+          "threshold": 0.5,
+          "macro_dice": 0.4381001095671959,
+          "centerline_coverage_10px": 0.7955139432106235,
+          "missed_catheter_rate": 4.435483870967742,
+          "total_catheters_evaluated": 248,
+          "negative_false_area_pct": 0.10928468967442644,
+          "negative_total_false_pixels": 61960,
+          "negative_any_fp_rate": 75.0,
+          "num_positive_studies": 185,
+          "num_negative_studies": 8
+        },
+        "timestamp": "2026-10-17T20:32:19Z"
+      }
+    ]
+  },
+  "arm_b_mamba_hybrid": {
+    "total_params_keys": 408,
+    "changed_params_keys": 264,
+    "max_param_delta": 0.0015274286270141602,
+    "l2_param_delta": 0.7097045910958173,
+    "checkpoints": [
+      "best_segmentation_v3.pt",
+      "final_segmentation_v3.pt",
+      "update_0000.pt",
+      "update_0025.pt",
+      "update_0030.pt"
+    ],
+    "history": [
+      {
+        "update": 0,
+        "loss": null,
+        "lr": 0.0001,
+        "val_metrics": {
+          "threshold": 0.5,
+          "macro_dice": 0.44187175868760264,
+          "centerline_coverage_10px": 0.8052527818421147,
+          "missed_catheter_rate": 4.435483870967742,
+          "total_catheters_evaluated": 248,
+          "negative_false_area_pct": 0.07765229771788769,
+          "negative_total_false_pixels": 45714,
+          "negative_any_fp_rate": 87.5,
+          "num_positive_studies": 185,
+          "num_negative_studies": 8
+        },
+        "timestamp": "2026-10-17T20:44:47Z"
+      },
+      {
+        "update": 25,
+        "loss": 0.979037675485015,
+        "lr": 7.631742512670284e-06,
+        "val_metrics": {
+          "threshold": 0.5,
+          "macro_dice": 0.43777623858185255,
+          "centerline_coverage_10px": 0.7988467132557349,
+          "missed_catheter_rate": 4.435483870967742,
+          "total_catheters_evaluated": 248,
+          "negative_false_area_pct": 0.11728555507170656,
+          "negative_total_false_pixels": 65891,
+          "negative_any_fp_rate": 75.0,
+          "num_positive_studies": 185,
+          "num_negative_studies": 8
+        },
+        "timestamp": "2026-10-17T21:06:16Z"
+      },
+      {
+        "update": 30,
+        "loss": 0.9789283537119627,
+        "lr": 1e-06,
+        "val_metrics": {
+          "threshold": 0.5,
+          "macro_dice": 0.4383034382167088,
+          "centerline_coverage_10px": 0.7960323772566462,
+          "missed_catheter_rate": 4.435483870967742,
+          "total_catheters_evaluated": 248,
+          "negative_false_area_pct": 0.11159655315144554,
+          "negative_total_false_pixels": 63050,
+          "negative_any_fp_rate": 75.0,
+          "num_positive_studies": 185,
+          "num_negative_studies": 8
+        },
+        "timestamp": "2026-10-17T21:15:49Z"
+      }
+    ]
+  },
+  "arm_c_conv_control": {
+    "total_params_keys": 408,
+    "changed_params_keys": 264,
+    "max_param_delta": 0.001526951789855957,
+    "l2_param_delta": 0.7101807843628429,
+    "checkpoints": [
+      "best_segmentation_v3.pt",
+      "final_segmentation_v3.pt",
+      "update_0000.pt",
+      "update_0025.pt",
+      "update_0030.pt"
+    ],
+    "history": [
+      {
+        "update": 0,
+        "loss": null,
+        "lr": 0.0001,
+        "val_metrics": {
+          "threshold": 0.5,
+          "macro_dice": 0.44187175868760264,
+          "centerline_coverage_10px": 0.8052527818421147,
+          "missed_catheter_rate": 4.435483870967742,
+          "total_catheters_evaluated": 248,
+          "negative_false_area_pct": 0.07765229771788769,
+          "negative_total_false_pixels": 45714,
+          "negative_any_fp_rate": 87.5,
+          "num_positive_studies": 185,
+          "num_negative_studies": 8
+        },
+        "timestamp": "2026-10-17T21:18:57Z"
+      },
+      {
+        "update": 25,
+        "loss": 0.9790979059413075,
+        "lr": 7.631742512670284e-06,
+        "val_metrics": {
+          "threshold": 0.5,
+          "macro_dice": 0.4380312202095728,
+          "centerline_coverage_10px": 0.7990621522618342,
+          "missed_catheter_rate": 4.435483870967742,
+          "total_catheters_evaluated": 248,
+          "negative_false_area_pct": 0.11761059146649852,
+          "negative_total_false_pixels": 66173,
+          "negative_any_fp_rate": 75.0,
+          "num_positive_studies": 185,
+          "num_negative_studies": 8
+        },
+        "timestamp": "2026-10-17T21:21:22Z"
+      },
+      {
+        "update": 30,
+        "loss": 0.9790004306659102,
+        "lr": 1e-06,
+        "val_metrics": {
+          "threshold": 0.5,
+          "macro_dice": 0.4386596759980949,
+          "centerline_coverage_10px": 0.7964351513166803,
+          "missed_catheter_rate": 4.435483870967742,
+          "total_catheters_evaluated": 248,
+          "negative_false_area_pct": 0.11172936809534392,
+          "negative_total_false_pixels": 63228,
+          "negative_any_fp_rate": 75.0,
+          "num_positive_studies": 185,
+          "num_negative_studies": 8
+        },
+        "timestamp": "2026-10-17T21:23:18Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "status": "complete",
+  "smoke": true,
+  "updates_per_arm": 2,
+  "original_checkpoints_unchanged": true,
+  "source_inputs_unchanged": true
+}

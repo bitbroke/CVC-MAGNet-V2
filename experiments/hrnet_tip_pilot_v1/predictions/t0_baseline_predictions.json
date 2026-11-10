@@ -1,0 +1,2705 @@
+{
+  "1.2.826.0.1.3680043.8.498.10142092999655849225765018785055284143": [
+    {
+      "native_x": 2958.0,
+      "native_y": 1133.0,
+      "conf": 0.651766836643219,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 66.0,
+      "native_y": 1675.0,
+      "conf": 0.6296681761741638,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1743.0,
+      "native_y": 1003.0,
+      "conf": 0.5956245064735413,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3031.0,
+      "native_y": 947.0,
+      "conf": 0.5952779650688171,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1294.0,
+      "native_y": 1351.0,
+      "conf": 0.5830798149108887,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 30.0,
+      "native_y": 1677.0,
+      "conf": 0.5780448913574219,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1855.0,
+      "native_y": 921.0,
+      "conf": 0.5530122518539429,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1541.0,
+      "native_y": 919.0,
+      "conf": 0.4984964430332184,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2871.0,
+      "native_y": 981.0,
+      "conf": 0.7865666151046753,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 10.0,
+      "native_y": 1563.0,
+      "conf": 0.7213753461837769,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 8.0,
+      "native_y": 1561.0,
+      "conf": 0.7075721621513367,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1378.0,
+      "native_y": 1424.0,
+      "conf": 0.645534873008728,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2408.0,
+      "native_y": 755.0,
+      "conf": 0.618522584438324,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 22.0,
+      "native_y": 1674.0,
+      "conf": 0.5960661768913269,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1875.0,
+      "native_y": 911.0,
+      "conf": 0.5937979817390442,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1496.0,
+      "native_y": 1131.0,
+      "conf": 0.5884913802146912,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1934.0,
+      "native_y": 971.0,
+      "conf": 0.5849683880805969,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3043.0,
+      "native_y": 961.0,
+      "conf": 0.5679519176483154,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1321.0,
+      "native_y": 1569.0,
+      "conf": 0.5437990427017212,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1906.0,
+      "native_y": 1002.0,
+      "conf": 0.5172420740127563,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1547.0,
+      "native_y": 947.0,
+      "conf": 0.5128597021102905,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1545.0,
+      "native_y": 896.0,
+      "conf": 0.5080462098121643,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 45.0,
+      "native_y": 1674.0,
+      "conf": 0.5009541511535645,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3054.0,
+      "native_y": 1390.0,
+      "conf": 0.4989246726036072,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.10170207279308459326747766938968452713": [
+    {
+      "native_x": 1218.0,
+      "native_y": 1209.0,
+      "conf": 0.7272275686264038,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1579.0,
+      "native_y": 361.0,
+      "conf": 0.5983818173408508,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1251.0,
+      "native_y": 859.0,
+      "conf": 0.5974002480506897,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1141.0,
+      "native_y": 1243.0,
+      "conf": 0.5616328120231628,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1809.0,
+      "native_y": 11.0,
+      "conf": 0.8286407589912415,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 947.0,
+      "native_y": 432.0,
+      "conf": 0.8142923712730408,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1808.0,
+      "native_y": 7.0,
+      "conf": 0.7381939888000488,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 11.0,
+      "native_y": 1101.0,
+      "conf": 0.723431408405304,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1023.0,
+      "native_y": 407.0,
+      "conf": 0.706068754196167,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1588.0,
+      "native_y": 354.0,
+      "conf": 0.5911978483200073,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1126.0,
+      "native_y": 1164.0,
+      "conf": 0.568859338760376,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.10440737162765321826792607915488422088": [
+    {
+      "native_x": 2070.0,
+      "native_y": 653.0,
+      "conf": 0.8805100321769714,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1936.0,
+      "native_y": 580.0,
+      "conf": 0.7776409387588501,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 571.0,
+      "native_y": 764.0,
+      "conf": 0.6889820694923401,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 404.0,
+      "native_y": 698.0,
+      "conf": 0.6511110663414001,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 988.0,
+      "native_y": 1063.0,
+      "conf": 0.6124931573867798,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1616.0,
+      "native_y": 518.0,
+      "conf": 0.5921018719673157,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1103.0,
+      "native_y": 835.0,
+      "conf": 0.5765542984008789,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1806.0,
+      "native_y": 553.0,
+      "conf": 0.5687195062637329,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 345.0,
+      "native_y": 715.0,
+      "conf": 0.5607792735099792,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 516.0,
+      "native_y": 193.0,
+      "conf": 0.5359868407249451,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 446.0,
+      "native_y": 126.0,
+      "conf": 0.522615373134613,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2498.0,
+      "native_y": 1459.0,
+      "conf": 0.5092247724533081,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 599.0,
+      "native_y": 874.0,
+      "conf": 0.5000759363174438,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1421.0,
+      "native_y": 860.0,
+      "conf": 0.49976468086242676,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 446.0,
+      "native_y": 144.0,
+      "conf": 0.4959082007408142,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1832.0,
+      "native_y": 533.0,
+      "conf": 0.6339103579521179,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 958.0,
+      "native_y": 401.0,
+      "conf": 0.6323992013931274,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 941.0,
+      "native_y": 342.0,
+      "conf": 0.6120919585227966,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 497.0,
+      "native_y": 986.0,
+      "conf": 0.6036618947982788,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1110.0,
+      "native_y": 729.0,
+      "conf": 0.5775645971298218,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 535.0,
+      "native_y": 918.0,
+      "conf": 0.5687378644943237,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1639.0,
+      "native_y": 504.0,
+      "conf": 0.5560848116874695,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 763.0,
+      "native_y": 2.0,
+      "conf": 0.5553966760635376,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 998.0,
+      "native_y": 663.0,
+      "conf": 0.5469226837158203,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1143.0,
+      "native_y": 776.0,
+      "conf": 0.5356031656265259,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1580.0,
+      "native_y": 507.0,
+      "conf": 0.5352573990821838,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 366.0,
+      "native_y": 714.0,
+      "conf": 0.5350082516670227,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 438.0,
+      "native_y": 138.0,
+      "conf": 0.5322950482368469,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 476.0,
+      "native_y": 164.0,
+      "conf": 0.5310955047607422,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 338.0,
+      "native_y": 722.0,
+      "conf": 0.5298618078231812,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 491.0,
+      "native_y": 954.0,
+      "conf": 0.5134943723678589,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 442.0,
+      "native_y": 135.0,
+      "conf": 0.5114569067955017,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 596.0,
+      "native_y": 882.0,
+      "conf": 0.5103553533554077,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 976.0,
+      "native_y": 803.0,
+      "conf": 0.5060447454452515,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2499.0,
+      "native_y": 1430.0,
+      "conf": 0.50129634141922,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1393.0,
+      "native_y": 851.0,
+      "conf": 0.4985412657260895,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2498.0,
+      "native_y": 1642.0,
+      "conf": 0.49632343649864197,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 456.0,
+      "native_y": 125.0,
+      "conf": 0.4903186857700348,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.10932114997832542179096247154359873950": [
+    {
+      "native_x": 308.0,
+      "native_y": 471.0,
+      "conf": 0.6022536754608154,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 883.0,
+      "native_y": 1044.0,
+      "conf": 0.5179945826530457,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 193.0,
+      "native_y": 184.0,
+      "conf": 0.5102415680885315,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2149.0,
+      "native_y": 1089.0,
+      "conf": 0.5074437856674194,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 893.0,
+      "native_y": 1154.0,
+      "conf": 0.5019685626029968,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 89.0,
+      "native_y": 636.0,
+      "conf": 0.49699923396110535,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1027.0,
+      "native_y": 552.0,
+      "conf": 0.7186877727508545,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 357.0,
+      "native_y": 392.0,
+      "conf": 0.6858015656471252,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 885.0,
+      "native_y": 1075.0,
+      "conf": 0.6212412118911743,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 280.0,
+      "native_y": 483.0,
+      "conf": 0.6171214580535889,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1020.0,
+      "native_y": 463.0,
+      "conf": 0.587481677532196,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 924.0,
+      "native_y": 549.0,
+      "conf": 0.5854062438011169,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2294.0,
+      "native_y": 1388.0,
+      "conf": 0.5651388168334961,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 832.0,
+      "native_y": 387.0,
+      "conf": 0.5601406693458557,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2104.0,
+      "native_y": 1068.0,
+      "conf": 0.5487037301063538,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 304.0,
+      "native_y": 426.0,
+      "conf": 0.530414879322052,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 120.0,
+      "native_y": 252.0,
+      "conf": 0.5165944695472717,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 295.0,
+      "native_y": 412.0,
+      "conf": 0.49846768379211426,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 82.0,
+      "native_y": 649.0,
+      "conf": 0.4955202341079712,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.12780732480359760065997067333764961045": [
+    {
+      "native_x": 1359.0,
+      "native_y": 261.0,
+      "conf": 0.6607581973075867,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1435.0,
+      "native_y": 1172.0,
+      "conf": 0.6144933104515076,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1229.0,
+      "native_y": 407.0,
+      "conf": 0.6046904921531677,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1520.0,
+      "native_y": 754.0,
+      "conf": 0.5615592002868652,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1838.0,
+      "native_y": 386.0,
+      "conf": 0.5527639985084534,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1351.0,
+      "native_y": 1260.0,
+      "conf": 0.5513715147972107,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 658.0,
+      "native_y": 661.0,
+      "conf": 0.5488617420196533,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 636.0,
+      "native_y": 683.0,
+      "conf": 0.5431020855903625,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1356.0,
+      "native_y": 215.0,
+      "conf": 0.5283083915710449,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1359.0,
+      "native_y": 1215.0,
+      "conf": 0.5218653082847595,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 724.0,
+      "native_y": 647.0,
+      "conf": 0.5170367956161499,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 13.0,
+      "native_y": 1365.0,
+      "conf": 0.49951961636543274,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1304.0,
+      "native_y": 119.0,
+      "conf": 0.8335028290748596,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1222.0,
+      "native_y": 21.0,
+      "conf": 0.7882241606712341,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 279.0,
+      "native_y": 1119.0,
+      "conf": 0.7566572427749634,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1953.0,
+      "native_y": 118.0,
+      "conf": 0.7267703413963318,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1354.0,
+      "native_y": 243.0,
+      "conf": 0.67085862159729,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1451.0,
+      "native_y": 737.0,
+      "conf": 0.6586543917655945,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1331.0,
+      "native_y": 211.0,
+      "conf": 0.6243016123771667,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1812.0,
+      "native_y": 384.0,
+      "conf": 0.623819887638092,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2261.0,
+      "native_y": 330.0,
+      "conf": 0.6221707463264465,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1297.0,
+      "native_y": 206.0,
+      "conf": 0.6194826364517212,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1480.0,
+      "native_y": 852.0,
+      "conf": 0.6162590980529785,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1367.0,
+      "native_y": 30.0,
+      "conf": 0.6084861755371094,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 677.0,
+      "native_y": 624.0,
+      "conf": 0.6065808534622192,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 736.0,
+      "native_y": 600.0,
+      "conf": 0.57659512758255,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1526.0,
+      "native_y": 752.0,
+      "conf": 0.5746073126792908,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1356.0,
+      "native_y": 292.0,
+      "conf": 0.5644341111183167,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 712.0,
+      "native_y": 635.0,
+      "conf": 0.5643320679664612,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1349.0,
+      "native_y": 1250.0,
+      "conf": 0.5385118722915649,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1376.0,
+      "native_y": 1162.0,
+      "conf": 0.5333669185638428,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2080.0,
+      "native_y": 236.0,
+      "conf": 0.5319703817367554,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1357.0,
+      "native_y": 207.0,
+      "conf": 0.5187739729881287,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1338.0,
+      "native_y": 1026.0,
+      "conf": 0.503767728805542,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 13.0,
+      "native_y": 1539.0,
+      "conf": 0.4992288649082184,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2111.0,
+      "native_y": 313.0,
+      "conf": 0.4980890154838562,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.13017164521065023035548038728748538778": [
+    {
+      "native_x": 1171.0,
+      "native_y": 692.0,
+      "conf": 0.6006152033805847,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 678.0,
+      "native_y": 727.0,
+      "conf": 0.5261080265045166,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 936.0,
+      "native_y": 917.0,
+      "conf": 0.5194463133811951,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1092.0,
+      "native_y": 474.0,
+      "conf": 0.8112468719482422,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1042.0,
+      "native_y": 317.0,
+      "conf": 0.7016053795814514,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1072.0,
+      "native_y": 632.0,
+      "conf": 0.682140052318573,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 39.0,
+      "native_y": 1233.0,
+      "conf": 0.6559152007102966,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 877.0,
+      "native_y": 12.0,
+      "conf": 0.6433238387107849,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 975.0,
+      "native_y": 1232.0,
+      "conf": 0.5634424090385437,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 564.0,
+      "native_y": 764.0,
+      "conf": 0.5067436099052429,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 11.0,
+      "native_y": 1166.0,
+      "conf": 0.4936685264110565,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.18410947814836744017433863290486014207": [
+    {
+      "native_x": 1073.0,
+      "native_y": 783.0,
+      "conf": 0.7866469621658325,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1127.0,
+      "native_y": 806.0,
+      "conf": 0.6055947542190552,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1093.0,
+      "native_y": 829.0,
+      "conf": 0.5230221748352051,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1075.0,
+      "native_y": 838.0,
+      "conf": 0.5194590091705322,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 687.0,
+      "native_y": 469.0,
+      "conf": 0.7335348725318909,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1127.0,
+      "native_y": 790.0,
+      "conf": 0.7131052613258362,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1105.0,
+      "native_y": 822.0,
+      "conf": 0.5988659262657166,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 4.0,
+      "native_y": 992.0,
+      "conf": 0.5552104115486145,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 791.0,
+      "native_y": 491.0,
+      "conf": 0.5311021208763123,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1085.0,
+      "native_y": 832.0,
+      "conf": 0.4946191906929016,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.19199956600681562172857920937202963879": [
+    {
+      "native_x": 1356.0,
+      "native_y": 1625.0,
+      "conf": 0.6977073550224304,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2016.0,
+      "native_y": 737.0,
+      "conf": 0.6402021646499634,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1232.0,
+      "native_y": 1963.0,
+      "conf": 0.4979995787143707,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2001.0,
+      "native_y": 720.0,
+      "conf": 0.8334650993347168,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1232.0,
+      "native_y": 1994.0,
+      "conf": 0.5666678547859192,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3054.0,
+      "native_y": 1923.0,
+      "conf": 0.5095500946044922,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.33128061425218955763725802634384514025": [
+    {
+      "native_x": 2070.0,
+      "native_y": 841.0,
+      "conf": 0.7941824197769165,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 917.0,
+      "native_y": 976.0,
+      "conf": 0.7713484764099121,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 944.0,
+      "native_y": 705.0,
+      "conf": 0.5796502232551575,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 332.0,
+      "native_y": 283.0,
+      "conf": 0.5259173512458801,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 567.0,
+      "native_y": 234.0,
+      "conf": 0.7786957621574402,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 368.0,
+      "native_y": 207.0,
+      "conf": 0.7408381700515747,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 646.0,
+      "native_y": 218.0,
+      "conf": 0.6251630187034607,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 614.0,
+      "native_y": 268.0,
+      "conf": 0.613645613193512,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2498.0,
+      "native_y": 1876.0,
+      "conf": 0.505370557308197,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2499.0,
+      "native_y": 1852.0,
+      "conf": 0.5004836320877075,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 962.0,
+      "native_y": 643.0,
+      "conf": 0.48632004857063293,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.36946435309406077585142653815528419324": [
+    {
+      "native_x": 1117.0,
+      "native_y": 1329.0,
+      "conf": 0.7669141888618469,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2089.0,
+      "native_y": 660.0,
+      "conf": 0.5814059972763062,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1783.0,
+      "native_y": 597.0,
+      "conf": 0.5142289996147156,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 4.0,
+      "native_y": 669.0,
+      "conf": 0.6089170575141907,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1849.0,
+      "native_y": 593.0,
+      "conf": 0.5435755252838135,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1984.0,
+      "native_y": 636.0,
+      "conf": 0.5387382507324219,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.42660484194582964620892158741708266886": [
+    {
+      "native_x": 1199.0,
+      "native_y": 778.0,
+      "conf": 0.5051632523536682,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1107.0,
+      "native_y": 923.0,
+      "conf": 0.5033771395683289,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3034.0,
+      "native_y": 2135.0,
+      "conf": 0.5019211769104004,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3037.0,
+      "native_y": 2415.0,
+      "conf": 0.4998355209827423,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3037.0,
+      "native_y": 1057.0,
+      "conf": 0.4997420012950897,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3037.0,
+      "native_y": 2322.0,
+      "conf": 0.4996422827243805,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3054.0,
+      "native_y": 2335.0,
+      "conf": 0.4990895390510559,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3054.0,
+      "native_y": 491.0,
+      "conf": 0.498568594455719,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3054.0,
+      "native_y": 2064.0,
+      "conf": 0.49851006269454956,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3054.0,
+      "native_y": 2424.0,
+      "conf": 0.4984312057495117,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1076.0,
+      "native_y": 976.0,
+      "conf": 0.48836109042167664,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2811.0,
+      "native_y": 1226.0,
+      "conf": 0.4849071204662323,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 341.0,
+      "native_y": 551.0,
+      "conf": 0.8805980086326599,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 343.0,
+      "native_y": 553.0,
+      "conf": 0.8653301000595093,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 5.0,
+      "native_y": 1011.0,
+      "conf": 0.6429368853569031,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3002.0,
+      "native_y": 1713.0,
+      "conf": 0.5851949453353882,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1079.0,
+      "native_y": 808.0,
+      "conf": 0.5577265024185181,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1119.0,
+      "native_y": 908.0,
+      "conf": 0.5401028394699097,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 401.0,
+      "native_y": 587.0,
+      "conf": 0.5198643207550049,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3042.0,
+      "native_y": 1697.0,
+      "conf": 0.5097530484199524,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3038.0,
+      "native_y": 2470.0,
+      "conf": 0.5054364204406738,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3041.0,
+      "native_y": 2368.0,
+      "conf": 0.5011815428733826,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3037.0,
+      "native_y": 1082.0,
+      "conf": 0.4997099041938782,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3054.0,
+      "native_y": 1889.0,
+      "conf": 0.49964699149131775,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3054.0,
+      "native_y": 1680.0,
+      "conf": 0.4995902180671692,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3054.0,
+      "native_y": 2378.0,
+      "conf": 0.4995476305484772,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3054.0,
+      "native_y": 2465.0,
+      "conf": 0.49935182929039,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3054.0,
+      "native_y": 515.0,
+      "conf": 0.4986729025840759,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3054.0,
+      "native_y": 2105.0,
+      "conf": 0.4986101984977722,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.45244834314896076632852957176525307034": [
+    {
+      "native_x": 2673.0,
+      "native_y": 1270.0,
+      "conf": 0.7250010967254639,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 969.0,
+      "native_y": 1178.0,
+      "conf": 0.6244969367980957,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1046.0,
+      "native_y": 596.0,
+      "conf": 0.5650241374969482,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 986.0,
+      "native_y": 318.0,
+      "conf": 0.5300589203834534,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1056.0,
+      "native_y": 739.0,
+      "conf": 0.5170151591300964,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1539.0,
+      "native_y": 589.0,
+      "conf": 0.5066695213317871,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2736.0,
+      "native_y": 1283.0,
+      "conf": 0.7256693840026855,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2719.0,
+      "native_y": 1271.0,
+      "conf": 0.710300087928772,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2727.0,
+      "native_y": 1345.0,
+      "conf": 0.6478008031845093,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1053.0,
+      "native_y": 670.0,
+      "conf": 0.61933434009552,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 899.0,
+      "native_y": 1193.0,
+      "conf": 0.5949504971504211,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 983.0,
+      "native_y": 313.0,
+      "conf": 0.5338016748428345,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1605.0,
+      "native_y": 463.0,
+      "conf": 0.5206248760223389,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1056.0,
+      "native_y": 754.0,
+      "conf": 0.5121970772743225,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1724.0,
+      "native_y": 71.0,
+      "conf": 0.5019909143447876,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1486.0,
+      "native_y": 708.0,
+      "conf": 0.4939417243003845,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1040.0,
+      "native_y": 511.0,
+      "conf": 0.48810040950775146,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.45751038310072447581875796497385841972": [
+    {
+      "native_x": 20.0,
+      "native_y": 1590.0,
+      "conf": 0.6551492810249329,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 770.0,
+      "native_y": 1064.0,
+      "conf": 0.6535857319831848,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 808.0,
+      "native_y": 1607.0,
+      "conf": 0.6436410546302795,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 881.0,
+      "native_y": 1183.0,
+      "conf": 0.6065869927406311,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 593.0,
+      "native_y": 897.0,
+      "conf": 0.6060361266136169,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 382.0,
+      "native_y": 948.0,
+      "conf": 0.5380911231040955,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 503.0,
+      "native_y": 873.0,
+      "conf": 0.534396231174469,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 130.0,
+      "native_y": 1301.0,
+      "conf": 0.5307327508926392,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 602.0,
+      "native_y": 493.0,
+      "conf": 0.5291556119918823,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 64.0,
+      "native_y": 1475.0,
+      "conf": 0.5273216366767883,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 850.0,
+      "native_y": 1137.0,
+      "conf": 0.5215137004852295,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 773.0,
+      "native_y": 1330.0,
+      "conf": 0.49862775206565857,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 317.0,
+      "native_y": 1012.0,
+      "conf": 0.4891413748264313,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 801.0,
+      "native_y": 1069.0,
+      "conf": 0.7985004186630249,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 844.0,
+      "native_y": 1269.0,
+      "conf": 0.7889717221260071,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 140.0,
+      "native_y": 1288.0,
+      "conf": 0.6102553606033325,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 840.0,
+      "native_y": 1045.0,
+      "conf": 0.5919573307037354,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 620.0,
+      "native_y": 896.0,
+      "conf": 0.5845543146133423,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 9.0,
+      "native_y": 1615.0,
+      "conf": 0.5691590309143066,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 665.0,
+      "native_y": 1135.0,
+      "conf": 0.564217209815979,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 100.0,
+      "native_y": 1375.0,
+      "conf": 0.5634262561798096,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 771.0,
+      "native_y": 1225.0,
+      "conf": 0.5233305096626282,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 355.0,
+      "native_y": 970.0,
+      "conf": 0.5225641131401062,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 47.0,
+      "native_y": 1537.0,
+      "conf": 0.5106426477432251,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 641.0,
+      "native_y": 488.0,
+      "conf": 0.502124011516571,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 558.0,
+      "native_y": 1170.0,
+      "conf": 0.5020660161972046,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 455.0,
+      "native_y": 893.0,
+      "conf": 0.48445549607276917,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.51105147320519385088961382872049085601": [
+    {
+      "native_x": 691.0,
+      "native_y": 607.0,
+      "conf": 0.8110502362251282,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1000.0,
+      "native_y": 1142.0,
+      "conf": 0.7305759191513062,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 34.0,
+      "native_y": 1362.0,
+      "conf": 0.6522608995437622,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 162.0,
+      "native_y": 971.0,
+      "conf": 0.5832895040512085,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1851.0,
+      "native_y": 616.0,
+      "conf": 0.5639705061912537,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1943.0,
+      "native_y": 719.0,
+      "conf": 0.5620185732841492,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 31.0,
+      "native_y": 604.0,
+      "conf": 0.5552394986152649,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 58.0,
+      "native_y": 1629.0,
+      "conf": 0.5511659979820251,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 126.0,
+      "native_y": 605.0,
+      "conf": 0.5486441850662231,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 327.0,
+      "native_y": 909.0,
+      "conf": 0.5445314049720764,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2006.0,
+      "native_y": 798.0,
+      "conf": 0.5156360864639282,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 202.0,
+      "native_y": 959.0,
+      "conf": 0.5120056867599487,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2179.0,
+      "native_y": 1023.0,
+      "conf": 0.5049951672554016,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2498.0,
+      "native_y": 989.0,
+      "conf": 0.49634313583374023,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 87.0,
+      "native_y": 1157.0,
+      "conf": 0.8476923108100891,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 391.0,
+      "native_y": 677.0,
+      "conf": 0.7830612659454346,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 15.0,
+      "native_y": 1542.0,
+      "conf": 0.7643893361091614,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2163.0,
+      "native_y": 1125.0,
+      "conf": 0.7542394995689392,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 29.0,
+      "native_y": 1812.0,
+      "conf": 0.7347762584686279,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 707.0,
+      "native_y": 576.0,
+      "conf": 0.713158130645752,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 487.0,
+      "native_y": 712.0,
+      "conf": 0.6801285743713379,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 100.0,
+      "native_y": 1388.0,
+      "conf": 0.6336634755134583,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 169.0,
+      "native_y": 569.0,
+      "conf": 0.6280969381332397,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1722.0,
+      "native_y": 530.0,
+      "conf": 0.603543758392334,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 47.0,
+      "native_y": 1169.0,
+      "conf": 0.5959919691085815,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 509.0,
+      "native_y": 635.0,
+      "conf": 0.5869290232658386,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 332.0,
+      "native_y": 586.0,
+      "conf": 0.5854530334472656,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2.0,
+      "native_y": 1092.0,
+      "conf": 0.5455572605133057,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 192.0,
+      "native_y": 970.0,
+      "conf": 0.5421046614646912,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2190.0,
+      "native_y": 1065.0,
+      "conf": 0.5381855368614197,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 10.0,
+      "native_y": 611.0,
+      "conf": 0.5365319848060608,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 250.0,
+      "native_y": 952.0,
+      "conf": 0.534293532371521,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 568.0,
+      "native_y": 545.0,
+      "conf": 0.5256248116493225,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 158.0,
+      "native_y": 604.0,
+      "conf": 0.5192757248878479,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 544.0,
+      "native_y": 680.0,
+      "conf": 0.5085622668266296,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 402.0,
+      "native_y": 734.0,
+      "conf": 0.4976711571216583,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 91.0,
+      "native_y": 610.0,
+      "conf": 0.49681416153907776,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2498.0,
+      "native_y": 1229.0,
+      "conf": 0.4963935315608978,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1980.0,
+      "native_y": 760.0,
+      "conf": 0.4942033290863037,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1004.0,
+      "native_y": 861.0,
+      "conf": 0.4820310175418854,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.60946752499839299438889356567020750521": [
+    {
+      "native_x": 1242.0,
+      "native_y": 1093.0,
+      "conf": 0.7453598976135254,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 152.0,
+      "native_y": 807.0,
+      "conf": 0.5019230842590332,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1648.0,
+      "native_y": 124.0,
+      "conf": 0.4989379644393921,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2560.0,
+      "native_y": 964.0,
+      "conf": 0.5035151243209839,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 88.0,
+      "native_y": 842.0,
+      "conf": 0.5007665157318115,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1666.0,
+      "native_y": 99.0,
+      "conf": 0.49964281916618347,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.65210359419862675092577613505972938491": [
+    {
+      "native_x": 100.0,
+      "native_y": 1873.0,
+      "conf": 0.6642584204673767,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1915.0,
+      "native_y": 480.0,
+      "conf": 0.6148743629455566,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1197.0,
+      "native_y": 881.0,
+      "conf": 0.5952306985855103,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2042.0,
+      "native_y": 775.0,
+      "conf": 0.5085513591766357,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2087.0,
+      "native_y": 657.0,
+      "conf": 0.8176828026771545,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1967.0,
+      "native_y": 468.0,
+      "conf": 0.6984407305717468,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 31.0,
+      "native_y": 2014.0,
+      "conf": 0.645168662071228,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 93.0,
+      "native_y": 1900.0,
+      "conf": 0.6051822304725647,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 662.0,
+      "native_y": 422.0,
+      "conf": 0.568630576133728,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1244.0,
+      "native_y": 556.0,
+      "conf": 0.549933910369873,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2043.0,
+      "native_y": 552.0,
+      "conf": 0.5257375836372375,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2112.0,
+      "native_y": 697.0,
+      "conf": 0.5222212076187134,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2047.0,
+      "native_y": 757.0,
+      "conf": 0.5077257752418518,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.72142507856019138854820123307260218740": [
+    {
+      "native_x": 1205.0,
+      "native_y": 1054.0,
+      "conf": 0.6192892789840698,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1207.0,
+      "native_y": 999.0,
+      "conf": 0.9154765605926514,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1121.0,
+      "native_y": 1007.0,
+      "conf": 0.7413285970687866,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2704.0,
+      "native_y": 1250.0,
+      "conf": 0.5099145174026489,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.74067092954277858591731369789552043856": [
+    {
+      "native_x": 1101.0,
+      "native_y": 1079.0,
+      "conf": 0.5981329679489136,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1085.0,
+      "native_y": 800.0,
+      "conf": 0.5796470046043396,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1641.0,
+      "native_y": 409.0,
+      "conf": 0.5326929688453674,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1172.0,
+      "native_y": 571.0,
+      "conf": 0.5285124182701111,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1080.0,
+      "native_y": 354.0,
+      "conf": 0.9502617716789246,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 747.0,
+      "native_y": 745.0,
+      "conf": 0.682365357875824,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1896.0,
+      "native_y": 548.0,
+      "conf": 0.5369293093681335,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1649.0,
+      "native_y": 409.0,
+      "conf": 0.5303729772567749,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2499.0,
+      "native_y": 1011.0,
+      "conf": 0.5025790929794312,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2498.0,
+      "native_y": 1048.0,
+      "conf": 0.49325400590896606,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1085.0,
+      "native_y": 784.0,
+      "conf": 0.49009567499160767,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.74102457848421594543038787547851069803": [
+    {
+      "native_x": 1159.0,
+      "native_y": 1171.0,
+      "conf": 0.7815525531768799,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 632.0,
+      "native_y": 487.0,
+      "conf": 0.6877560615539551,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 689.0,
+      "native_y": 523.0,
+      "conf": 0.6532019972801208,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 3.0,
+      "native_y": 787.0,
+      "conf": 0.628482460975647,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.76848279279259553542487077976162103936": [
+    {
+      "native_x": 1339.0,
+      "native_y": 644.0,
+      "conf": 0.7220377922058105,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1437.0,
+      "native_y": 509.0,
+      "conf": 0.5722226500511169,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1628.0,
+      "native_y": 247.0,
+      "conf": 0.7925742864608765,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1457.0,
+      "native_y": 436.0,
+      "conf": 0.6048344373703003,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1361.0,
+      "native_y": 390.0,
+      "conf": 0.549669623374939,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1728.0,
+      "native_y": 0.0,
+      "conf": 0.5401378273963928,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1436.0,
+      "native_y": 474.0,
+      "conf": 0.5134446620941162,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.78022247816932733427074863804392231471": [
+    {
+      "native_x": 929.0,
+      "native_y": 931.0,
+      "conf": 0.8092226982116699,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 108.0,
+      "native_y": 997.0,
+      "conf": 0.6518420577049255,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 945.0,
+      "native_y": 1064.0,
+      "conf": 0.5878819823265076,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 994.0,
+      "native_y": 622.0,
+      "conf": 0.5775552988052368,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 990.0,
+      "native_y": 1008.0,
+      "conf": 0.5693396925926208,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 958.0,
+      "native_y": 1381.0,
+      "conf": 0.5652288198471069,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1563.0,
+      "native_y": 626.0,
+      "conf": 0.5598329305648804,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1556.0,
+      "native_y": 569.0,
+      "conf": 0.5390668511390686,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 910.0,
+      "native_y": 943.0,
+      "conf": 0.5367745757102966,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1012.0,
+      "native_y": 960.0,
+      "conf": 0.5193091630935669,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1039.0,
+      "native_y": 895.0,
+      "conf": 0.5096688866615295,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1589.0,
+      "native_y": 873.0,
+      "conf": 0.5017654895782471,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1609.0,
+      "native_y": 900.0,
+      "conf": 0.4969201683998108,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 957.0,
+      "native_y": 817.0,
+      "conf": 0.8242860436439514,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1100.0,
+      "native_y": 893.0,
+      "conf": 0.7763139605522156,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1004.0,
+      "native_y": 873.0,
+      "conf": 0.7730157375335693,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 62.0,
+      "native_y": 1197.0,
+      "conf": 0.6708629727363586,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 985.0,
+      "native_y": 1027.0,
+      "conf": 0.6680706143379211,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 181.0,
+      "native_y": 1083.0,
+      "conf": 0.6532337665557861,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1014.0,
+      "native_y": 779.0,
+      "conf": 0.628109872341156,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 906.0,
+      "native_y": 976.0,
+      "conf": 0.6222819089889526,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1566.0,
+      "native_y": 590.0,
+      "conf": 0.584336519241333,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 381.0,
+      "native_y": 827.0,
+      "conf": 0.5839930176734924,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1600.0,
+      "native_y": 532.0,
+      "conf": 0.5838188529014587,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1572.0,
+      "native_y": 630.0,
+      "conf": 0.5813299417495728,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 153.0,
+      "native_y": 1091.0,
+      "conf": 0.5404143929481506,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 939.0,
+      "native_y": 1108.0,
+      "conf": 0.5214011669158936,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 434.0,
+      "native_y": 780.0,
+      "conf": 0.5166895985603333,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 957.0,
+      "native_y": 1320.0,
+      "conf": 0.5043954253196716,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1619.0,
+      "native_y": 915.0,
+      "conf": 0.494951069355011,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1606.0,
+      "native_y": 896.0,
+      "conf": 0.49374088644981384,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1024.0,
+      "native_y": 918.0,
+      "conf": 0.48935022950172424,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.79020141486676788517917608163138352497": [
+    {
+      "native_x": 1110.0,
+      "native_y": 931.0,
+      "conf": 0.6531827449798584,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2463.0,
+      "native_y": 625.0,
+      "conf": 0.6493644118309021,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2304.0,
+      "native_y": 430.0,
+      "conf": 0.5890136957168579,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 34.0,
+      "native_y": 0.0,
+      "conf": 0.49620893597602844,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1954.0,
+      "native_y": 401.0,
+      "conf": 0.9671679139137268,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1930.0,
+      "native_y": 434.0,
+      "conf": 0.9473631978034973,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1878.0,
+      "native_y": 380.0,
+      "conf": 0.9051104187965393,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2056.0,
+      "native_y": 462.0,
+      "conf": 0.9048069715499878,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2058.0,
+      "native_y": 466.0,
+      "conf": 0.8798925876617432,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1460.0,
+      "native_y": 528.0,
+      "conf": 0.6685904860496521,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2471.0,
+      "native_y": 615.0,
+      "conf": 0.636655330657959,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2540.0,
+      "native_y": 764.0,
+      "conf": 0.6283628940582275,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1994.0,
+      "native_y": 447.0,
+      "conf": 0.6240524053573608,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2304.0,
+      "native_y": 438.0,
+      "conf": 0.6177837252616882,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2441.0,
+      "native_y": 619.0,
+      "conf": 0.6146273016929626,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2439.0,
+      "native_y": 612.0,
+      "conf": 0.606081485748291,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 0.0,
+      "native_y": 18.0,
+      "conf": 0.5049076080322266,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.81127623321662914444250471666839283397": [
+    {
+      "native_x": 2465.0,
+      "native_y": 1796.0,
+      "conf": 0.7705069780349731,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 926.0,
+      "native_y": 922.0,
+      "conf": 0.6322569847106934,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2463.0,
+      "native_y": 1950.0,
+      "conf": 0.5622386336326599,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2343.0,
+      "native_y": 1861.0,
+      "conf": 0.5612604022026062,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2345.0,
+      "native_y": 1837.0,
+      "conf": 0.5304571390151978,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 435.0,
+      "native_y": 898.0,
+      "conf": 0.8284170627593994,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1499.0,
+      "native_y": 506.0,
+      "conf": 0.6631320118904114,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2377.0,
+      "native_y": 1909.0,
+      "conf": 0.6570080518722534,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2342.0,
+      "native_y": 1903.0,
+      "conf": 0.6566779613494873,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 973.0,
+      "native_y": 905.0,
+      "conf": 0.6501811742782593,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1590.0,
+      "native_y": 537.0,
+      "conf": 0.6087349653244019,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2332.0,
+      "native_y": 1699.0,
+      "conf": 0.5994493961334229,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 888.0,
+      "native_y": 954.0,
+      "conf": 0.5824828147888184,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 868.0,
+      "native_y": 830.0,
+      "conf": 0.5791347026824951,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2372.0,
+      "native_y": 1460.0,
+      "conf": 0.5559498071670532,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2375.0,
+      "native_y": 1456.0,
+      "conf": 0.5548771023750305,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2465.0,
+      "native_y": 1939.0,
+      "conf": 0.5224254727363586,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2498.0,
+      "native_y": 1832.0,
+      "conf": 0.505285918712616,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2499.0,
+      "native_y": 1811.0,
+      "conf": 0.5024645924568176,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.84889777057776043193439896026532328767": [
+    {
+      "native_x": 1122.0,
+      "native_y": 896.0,
+      "conf": 0.7145534753799438,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1025.0,
+      "native_y": 1533.0,
+      "conf": 0.6926853656768799,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 955.0,
+      "native_y": 1094.0,
+      "conf": 0.6605510115623474,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1004.0,
+      "native_y": 1148.0,
+      "conf": 0.5110794305801392,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2436.0,
+      "native_y": 1273.0,
+      "conf": 0.5004507303237915,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1126.0,
+      "native_y": 878.0,
+      "conf": 0.6382694840431213,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2398.0,
+      "native_y": 1094.0,
+      "conf": 0.582633376121521,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1142.0,
+      "native_y": 852.0,
+      "conf": 0.5702050924301147,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1004.0,
+      "native_y": 1193.0,
+      "conf": 0.516156017780304,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 2438.0,
+      "native_y": 1258.0,
+      "conf": 0.49868541955947876,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1183.0,
+      "native_y": 762.0,
+      "conf": 0.4938216805458069,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1105.0,
+      "native_y": 794.0,
+      "conf": 0.491779088973999,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.98610781732941210925340079679854572917": [
+    {
+      "native_x": 1532.0,
+      "native_y": 612.0,
+      "conf": 0.5545394420623779,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1226.0,
+      "native_y": 947.0,
+      "conf": 0.5039251446723938,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1184.0,
+      "native_y": 569.0,
+      "conf": 0.5405856966972351,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1132.0,
+      "native_y": 1.0,
+      "conf": 0.5317556262016296,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1094.0,
+      "native_y": 1.0,
+      "conf": 0.5196044445037842,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1520.0,
+      "native_y": 603.0,
+      "conf": 0.4998360574245453,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.11949936472769428466626780922892522748": [
+    {
+      "native_x": 605.0,
+      "native_y": 715.0,
+      "conf": 0.6160014271736145,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 499.0,
+      "native_y": 756.0,
+      "conf": 0.5572009682655334,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 603.0,
+      "native_y": 705.0,
+      "conf": 0.6038508415222168,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 261.0,
+      "native_y": 819.0,
+      "conf": 0.4906490445137024,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.12081555449560607487646381923653562395": [
+    {
+      "native_x": 160.0,
+      "native_y": 1735.0,
+      "conf": 0.5428571105003357,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 156.0,
+      "native_y": 1458.0,
+      "conf": 0.5173731446266174,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1498.0,
+      "native_y": 915.0,
+      "conf": 0.4946260154247284,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 221.0,
+      "native_y": 1218.0,
+      "conf": 0.49380385875701904,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1494.0,
+      "native_y": 995.0,
+      "conf": 0.4924481511116028,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 109.0,
+      "native_y": 1881.0,
+      "conf": 0.6623570322990417,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 169.0,
+      "native_y": 1417.0,
+      "conf": 0.6032857298851013,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 141.0,
+      "native_y": 1825.0,
+      "conf": 0.5817174315452576,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1501.0,
+      "native_y": 898.0,
+      "conf": 0.4930333197116852,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 1498.0,
+      "native_y": 960.0,
+      "conf": 0.4881071448326111,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.16685145848089373870698736004452376249": [],
+  "1.2.826.0.1.3680043.8.498.22320705680148774104574675541453580288": [],
+  "1.2.826.0.1.3680043.8.498.44115252344656427769689937573516279206": [],
+  "1.2.826.0.1.3680043.8.498.53607701500171502074287088982752779385": [
+    {
+      "native_x": 17.0,
+      "native_y": 1214.0,
+      "conf": 0.6944542527198792,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 98.0,
+      "native_y": 1341.0,
+      "conf": 0.5438142418861389,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 193.0,
+      "native_y": 1508.0,
+      "conf": 0.4985077381134033,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 16.0,
+      "native_y": 1209.0,
+      "conf": 0.6928341388702393,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 58.0,
+      "native_y": 1235.0,
+      "conf": 0.6157397627830505,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 173.0,
+      "native_y": 1483.0,
+      "conf": 0.4919136166572571,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.60080956841618870940968575868106407717": [
+    {
+      "native_x": 448.0,
+      "native_y": 781.0,
+      "conf": 0.49401581287384033,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 395.0,
+      "native_y": 822.0,
+      "conf": 0.49478569626808167,
+      "method": "skeleton_endpoints"
+    }
+  ],
+  "1.2.826.0.1.3680043.8.498.86838128454349618942354724331908482816": [
+    {
+      "native_x": 1003.0,
+      "native_y": 1017.0,
+      "conf": 0.5028316378593445,
+      "method": "skeleton_endpoints"
+    },
+    {
+      "native_x": 997.0,
+      "native_y": 1050.0,
+      "conf": 0.4879615306854248,
+      "method": "skeleton_endpoints"
+    }
+  ]
+}

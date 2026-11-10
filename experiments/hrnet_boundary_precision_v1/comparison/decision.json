@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "dice_improves_parent_and_control": true,
+    "precision_improves_parent_and_control": true,
+    "all_four_recoveries_preserved": false,
+    "no_new_misses_vs_parent": false,
+    "coverage_within_half_pp": false,
+    "mean_gap_no_more_than_10px_worse": false,
+    "negative_mean_area_not_worse": false,
+    "negative_total_pixels_not_worse": false
+  },
+  "experiment_passed": false,
+  "original_quality_checks": {
+    "dice_at_least_original": true,
+    "precision_at_least_original": false
+  },
+  "all_requirements_passed": false,
+  "promoted": false,
+  "qualification": "Repeatedly used development set; annotations provisional, eight negatives. No clinical or independent-test claim."
+}

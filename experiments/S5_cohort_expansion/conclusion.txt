@@ -1,0 +1,21 @@
+1. What changed:
+Compared 2,500 successful optimizer updates on Arm A (Duration Control: 400 positives + 396 negatives) vs Arm B (Expanded Cohort: 800 positives + 396 negatives) using 50% Top-99 hard negative sampling, in-place same-batch AMP retry on gradient overflow, and native radiograph geometry evaluation on frozen dev_pilot_val (193 studies).
+
+2. What stayed fixed:
+EfficientNet-B0 + FPN architecture, 768px input resolution, evaluation threshold tau=0.50, native-resolution evaluation grid, initial weights (frozen S3 baseline), AdamW optimizer, cosine schedule, and random seeds (seed 43, aug_seed 43).
+
+3. Did the primary metric improve:
+No. Primary metric (Macro Binary Dice at tau=0.50) collapsed:
+- S4 Reference (Seed 43, 1,000 updates): Dice = 0.4419 (Precision 32.10%, Recall 74.47%)
+- S5 Arm A (2,500 updates, 400 pos): Dice = 0.0053 (Precision 12.31%, Recall 0.37%)
+- S5 Arm B (2,500 updates, 800 pos): Dice = 0.0000 (Precision 0.00%, Recall 0.00%)
+
+4. What became worse:
+Extended training beyond 1,000 updates with 50% selective hard negatives drove the model to over-suppress foreground entirely, reducing false negative pixels on negatives to 0 px, but at the cost of catastrophic recall collapse (0.37% and 0.00%).
+
+5. Crashes, retries, exclusions, or protocol deviations:
+- 3 AMP overflow retries in Arm A, 2 AMP overflow retries in Arm B. Handled with exact in-place same-batch retry without advancing step counter or scheduler. Zero divergence or loss NaN.
+- Evaluation script keyword argument mismatch in compute_patient_bootstrap_ci was diagnosed and resolved.
+
+6. Protocol Decision (RETAIN / REPEAT / REJECT):
+REJECT 2,500-update continued segmentation training. Retain S4 Seed-43 (1,000 updates, Dice 0.4419) as the active segmentation reference. All checkpoints preserved. Proceed immediately to Direct Tip localization roadmap (T0, T1, T2).

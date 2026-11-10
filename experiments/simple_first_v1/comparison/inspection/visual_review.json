@@ -1,0 +1,64 @@
+{
+  "decision": "Proceed only as a metadata-defined low-clutter-order pilot, with no automatic label changes or cohort accuracy claims.",
+  "date": "2026-10-24",
+  "scope": "Raw X-rays and annotation overlays at contact-sheet resolution; visual inspection does not verify every pixel or catheter identity.",
+  "no_clinical_accuracy_claim": true,
+  "inspected_panels": [
+    "sample_1.jpg",
+    "sample_2.jpg",
+    "sample_3.jpg"
+  ],
+  "all_12_viewed": true,
+  "findings": [
+    {
+      "id": 1,
+      "note": "Low contrast and large dense image region; trace approaches upper/lateral frame. Not clinically verified."
+    },
+    {
+      "id": 2,
+      "note": "Long curve and central descent broadly visible; external leads remain."
+    },
+    {
+      "id": 3,
+      "note": "Looped catheter course; one CVC does not imply easy topology."
+    },
+    {
+      "id": 4,
+      "note": "Long lateral trace with tight upper loop; not an easy straight-line example."
+    },
+    {
+      "id": 5,
+      "note": "Only short peripheral annotated segment; many crossing external wires. Flag for qualified annotation-completeness review."
+    },
+    {
+      "id": 6,
+      "note": "Faint arch over upper chest; exact trace accuracy cannot be certified at this scale."
+    },
+    {
+      "id": 7,
+      "note": "Dense background, looping trace, and external wires; visually difficult despite metadata."
+    },
+    {
+      "id": 8,
+      "note": "Long arm-to-chest course and other surface wires; broad course plausible."
+    },
+    {
+      "id": 9,
+      "note": "Short neck trace in low contrast image; tip and annotation completeness uncertain."
+    },
+    {
+      "id": 10,
+      "note": "Relatively clear upper arch and descending segment; still overlaps ribs."
+    },
+    {
+      "id": 11,
+      "note": "Central descent and arch; external chain at neck adds clutter."
+    },
+    {
+      "id": 12,
+      "note": "Long lateral course includes external loop; simple metadata is not simple geometry."
+    }
+  ],
+  "labels_modified": false,
+  "reviewer": "AI engineering visual inspection; not clinical attestation"
+}

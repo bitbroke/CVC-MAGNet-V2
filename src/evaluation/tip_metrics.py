@@ -92,7 +92,7 @@ def hungarian_match_tips(
 
 def compute_tip_metrics(
     eval_df: pd.DataFrame,
-    tolerances: Tuple[float, ...] = (5.0, 10.0, 15.0, 20.0, 30.0),
+    tolerances: Tuple[float, ...] = (5.0, 10.0, 15.0, 20.0, 25.0, 35.0, 50.0, 65.0),
     confidence_threshold: float = 0.50,
 ) -> Dict[str, Any]:
     """Compute comprehensive evaluation metrics across an entire evaluation cohort.

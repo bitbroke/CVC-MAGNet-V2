@@ -1,0 +1,6 @@
+{
+  "frozen_tensor_hash": "d248209fc045d23238bc334c131a0925a2565371020bdccf40426febf5209168",
+  "unchanged": true,
+  "tip_head_weights_frozen": true,
+  "tip_output_policy": "Separate complete frozen reference; adapted copy tip outputs are NOT used"
+}

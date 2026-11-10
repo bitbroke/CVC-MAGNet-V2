@@ -1,0 +1,1 @@
+python scripts/evaluate_t0_baseline.py --checkpoint runs/s4_experiment_seed43/checkpoints/final_segmentation_v3.pt

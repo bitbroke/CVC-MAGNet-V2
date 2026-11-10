@@ -1,0 +1,69 @@
+[
+  {
+    "update_id": 1,
+    "study_ids": [
+      "1.2.826.0.1.3680043.8.498.57895167239963477615391127330978220967",
+      "1.2.826.0.1.3680043.8.498.11282726926385674799032474140254366087",
+      "1.2.826.0.1.3680043.8.498.58316870273475304341182775332135854880",
+      "1.2.826.0.1.3680043.8.498.74097243699070773856712835722074575225"
+    ],
+    "sampling_category": [
+      "uniform_negative",
+      "positive",
+      "positive",
+      "positive"
+    ],
+    "augmentation_parameters": [
+      {
+        "hflip": true,
+        "angle": 2.197473582119372,
+        "translate_x_pct": -0.007367584604102161,
+        "translate_y_pct": 0.034173260234706536,
+        "scale": 1.026321298620173,
+        "brightness": 1.0,
+        "contrast": 0.9159417521887697,
+        "exposure_idx": 0,
+        "aug_seed": "014bf885cdfe366c"
+      },
+      {
+        "hflip": true,
+        "angle": -2.4756131582071923,
+        "translate_x_pct": 0.010369856175705204,
+        "translate_y_pct": -0.03264792251061047,
+        "scale": 0.9811150723619271,
+        "brightness": 1.0,
+        "contrast": 1.021978481671181,
+        "exposure_idx": 0,
+        "aug_seed": "0246ed2408f649bc"
+      },
+      {
+        "hflip": true,
+        "angle": 0.1566950127032669,
+        "translate_x_pct": -0.013451011851947685,
+        "translate_y_pct": -0.008830107309034895,
+        "scale": 1.0332651545146658,
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "exposure_idx": 0,
+        "aug_seed": "1a567e8d4127ab8a"
+      },
+      {
+        "hflip": true,
+        "angle": -4.58102424642324,
+        "translate_x_pct": 0.010531489790231115,
+        "translate_y_pct": -0.0037445280540763515,
+        "scale": 1.019725125211568,
+        "brightness": 1.0,
+        "contrast": 1.0273100601052865,
+        "exposure_idx": 0,
+        "aug_seed": "ffc707a78cdedb5b"
+      }
+    ],
+    "source_image_hashes": [
+      "2d441d64ba2c867bd91c2b31de9e1ebd642f63de4ec27a330eb04b36efce2a65",
+      "3d4199fb13004f83f8c234e8f93b9c1882558da4d0969f3d71eff3cee9218f6e",
+      "9a39d546c413a24b5786bd6b05e22105647676bbf21c9df2d5c21461de7cde9d",
+      "7ff4a0192200d8ae2a63b09beccf048903c5d8dca8993c5f5a3cd15551c0284b"
+    ]
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "cohort": {
+    "total_studies": 193,
+    "positive_studies": 193,
+    "negative_studies": 0,
+    "total_assessable_gt_tips": 417,
+    "total_predictions_above_threshold": 509,
+    "confidence_threshold": 0.2
+  },
+  "primary_metric": {
+    "name": "Success@15",
+    "value": 0.26618705035971224,
+    "matched_assessable_tips": 111,
+    "all_assessable_gt_tips": 417
+  },
+  "tolerance_metrics": {
+    "Success@5": {
+      "success_rate": 0.04316546762589928,
+      "precision": 0.03536345776031434,
+      "recall": 0.04316546762589928,
+      "f1": 0.0388768898488121,
+      "tp": 18,
+      "fp": 491,
+      "fn": 399
+    },
+    "Success@10": {
+      "success_rate": 0.15827338129496402,
+      "precision": 0.12966601178781925,
+      "recall": 0.15827338129496402,
+      "f1": 0.14254859611231102,
+      "tp": 66,
+      "fp": 443,
+      "fn": 351
+    },
+    "Success@15": {
+      "success_rate": 0.26618705035971224,
+      "precision": 0.2180746561886051,
+      "recall": 0.26618705035971224,
+      "f1": 0.23974082073434125,
+      "tp": 111,
+      "fp": 398,
+      "fn": 306
+    },
+    "Success@20": {
+      "success_rate": 0.354916067146283,
+      "precision": 0.2907662082514735,
+      "recall": 0.354916067146283,
+      "f1": 0.31965442764578833,
+      "tp": 148,
+      "fp": 361,
+      "fn": 269
+    },
+    "Success@30": {
+      "success_rate": 0.460431654676259,
+      "precision": 0.37721021611001965,
+      "recall": 0.460431654676259,
+      "f1": 0.4146868250539956,
+      "tp": 192,
+      "fp": 317,
+      "fn": 225
+    }
+  },
+  "error_distribution_matched_15px": {
+    "matched_population_count": 111,
+    "median_error_px": 9.09370227173426,
+    "mean_error_px": 8.78406557304177,
+    "p95_error_px": 14.392917712924156,
+    "min_error_px": 0.8302677989996337,
+    "max_error_px": 14.992623330834382
+  },
+  "candidate_diagnostics": {
+    "raw_candidate_coverage_15px": 0.26618705035971224,
+    "covered_tips_count": 111,
+    "coverage_drop_due_to_filtering_or_competition": 0.0,
+    "false_tips_per_image": 2.062176165803109,
+    "false_tips_on_cvc_negatives_per_image": 0.0
+  },
+  "strata_metrics_15px": {
+    "single_cvc": {
+      "gt_tips": 68,
+      "matched_tp": 31,
+      "success_rate": 0.45588235294117646
+    },
+    "multi_cvc": {
+      "gt_tips": 349,
+      "matched_tp": 80,
+      "success_rate": 0.22922636103151864
+    },
+    "border_stratum": {
+      "gt_tips": 0,
+      "matched_tp": 0,
+      "success_rate": null
+    },
+    "clutter_stratum": {
+      "gt_tips": 0,
+      "matched_tp": 0,
+      "success_rate": null
+    },
+    "abnormal_course_stratum": {
+      "gt_tips": 0,
+      "matched_tp": 0,
+      "success_rate": null
+    }
+  }
+}

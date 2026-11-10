@@ -1,0 +1,23 @@
+{
+  "development_validation": {
+    "studies": 193,
+    "source_polyline_mismatch_studies": 0,
+    "inventory_instances": 248,
+    "label_positive_without_polyline": 0,
+    "label_negative_with_polyline": 0,
+    "short_paths_under300": 0,
+    "border_contact_paths": 0,
+    "unassessable_tips": 0
+  },
+  "experiment_train": {
+    "studies": 896,
+    "source_polyline_mismatch_studies": 0,
+    "inventory_instances": 572,
+    "label_positive_without_polyline": 0,
+    "label_negative_with_polyline": 0,
+    "short_paths_under300": 0,
+    "border_contact_paths": 0,
+    "unassessable_tips": 0
+  },
+  "whole_inventory_label_positive_without_cvc_polyline": 20480
+}

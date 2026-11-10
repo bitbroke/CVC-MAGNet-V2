@@ -1,0 +1,8 @@
+{
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_42\\t1_joint_hrnet\\checkpoints\\final_model.pt": "d9ef494fc6f95e2abcf2597d7269e8732803a3e634bd638e64a5ab9a2d139b1d",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_43\\t1_joint_hrnet\\checkpoints\\final_model.pt": "3babf3448a41df2a8dc9dcdd1b00e0addc9988bba165361fa544f493a612b023",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_improvement_v2\\checkpoints\\control_final_model.pt": "dcc05cb25676466dea1fdd960143e014fe4d0253e7c3574560975558fa257d60",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_improvement_v2\\checkpoints\\experiment_final_model.pt": "02046ea6988a61bba15351cfcf134a421d49c474dc18b10f5f5d54511d056a67",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_missed_catheter_pilot_v1\\comparison\\control\\last.pt": "a60281b4b152ade87a1ba5ed6d192a99347e7dc1e5ee236c6226ed4505ff7b72",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_missed_catheter_pilot_v1\\comparison\\instance_recall\\last.pt": "5b58044932ef6d95d88272cf83c0492fe064082d890afac20717f9efdb518bdd"
+}

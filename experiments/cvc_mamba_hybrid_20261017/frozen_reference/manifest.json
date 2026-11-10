@@ -1,0 +1,77 @@
+{
+  "created": "2026-10-17T03:15:06.169288+05:30",
+  "files": [
+    {
+      "original": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\s4_experiment_seed43\\checkpoints\\final_segmentation_v3.pt",
+      "copy": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\cvc_mamba_hybrid_20261017\\frozen_reference\\runs\\s4_experiment_seed43\\checkpoints\\final_segmentation_v3.pt",
+      "sha256": "f01089be1b7507bfb1d1a2762911f6ee1f0d425ce49628c6d0083daecf5e94e2",
+      "bytes": 50725788
+    },
+    {
+      "original": "C:\\Ankshit\\CVC-MAGNet-V2\\runs\\s4_experiment_seed43\\train_summary.json",
+      "copy": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\cvc_mamba_hybrid_20261017\\frozen_reference\\runs\\s4_experiment_seed43\\train_summary.json",
+      "sha256": "378c1370cf35a00704cda787dbe1b7c6c439202c14c734dc25317f242fa02912",
+      "bytes": 571
+    },
+    {
+      "original": "C:\\Ankshit\\CVC-MAGNet-V2\\src\\models\\segmentation_v3.py",
+      "copy": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\cvc_mamba_hybrid_20261017\\frozen_reference\\src\\models\\segmentation_v3.py",
+      "sha256": "c2b952e79f7a3086a2cbc8e34cd1a53ab4ac0594ce1ba97d00e4754e61310444",
+      "bytes": 5358
+    },
+    {
+      "original": "C:\\Ankshit\\CVC-MAGNet-V2\\src\\data\\segmentation_v3_dataset.py",
+      "copy": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\cvc_mamba_hybrid_20261017\\frozen_reference\\src\\data\\segmentation_v3_dataset.py",
+      "sha256": "71d87fe0299628bba4a71f12ca826b92ed0dba0d03f65c4a84a435e6a51eec9f",
+      "bytes": 15439
+    },
+    {
+      "original": "C:\\Ankshit\\CVC-MAGNet-V2\\scripts\\train_segmentation_v3.py",
+      "copy": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\cvc_mamba_hybrid_20261017\\frozen_reference\\scripts\\train_segmentation_v3.py",
+      "sha256": "554035ad880ba898cb802499b62c877acdcaa54944f39f41b0d557623e26aded",
+      "bytes": 33394
+    },
+    {
+      "original": "C:\\Ankshit\\CVC-MAGNet-V2\\scripts\\evaluate_s4_experiment.py",
+      "copy": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\cvc_mamba_hybrid_20261017\\frozen_reference\\scripts\\evaluate_s4_experiment.py",
+      "sha256": "b59b2a77dd60628a1c695501c35393d5caad94245b8b2694fb251f3796e10633",
+      "bytes": 14069
+    },
+    {
+      "original": "C:\\Ankshit\\CVC-MAGNet-V2\\data\\splits.json",
+      "copy": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\cvc_mamba_hybrid_20261017\\frozen_reference\\data\\splits.json",
+      "sha256": "5ba91e3521cd4fe3deac6c7fea7ff11ae211b65a8c65457989a2e5b49f1a2887",
+      "bytes": 1267011
+    },
+    {
+      "original": "C:\\Ankshit\\CVC-MAGNet-V2\\data\\selective_hard_negatives_manifest.json",
+      "copy": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\cvc_mamba_hybrid_20261017\\frozen_reference\\data\\selective_hard_negatives_manifest.json",
+      "sha256": "0c869fdfd865c550e882f7f77a7b842d41ceb3a77d459afa73b38d48a7903f1c",
+      "bytes": 62781
+    },
+    {
+      "original": "C:\\Ankshit\\CVC-MAGNet-V2\\data\\study_inventory.parquet",
+      "copy": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\cvc_mamba_hybrid_20261017\\frozen_reference\\data\\study_inventory.parquet",
+      "sha256": "2acff229cdac56db0db5b853a8a93953e10a14a4b628f3e4d385a16a91bec1ca",
+      "bytes": 1261175
+    },
+    {
+      "original": "C:\\Ankshit\\CVC-MAGNet-V2\\data\\annotation_inventory.parquet",
+      "copy": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\cvc_mamba_hybrid_20261017\\frozen_reference\\data\\annotation_inventory.parquet",
+      "sha256": "02b8f5acec0e8075444e1bf7484bfc9afed66fd38a323cbbbeb1c710dc26c859",
+      "bytes": 3130580
+    },
+    {
+      "original": "C:\\Ankshit\\CVC-MAGNet-V2\\reports\\native_eval_S4_experiment_seed43_final.json",
+      "copy": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\cvc_mamba_hybrid_20261017\\frozen_reference\\reports\\native_eval_S4_experiment_seed43_final.json",
+      "sha256": "b983a31868ee2b5819a0582816013ad4aa99e9faf23623b9e84c53b63b5848f2",
+      "bytes": 11879
+    },
+    {
+      "original": "C:\\Ankshit\\CVC-MAGNet-V2\\reports\\native_eval_S4_experiment_seed43_final_per_study.json",
+      "copy": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\cvc_mamba_hybrid_20261017\\frozen_reference\\reports\\native_eval_S4_experiment_seed43_final_per_study.json",
+      "sha256": "b68fba99aa75372e98c867d97dc9f82854b326e5c35150bdc1c0d2995b6c226b",
+      "bytes": 634494
+    }
+  ]
+}

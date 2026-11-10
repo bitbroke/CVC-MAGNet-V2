@@ -1,0 +1,24 @@
+{
+  "frozen_baseline_seed_42": {
+    "macro_dice": 0.473204,
+    "centerline_coverage_10px": 0.871774,
+    "precision": 0.343782,
+    "recall": 0.836118,
+    "missed_catheter_rate_pct": 3.629,
+    "negative_fp_area_pct": 0.042
+  },
+  "t1_joint_hrnet_update_1000": {
+    "num_positive_studies": 185,
+    "num_negative_studies": 8,
+    "macro_dice": 0.46251080101061587,
+    "centerline_coverage_10px": 0.8792561434254356,
+    "precision": 0.3071849416888344,
+    "recall": 0.8260091470739437,
+    "missed_catheter_rate_pct": 3.225806451612903,
+    "total_catheters_evaluated": 248,
+    "negative_fp_area_pct": 0.0498120743909935
+  },
+  "dice_difference": -0.010693198989384145,
+  "coverage_difference": 0.007482143425435517,
+  "segmentation_damaged": false
+}

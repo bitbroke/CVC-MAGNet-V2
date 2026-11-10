@@ -1,0 +1,39 @@
+FREEZE HASH 25 127
+FREEZE HASH 50 127
+FREEZE HASH 75 127
+FREEZE HASH 100 127
+FREEZE HASH 125 127
+CACHE 100 729
+CACHE 200 729
+CACHE 300 729
+CACHE 400 729
+CACHE 500 729
+CACHE 600 729
+CACHE 700 729
+SUPERVISION {('label_supported_negative', True): 329, ('provisional_or_attested', True): 12, ('unknown_or_unreviewed', False): 388}
+TRAIN MINING 50 729
+TRAIN MINING 100 729
+TRAIN MINING 150 729
+TRAIN MINING 350 729
+TRAIN MINING 500 729
+TRAIN MINING 650 729
+head_control {'update': 25, 'attempts': 25, 'loss': [1.0591615736484528, 1.045253872871399, 0.05563071556389332], 'seconds': 16.323368310928345, 'peak_allocated_mb': 374.23193359375, 'peak_reserved_mb': 448.0, 'amp_scale': 1024.0}
+head_control {'update': 50, 'attempts': 50, 'loss': [1.038009062409401, 1.027518704533577, 0.04196145897731185], 'seconds': 29.529923915863037, 'peak_allocated_mb': 374.23193359375, 'peak_reserved_mb': 448.0, 'amp_scale': 1024.0}
+head_control {'update': 75, 'attempts': 75, 'loss': [1.040784027427435, 1.0201911889016628, 0.08237136714160442], 'seconds': 42.97008562088013, 'peak_allocated_mb': 374.23193359375, 'peak_reserved_mb': 448.0, 'amp_scale': 1024.0}
+head_control {'update': 100, 'attempts': 100, 'loss': [1.0865993611514568, 1.0633894316852093, 0.09283969807438552], 'seconds': 55.80153155326843, 'peak_allocated_mb': 374.23583984375, 'peak_reserved_mb': 448.0, 'amp_scale': 1024.0}
+head_control {'update': 125, 'attempts': 125, 'loss': [1.0899576973170042, 1.046446604654193, 0.1740444153547287], 'seconds': 70.16802144050598, 'peak_allocated_mb': 374.23583984375, 'peak_reserved_mb': 448.0, 'amp_scale': 1024.0}
+head_control {'update': 150, 'attempts': 150, 'loss': [1.1179174669086933, 1.0694338865578175, 0.19393441220745444], 'seconds': 83.83533143997192, 'peak_allocated_mb': 374.23583984375, 'peak_reserved_mb': 448.0, 'amp_scale': 1024.0}
+head_control {'update': 175, 'attempts': 175, 'loss': [1.0891296230256557, 1.0440581999719143, 0.18028573459014297], 'seconds': 97.5962827205658, 'peak_allocated_mb': 374.23583984375, 'peak_reserved_mb': 448.0, 'amp_scale': 1024.0}
+head_control {'update': 200, 'attempts': 200, 'loss': [1.0705632865428925, 1.028496116399765, 0.16826864518225193], 'seconds': 111.25349140167236, 'peak_allocated_mb': 374.23583984375, 'peak_reserved_mb': 448.0, 'amp_scale': 1024.0}
+head_control {'update': 225, 'attempts': 225, 'loss': [1.0251734517514706, 0.9894625805318356, 0.1428435929119587], 'seconds': 124.08443927764893, 'peak_allocated_mb': 374.23583984375, 'peak_reserved_mb': 448.0, 'amp_scale': 1024.0}
+head_control {'update': 250, 'attempts': 250, 'loss': [1.0312593206763268, 1.0186797603964806, 0.0503181628882885], 'seconds': 137.51600074768066, 'peak_allocated_mb': 374.23583984375, 'peak_reserved_mb': 448.0, 'amp_scale': 1024.0}
+feature_adaptation {'update': 25, 'attempts': 25, 'loss': [1.0594544298946857, 1.0463945157825947, 0.0522396769374609], 'seconds': 42.91043496131897, 'peak_allocated_mb': 1294.595703125, 'peak_reserved_mb': 1370.0, 'amp_scale': 1024.0}
+feature_adaptation {'update': 50, 'attempts': 50, 'loss': [1.030164897441864, 1.0197102427482605, 0.04181864648126066], 'seconds': 76.37641596794128, 'peak_allocated_mb': 1294.595703125, 'peak_reserved_mb': 1370.0, 'amp_scale': 1024.0}
+feature_adaptation {'update': 75, 'attempts': 75, 'loss': [1.0374195873737335, 1.0200949311256409, 0.06929869577288628], 'seconds': 112.41778016090393, 'peak_allocated_mb': 1294.60302734375, 'peak_reserved_mb': 1370.0, 'amp_scale': 1024.0}
+feature_adaptation {'update': 100, 'attempts': 100, 'loss': [1.0745469965040684, 1.0603247322142124, 0.05688917892985046], 'seconds': 142.32814955711365, 'peak_allocated_mb': 1294.60302734375, 'peak_reserved_mb': 1370.0, 'amp_scale': 1024.0}
+feature_adaptation {'update': 125, 'attempts': 125, 'loss': [1.0751983076334, 1.0365297049283981, 0.15467441361397505], 'seconds': 173.6392526626587, 'peak_allocated_mb': 1294.6044921875, 'peak_reserved_mb': 1370.0, 'amp_scale': 1024.0}
+feature_adaptation {'update': 150, 'attempts': 150, 'loss': [1.0570483207702637, 1.0479530096054077, 0.03638118505477905], 'seconds': 206.96672248840332, 'peak_allocated_mb': 1294.607421875, 'peak_reserved_mb': 1370.0, 'amp_scale': 1024.0}
+feature_adaptation {'update': 175, 'attempts': 175, 'loss': [1.0810234099626541, 1.0360966175794601, 0.1797071909531951], 'seconds': 240.28410744667053, 'peak_allocated_mb': 1294.607421875, 'peak_reserved_mb': 1370.0, 'amp_scale': 1024.0}
+feature_adaptation {'update': 200, 'attempts': 200, 'loss': [1.0595263242721558, 1.021929681301117, 0.15038649551570415], 'seconds': 270.1072840690613, 'peak_allocated_mb': 1294.607421875, 'peak_reserved_mb': 1372.0, 'amp_scale': 1024.0}
+feature_adaptation {'update': 225, 'attempts': 225, 'loss': [1.024357095360756, 0.990901991724968, 0.1338204387575388], 'seconds': 302.7059757709503, 'peak_allocated_mb': 1294.61279296875, 'peak_reserved_mb': 1372.0, 'amp_scale': 1024.0}
+feature_adaptation {'update': 250, 'attempts': 250, 'loss': [1.0211407467722893, 1.012169025838375, 0.03588698338717222], 'seconds': 332.2690432071686, 'peak_allocated_mb': 1294.61279296875, 'peak_reserved_mb': 1372.0, 'amp_scale': 1024.0}

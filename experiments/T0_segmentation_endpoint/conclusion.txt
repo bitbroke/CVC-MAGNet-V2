@@ -1,0 +1,21 @@
+======================================================================
+EXPERIMENT CONCLUSION: T0_segmentation_endpoint
+Date: 2026-10-16T23:37:21.003220+00:00
+======================================================================
+1. What changed:
+Evaluated frozen segmentation baseline using skeleton endpoint extractor against the corrected Hungarian tip benchmark.
+
+2. What stayed fixed:
+Fixed segmentation model, 768px input resolution, threshold 0.50, and 15px Hungarian matching tolerance.
+
+3. Did the primary metric improve:
+T0 Success@15 baseline established at 2.73% (Precision: 0.92%, Recall: 2.73%).
+
+4. What became worse:
+Skeleton endpoints frequently diverge at bifurcations or curve terminations.
+
+5. Crashes, retries, exclusions, or protocol deviations:
+None. Evaluation completed cleanly.
+
+6. Protocol Decision (RETAIN / REPEAT / REJECT):
+REFERENCE_ESTABLISHED

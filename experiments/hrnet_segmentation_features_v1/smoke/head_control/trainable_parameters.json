@@ -1,0 +1,10 @@
+{
+  "seg_head.1.weight": 18432,
+  "seg_head.2.weight": 32,
+  "seg_head.2.bias": 32,
+  "seg_head.5.weight": 4608,
+  "seg_head.6.weight": 16,
+  "seg_head.6.bias": 16,
+  "seg_head.8.weight": 16,
+  "seg_head.8.bias": 1
+}

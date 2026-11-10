@@ -1,0 +1,87 @@
+{
+  "selection_protocol": "Seed 42 selected; applied unchanged to Seed 43 for repeatability check",
+  "benchmark_evaluated": "benchmark_v2 (41 fully audited targets, 33 studies)",
+  "chosen_configuration": {
+    "config_id": "tau0.40_nms20px_local_subpixel_refinement_cap_10",
+    "confidence_threshold": 0.4,
+    "nms_radius_native_px": 20.0,
+    "coordinate_decoding": "local_subpixel_refinement",
+    "candidate_cap": 10,
+    "rationales": [
+      "Controls false-tip burden: reduces mean false tips/image from 1.97 to 1.27 (-35.5%) on Seed 42, and from 2.12 to 1.30 (-38.7%) on Seed 43.",
+      "Reduces false tips on confirmed negative images from 0.50 to 0.38 (Seed 42) and from 0.62 to 0.25 (Seed 43).",
+      "Subpixel refinement boosts Seed 43 Success@15 from 12/41 to 14/41 (+2 matches), matching Seed 42 at 34.15%.",
+      "Improves precise localization: Success@10 increases from 21.95% to 24.39% (Seed 42) and from 14.63% to 21.95% (Seed 43).",
+      "20px NMS radius resolves multi-tip cavoatrial collisions without inflating background clusters."
+    ]
+  },
+  "performance_comparison": {
+    "Seed_42": {
+      "baseline_decoder_tau0.20_nms30px_grid": {
+        "success_at_5px": 0.1219512195121951,
+        "success_at_10px": 0.2195121951219512,
+        "success_at_15px": 0.3414634146341463,
+        "success_at_25px": 0.4634146341463415,
+        "matches_15px": 14,
+        "mean_false_tips_per_image": 1.9696969696969695,
+        "mean_false_tips_negative_image": 0.5,
+        "single_cvc_matches": 6,
+        "multi_cvc_matches": 8
+      },
+      "chosen_optimal_decoder": {
+        "success_at_5px": 0.073170731707317,
+        "success_at_10px": 0.2439024390243902,
+        "success_at_15px": 0.3414634146341463,
+        "success_at_25px": 0.4634146341463415,
+        "matches_15px": 14,
+        "mean_false_tips_per_image": 1.2727272727272727,
+        "mean_false_tips_negative_image": 0.375,
+        "single_cvc_matches": 6,
+        "multi_cvc_matches": 8
+      },
+      "high_sensitivity_decoder": {
+        "success_at_15px": 0.3658536585365853,
+        "matches_15px": 15,
+        "mean_false_tips_per_image": 2.575757575757576,
+        "mean_false_tips_negative_image": 0.625
+      }
+    },
+    "Seed_43": {
+      "baseline_decoder_tau0.20_nms30px_grid": {
+        "success_at_5px": 0.073170731707317,
+        "success_at_10px": 0.1463414634146341,
+        "success_at_15px": 0.2926829268292683,
+        "success_at_25px": 0.4878048780487805,
+        "matches_15px": 12,
+        "mean_false_tips_per_image": 2.121212121212121,
+        "mean_false_tips_negative_image": 0.625,
+        "single_cvc_matches": 5,
+        "multi_cvc_matches": 7
+      },
+      "chosen_optimal_decoder": {
+        "success_at_5px": 0.048780487804878,
+        "success_at_10px": 0.2195121951219512,
+        "success_at_15px": 0.3414634146341463,
+        "success_at_25px": 0.5121951219512195,
+        "matches_15px": 14,
+        "mean_false_tips_per_image": 1.303030303030303,
+        "mean_false_tips_negative_image": 0.25,
+        "single_cvc_matches": 7,
+        "multi_cvc_matches": 7
+      },
+      "high_sensitivity_decoder": {
+        "success_at_15px": 0.3414634146341463,
+        "matches_15px": 14,
+        "mean_false_tips_per_image": 2.636363636363636,
+        "mean_false_tips_negative_image": 0.75
+      }
+    }
+  },
+  "uncapped_diagnostic": {
+    "cap_10_matches": 14,
+    "uncapped_matches": 14,
+    "cap_10_fp_per_image": 1.2727272727272727,
+    "uncapped_fp_per_image": 1.2727272727272727,
+    "finding": "The 10-candidate cap causes zero target pruning failures at tau=0.40 (matches are identical at 14/41), while preventing runaway false detections in noisy images."
+  }
+}

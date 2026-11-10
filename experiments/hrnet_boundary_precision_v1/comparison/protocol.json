@@ -1,0 +1,22 @@
+{
+  "seed": 42,
+  "updates": 250,
+  "initial": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_segmentation_features_v1\\comparison\\feature_adaptation\\last.pt",
+  "initial_sha256": "bc4ec1da1143034a27496c77fe30fe939ee5133cd24ca81e28d0a3126a205c83",
+  "effective_batch": 4,
+  "microbatch": 1,
+  "resolution": 768,
+  "head_lr": 1e-05,
+  "feature_lr": 2e-06,
+  "bn": "frozen",
+  "base_loss": "BCE posweight10 + Dice + .25 recall + .5 teacher retention on GT where teacher>=.5; retention margin .02",
+  "arms": {
+    "control": 0,
+    "boundary": 0.25
+  },
+  "boundary": "softplus(logit) mean outside GT at distance >1 and <=8 model pixels; valid-image only; positive studies only",
+  "threshold": 0.5,
+  "tip_model": "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\runs\\seed_42\\t1_joint_hrnet\\checkpoints\\final_model.pt",
+  "preservation": "four old recoveries within 1pp coverage and +10 native px gap individually; no new misses; total coverage within .5pp; mean gap within10px; negative mean area AND total FP not worse",
+  "promotion": "no automatic promotion; original Dice and precision additionally required"
+}

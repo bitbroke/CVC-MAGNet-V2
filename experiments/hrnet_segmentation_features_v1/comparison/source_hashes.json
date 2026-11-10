@@ -1,0 +1,9 @@
+{
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_recovery_v3\\run_feature_pilot.py": "7fecfed4bcd19487dbbf5a04211c82c36e322ffbe548d2031f07652cbfb85544",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_recovery_v3\\run_recall_pilot.py": "455b5a447dc54e07e74473a0a6e32332b7f919efd5e8a8969e9d170ff5c1124f",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_recovery_v3\\audit_missed_paths.py": "04e7420dd238b9adb3e089859242e2fd34032d43630f00f629048a9e1e2d84c9",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\experiments\\hrnet_tip_pilot_v1\\src\\models\\hrnet_joint_tip.py": "4e34e45749941f5005ffe2740d8898d9a9b05a67a0694ee41cfe470ef54b7748",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\data\\splits.json": "5ba91e3521cd4fe3deac6c7fea7ff11ae211b65a8c65457989a2e5b49f1a2887",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\data\\annotation_inventory.parquet": "02b8f5acec0e8075444e1bf7484bfc9afed66fd38a323cbbbeb1c710dc26c859",
+  "C:\\Ankshit\\CVC-MAGNet-V2\\data\\study_inventory.parquet": "2acff229cdac56db0db5b853a8a93953e10a14a4b628f3e4d385a16a91bec1ca"
+}

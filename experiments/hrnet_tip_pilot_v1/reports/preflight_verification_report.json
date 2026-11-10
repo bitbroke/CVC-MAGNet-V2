@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-10-18T04:11:01Z",
+  "part1_tiny_batch_fitting": {
+    "initial_loss": 0.4497706852853298,
+    "final_loss": 0.07167854229919612,
+    "loss_reduction_pct": 84.06331389656397,
+    "initial_peak_val": 0.017418596893548965,
+    "post_peak_val": 0.9055824875831604,
+    "distances_to_gt_px": [
+      5.136977477346721,
+      3.675981387780159
+    ]
+  },
+  "part2_production_runner_and_vram": {
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "total_device_memory_mb": 4095.5,
+    "peak_allocated_vram_mb": 1306.33837890625,
+    "peak_reserved_vram_mb": 1596.0,
+    "free_vram_headroom_mb": 2499.5,
+    "total_elapsed_seconds": 207.01632976531982,
+    "seconds_per_update": 8.280653190612792,
+    "updates_per_second": 0.12076342010478487,
+    "estimated_1000_update_runtime_minutes": 138.01088651021323,
+    "loss_progression": {
+      "update_1": {
+        "total": 1.3227513991296291,
+        "seg": 1.1476872973144054,
+        "tip": 0.1750641332473606
+      },
+      "update_25": {
+        "total": 1.3227513991296291,
+        "seg": 1.1476872973144054,
+        "tip": 0.1750641332473606
+      }
+    }
+  },
+  "overall_status": "PASSED"
+}

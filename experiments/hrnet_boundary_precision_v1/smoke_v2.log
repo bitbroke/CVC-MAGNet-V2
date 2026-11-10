@@ -1,0 +1,8 @@
+FREEZE HASH 25 129
+FREEZE HASH 50 129
+FREEZE HASH 75 129
+FREEZE HASH 100 129
+FREEZE HASH 125 129
+SUPERVISION {('label_supported_negative', True): 2, ('unknown_or_unreviewed', False): 6}
+control {'update': 2, 'attempts': 2, 'loss': [1.0297284480184317, 1.0260441955178976, 0.01473710942082107, 0.0, 0.8726615011692047], 'seconds': 21.797570943832397, 'peak_allocated_mb': 1345.875, 'peak_reserved_mb': 1422.0, 'amp_scale': 1024.0}
+boundary {'update': 2, 'attempts': 2, 'loss': [1.24476352147758, 1.0260545890778303, 0.014972150791436434, 2.6005055815403466e-06, 0.859858512878418], 'seconds': 3.565492868423462, 'peak_allocated_mb': 1346.01611328125, 'peak_reserved_mb': 1422.0, 'amp_scale': 1024.0}

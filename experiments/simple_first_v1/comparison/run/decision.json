@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "dice_improves": false,
+    "precision_preserved": false,
+    "coverage_preserved": true,
+    "misses_not_increased": true,
+    "negative_area_preserved": false,
+    "negative_pixels_preserved": false
+  },
+  "passed": false,
+  "promoted": false
+}
