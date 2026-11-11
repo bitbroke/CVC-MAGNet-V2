@@ -1,6 +1,8 @@
 """E104: Split-Conformal Risk Control (CRC) Calibration & Clinical Safety Suite
-Computes distribution-free conformal safety bounds, generates 10-metric comparison table,
-and saves clinical decision curve analysis (DCA) and conformal triage charts.
+Evaluates non-tautological clinical separation metrics:
+- Missed Abnormal (FN / 266) @ Fixed 80% & 90% Specificity
+- Rule-Out Specificity (% normal patients cleared) @ Conformal 98% Recall bound
+- Exact distribution-free CRC expected risk bounds under patient exchangeability
 """
 
 import os
@@ -34,51 +36,55 @@ def compute_metrics(y_true, y_pred, name="Model"):
     roc_abn  = roc_auc_score(y_true[:, 2], y_pred[:, 2])
     macro_roc = (roc_norm + roc_bord + roc_abn) / 3.0
     
-    pr_norm = average_precision_score(y_true[:, 0], y_pred[:, 0])
-    pr_bord = average_precision_score(y_true[:, 1], y_pred[:, 1])
     pr_abn  = average_precision_score(y_true[:, 2], y_pred[:, 2])
-    macro_pr = (pr_norm + pr_bord + pr_abn) / 3.0
+    macro_pr = np.mean([average_precision_score(y_true[:, c], y_pred[:, c]) for c in range(3)])
     
     yt_abn = y_true[:, 2]
     yp_abn = y_pred[:, 2]
+    N_pos = int(yt_abn.sum())
+    N_neg = len(yt_abn) - N_pos
     
-    prec, rec, thresholds = precision_recall_curve(yt_abn, yp_abn)
-    idx90 = np.where(rec >= 0.90)[0]
-    th90 = thresholds[idx90[-1]] if len(idx90) > 0 and idx90[-1] < len(thresholds) else thresholds[0]
-    yp_bin90 = (yp_abn >= th90).astype(int)
-    tn90, fp90, fn90, tp90 = confusion_matrix(yt_abn, yp_bin90).ravel()
-    spec_at_90_sens = tn90 / (tn90 + fp90)
-    
-    fpr, tpr, roc_ths = roc_curve(yt_abn, yp_abn)
-    idx_spec90 = np.where(fpr <= 0.10)[0]
-    sens_at_90_spec = tpr[idx_spec90[-1]] if len(idx_spec90) > 0 else tpr[0]
-    
+    prec, rec, _ = precision_recall_curve(yt_abn, yp_abn)
     f2_scores = (5 * prec * rec) / (4 * prec + rec + 1e-8)
     best_f2 = np.max(f2_scores)
     
-    # 98% Recall check (FN count)
-    idx98 = np.where(rec >= 0.98)[0]
-    th98 = thresholds[idx98[-1]] if len(idx98) > 0 and idx98[-1] < len(thresholds) else thresholds[0]
-    yp_bin98 = (yp_abn >= th98).astype(int)
-    tn98, fp98, fn98, tp98 = confusion_matrix(yt_abn, yp_bin98).ravel()
-    npv_at_98 = tn98 / (tn98 + fn98) if (tn98 + fn98) > 0 else 0.0
+    fpr, tpr, roc_ths = roc_curve(yt_abn, yp_abn)
+    
+    # 1. At Fixed 90% Specificity (FPR <= 0.10)
+    idx_sp90 = np.where(fpr <= 0.10)[0]
+    sens_at_90_spec = tpr[idx_sp90[-1]] if len(idx_sp90) > 0 else tpr[0]
+    th90 = roc_ths[idx_sp90[-1]]
+    fn_at_90_spec = int(((yp_abn < th90) & (yt_abn == 1)).sum())
+    
+    # 2. At Fixed 80% Specificity (FPR <= 0.20)
+    idx_sp80 = np.where(fpr <= 0.20)[0]
+    sens_at_80_spec = tpr[idx_sp80[-1]] if len(idx_sp80) > 0 else tpr[0]
+    th80 = roc_ths[idx_sp80[-1]]
+    fn_at_80_spec = int(((yp_abn < th80) & (yt_abn == 1)).sum())
+    
+    # 3. Rule-Out Efficiency: Specificity @ Conformal 98% Recall (FN <= 5)
+    pos_scores = np.sort(yp_abn[yt_abn == 1])
+    k_miss = int(np.floor(0.02 * (N_pos + 1)))
+    tau_crc = pos_scores[k_miss]
+    neg_cleared = int(((yp_abn < tau_crc) & (yt_abn == 0)).sum())
+    rule_out_spec_crc = float(neg_cleared / N_neg)
+    green_npv = float(neg_cleared / (neg_cleared + k_miss))
     
     return {
         "Model": name,
-        "Stage1_Unsafe_AUROC": unsafe_roc,
-        "Stage1_Unsafe_AUPRC": unsafe_pr,
         "Macro_AUROC": macro_roc,
-        "Normal_AUROC": roc_norm,
-        "Borderline_AUROC": roc_bord,
+        "Binary_Unsafe_AUROC": unsafe_roc,
         "Abnormal_AUROC": roc_abn,
-        "Macro_AUPRC": macro_pr,
         "Abnormal_AUPRC": pr_abn,
+        "Macro_AUPRC": macro_pr,
         "Abnormal_F2": best_f2,
         "Sens_at_90_Spec": sens_at_90_spec,
-        "Spec_at_90_Sens": spec_at_90_sens,
-        "FN_at_98_Sens": fn98,
-        "NPV_at_98_Sens": npv_at_98,
-        "Threshold_at_98_Sens": th98
+        "Missed_Abn_at_90_Spec": fn_at_90_spec,
+        "Sens_at_80_Spec": sens_at_80_spec,
+        "Missed_Abn_at_80_Spec": fn_at_80_spec,
+        "RuleOut_Spec_at_Conformal_98": rule_out_spec_crc,
+        "Green_Zone_Patients_Cleared": neg_cleared,
+        "Green_Zone_NPV": green_npv
     }
 
 def main():
@@ -98,8 +104,8 @@ def main():
         ("E85_T3_Grand_Apex", VAL_PREDS_DIR / "val_preds_E85_multiplicity_gated_t3_grand_apex.npy"),
         ("E99_Meta_Apex", VAL_PREDS_DIR / "val_preds_E99_grand_meta_apex.npy"),
         ("E101_Hierarchical_Bayes", VAL_PREDS_DIR / "val_preds_E101_hierarchical_bayes.npy"),
-        ("E102_pAUROC_Specialist", VAL_PREDS_DIR / "val_preds_E102_pauroc_specialist.npy"),
-        ("E103_Clinical_Safety_Apex", VAL_PREDS_DIR / "val_preds_E103_clinical_safety_apex.npy")
+        ("E102b_pAUROC_Specialist", VAL_PREDS_DIR / "val_preds_E102_pauroc_specialist.npy"),
+        ("E103b_Clinical_Safety_Apex", VAL_PREDS_DIR / "val_preds_E103_clinical_safety_apex.npy")
     ]
     
     results = []
@@ -114,46 +120,44 @@ def main():
     df_res = pd.DataFrame(results)
     table_csv = REPORTS_DIR / "clinical_safety_10_metric_table.csv"
     df_res.to_csv(table_csv, index=False)
-    print(f"✅ Saved 10-Metric Comparison Table to: {table_csv}")
+    print(f"✅ Saved Non-Tautological Clinical Safety Table to: {table_csv}")
     
     # Display the table
-    print("\n" + "=" * 105)
-    print(f"{'Model':<26} | {'Macro ROC':<9} | {'Abn ROC':<7} | {'Abn PRC':<7} | {'Abn F2':<6} | {'Sens@90Sp':<9} | {'FN@98%Sn':<8} | {'NPV@98%Sn':<9}")
-    print("-" * 105)
+    print("\n" + "=" * 125)
+    print(f"{'Model':<26} | {'MacroROC':<8} | {'AbnROC':<6} | {'AbnPRC':<6} | {'Sens@90':<7} | {'Miss@90':<7} | {'Sens@80':<7} | {'Miss@80':<7} | {'RuleOutSpec':<11} | {'Cleared':<7}")
+    print("-" * 125)
     for _, r in df_res.iterrows():
-        print(f"{r['Model']:<26} | {r['Macro_AUROC']:.4f}    | {r['Abnormal_AUROC']:.4f}  | {r['Abnormal_AUPRC']:.4f}  | {r['Abnormal_F2']:.4f} | {r['Sens_at_90_Spec']:.4f}    | {int(r['FN_at_98_Sens']):<8} | {r['NPV_at_98_Sens']:.4%}")
-    print("=" * 105)
+        print(f"{r['Model']:<26} | {r['Macro_AUROC']:.4f}   | {r['Abnormal_AUROC']:.4f} | {r['Abnormal_AUPRC']:.4f} | {r['Sens_at_90_Spec']:.2%}  | {r['Missed_Abn_at_90_Spec']:<7} | {r['Sens_at_80_Spec']:.2%}  | {r['Missed_Abn_at_80_Spec']:<7} | {r['RuleOut_Spec_at_Conformal_98']:.2%}     | {r['Green_Zone_Patients_Cleared']}/2292")
+    print("=" * 125)
 
     # --------------------------------------------------------------------------
-    # Conformal Risk Control Calibration on E103
+    # Conformal Risk Control Calibration on E103b
     # --------------------------------------------------------------------------
-    p_e103 = preds_dict["E103_Clinical_Safety_Apex"]
+    p_e103 = preds_dict["E103b_Clinical_Safety_Apex"]
     p_abn = p_e103[:, 2]
     y_abn = y_val[:, 2]
     pos_idx = np.where(y_abn == 1)[0]
     N_pos = len(pos_idx)
     pos_scores = p_abn[pos_idx]
     
-    # Angelopoulos & Bates Conformal Risk Control Formula:
-    # We want E[Loss] <= alpha_FN. Non-conformity loss: L_i(tau) = I[p_abn < tau]
-    # Smallest tau such that (sum_{i} I[p_i < tau] + 1) / (N_pos + 1) <= alpha_FN
+    print("\n" + "=" * 80)
+    print("DISTRIBUTION-FREE SPLIT-CONFORMAL RISK CONTROL (CRC) GUARANTEES:")
+    print("=" * 80)
     for alpha_fn, target_sens in [(0.02, 0.98), (0.05, 0.95)]:
-        # Sort positive scores ascending
         sorted_pos = np.sort(pos_scores)
-        # allowed misses
         k_miss = int(np.floor(alpha_fn * (N_pos + 1)))
         tau_crc = sorted_pos[k_miss]
         emp_fn = (pos_scores < tau_crc).sum()
         emp_sens = 1.0 - (emp_fn / N_pos)
-        print(f"\n[CRC Calibration] Target FN Bound alpha={alpha_fn:.2f} (Sensitivity >= {target_sens:.0%}):")
-        print(f"  Exact Conformal Safety Threshold tau_CRC : {tau_crc:.4f}")
-        print(f"  Empirical False Negatives (Misses)       : {emp_fn} / {N_pos} (Sensitivity: {emp_sens:.2%})")
-        print(f"  Mathematical Upper Bound on Test FNR     : <= {alpha_fn:.2f} (P >= 0.99)")
-        
-    # Find High-Precision Threshold for RED Zone (PPV >= 75%)
+        print(f"\n[CRC Calibration] alpha_FN = {alpha_fn:.2f} (Target Sensitivity >= {target_sens:.0%}):")
+        print(f"  Exact Conformal Threshold tau_CRC        : {tau_crc:.4f}")
+        print(f"  Validation Misses (False Negatives)      : {emp_fn} / {N_pos} (Empirical Sensitivity: {emp_sens:.2%})")
+        print(f"  Formal Theorem Guarantee (Angelopoulos): E[FNR_test] <= {alpha_fn:.2f} under patient-cluster exchangeability.")
+
+    # High-Precision Threshold for RED Zone (PPV >= 70%)
     prec_abn, rec_abn, th_abn = precision_recall_curve(y_abn, p_abn)
-    idx_ppv75 = np.where(prec_abn >= 0.70)[0]
-    tau_ppv = th_abn[idx_ppv75[0]] if len(idx_ppv75) > 0 else 0.40
+    idx_ppv70 = np.where(prec_abn >= 0.70)[0]
+    tau_ppv = th_abn[idx_ppv70[0]] if len(idx_ppv70) > 0 else 0.80
     tau_safe_02 = np.sort(pos_scores)[int(np.floor(0.02 * (N_pos + 1)))]
     
     print("\n" + "=" * 80)
@@ -167,24 +171,19 @@ def main():
     # --------------------------------------------------------------------------
     # Plot Decision Curve Analysis (DCA Net Benefit)
     # --------------------------------------------------------------------------
-    plt.style.use("seaborn-v0_8-whitegrid" if "seaborn-v0_8-whitegrid" in plt.style.available else "default")
     fig, ax = plt.subplots(figsize=(8, 6), dpi=300)
-    
     thresholds = np.linspace(0.01, 0.50, 50)
     prev = y_abn.sum() / N_val
-    
-    # Net Benefit = (TP / N) - (FP / N) * (p / (1 - p))
     net_benefit_all = prev - (1 - prev) * (thresholds / (1 - thresholds))
     net_benefit_none = np.zeros_like(thresholds)
     
     ax.plot(thresholds, net_benefit_none, 'k--', label="Treat None (Net Benefit = 0)", alpha=0.7)
     ax.plot(thresholds, net_benefit_all, 'gray', linestyle=":", label="Treat All (Mandatory Intervention)", alpha=0.7)
     
-    # Models DCA
     dca_models = [
         ("E00 Baseline Traced EffNet", preds_dict["E00_Baseline_Traced_EffNet"][:, 2], "orange", "--"),
         ("E99-B Meta-Apex", preds_dict["E99_Meta_Apex"][:, 2], "blue", "-."),
-        ("E103 Conformal Safety Apex", preds_dict["E103_Clinical_Safety_Apex"][:, 2], "crimson", "-")
+        ("E103b Conformal Safety Apex", preds_dict["E103b_Clinical_Safety_Apex"][:, 2], "crimson", "-")
     ]
     
     for lbl, probs, clr, ls in dca_models:
@@ -196,7 +195,7 @@ def main():
             nb.append(val)
         ax.plot(thresholds, nb, color=clr, linestyle=ls, linewidth=2.0, label=lbl)
         
-    ax.axvline(tau_safe_02, color="green", linestyle=":", label=f"Conformal Safety Threshold (tau={tau_safe_02:.3f})")
+    ax.axvline(tau_safe_02, color="green", linestyle=":", label=f"Conformal Green Bound (tau={tau_safe_02:.3f})")
     ax.set_xlim([0.01, 0.45])
     ax.set_ylim([-0.02, prev * 1.05])
     ax.set_xlabel("Clinical Decision Probability Threshold Pt", fontsize=11, fontweight="bold")
@@ -223,14 +222,13 @@ def main():
     ax.axvline(tau_safe_02, color="forestgreen", linestyle="--", linewidth=2.2, label=f"Conformal tau_CRC={tau_safe_02:.3f} (98% Recall Guard)")
     ax.axvline(tau_ppv, color="darkred", linestyle="-.", linewidth=2.2, label=f"High-Precision tau_RED={tau_ppv:.3f} (70% PPV Alert)")
     
-    # Highlight zones
-    ax.axvspan(0.0, tau_safe_02, alpha=0.15, color="green", label="🟢 GREEN ZONE (Safe)")
-    ax.axvspan(tau_safe_02, tau_ppv, alpha=0.15, color="gold", label="🟡 AMBER ZONE (Uncertain)")
-    ax.axvspan(tau_ppv, 1.0, alpha=0.15, color="red", label="🔴 RED ZONE (Critical)")
+    ax.axvspan(0.0, tau_safe_02, alpha=0.15, color="green", label="GREEN ZONE (Cleared)")
+    ax.axvspan(tau_safe_02, tau_ppv, alpha=0.15, color="gold", label="AMBER ZONE (Uncertain)")
+    ax.axvspan(tau_ppv, 1.0, alpha=0.15, color="red", label="RED ZONE (Critical Alert)")
     
     ax.set_xlabel("Predicted Probability of Critical Malposition P(Abnormal)", fontsize=11, fontweight="bold")
     ax.set_ylabel("Empirical Density", fontsize=11, fontweight="bold")
-    ax.set_title("Split-Conformal 3-Zone Clinical Safety Triage Partition (E103/E104)", fontsize=12, fontweight="bold")
+    ax.set_title("Split-Conformal 3-Zone Clinical Safety Triage Partition (E103b/E104)", fontsize=12, fontweight="bold")
     ax.set_xlim([0.0, 1.0])
     ax.legend(loc="upper right", frameon=True, fontsize=8.5)
     plt.tight_layout()
@@ -240,16 +238,14 @@ def main():
     plt.close()
     print(f"✅ Saved Conformal 3-Zone Triage Diagram to: {zones_plot_path}")
     
-    # Copy both plots to Downloads for user inspection
+    # Sync artifacts to Downloads
     downloads_dir = Path(r"C:\Users\M S I\Downloads")
     if downloads_dir.exists():
         import shutil
         shutil.copy(dca_plot_path, downloads_dir / "clinical_safety_dca_curve.png")
         shutil.copy(zones_plot_path, downloads_dir / "conformal_triage_zones.png")
         shutil.copy(table_csv, downloads_dir / "clinical_safety_10_metric_table.csv")
-        print(f"✅ Synced artifacts to Downloads directory!")
-        
-    print(f"Runtime: {time.time() - start_time:.1f} seconds")
+        print(f"✅ Synced updated non-tautological artifacts to Downloads!")
 
 if __name__ == "__main__":
     main()

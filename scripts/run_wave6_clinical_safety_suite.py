@@ -89,32 +89,34 @@ def evaluate_10_clinical_metrics(y_true: np.ndarray, y_pred: np.ndarray, name: s
     f2_scores = (5.0 * prec * rec) / (4.0 * prec + rec + 1e-8)
     best_f2 = float(np.max(f2_scores))
     
-    # 6. High-Recall / High-Specificity Operating Points
+    # Non-tautological False Negative Operating Points
     fpr, tpr, roc_ths = roc_curve(yt_abn, yp_abn)
     
-    # Sens @ 90% Spec (FPR <= 0.10)
+    # 1. At Fixed 90% Specificity (FPR <= 0.10)
     idx_sp90 = np.where(fpr <= 0.10)[0]
     sens_at_90_spec = float(tpr[idx_sp90[-1]] if len(idx_sp90) > 0 else tpr[0])
+    th90 = roc_ths[idx_sp90[-1]]
+    fn_at_90_spec = int(((yp_abn < th90) & (yt_abn == 1)).sum())
     
-    # Sens @ 80% Spec (FPR <= 0.20)
+    # 2. At Fixed 80% Specificity (FPR <= 0.20)
     idx_sp80 = np.where(fpr <= 0.20)[0]
     sens_at_80_spec = float(tpr[idx_sp80[-1]] if len(idx_sp80) > 0 else tpr[0])
+    th80 = roc_ths[idx_sp80[-1]]
+    fn_at_80_spec = int(((yp_abn < th80) & (yt_abn == 1)).sum())
     
-    # Spec @ 95% Sens (TPR >= 0.95)
-    idx_sn95 = np.where(tpr >= 0.95)[0]
-    spec_at_95_sens = float(1.0 - fpr[idx_sn95[0]] if len(idx_sn95) > 0 else 0.0)
+    # 3. Non-tautological Rule-Out Efficiency @ Conformal 98% Recall bound (FN <= 5)
+    pos_scores = np.sort(yp_abn[yt_abn == 1])
+    k_miss = int(np.floor(0.02 * (len(pos_scores) + 1)))
+    tau_crc = pos_scores[k_miss]
+    neg_cleared = int(((yp_abn < tau_crc) & (yt_abn == 0)).sum())
+    N_neg = len(yt_abn) - int(yt_abn.sum())
+    rule_out_spec_crc = float(neg_cleared / N_neg)
+    green_npv = float(neg_cleared / (neg_cleared + k_miss))
     
-    # 7. FN count at Conformal 98% Recall & Green Zone NPV
-    idx_sn98 = np.where(rec >= 0.98)[0]
-    th98 = pr_ths[idx_sn98[-1]] if len(idx_sn98) > 0 and idx_sn98[-1] < len(pr_ths) else pr_ths[0]
-    pred_bin_98 = (yp_abn >= th98).astype(int)
-    tn98, fp98, fn98, tp98 = confusion_matrix(yt_abn, pred_bin_98).ravel()
-    npv_at_98 = float(tn98 / (tn98 + fn98) if (tn98 + fn98) > 0 else 0.0)
-    
-    # 8. ECE (Expected Calibration Error) on Abnormal
+    # 4. ECE (Expected Calibration Error) on Abnormal
     ece = compute_ece(yt_abn, yp_abn, n_bins=10)
     
-    # 9. Net Benefit at 10% threshold
+    # 5. Net Benefit at 10% threshold
     pt = 0.10
     pred_pt = (yp_abn >= pt).astype(int)
     tn_pt, fp_pt, fn_pt, tp_pt = confusion_matrix(yt_abn, pred_pt).ravel()
@@ -128,11 +130,13 @@ def evaluate_10_clinical_metrics(y_true: np.ndarray, y_pred: np.ndarray, name: s
         "Abnormal_AUPRC": round(pr_abn, 4),
         "Macro_AUPRC": round(macro_pr, 4),
         "Abnormal_F2": round(best_f2, 4),
-        "Sens_at_90_Spec": round(sens_at_90_spec, 4),
-        "Sens_at_80_Spec": round(sens_at_80_spec, 4),
-        "Spec_at_95_Sens": round(spec_at_95_sens, 4),
-        "FN_at_Conformal_98": int(fn98),
-        "Green_Zone_NPV": round(npv_at_98 * 100.0, 2),
+        "Sens_at_90_Spec": round(sens_at_90_spec * 100.0, 2),
+        "Missed_Abn_at_90_Spec": fn_at_90_spec,
+        "Sens_at_80_Spec": round(sens_at_80_spec * 100.0, 2),
+        "Missed_Abn_at_80_Spec": fn_at_80_spec,
+        "RuleOut_Spec_at_Conf_98": round(rule_out_spec_crc * 100.0, 2),
+        "Patients_Cleared_Conf_98": neg_cleared,
+        "Green_Zone_NPV": round(green_npv * 100.0, 2),
         "ECE": round(ece, 4),
         "Net_Benefit_10pct": round(net_benefit_10, 4)
     }
@@ -567,13 +571,14 @@ def main():
         print("✅ Synced tables to Downloads directory!")
 
     # Display Master Ledger Table
-    print("\n" + "=" * 135)
-    print(f"{'Experiment':<34} | {'MacroROC':<8} | {'UnsafeROC':<9} | {'AbnROC':<6} | {'AbnPRC':<6} | {'AbnF2':<5} | {'Sens@90':<7} | {'Sens@80':<7} | {'Spec@95':<7} | {'FN@98':<5} | {'NPV@98':<7} | {'ECE':<6}")
-    print("-" * 135)
+    print("\n" + "=" * 145)
+    print(f"{'Experiment':<34} | {'MacroROC':<8} | {'AbnROC':<6} | {'AbnPRC':<6} | {'AbnF2':<5} | {'Sens@90':<7} | {'Miss@90':<7} | {'Sens@80':<7} | {'Miss@80':<7} | {'RuleOutSpec':<11} | {'Cleared':<7} | {'GreenNPV':<8} | {'ECE':<6}")
+    print("-" * 145)
     for _, r in df_ledger.iterrows():
-        print(f"{r['Experiment']:<34} | {r['Macro_AUROC']:.4f}   | {r['Binary_Unsafe_AUROC']:.4f}    | {r['Abnormal_AUROC']:.4f} | {r['Abnormal_AUPRC']:.4f} | {r['Abnormal_F2']:.4f} | {r['Sens_at_90_Spec']:.4f}  | {r['Sens_at_80_Spec']:.4f}  | {r['Spec_at_95_Sens']:.4f}  | {int(r['FN_at_Conformal_98']):<5} | {r['Green_Zone_NPV']:.2f}% | {r['ECE']:.4f}")
-    print("=" * 135)
+        print(f"{r['Experiment']:<34} | {r['Macro_AUROC']:.4f}   | {r['Abnormal_AUROC']:.4f} | {r['Abnormal_AUPRC']:.4f} | {r['Abnormal_F2']:.4f} | {r['Sens_at_90_Spec']:.2f}% | {r['Missed_Abn_at_90_Spec']:<7} | {r['Sens_at_80_Spec']:.2f}% | {r['Missed_Abn_at_80_Spec']:<7} | {r['RuleOut_Spec_at_Conf_98']:.2f}%     | {r['Patients_Cleared_Conf_98']:<7} | {r['Green_Zone_NPV']:.2f}%  | {r['ECE']:.4f}")
+    print("=" * 145)
     print(f"Total Wave 6 Suite Runtime: {time.time() - start_all:.1f} seconds")
 
 if __name__ == "__main__":
     main()
+
