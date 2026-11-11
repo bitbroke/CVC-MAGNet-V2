@@ -210,3 +210,4 @@ if __name__ == "__main__":
     else:
         report = pred.predict_radiograph(Path(args.image))
         print(json.dumps(report, indent=2))
+

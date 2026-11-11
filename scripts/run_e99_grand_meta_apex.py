@@ -133,6 +133,18 @@ def main():
             feature_matrices.append(to_rank(arr))
             feature_names.extend([f"{tag}_c{c}" for c in range(3)])
 
+    # Stream 6: Full-Cohort Distilled Noisy-Students (E96 & E97)
+    stream6_files = [
+        ("E96_noisy_dense", VAL_PREDS_DIR / "val_preds_E96_noisy_student_densenet121_512.npy"),
+        ("E97_noisy_srx", VAL_PREDS_DIR / "val_preds_E97_noisy_student_seresnext50_512.npy"),
+    ]
+    for tag, p_path in stream6_files:
+        if p_path.exists():
+            arr = np.load(p_path)
+            feature_matrices.append(to_rank(arr))
+            feature_names.extend([f"{tag}_c{c}" for c in range(3)])
+            print(f"Loaded distilled student predictions: {tag} ({p_path.name})")
+
     # Historical Apex anchors (E85)
     e85_path = VAL_PREDS_DIR / "val_preds_E85_multiplicity_gated_t3_grand_apex.npy"
     if e85_path.exists():
