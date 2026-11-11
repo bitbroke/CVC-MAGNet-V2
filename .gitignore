@@ -19,3 +19,6 @@ tools/mask_review/__pycache__/
 *.npy
 *.npz
 *.bin
+
+reports/sample_visualizations/
+
