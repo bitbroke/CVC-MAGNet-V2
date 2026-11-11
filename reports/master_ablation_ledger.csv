@@ -62,3 +62,7 @@ E100_sealed_blind_test_apex,6,12.5,0.8121,0.8253,0.7797,0.8314,0.8,0.8182,0.6942
 E96_noisy_student_densenet121_512,4,,,0.8074,0.7509,0.8051,,,,,"Noisy-Student Distillation on all 21,855 studies (densenet121)",0.8115,0.7811,0.7912,0.6698,Completed,2026-11-11 04:06:38
 E97_noisy_student_seresnext50_512,4,,,0.7935,0.7099,0.7876,,,,,"Noisy-Student Distillation on all 21,855 studies (seresnext50_32x4d)",0.806,0.7478,0.7714,0.6227,Completed,2026-11-11 16:08:46
 E99_grand_meta_apex,6,1.3,0.8499,0.851,0.846,0.8527,0.8364,0.8528,0.6311,72.0,,,,,,,
+E101_hierarchical_bayes_triage,6,12.5,0.8287,0.8252,0.8408,0.8457,,,,,Wave 6 Hierarchical Bayes: Level-1 Safe-vs-Unsafe Gate (0.8739 ROC) + Level-2 Conditional Specialist,0.8287,,,,Completed,2026-11-12 00:44:33
+E102_subtype_balanced_asl_pauroc,6,29.4,0.852,0.8546,0.8457,0.8558,,,,,"Wave 6 Subtype ASL + Top-15% Hard-Negative Partial AUROC Specialist (AUPRC 0.4957, Sens@90Sp 0.5526)",0.852,,,,Completed,2026-11-12 00:44:33
+E103_cost_sensitive_clinical_apex,6,0.8,0.8532,0.8551,0.8474,0.8572,,,,,Wave 6 Cost-Sensitive Clinical Safety Apex: E99 + E101 + E102 Convex Simplex Optimization,0.8532,,,,Completed,2026-11-12 00:44:33
+E104_split_conformal_risk_calibration,6,3.2,0.8532,0.8551,0.8474,0.8572,,,,,"Wave 6 Split-Conformal Risk Control: alpha_FN=0.02 bound, 3-zone GREEN/AMBER/RED triage, DCA Net Benefit",0.8532,,,,Completed,2026-11-12 00:44:33
